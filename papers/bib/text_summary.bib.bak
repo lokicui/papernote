@@ -1,0 +1,21 @@
+% This file was created with JabRef 2.7b.
+% Encoding: UTF-8
+
+@PROCEEDINGS{wong2008extractive,
+  title = {Extractive summarization using supervised and semi-supervised learning},
+  year = {2008},
+  organization = {Association for Computational Linguistics},
+  author = {Wong, Kam-Fai and Wu, Mingli and Li, Wenjie},
+  booktitle = {Proceedings of the 22nd International Conference on Computational
+	Linguistics-Volume 1},
+  pages = {985--992}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
