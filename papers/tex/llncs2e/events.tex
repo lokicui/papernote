@@ -43,14 +43,9 @@
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Jie Chen%Yulong shi
-\thanks{Please note that the LNCS Editorial assumes that all authors have used
-the western naming convention, with given names preceding surnames. This determines
-the structure of the names in the running heads and the author index.}%
-\and Ursula Barth\and Ingrid Haas\and Frank Holzwarth\and\\
-Anna Kramer\and Leonie Kunz\and Christine Rei\ss\and\\
-Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
-%
+%\author{Jie Chen \and Changmin Zhang \and Yulong Shi \and Zhendong Niu}
+
+
 \authorrunning{Lecture Notes in Computer Science: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
 
@@ -70,8 +65,8 @@ Nicole Sator\and Erika Siebert-Cole\and Peter Stra\ss er}
 % "llncs.dem" accompanies the document class "llncs.cls".
 %
 
-\toctitle{Lecture Notes in Computer Science}
-\tocauthor{Authors' Instructions}
+%\toctitle{Lecture Notes in Computer Science}
+%\tocauthor{Authors' Instructions}
 \maketitle
 
 
@@ -112,248 +107,124 @@ As aging theory using the concept of energy to indicate the liveliness of an eve
 \begin{equation}
   E_{w,t} =F(F^{-1}E_{w,t-1}+\alpha\cdot\chi^2_{w,t})
 \end{equation}
+
 where $E_{w,t}$ is the energy of word $w$  in time interval$t$ , and $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in [16]. 
 
 However, no words descripting a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor β at the end of every time interval. And if the decayed energy value became negative, we change it to 0.
 
 According to the description above, if the energies of some words increase greatly, we can draw a conclusion that there is a hot event spot. So we need to calculate the variance of word energy next. Here we use standard deviation:
-\section{Paper Preparation}
-
-Springer provides you with a complete integrated \LaTeX{} document class
-(\texttt{llncs.cls}) for multi-author books such as those in the LNCS
-series. Papers not complying with the LNCS style will be reformatted.
-This can lead to an increase in the overall number of pages. We would
-therefore urge you not to squash your paper.
-
-Please always cancel any superfluous definitions that are
-not actually used in your text. If you do not, these may conflict with
-the definitions of the macro package, causing changes in the structure
-of the text and leading to numerous mistakes in the proofs.
-
-If you wonder what \LaTeX{} is and where it can be obtained, see the
-``\textit{LaTeX project site}'' (\url{http://www.latex-project.org})
-and especially the webpage ``\textit{How to get it}''
-(\url{http://www.latex-project.org/ftp.html}) respectively.
-
-When you use \LaTeX\ together with our document class file,
-\texttt{llncs.cls},
-your text is typeset automatically in Computer Modern Roman (CM) fonts.
-Please do
-\emph{not} change the preset fonts. If you have to use fonts other
-than the preset fonts, kindly submit these with your files.
-
-Please use the commands \verb+\label+ and \verb+\ref+ for
-cross-references and the commands \verb+\bibitem+ and \verb+\cite+ for
-references to the bibliography, to enable us to create hyperlinks at
-these places.
-
-For preparing your figures electronically and integrating them into
-your source file we recommend using the standard \LaTeX{} \verb+graphics+ or
-\verb+graphicx+ package. These provide the \verb+\includegraphics+ command.
-In general, please refrain from using the \verb+\special+ command.
-
-Remember to submit any further style files and
-fonts you have used together with your source files.
-
-\subsubsection{Headings.}
-
-Headings should be capitalized
-(i.e., nouns, verbs, and all other words
-except articles, prepositions, and conjunctions should be set with an
-initial capital) and should,
-with the exception of the title, be aligned to the left.
-Words joined by a hyphen are subject to a special rule. If the first
-word can stand alone, the second word should be capitalized.
-
-Here are some examples of headings: ``Criteria to Disprove
-Context-Freeness of Collage Language", ``On Correcting the Intrusion of
-Tracing Non-deterministic Programs by Software", ``A User-Friendly and
-Extendable Data Distribution System", ``Multi-flip Networks:
-Parallelizing GenSAT", ``Self-determinations of Man".
-
-\subsubsection{Lemmas, Propositions, and Theorems.}
-
-The numbers accorded to lemmas, propositions, and theorems, etc. should
-appear in consecutive order, starting with Lemma 1, and not, for
-example, with Lemma 11.
-
-\subsection{Figures}
-
-For \LaTeX\ users, we recommend using the \emph{graphics} or \emph{graphicx}
-package and the \verb+\includegraphics+ command.
-
-Please check that the lines in line drawings are not
-interrupted and are of a constant width. Grids and details within the
-figures must be clearly legible and may not be written one on top of
-the other. Line drawings should have a resolution of at least 800 dpi
-(preferably 1200 dpi). The lettering in figures should have a height of
-2~mm (10-point type). Figures should be numbered and should have a
-caption which should always be positioned \emph{under} the figures, in
-contrast to the caption belonging to a table, which should always appear
-\emph{above} the table; this is simply achieved as matter of sequence in
-your source.
-
-Please center the figures or your tabular material by using the \verb+\centering+
-declaration. Short captions are centered by default between the margins
-and typeset in 9-point type (Fig.~\ref{fig:example} shows an example).
-The distance between text and figure is preset to be about 8~mm, the
-distance between figure and caption about 6~mm.
-
-To ensure that the reproduction of your illustrations is of a reasonable
-quality, we advise against the use of shading. The contrast should be as
-pronounced as possible.
-
-If screenshots are necessary, please make sure that you are happy with
-the print quality before you send the files.
-\begin{figure}
-\centering
-\includegraphics[height=6.2cm]{images:eijkel2}
-\caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at
-$x_i$ and $x_j$ (\textit{left and right}) lead to the same summed estimate
-at $x_s$. This shows a figure consisting of different types of
-lines. Elements of the figure described in the caption should be set in
-italics, in parentheses, as shown in this sample caption.}
-\label{fig:example}
-\end{figure}
-
-Please define figures (and tables) as floating objects. Please avoid
-using optional location parameters like ``\verb+[h]+" for ``here".
-
-\paragraph{Remark 1.}
-
-In the printed volumes, illustrations are generally black and white
-(halftones), and only in exceptional cases, and if the author is
-prepared to cover the extra cost for color reproduction, are colored
-pictures accepted. Colored pictures are welcome in the electronic
-version free of charge. If you send colored figures that are to be
-printed in black and white, please make sure that they really are
-legible in black and white. Some colors as well as the contrast of
-converted colors show up very poorly when printed in black and white.
-
-\subsection{Formulas}
-
-Displayed equations or formulas are centered and set on a separate
-line (with an extra line or halfline space above and below). Displayed
-expressions should be numbered for reference. The numbers should be
-consecutive within each section or within the contribution,
-with numbers enclosed in parentheses and set on the right margin --
-which is the default if you use the \emph{equation} environment, e.g.,
 \begin{equation}
-  \psi (u) = \int_{o}^{T} \left[\frac{1}{2}
-  \left(\Lambda_{o}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \;  .
+Var_{w,t} = \sqrt{ \frac{1}{N} \sum_{t \in period}(E_{w,t}- \overline{E_{w}})^2}
 \end{equation}
 
-Equations should be punctuated in the same way as ordinary
-text but with a small space before the end punctuation mark.
+where N is the number of time intervals during the given period, $E_{w,t}$  is the energy of word $w$  in time interval $t$ , $\overline{E_{w}}$  is the average energy during the period, and $Var_{w,t}$  is the variance of $w$ .
+Then each word will be assigned a new weight besides the traditional TFIDF which can be defined as:
+ \begin{equation}
+NewWeight(w)=TF*IDF_{w} + \mu \cdot Var_{w}
+\end{equation}
+This kind of new weight can help us identify both central and hot information, so people can capture the main line and new changes of events simultaneously.
 
-\subsection{Footnotes}
+\subsection{An incremental LSA Model}
+Here we use a variant of latent semantic analysis (LSA), a mathematical technique, to derive implicit semantics from news. The process starts with the construction of a word-by-sentence matrix A, where each row indicates a word, each column indicates a sentence, and   indicates the weight of word   in sentence , which is defined as Eq.6. Since every word does not normally appear in each sentence, the matrix A is usually sparse.
+\begin{displaymath}
+\left( \begin{array}{cccc}
+a_{11} & a_{12} & \ldots & a_{1n} \\
+a_{21} & a_{22} & \ldots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \ldots & a_{mn}
+\end{array} \right)
+\end{displaymath}
 
-The superscript numeral used to refer to a footnote appears in the text
-either directly after the word to be discussed or -- in relation to a
-phrase or a sentence -- following the punctuation sign (comma,
-semicolon, or period). Footnotes should appear at the bottom of
-the
-normal text area, with a line of about 2~cm set
-immediately above them.\footnote{The footnote numeral is set flush left
-and the text follows with the usual word spacing.}
+We then apply the singular value decomposition (SVD) to the matrix A, which is defined as:
+\begin{equation}
+A = U \Sigma V^T
+\end{equation}
 
-\subsection{Program Code}
+where U is an $m×n$ matrix whose columns are called left singular vectors, $\Sigma$ is an $n×n$ diagonal matrix whose diagonal elements are non-negative singular values sorted in descending order, and V is an $n×n$ matrix whose columns are called right singular vectors.
+Next, we perform a dimension reduction to the diagonal matrix $\Sigma$ by cutting down some elements in it and we get matrix $\Sigma '$. Then a new matrix $A'$ is reconstructed by multiplying three matrices as:
+\begin{equation}
+A' = U' \Sigma V'^T \approx A
+\end{equation}
+ 
 
-Program listings or program commands in the text are normally set in
-typewriter font, e.g., CMTT10 or Courier.
+where $\Sigma'$ represents the semantic space that can derive latent semantic structures from A, U' and V' is the dimension reduced matrices correspond to U and V respectively. Each column of A' denotes the semantic sentence representation, and each row denotes the semantic word representation.
+Since we generate a small summary every day during the life cycle of event, we should know information not only on that day but also on its previous neighbors for we do not know what will happen in the future. So if a new news set come, we need to combine them with the previous obtained semantic space so as to acquire more precise data. Firstly, we find out new words compared to previous neighbors and append them to the word-by-sentence matrix as well as new sentences. And the   for the new comers is the term weight on that day as Eq.5: 
+ 
+where A' is the semantic space obtained before that date, O indicates the weight of new words in old sentences are 0 since they did not occur in the old ones utterly, while others are the weight of words in the new sentences.  
+Then we can perform the same latent semantic analysis process to the incremental matrix with the description above and get a new semantic space at a wider range.
 
-\medskip
+\subsection{Summary generation}
+We generate our timeline summary with two metrics: importance and diversity. Importance means summary sentences must represent the main information about the event. Diversity means we need select sentences novel enough compared to sentences both on that day and on other days.
 
-\noindent
-{\it Example of a Computer Program}
-\begin{verbatim}
-program Inflation (Output)
-  {Assuming annual inflation rates of 7%, 8%, and 10%,...
-   years};
-   const
-     MaxYears = 10;
-   var
-     Year: 0..MaxYears;
-     Factor1, Factor2, Factor3: Real;
-   begin
-     Year := 0;
-     Factor1 := 1.0; Factor2 := 1.0; Factor3 := 1.0;
-     WriteLn('Year  7% 8% 10%'); WriteLn;
-     repeat
-       Year := Year + 1;
-       Factor1 := Factor1 * 1.07;
-       Factor2 := Factor2 * 1.08;
-       Factor3 := Factor3 * 1.10;
-       WriteLn(Year:5,Factor1:7:3,Factor2:7:3,Factor3:7:3)
-     until Year = MaxYears
-end.
-\end{verbatim}
-%
-\noindent
-{\small (Example from Jensen K., Wirth N. (1991) Pascal user manual and
-report. Springer, New York)}
+\subsubsection{Importance metric}
+We use a graph-based method to determine sentence importance score. Each node in the graph stands for a semantic sentence and is represented by a vector of semantic words obtained in section 3.2. The edge between two nodes is weighted by the similarity value between two sentences which is calculated by cosine similarity:
+\begin{equation}
+sim(\overrightarrow{s_i}, \overrightarrow{s_j}) = \frac{\overrightarrow{s_i} \sdot \overrightarrow{s_j} } {| \overrightarrow{s_i} || \overrightarrow{s_j} |}
+\end{equation}
 
-\subsection{Citations}
+And then, the importance of sentence s is measured by the average similarities between s and all the other sentences in the news set:
+\begin{equation}
+importance(s_i) = \frac{1}{n-1} \sum_{j=0, j \neq i}^n sim(\overrightarrow{s_i}, \overrightarrow{s_j})
+\end{equation}
+where $n$ is the number of sentences.
 
-For citations in the text please use
-square brackets and consecutive numbers: \cite{jour}, \cite{lncschap},
-\cite{proceeding1} -- provided automatically
-by \LaTeX 's \verb|\cite| \dots\verb|\bibitem| mechanism.
+\subsubsection{Diversity metric}
+Since our purpose is to generate a timeline summary consisting of an individual small summary per day, we should also consider diversity of sentences to minimize the redundancy between sentences today and the produced small summaries on previous days, which is called cross-date diversity. Here we also use cosine similarity to measure the diversity but unlike the usual idea of similarity, diversity means the distance between s and the previous summary, so smaller similarity value is expected:
+\begin{equation}
+diversity(s) = sim(s, sum)
+\end{equation}
+where   is the small summary produced before the date sentence s belonging to for if we use all the existing summaries, there may be a topic excursion and some new changes related to prior information may be filtered out. Here sentence s and summary is also represented by the vector of the semantic words obtained in section 3.2.
 
-\subsection{Page Numbering and Running Heads}
+\subsubsection{Sentence selection}
 
-There is no need to include page numbers. If your paper title is too
-long to serve as a running head, it will be shortened. Your suggestion
-as to how to shorten it would be most welcome.
+For importance bigger similarity value is desired while for diversity we need smaller similarity value. Here we introduce two decreasing/increasing logistic functions,  $L_1(x) = 1/(1+e^x)$  and $L_2(x) = e^x / (1+e^x)$ , like [19] to balance importance and diversity. And finally we can combine the two measure metrics together to determine sentence weight:
+\begin{equation}
+weight(s) = \lambda \cdot L_2 \cdot importance(s) + (1- \lambda ) \cdot L_1 \cdot  diversity(s)
+\end{equation}
 
-\section{LNCS Online}
+However, simply ranking sentences based on the weighted score above may result in similar sentences at the top of list, so we still utilize MMR [25] to avoid sentences having similar meanings on the same day both presenting.
 
-The online version of the volume will be available in LNCS Online.
-Members of institutes subscribing to the Lecture Notes in Computer
-Science series have access to all the pdfs of all the online
-publications. Non-subscribers can only read as far as the abstracts. If
-they try to go beyond this point, they are automatically asked, whether
-they would like to order the pdf, and are given instructions as to how
-to do so.
+\section{Experiments and dicussions}
+\subsection{Dataset}
+Here we use dataset from TAC2010 which contains 46 events taken from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service. Since our experiment is based on the timeline which can track the development of events and there are no standard summaries for timeline summarization evaluation, we generate a timeline summary for each event manually and save it as the standard. Here we take 5 events as examples.
+\subsection{Experiment}
+We start our experiment with some preprocesses like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We also implement some widely used multi-document summarization methods as the baselines.
+Centroid extracts sentences based on centroid value, positional value and first-sentence overlap.
+Cluster considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
+Allan is a similar timeline system from different aspect proposed by Allan et al., dividing sentences into on-event and off-event while ranking them with useful and novelty.
+We also compared our method with itself in the aspect of considering aging theory and the incremental latent semantic analysis or not to enhance our thesis.
 
-Please note that, if your email address is given in your paper,
-it will also be included in the meta data of the online version.
+\subsection{Evaluation Metrics}
+Here we use ROUGE toolkit [26], which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate three scores (recall (R), precision (P) and F-measure). Take ROUGE-N as an example:
+\begin{equation}
+R=\frac{\sum_{s \in manual } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s \in manual} \sum_{N-gram \in s} Count(N-gram)  }
+\end{equation}
 
-\section{BibTeX Entries}
+Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
 
-The correct BibTeX entries for the Lecture Notes in Computer Science
-volumes can be found at the following Website shortly after the
-publication of the book:
-\url{http://www.informatik.uni-trier.de/~ley/db/journals/lncs.html}
+\subsection{Results and discussions}
+We conduct our proposed method AIL and some other widely used approaches descripted in section 4.2 as well as the methods without aging theory (AIL1) and incremental LSA (AIL2) to the events and the overall results are shown in Figure 1. Table 1 describes some details about the results of the 5 example events.
 
-\subsubsection*{Acknowledgments.} The heading should be treated as a
-subsubsection heading and should not be assigned a number.
+From the results, we can see that:
+Centroid has the worst performance mainly because it selects sentences according to the centroids of document set which makes it capture the main points of events but loses the coverage of other points. Cluster divides sentences with different meanings into different clusters and selects one representative sentence from each cluster which improves its overall performance but still works worse than Allan and our methods due to neglecting the temporal characteristics. For Allan, it ranks sentences with useful and novelty and take into account timeline so it outperforms Centroid and Cluster. And unsurprisingly, our proposed method outperforms all these baselines, indicating that aging theory and incremental LSA is applicable to timeline summarization. Comparison within our approach enhances our proposition further for without either aging theory or incremental LSA the performance will drop obviously.
+In order to balance importance and diversity metrics when combine them together in Eq.9, we change the parameter λ from 0.1 to 0.9. And its effect on the results is shown in Figure 2.
 
-\section{The References Section}\label{references}
 
-In order to permit cross referencing within LNCS-Online, and eventually
-between different publishers and their online databases, LNCS will,
-from now on, be standardizing the format of the references. This new
-feature will increase the visibility of publications and facilitate
-academic research considerably. Please base your references on the
-examples below. References that don't adhere to this style will be
-reformatted by Springer. You should therefore check your references
-thoroughly when you receive the final pdf of your paper.
-The reference section must be complete. You may not omit references.
-Instructions as to where to find a fuller version of the references are
-not permissible.
+From Figure 2 we can see that when λ=0.3 our approach receive the best performance, indicating that in timeline summarization which emphasizes new changes as the event going on we should bias to diversity slightly.
 
-We only accept references written using the latin alphabet. If the title
-of the book you are referring to is in Russian or Chinese, then please write
-(in Russian) or (in Chinese) at the end of the transcript or translation
-of the title.
+\section{Conclusion}
+In this paper, we present a novel approach for event timeline summarization. In our approach, we firstly identify hot terms on every day during the life cycle of the event using aging theory. Then we recognize the implicit semantics from news set with incremental LSA. At last sentences both important and diverse are selected with a graph-based method and a timeline consisting of a series of individual small summaries which can represent the development trajectory of event is constructed. Experiment results show that our approach performs better compared with other widely used methods.
+In the future, we will identify semantic units using other methods for LSA can process synonym but is unable to handle polysemy. And we will also extend our approach to short text such as microblogs and comments.
 
-The following section shows a sample reference list with entries for
-journal articles \cite{jour}, an LNCS chapter \cite{lncschap}, a book
-\cite{book}, proceedings without editors \cite{proceeding1} and
-\cite{proceeding2}, as well as a URL \cite{url}.
-Please note that proceedings published in LNCS are not cited with their
-full titles, but with their acronyms!
+\section{Acknowledgements}
+
+
+\begin{thebibliography}{4}
+
+\end{thebibliography}
+
+
+
 
 \begin{thebibliography}{4}
 
@@ -382,29 +253,8 @@ Integration. Technical report, Global Grid Forum (2002)
 \end{thebibliography}
 
 
-\section*{Appendix: Springer-Author Discount}
-
-LNCS authors are entitled to a 33.3\% discount off all Springer
-publications. Before placing an order, the author should send an email, 
-giving full details of his or her Springer publication,
-to \url{orders-HD-individuals@springer.com} to obtain a so-called token. This token is a
-number, which must be entered when placing an order via the Internet, in
-order to obtain the discount.
-
-\section{Checklist of Items to be Sent to Volume Editors}
-Here is a checklist of everything the volume editor requires from you:
 
 
-\begin{itemize}
-\settowidth{\leftmargin}{{\Large$\square$}}\advance\leftmargin\labelsep
-\itemsep8pt\relax
-\renewcommand\labelitemi{{\lower1.5pt\hbox{\Large$\square$}}}
 
-\item The final \LaTeX{} source files
-\item A final PDF file
-\item A copyright form, signed by one author on behalf of all of the
-authors of the paper.
-\item A readme giving the name and email address of the
-corresponding author.
-\end{itemize}
+
 \end{document}
