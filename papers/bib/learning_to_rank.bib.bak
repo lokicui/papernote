@@ -1,5 +1,5 @@
 % This file was created with JabRef 2.7b.
-% Encoding: UTF-8
+% Encoding: UTF8
 
 @INPROCEEDINGS{conf/aaai/InagakiSDDLCZ10,
   author = {Inagaki, Yoshiyuki and Sadagopan, Narayanan and Dupret, Georges and
@@ -90,6 +90,8 @@
 }
 
 @comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: fileDirectory-coder:/home/coder/git/papernote;}
 
 @comment{jabref-meta: selector_author:}
 
