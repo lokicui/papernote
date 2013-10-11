@@ -207,6 +207,12 @@ Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the max
 
 \subsection{Results and discussions}
 We conduct our proposed method AIL and some other widely used approaches descripted in section 4.2 as well as the methods without aging theory (AIL1) and incremental LSA (AIL2) to the events and the overall results are shown in Figure 1. Table 1 describes some details about the results of the 5 example events.
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{zhuzhuangtu}
+\caption{Overall performance of these approaches}
+\label{fig:zhuzhuangtu}
+\end{figure}
 
 \begin{tabular}{c|c c c c c c c}
 \hline
@@ -240,6 +246,13 @@ From the results, we can see that:
 Centroid has the worst performance mainly because it selects sentences according to the centroids of document set which makes it capture the main points of events but loses the coverage of other points. Cluster divides sentences with different meanings into different clusters and selects one representative sentence from each cluster which improves its overall performance but still works worse than Allan and our methods due to neglecting the temporal characteristics. For Allan, it ranks sentences with useful and novelty and take into account timeline so it outperforms Centroid and Cluster. And unsurprisingly, our proposed method outperforms all these baselines, indicating that aging theory and incremental LSA is applicable to timeline summarization. Comparison within our approach enhances our proposition further for without either aging theory or incremental LSA the performance will drop obviously.
 In order to balance importance and diversity metrics when combine them together in Eq.9, we change the parameter λ from 0.1 to 0.9. And its effect on the results is shown in Figure 2.
 
+\begin{figure}
+\centering
+\includegraphics[height=6.2cm]{lambda}
+\caption{The effect of $\lambda$ on the results when ranging from 0.1 to 0.9}
+\label{fig:zhuzhuangtu}
+\end{figure}
+
 
 From Figure 2 we can see that when λ=0.3 our approach receive the best performance, indicating that in timeline summarization which emphasizes new changes as the event going on we should bias to diversity slightly.
 
@@ -251,7 +264,7 @@ In the future, we will identify semantic units using other methods for LSA can p
 
 
 
-\bibliographystyle{ieeetr}                                                    %控制文献显示格式的
-\bibliography{../../bib/text_summary}  %保证 LaTeX 可以找到该 bib 文件
+\bibliographystyle{ieeetr}
+\bibliography{../../bib/text_summary}
 
 \end{document}
