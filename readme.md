@@ -1,7 +1,7 @@
-一共3个文件夹
+papers foler: all papers need to read or have read and some note about it.
 
-note里面放笔记，txt格式就行，文件名上带日期
+  bib: a bib library for jabref software
+  pdf: different versions of my papers to publish
+  tex: the origin source of paper latex
 
-其他两个文件夹是要看的论文与已经看完的。
-
-分支在master上
+ppt: ppt for weekly meetting
