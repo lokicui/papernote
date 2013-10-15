@@ -1,0 +1,95 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF8
+
+@ARTICLE{-Deveaud-p-,
+  author = {Deveaud, Romain and Avignon, France and SanJuan, Eric and Bellot,
+	Patrice},
+  title = {LIA at TREC 2012 Web Track: Unsupervised Search Concepts Identification
+	from General Sources of Information},
+  __markedentry = {[coder:]},
+  file = {LIA at TREC 2012 Web Track\: Unsupervised Search Concepts Identification from General Sources of Information.pdf:papers-not-read/trec/LIA at TREC 2012 Web Track\: Unsupervised Search Concepts Identification from General Sources of Information.pdf:PDF},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@INPROCEEDINGS{2013-Deveaud-p-,
+  author = {Deveaud, Romain and SanJuan, Eric},
+  title = {LIA at the NTCIR-10 INTENT task},
+  booktitle = {Proceedings of NTCIR},
+  year = {2013},
+  volume = {10},
+  __markedentry = {[coder:]},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@ARTICLE{-Feng-p-,
+  author = {Feng, Zilong and Xue, Yuanhai and Yu, Xiaoming and Xu, Hongbo and
+	Liu, Yue and Cheng, Xueqi},
+  title = {ICTNET at Web Track 2012 Diversity Task},
+  __markedentry = {[coder:6]},
+  file = {ICTNET at Web Track 2012 Diversity Task.pdf:papers-not-read/trec/ICTNET at Web Track 2012 Diversity Task.pdf:PDF},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@INPROCEEDINGS{2011-Kanoulas-p-,
+  author = {Kanoulas, Evangelos and Carterette, Ben and Hall, Mark and Clough,
+	Paul and Sanderson, Mark},
+  title = {Session track 2011 overview},
+  booktitle = {20th Text REtrieval Conference Notebook Proceedings (TREC 2011)},
+  year = {2011},
+  __markedentry = {[coder:6]},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@PHDTHESIS{2012-Leelanupab-p-,
+  author = {Leelanupab, Teerapong},
+  title = {A Ranking framework and evaluation for diversity-based retrieval},
+  school = {University of Glasgow},
+  year = {2012},
+  owner = {coder},
+  timestamp = {2013.10.15},
+  url = {http://theses.gla.ac.uk/id/eprint/3442}
+}
+
+@INPROCEEDINGS{2013-Leveling-p-,
+  author = {Leveling, Johannes and Goeuriot, Lorraine and Kelly, Liadh and Jones,
+	Gareth JF},
+  title = {DCU@ TRECMed 2012: Using ad-hoc baselines for domain-specific retrieval},
+  booktitle = {Proceedings of the Twenty-First Text REtrieval Conference (TREC 2012)},
+  year = {2013},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@INPROCEEDINGS{2012-Limsopatham-p221-221,
+  author = {Limsopatham, Nut and McCreadie, Richard and Albakour, M-Dyaa and
+	Macdonald, Craig and Santos, Rodrygo LT and Ounis, Iadh},
+  title = {University of Glasgow at TREC 2012: experiments with Terrier in Medical
+	Records, Microblog, and Web tracks},
+  booktitle = {Proceedings of the 21st Text REtrieval Conference, Gaithersburg,
+	MD, USA},
+  year = {2012},
+  volume = {6},
+  pages = {221},
+  file = {University of Glasgow at TREC 2012\: experiments with Terrier in Medical Records, Microblog, and Web tracks.pdf:papers-not-read/trec/University of Glasgow at TREC 2012\: experiments with Terrier in Medical Records, Microblog, and Web tracks.pdf:PDF},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@INPROCEEDINGS{2013-Symonds-p-,
+  author = {Symonds, Michael and Zuccon, Guido and Koopman, Bevan and Bruza,
+	Peter D},
+  title = {QUT\_Para at TREC 2012 Web Track: word associations for retrieving
+	web documents},
+  booktitle = {NIST Special Publication 500-298: The Twenty First Text REtrieval
+	Conference Proceedings (TREC 2012)},
+  year = {2013},
+  organization = {NIST},
+  file = {2013-Symonds-p-.pdf:papers-not-read/trec/2013-Symonds-p-.pdf:PDF},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
