@@ -14,6 +14,26 @@
   file = {allan2001temporal.pdf:text_summary/allan2001temporal.pdf:PDF}
 }
 
+@ARTICLE{-Binwahlan-p1-1,
+  author = {Binwahlan, Mohammed Salem and Suanmali, Ladda and Salim, Naomie},
+  title = {TEXT SUMMARIZATION},
+  journal = {Ahmad Zaki Abu Bakar Roliana Ibrahim},
+  pages = {1},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16}
+}
+
+@PHDTHESIS{2006-Bogdanovski-p-,
+  author = {Bogdanovski, Alexander},
+  title = {An Automatic Text Summarizer},
+  school = {Master thesis, COM3010, 3 May},
+  year = {2006},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16}
+}
+
 @INPROCEEDINGS{2001-Brunn-p-,
   author = {Brunn, Meru and Chali, Yllias and Pinchak, Christopher J},
   title = {Text summarization using lexical chains},
@@ -35,7 +55,6 @@
   year = {1998},
   pages = {335--336},
   organization = {ACM},
-  __markedentry = {[coder:]},
   owner = {coder},
   timestamp = {2013.10.10},
   url = {http://dl.acm.org/citation.cfm?id=291025}
@@ -107,6 +126,17 @@
   date-modified = {2013-10-09 13:47:40 +0000}
 }
 
+@ARTICLE{2004-Ding-p-,
+  author = {Ding, Yuan},
+  title = {A Survey on Multi-Document Summarization},
+  journal = {Department of Computer and Information Science University of Pennsylvania},
+  year = {2004},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  publisher = {Citeseer},
+  timestamp = {2013.10.16}
+}
+
 @INPROCEEDINGS{2004-Erkan-p365-371,
   author = {Erkan, G{\"u}nes and Radev, Dragomir R},
   title = {LexPageRank: Prestige in Multi-Document Text Summarization.},
@@ -141,6 +171,7 @@
   pages = {19--25},
   organization = {ACM},
   owner = {coder},
+  pdf = {text_summary/[23]Generic text summarization using relevance measure and latent semantic analysis-373.pdf},
   timestamp = {2013.10.10},
   url = {http://dl.acm.org/citation.cfm?id=383955}
 }
@@ -170,24 +201,12 @@
   date-modified = {2013-10-09 16:58:04 +0000}
 }
 
-@PHDTHESIS{2012-Klassen-p-,
-  author = {Klassen, Prescott P},
-  title = {Calculating LLR Topic Signatures with Dependency Relations for Automatic
-	Text Summarization},
-  school = {University of Washington},
-  year = {2012},
-  __markedentry = {[coder:6]},
-  owner = {coder},
-  timestamp = {2013.10.15}
-}
-
 @INPROCEEDINGS{2004-Lin-p74-81,
   author = {Lin, Chin-Yew},
   title = {Rouge: A package for automatic evaluation of summaries},
   booktitle = {Text Summarization Branches Out: Proceedings of the ACL-04 Workshop},
   year = {2004},
   pages = {74--81},
-  __markedentry = {[coder:6]},
   owner = {coder},
   timestamp = {2013.10.10}
 }
@@ -246,6 +265,67 @@
   publisher = {Oxford Univ Press}
 }
 
+@INPROCEEDINGS{2008-Nedunchelian-p480-485,
+  author = {Nedunchelian, R},
+  title = {Centroid based summarization of multiple documents implemented using
+	timestamps},
+  booktitle = {Emerging Trends in Engineering and Technology, 2008. ICETET'08. First
+	International Conference on},
+  year = {2008},
+  pages = {480--485},
+  organization = {IEEE},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4579948}
+}
+
+@INPROCEEDINGS{2000-Radev-p99-109,
+  author = {Radev, Dragomir R and Fan, Weiguo},
+  title = {Automatic summarization of search engine hit lists},
+  booktitle = {Proceedings of the ACL-2000 workshop on Recent advances in natural
+	language processing and information retrieval: held in conjunction
+	with the 38th Annual Meeting of the Association for Computational
+	Linguistics-Volume 11},
+  year = {2000},
+  pages = {99--109},
+  organization = {Association for Computational Linguistics},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://dl.acm.org/citation.cfm?id=1117768}
+}
+
+@INPROCEEDINGS{1999-Radev-p205-205,
+  author = {Radev, Dragomir R and Hatzivassiloglou, Vasileios and McKeown, Kathleen
+	R},
+  title = {A description of the CIDR system as used for TDT-2},
+  booktitle = {Broadcast News Workshop'99 Proceedings},
+  year = {1999},
+  pages = {205},
+  organization = {Morgan Kaufmann Pub},
+  __markedentry = {[omar:6]},
+  file = {A description of the CIDR system as used for TDT-2.pdf:text_summary/A description of the CIDR system as used for TDT-2.pdf:PDF},
+  owner = {omar},
+  pdf = {text_summary/A description of the CIDR system as used for TDT-2.pdf},
+  timestamp = {2013.10.16},
+  url = {http://books.google.com/books?hl=en&amp;lr=&amp;id=uuR3mpBI5ksC&amp;oi=fnd&amp;pg=PA205&amp;dq=A+description+of+the+CIDR+system+as+used+for+TDT-2&amp;ots=DMavi0NN5Q&amp;sig=qWzvHODBfpbVDXoBjMtll629mdE}
+}
+
+@INPROCEEDINGS{2000-Radev-p21-30,
+  author = {Radev, Dragomir R and Jing, Hongyan and Budzikowska, Malgorzata},
+  title = {Centroid-based summarization of multiple documents: sentence extraction,
+	utility-based evaluation, and user studies},
+  booktitle = {Proceedings of the 2000 NAACL-ANLP Workshop on Automatic Summarization},
+  year = {2000},
+  pages = {21--30},
+  organization = {Association for Computational Linguistics},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://dl.acm.org/citation.cfm?id=1567567}
+}
+
 @ARTICLE{2004-Radev-p919-938,
   author = {Radev, Dragomir R and Jing, Hongyan and Sty{\'s}, Ma{\l}gorzata and
 	Tam, Daniel},
@@ -261,6 +341,19 @@
   publisher = {Elsevier}
 }
 
+@INCOLLECTION{2004-Ravindra-p289-300,
+  author = {Ravindra, G and Balakrishnan, N and Ramakrishnan, KR},
+  title = {Multi-document automatic text summarization using entropy estimates},
+  booktitle = {SOFSEM 2004: Theory and Practice of Computer Science},
+  publisher = {Springer},
+  year = {2004},
+  pages = {289--300},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://link.springer.com/chapter/10.1007/978-3-540-24618-3_25}
+}
+
 @ARTICLE{1997-Salton-p193-207,
   author = {Salton, Gerard and Singhal, Amit and Mitra, Mandar and Buckley, Chris},
   title = {Automatic text structuring and summarization},
@@ -272,6 +365,33 @@
   date-added = {2013-10-09 16:53:41 +0000},
   date-modified = {2013-10-09 16:53:41 +0000},
   publisher = {Elsevier}
+}
+
+@INCOLLECTION{2008-Seno-p133-142,
+  author = {Seno, Eloize Rossi Marques and Nunes, Maria das Gra{\c{c}}as Volpe},
+  title = {Some experiments on clustering similar sentences of texts in portuguese},
+  booktitle = {Computational Processing of the Portuguese Language},
+  publisher = {Springer},
+  year = {2008},
+  pages = {133--142},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://link.springer.com/chapter/10.1007/978-3-540-85980-2_14}
+}
+
+@INPROCEEDINGS{2009-Sigogne-p281-286,
+  author = {Sigogne, Anthony and Constant, Matthieu},
+  title = {Real-time unsupervised classification of web documents},
+  booktitle = {Computer Science and Information Technology, 2009. IMCSIT'09. International
+	Multiconference on},
+  year = {2009},
+  pages = {281--286},
+  organization = {IEEE},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5352714}
 }
 
 @INPROCEEDINGS{2000-Swan-p49-56,
@@ -335,6 +455,7 @@
   date-added = {2013-10-09 17:00:02 +0000},
   date-modified = {2013-10-09 17:00:02 +0000},
   file = {[21]Document concept lattice for text understanding and summarization.pdf:text_summary/[21]Document concept lattice for text understanding and summarization.pdf:PDF},
+  pdf = {text_summary/[21]Document concept lattice for text understanding and summarization.pdf},
   publisher = {Elsevier}
 }
 
@@ -351,6 +472,7 @@
   date-added = {2013-10-09 16:56:48 +0000},
   date-modified = {2013-10-09 16:56:48 +0000},
   file = {Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:PDF},
+  pdf = {text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf},
   publisher = {Elsevier}
 }
 
