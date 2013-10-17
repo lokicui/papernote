@@ -6,7 +6,6 @@
 	Patrice},
   title = {LIA at TREC 2012 Web Track: Unsupervised Search Concepts Identification
 	from General Sources of Information},
-  __markedentry = {[coder:]},
   file = {LIA at TREC 2012 Web Track\: Unsupervised Search Concepts Identification from General Sources of Information.pdf:papers-not-read/trec/LIA at TREC 2012 Web Track\: Unsupervised Search Concepts Identification from General Sources of Information.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
@@ -18,7 +17,7 @@
   booktitle = {Proceedings of NTCIR},
   year = {2013},
   volume = {10},
-  __markedentry = {[coder:]},
+  file = {LIA at the NTCIR-10 INTENT Task.pdf:papers-not-read/trec/LIA at the NTCIR-10 INTENT Task.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
 }
@@ -27,7 +26,7 @@
   author = {Feng, Zilong and Xue, Yuanhai and Yu, Xiaoming and Xu, Hongbo and
 	Liu, Yue and Cheng, Xueqi},
   title = {ICTNET at Web Track 2012 Diversity Task},
-  __markedentry = {[coder:6]},
+  __markedentry = {[coder:]},
   file = {ICTNET at Web Track 2012 Diversity Task.pdf:papers-not-read/trec/ICTNET at Web Track 2012 Diversity Task.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
@@ -39,7 +38,7 @@
   title = {Session track 2011 overview},
   booktitle = {20th Text REtrieval Conference Notebook Proceedings (TREC 2011)},
   year = {2011},
-  __markedentry = {[coder:6]},
+  __markedentry = {[coder:]},
   owner = {coder},
   timestamp = {2013.10.15}
 }
@@ -60,6 +59,17 @@
   title = {DCU@ TRECMed 2012: Using ad-hoc baselines for domain-specific retrieval},
   booktitle = {Proceedings of the Twenty-First Text REtrieval Conference (TREC 2012)},
   year = {2013},
+  owner = {coder},
+  timestamp = {2013.10.15}
+}
+
+@ARTICLE{2011-Li-p-,
+  author = {Li, Heyuan and Xue, Yuanhai and Guo, Shaohua and Guan, Feng and Yu,
+	Xiaoming and Liu, Yue and Cheng, Xueqi},
+  title = {ICTNET at Web Track 2012 Ad-hoc Task},
+  year = {2011},
+  __markedentry = {[coder:6]},
+  file = {ICTNET at Web Track 2012 Ad-hoc Task.pdf:papers-have-read/trec/ICTNET at Web Track 2012 Ad-hoc Task.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
 }
