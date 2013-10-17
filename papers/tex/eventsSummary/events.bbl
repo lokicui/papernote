@@ -1,0 +1,108 @@
+\begin{thebibliography}{10}
+
+\bibitem{1958-Luhn-p159-165}
+H.~P. Luhn, ``The automatic creation of literature abstracts,'' {\em IBM
+  Journal of research and development}, vol.~2, no.~2, pp.~159--165, 1958.
+
+\bibitem{2003-Chen-p47-59}
+C.~C. Chen, Y.-T. Chen, Y.~Sun, and M.~C. Chen, ``Life cycle modeling of news
+  events using aging theory,'' in {\em Machine Learning: ECML 2003},
+  pp.~47--59, Springer, 2003.
+
+\bibitem{1990-Deerwester-p391-407}
+S.~C. Deerwester, S.~T. Dumais, T.~K. Landauer, G.~W. Furnas, and R.~A.
+  Harshman, ``Indexing by latent semantic analysis,'' {\em JASIS}, vol.~41,
+  no.~6, pp.~391--407, 1990.
+
+\bibitem{2004-Radev-p919-938}
+D.~R. Radev, H.~Jing, M.~Sty{\'s}, and D.~Tam, ``Centroid-based summarization
+  of multiple documents,'' {\em Information Processing \& Management}, vol.~40,
+  no.~6, pp.~919--938, 2004.
+
+\bibitem{1997-Salton-p193-207}
+G.~Salton, A.~Singhal, M.~Mitra, and C.~Buckley, ``Automatic text structuring
+  and summarization,'' {\em Information Processing \& Management}, vol.~33,
+  no.~2, pp.~193--207, 1997.
+
+\bibitem{2005-Harabagiu-p202-209}
+S.~Harabagiu and F.~Lacatusu, ``Topic themes for multi-document
+  summarization,'' in {\em Proceedings of the 28th annual international ACM
+  SIGIR conference on Research and development in information retrieval},
+  pp.~202--209, ACM, 2005.
+
+\bibitem{2008-Wong-p985-992}
+K.-F. Wong, M.~Wu, and W.~Li, ``Extractive summarization using supervised and
+  semi-supervised learning,'' in {\em Proceedings of the 22nd International
+  Conference on Computational Linguistics-Volume 1}, pp.~985--992, Association
+  for Computational Linguistics, 2008.
+
+\bibitem{2004-Erkan-p365-371}
+G.~Erkan and D.~R. Radev, ``Lexpagerank: Prestige in multi-document text
+  summarization.,'' in {\em EMNLP}, vol.~4, pp.~365--371, 2004.
+
+\bibitem{2005-Mihalcea-p-}
+R.~Mihalcea and P.~Tarau, ``A language independent algorithm for single and
+  multiple document summarization,'' in {\em Proceedings of IJCNLP}, vol.~5,
+  2005.
+
+\bibitem{2000-Swan-p49-56}
+R.~Swan and J.~Allan, ``Automatic generation of overview timelines,'' in {\em
+  Proceedings of the 23rd annual international ACM SIGIR conference on Research
+  and development in information retrieval}, pp.~49--56, ACM, 2000.
+
+\bibitem{2001-Allan-p10-18}
+J.~Allan, R.~Gupta, and V.~Khandelwal, ``Temporal summaries of new topics,'' in
+  {\em Proceedings of the 24th annual international ACM SIGIR conference on
+  Research and development in information retrieval}, pp.~10--18, ACM, 2001.
+
+\bibitem{2004-Chieu-p425-432}
+H.~L. Chieu and Y.~K. Lee, ``Query based event extraction along a timeline,''
+  in {\em Proceedings of the 27th annual international ACM SIGIR conference on
+  Research and development in information retrieval}, pp.~425--432, ACM, 2004.
+
+\bibitem{2011-Yan-p745-754}
+R.~Yan, X.~Wan, J.~Otterbacher, L.~Kong, X.~Li, and Y.~Zhang, ``Evolutionary
+  timeline summarization: a balanced optimization framework via iterative
+  substitution,'' in {\em Proceedings of the 34th international ACM SIGIR
+  conference on Research and development in Information Retrieval},
+  pp.~745--754, ACM, 2011.
+
+\bibitem{2001-Brunn-p-}
+M.~Brunn, Y.~Chali, and C.~J. Pinchak, ``Text summarization using lexical
+  chains,'' in {\em Workshop on Text Summarization in conjunction with the ACM
+  SIGIR Conference}, Citeseer, 2001.
+
+\bibitem{2007-Ye-p1643-1662}
+S.~Ye, T.-S. Chua, M.-Y. Kan, and L.~Qiu, ``Document concept lattice for text
+  understanding and summarization,'' {\em Information Processing \&
+  Management}, vol.~43, no.~6, pp.~1643--1662, 2007.
+
+\bibitem{1990-Miller-p235-244}
+G.~A. Miller, R.~Beckwith, C.~Fellbaum, D.~Gross, and K.~J. Miller,
+  ``Introduction to wordnet: An on-line lexical database*,'' {\em International
+  journal of lexicography}, vol.~3, no.~4, pp.~235--244, 1990.
+
+\bibitem{2001-Gong-p19-25}
+Y.~Gong and X.~Liu, ``Generic text summarization using relevance measure and
+  latent semantic analysis,'' in {\em Proceedings of the 24th annual
+  international ACM SIGIR conference on Research and development in information
+  retrieval}, pp.~19--25, ACM, 2001.
+
+\bibitem{2007-Chen-p1016-1025}
+K.-Y. Chen, L.~Luesukprasert, S.~Chou, {\em et~al.}, ``Hot topic extraction
+  based on timeline analysis and multidimensional sentence modeling,'' {\em
+  Knowledge and Data Engineering, IEEE Transactions on}, vol.~19, no.~8,
+  pp.~1016--1025, 2007.
+
+\bibitem{1998-Carbonell-p335-336}
+J.~Carbonell and J.~Goldstein, ``The use of mmr, diversity-based reranking for
+  reordering documents and producing summaries,'' in {\em Proceedings of the
+  21st annual international ACM SIGIR conference on Research and development in
+  information retrieval}, pp.~335--336, ACM, 1998.
+
+\bibitem{2004-Lin-p74-81}
+C.-Y. Lin, ``Rouge: A package for automatic evaluation of summaries,'' in {\em
+  Text Summarization Branches Out: Proceedings of the ACL-04 Workshop},
+  pp.~74--81, 2004.
+
+\end{thebibliography}

@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{CJKutf8}
+\begin{document}
+%\begin{CJK}{UTF8}{gkai}
+%Test it 中文如何？
+%\end{CJK}
+
+%begin title
+Query Based Learning to Rank with AP cluster
+%end title
+
+%begin keywords
+learning to rank, LETOR, ap cluster, query dependent ranking
+%end keywords
+
+%begin abstract
+
+%end abstract
+
+%begin introduction
+Ranking is becoming  a more and more important issue in modern web search system.
+When a user input a query in the web interface , he/she expect the system responds the related information, like the newest one , the cheapest one , the bestsales one or something like this. A problem arise , how to know which one is the most  expected ? a good ranking model can solve this .
+With a common ranking model to fit kinds of query may be not a good idea. For a web search system, there are 
+%end introduction
+
+%begin related works
+%end related works
+
+%begin content
+3. Ranking Using AP
+3.1 motivation
+Big differences among  different queries in several perspectives by people's intension. for example, when we search 'iphone' , we can get lots of pages about this dev, in this case the importance of the website and the view counts will take in charge of the rank function. however, when we search 'noprinter service' ,a low reputation service in beijing, very few related web pages returned, the web content is important than the website's reputation. With only a single ranking model seems not suit to deal this two samples. So we need to train different model to solve this problem.
+When we try KNN , K-means, Binary K-means methods to make the train data set into several parts, how to choose k is a big problem. although we can use cross-validate to get a good choice of k, it's really a time-consuming work and these based on K algs not always works well cause of the initial seeds. we think the ap alg is alternate way to solve it. 
+%end content
+\end{document}
