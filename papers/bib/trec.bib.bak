@@ -26,10 +26,21 @@
   author = {Feng, Zilong and Xue, Yuanhai and Yu, Xiaoming and Xu, Hongbo and
 	Liu, Yue and Cheng, Xueqi},
   title = {ICTNET at Web Track 2012 Diversity Task},
-  __markedentry = {[coder:]},
   file = {ICTNET at Web Track 2012 Diversity Task.pdf:papers-not-read/trec/ICTNET at Web Track 2012 Diversity Task.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
+}
+
+@INPROCEEDINGS{2013-Frank-p-,
+  author = {Frank, John R and Kleiman-Weiner, Max and Roberts, Daniel A and Niu,
+	Feng and Zhang, Ce and R{\'e}, Christopher and Soboroff, Ian},
+  title = {Building an entity-centric stream filtering test collection for TREC
+	2012},
+  booktitle = {21th Text REtrieval Conference (TREC'12)},
+  year = {2013},
+  __markedentry = {[coder:6]},
+  owner = {coder},
+  timestamp = {2013.10.17}
 }
 
 @INPROCEEDINGS{2011-Kanoulas-p-,
@@ -38,7 +49,6 @@
   title = {Session track 2011 overview},
   booktitle = {20th Text REtrieval Conference Notebook Proceedings (TREC 2011)},
   year = {2011},
-  __markedentry = {[coder:]},
   owner = {coder},
   timestamp = {2013.10.15}
 }
@@ -68,7 +78,7 @@
 	Xiaoming and Liu, Yue and Cheng, Xueqi},
   title = {ICTNET at Web Track 2012 Ad-hoc Task},
   year = {2011},
-  __markedentry = {[coder:6]},
+  __markedentry = {[coder:]},
   file = {ICTNET at Web Track 2012 Ad-hoc Task.pdf:papers-have-read/trec/ICTNET at Web Track 2012 Ad-hoc Task.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.15}
