@@ -92,10 +92,10 @@ We divided the query search phase into two parts: query expansion and reranking.
 
 \subsubsection{Meta search}
 
-we use google search and bing search as a meta search resource. each search engine return the top 200 pages about the topic, and we use the page extract technology \cite{linshuang-block} to get main content.  
+we use google search and bing search as a meta search resource. each search engine return the top 200 pages about the topic, and we use the page extract technology \cite{2012-Lin-p256-264} to get main content.  
 
 \subsubsection{Expansion Stractagcy}
-Query expansion is a commonly used method help search system to understand the origin query words. In our experiment, we use the local analysis \cite{localanalysis} method to get the expansion words. By calculating occurrence number of each word and remove the stop words to get the orgin expansion words list. With the help of Standford Parser \cite{standfordparser} , developed by Standford Natural Language Processing Group, we remove all the words in addition to nouns and get the top 30 as the final expansion words list.
+Query expansion is a commonly used method help search system to understand the origin query words. In our experiment, we use the local analysis \cite{2010-Imran-p386-393} method to get the expansion words. By calculating occurrence number of each word and remove the stop words to get the orgin expansion words list. With the help of Standford Parser \cite{standfordparser} , developed by Standford Natural Language Processing Group, we remove all the words in addition to nouns and get the top 30 as the final expansion words list.
 
 We treate the synonym of origin topic word as the denominator to get the weight of each expansion word
 \begin{equation}
@@ -105,23 +105,27 @@ w_i = \frac{TF_i}{TF_max}
 \begin{equation}
 q_{expan} = q_{origin} + \sum_{i=1}^n w_i * Expan_i
 \end{equation}
-\subsection{ReRanking}
+\subsection{Re-ranking Model}
 
-
+We aim to re-ranking the search results with learning to rank technology, on the rise in recent years. Learning to rank is a class of methods used machine learning to solove information retrieval problems. It is an effective way to combine different data features for ranking. We use the public data available for learning to rank, LETOR \cite{2007-Liu-p3-10}. Since the LETOR has a lot of features but we can get less,  we deleted those features of LETOR then train the ranking model. We use the SVMRank \cite{2010-Chapelle-p201-215} algorithm in this task and do five-folds cross validation. The output model is directly applied to the experiment.
 
 \section{Experiments}
 
-This year we submit only one run and it performs bad. In the 
+This year we submit only one run and it performs bad. We think there are two main reasons for this result. One reason is our ClueWeb-B-13 dataset is too small to obtain the valid search result in the data preprocessing step. The other reason is features we used to train the ranking model .Not only the counts of features is a small number ,but there are gaps between LETOR dataset and ClueWeb2012.We need to use more features and suitable dataset to train the ranking model next time.
 
-\section{Conculion and Feature}
+\section{Conculion}
 
 We described our approach in this paper. This year we use web content technology to remove the noise of web page and use the meta search and query expansion method to understand the topic. But the final run performs bad. In the next year , we will use the whole dataset of ClueWeb2012 to verify our approach.
 
-\section{Acknowledge}
 
-\section{References}
-
-
+\begin{thebibliography}{4}
+\bibitem{2010-Imran-p386-393}Imran, H. ; Sharan, A. A framework for automatic query expansion Web Information Systems and Mining, Springer, 2010, 386-393
+\bibitem{2012-Lin-p256-264}Lin, S.; Chen, J. ; Niu, Z. Combining a segmentation-like approach and a density-based approach in content extraction Tsinghua Science and Technology, TUP, 2012, 17, 256-264
+\bibitem{clueweb2012} Carnegie Mellon University. The ClueWeb2012 Dataset [EB.OL]. http://boston.lti.cs.cmu.edu/clueweb12/
+\bibitem{indri} The Lemur Project. The Indri search engine software. http://lemurproject.org/indri.php
+\bibitem{lucene} The ApacheSoftware Foundation. The Lucene Search Library. http://lucene.apache.org/
+\bibitem{standfordparser} The Standford Natural Language processing Group. The Standford Parser. http://nlp.stanford.edu/software/lex-parser.shtml
+\end{thebibliography}
 
 
 
