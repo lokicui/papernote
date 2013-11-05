@@ -72,17 +72,17 @@
 \maketitle
 
 \begin{abstract}
-\emph{In this note paper, we report our experiment method at ad-hoc task of Web Track 2013. The goal of this task is to return a ranking of the documents order by relevance from the collection of static web pages. Our group use meta search to help query expansion as the first step , then do text retrieval with the expansion query to get the search results and rerank them. }
+\emph{In this note paper, we report our experiment method at ad-hoc task of Web Track 2013. The goal of this task is to return a ranking of the documents order by relevance from the collection of static web pages. Our group use meta search to help query expansion as the first step , then retrieval with the expansion query to get the search results and rerank them. }
 \keywords{Ad-hoc search, query expansion , meta search}
 \end{abstract}
 
 \section{Introduction}
 
-The ad-hoc task of web track is based on some given topics to search out the most relevant documents from a large number of static web pages, ClueWeb2012 \cite{clueweb2012}, which comprises about 870 million web pages, collected between February 10, 2012 and May 10, 2012. Topics are similar to queries of tradition web search, short and ambiguity. It's hard to get better search results based on keywords match method. This year we use the WebClue2012-B13 dataset , a subset of WebClue2012 with 50 million web pages.First, we do some prepare word to the dataset in order to remove the spams and noise data. Second, in order to get more semantic meanings, we use meta search approach to get some pages relevant to the topic as seeds , then we can compute the semantic words as expansion. Third, we rerank the search results from the treated data with the expansion query. 
+The ad-hoc task of web track is based on some given topics to search out the most relevant documents from a large number of static web pages, ClueWeb2012 \cite{clueweb2012}, which comprises about 870 million web pages, collected between February 10, 2012 and May 10, 2012. Topics are similar to queries of tradition web search, short and ambiguity. It's hard to get better search results based on keywords match method. This year we use the WebClue2012-B13 dataset , a subset of WebClue2012 with 50 million web pages.Firstly, we do some prepare word to the dataset in order to remove the spams and noise data. Secondly, in order to get more semantic meanings, we use meta search approach to get some pages relevant to the topic as seeds , then we compute the semantic words as expansion. Thirdly, we rerank the search results from the treated data with the expansion query. 
 
 \section{Data preprocessing}
 
-Since the data set is too large to operate directly and efficiently, we remove the non-relevant  data and spam before doing the final query step. In our experiments , we first use the Indri \cite{indri} tools and waterloo spam \cite{2011-Cormack-p441-465} to build the raw index files. Second, we get all the relevant pages from the index with the topic as the query. These relevant pages are the basic data of our experiments. In the process of parsing the web page , we find here are many noises    in body such as advertisements, copy rights, so the Block web content parser \cite{2012-Lin-p256-264} , developed by our lab,  is introduced into this project to extract the main content. Third, we build a new index file with Lucene \cite{lucene} for subsequent experiments.  The reason is that our group already have a web search system based on Lucene package.
+Since the data set is too big to operate directly and efficiently, we remove the non-relevant  data and spam before doing the final query step. In our experiments , we first use the Indri \cite{indri} tools and waterloo spam \cite{2011-Cormack-p441-465} to build the raw index files. Second, we get all the relevant pages from the index with the topic as the query. These relevant pages are the basic data of our experiments. In the process of parsing the web page , we find here are many noises    in body such as advertisements, copy rights, so the Block web content parser \cite{2012-Lin-p256-264} , developed by our lab,  is introduced into this project to extract the main content. Third, we build a new index file with Lucene \cite{lucene} for subsequent experiments.  The reason is that our group has developed a web search system based on Lucene package.
 
 \section{Query Search}
 
@@ -92,30 +92,35 @@ We divided the query search phase into two parts: query expansion and reranking.
 
 \subsubsection{Meta search}
 
-we use google search and bing search as a meta search resource. each search engine return the top 200 pages about the topic, and we use the page extract technology \cite{2012-Lin-p256-264} to get main content.  
+We use google search and bing search as a meta search resource. Each search engine return the top 200 pages about the topic, then we use  the page extract technology \cite{2012-Lin-p256-264} to get main content.  
 
 \subsubsection{Expansion Stractagcy}
 Query expansion is a commonly used method help search system to understand the origin query words. In our experiment, we use the local analysis \cite{2010-Imran-p386-393} method to get the expansion words. By calculating occurrence number of each word and remove the stop words to get the orgin expansion words list. With the help of Standford Parser \cite{standfordparser} , developed by Standford Natural Language Processing Group, we remove all the words in addition to nouns and get the top 30 as the final expansion words list.
 
 We treate the synonym of origin topic word as the denominator to get the weight of each expansion word
 \begin{equation}
-w_i = \frac{TF_i}{TF_max}
+w_i = \frac{TF_i}{TF_{max}}
 \end{equation}
-.We can get the final query expansion formula as below
+The final query expansion formula is descripted : 
 \begin{equation}
-q_{expan} = q_{origin} + \sum_{i=1}^n w_i * Expan_i
+Query_{expan} = Query_{origin} + \sum_{i=1}^n w_i * Expan_i
 \end{equation}
+$n$ is the count of optional expansion terms.
 \subsection{Re-ranking Model}
 
 We aim to re-ranking the search results with learning to rank technology, on the rise in recent years. Learning to rank is a class of methods used machine learning to solove information retrieval problems. It is an effective way to combine different data features for ranking. We use the public data available for learning to rank, LETOR \cite{2007-Liu-p3-10}. Since the LETOR has a lot of features but we can get less,  we deleted those features of LETOR then train the ranking model. We use the SVMRank \cite{2010-Chapelle-p201-215} algorithm in this task and do five-folds cross validation. The output model is directly applied to the experiment.
 
 \section{Experiments}
 
-This year we submit only one run and it performs bad. We think there are two main reasons for this result. One reason is our ClueWeb-B-13 dataset is too small to obtain the valid search result in the data preprocessing step. The other reason is features we used to train the ranking model .Not only the counts of features is a small number ,but there are gaps between LETOR dataset and ClueWeb2012.We need to use more features and suitable dataset to train the ranking model next time.
+This year we submit only one run and it performs not good. We think there are two main reasons for this result. One reason is our ClueWeb-B-13 dataset is too small to obtain the valid search result in the data preprocessing step. The other  is features we used to train the ranking model .Not only the counts of features is a small number ,but there are gaps between LETOR dataset and ClueWeb2012.We need to do some transfer learning  to train the ranking model next time.
 
 \section{Conculion}
 
-We described our approach in this paper. This year we use web content technology to remove the noise of web page and use the meta search and query expansion method to understand the topic. But the final run performs bad. In the next year , we will use the whole dataset of ClueWeb2012 to verify our approach.
+Our approach is descripted in this paper. This year we use web content technology to remove the noise of web page and use the meta search and query expansion method to understand the topic. Since the dataset we have is only one tenth of the whole ,  the rate of two evaluation criteria are low. In the future , we will use the whole dataset of ClueWeb2012 to validate our ideas.
+
+\section{Acknowledgements}
+
+Thank organizers of TREC and NIST.
 
 
 \begin{thebibliography}{4}
