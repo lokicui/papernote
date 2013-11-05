@@ -1,0 +1,140 @@
+
+%%%%%%%%%%%%%%%%%%%%%%% file typeinst.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is the LaTeX source for the instructions to authors using
+% the LaTeX document class 'llncs.cls' for contributions to
+% the Lecture Notes in Computer Sciences series.
+% http://www.springer.com/lncs       Springer Heidelberg 2006/05/04
+%
+% It may be used as a template for your own input - copy it
+% to a new file with a new name and use it as the basis
+% for your article.
+%
+% NB: the document class 'llncs' has its own and detailed documentation, see
+% ftp://ftp.springer.de/data/pubftp/pub/tex/latex/llncs/latex2e/llncsdoc.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage{amssymb}
+\setcounter{tocdepth}{3}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{url}
+%\urldef{\mailsa}\path|{alfred.hofmann, ursula.barth, ingrid.haas, frank.holzwarth,|
+%\urldef{\mailsb}\path|anna.kramer, leonie.kunz, christine.reiss, nicole.sator,|
+%\urldef{\mailsc}\path|erika.siebert-cole, peter.strasser, lncs}@springer.com|    
+%\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+%\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+\mainmatter  % start of an individual contribution
+
+% first the title is needed
+\title{DLDE at web track: ad-hoc task}
+
+% a short form should be given in case it is too long for the running head
+\titlerunning{Ad-hoc task note}
+
+% the name(s) of the author(s) follow(s) next
+%
+% NB: Chinese authors should write their first names(s) in front of
+% their surnames. This ensures that the names appear correctly in
+% the running heads and the author index.
+%
+\author{Jie Chen \and Yulong Shi \and Changmin Zhang \and Weiyin Li \and Zhendong Niu}
+
+%
+\authorrunning{Notebook to ad-hoc task of web track 2013}
+% (feature abused for this document to repeat the title also on left hand pages)
+
+% the affiliations are given next; don't give your e-mail address
+% unless you accept that it will be published
+%\institute{Springer-Verlag, Computer Science Editorial,\\
+%Tiergartenstr. 17, 69121 Heidelberg, Germany\\
+%\mailsa\\
+%\mailsb\\
+%\mailsc\\
+%\url{http://www.springer.com/lncs}}
+
+%
+% NB: a more complex sample for affiliations and the mapping to the
+% corresponding authors can be found in the file "llncs.dem"
+% (search for the string "\mainmatter" where a contribution starts).
+% "llncs.dem" accompanies the document class "llncs.cls".
+%
+
+%\toctitle{Lecture Notes in Computer Science}
+%\tocauthor{Authors' Instructions}
+\maketitle
+
+\begin{abstract}
+\emph{In this note paper, we report our experiment method at ad-hoc task of Web Track 2013. The goal of this task is to return a rank of documents order by relevance from a collection of static web pages. Our group used meta search to help query expansion as the first step, and then retrieved with the expansion query to get the search results and rerank them. }
+\keywords{Ad-hoc search, query expansion, meta search}
+\end{abstract}
+
+\section{Introduction}
+
+The ad-hoc task of web track is given some topics to search out the most relevant documents from a large number of static web pages, ClueWeb2012 \cite{clueweb2012}, which comprises about 870 million web pages collected between February 10, 2012 and May 10, 2012. Topics are short and ambiguous which are similar to queries of tradition web search. It is hard to get satisfied search results based on keyword match method. This year we use the WebClue2012-B13 dataset, a subset of WebClue2012 with 50 million web pages. Firstly, some preprocessing work was done to the dataset in order to remove the spams and noise data. Secondly, in order to get more semantic meanings, meta search approach was used to get some pages relevant to the topic as seeds , and then the semantic words were computed as expansion. Thirdly, the search results from the treated data with the expansion query were reranked. 
+
+\section{Data preprocessing}
+
+Since the data set is too big to be operated directly and efficiently, the non-relevant  data and spam were removed before doing the final query step. In our experiments , the Indri \cite{indri} tools and waterloo spam \cite{2011-Cormack-p441-465} were used to build the raw index files. Second, all the relevant pages were got from the index with the topic as the query. These relevant pages are the basic data of our experiments. In the process of parsing the web page , we found there are many noises such as advertisements and copy rights in body part, so the Block web content parser \cite{2012-Lin-p256-264} ,developed by our lab, was introduced into this project to extract the main content. Third, a new index file with Lucene \cite{lucene} was built for subsequent experiments.  The reason was that our group had developed a web search system based on Lucene package.
+
+\section{Query Search}
+
+The query search phase was divided into two parts: query expansion and reranking. Each origin topic was expanded to a sematic word set as new query to get search results and treat them as the final results after reranking. 
+
+\subsection{Query Expansion }
+
+\subsubsection{Meta search}
+
+Google search and bing search were used as meta search resource. Each search engine returns the top 200 pages about the topic, and then  the page extract technology \cite{2012-Lin-p256-264} was used to get main content.  
+
+\subsubsection{Expansion Strategy}
+Query expansion is a commonly used method helping search system to understand the origin query words. In our experiment, the local analysis \cite{2010-Imran-p386-393} method was used to get the expansion words. Origin expansion words list was got by calculating occurrence number of each word and remove the stop words. With the help of Standford Parser \cite{standfordparser} , developed by Standford Natural Language Processing Group, all the words in addition to nouns were removed and the top 30 were got as final expansion words list.
+
+We treat the synonym of origin topic word as the denominator to get the weight of each expansion word
+\begin{equation}
+w_i = \frac{TF_i}{TF_{max}}
+\end{equation}
+The final query expansion formula is descripted : 
+\begin{equation}
+Query_{expan} = Query_{origin} + \sum_{i=1}^n w_i * Expan_i
+\end{equation}
+$n$ is the count of optional expansion terms.
+\subsection{Re-ranking Model}
+
+We aimed to re-ranking the search results with learning to rank technology which is on the rise in recent years. Learning to rank is a class of methods using machine learning to solve information retrieval problems. It is an effective way to combine different data features for ranking. The public available dataset ,LETOR \cite{2007-Liu-p3-10}, was used to train the rank model. Since a lot of features of LETOR we cannot get,  we droped those columns and  then trained the ranking model. The SVMRank \cite{2010-Chapelle-p201-215} algorithm was used in this task and five-folds cross validation was done. The output model was directly applied to our experiment.
+
+\section{Experiments}
+
+Submited only one run this year and it didn't perform well. We think there are two main reasons that caused this result. One reason was our ClueWeb-B-13 dataset is too small to obtain the valid search results in the data preprocessing step. The other  was caused by features we used to train the ranking model .Not only the number of features was small, but also there were gaps between LETOR dataset and ClueWeb2012.We need to do some transfer learning  to train the ranking model next time.
+
+\section{Conculion}
+
+Our approach was descripted in this paper. This year we used web content technology to remove the noise of web page and used the meta search and query expansion method to understand the topic. Since the dataset we had was only one tenth of the whole one,  the rate of two evaluation criteria was low. In the future , we will use the whole dataset of ClueWeb2012 to validate our ideas.
+
+\section{Acknowledgements}
+
+Thank organizers of TREC and NIST.
+
+
+\begin{thebibliography}{4}
+\bibitem{2010-Imran-p386-393}Imran, H. ; Sharan, A. A framework for automatic query expansion Web Information Systems and Mining, Springer, 2010, 386-393
+\bibitem{2011-Cormack-p441-465}Cormack, G. V.; Smucker, M. D. \& Clarke, C. L. Efficient and effective spam filtering and re-ranking for large web datasets Information retrieval, Springer, 2011, 14, 441-465
+\bibitem{2012-Lin-p256-264}Lin, S.; Chen, J. ; Niu, Z. Combining a segmentation-like approach and a density-based approach in content extraction Tsinghua Science and Technology, TUP, 2012, 17, 256-264
+\bibitem{2007-Liu-p3-10}Liu, T.-Y.; Xu, J.; Qin, T.; Xiong, W.; Li, H. Letor: Benchmark dataset for research on learning to rank for information retrieval Proceedings of SIGIR 2007 workshop on learning to rank for information retrieval, 2007, 3-10
+\bibitem{2010-Chapelle-p201-215}Chapelle, O.; Keerthi, S. S. Efficient algorithms for ranking with SVMs Information Retrieval, Springer, 2010, 13, 201-215
+\bibitem{clueweb2012} Carnegie Mellon University. The ClueWeb2012 Dataset [EB.OL]. http://boston.lti.cs.cmu.edu/clueweb12/
+\bibitem{indri} The Lemur Project. The Indri search engine software. http://lemurproject.org/indri.php
+\bibitem{lucene} The ApacheSoftware Foundation. The Lucene Search Library. http://lucene.apache.org/
+\bibitem{standfordparser} The Standford Natural Language processing Group. The Standford Parser. http://nlp.stanford.edu/software/lex-parser.shtml
+\end{thebibliography}
+
+
+
+\end{document}
