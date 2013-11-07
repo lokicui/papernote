@@ -81,7 +81,7 @@ The ad-hoc task of web track is given some topics to search out the most relevan
 
 \section{Data preprocessing}
 
-Since the data set is too big to be operated directly and efficiently, the non-relevant  data and spam were removed before doing the final query step. In our experiments , the Indri \cite{indri} tools and waterloo spam \cite{2011-Cormack-p441-465} were used to build the raw index files. Second, all the relevant pages were got from the index with the topic as the query. These relevant pages are the basic data of our experiments. In the process of parsing the web page , we found there are many noises such as advertisements and copy rights in body part, so the Block web content parser \cite{2012-Lin-p256-264} ,developed by our lab, was introduced into this project to extract the main content. Third, a new index file with Lucene \cite{lucene} was built for subsequent experiments.  The reason was that our group had developed a web search system based on Lucene package.
+Since the data set is too big to be operated directly and efficiently, the non-relevant  data and spam were removed before the final query step. In our experiments , the Indri \cite{indri} tools and waterloo spam \cite{2011-Cormack-p441-465} were used to build the raw index files. Second, all the relevant pages were got from the index with the topic as the query. These relevant pages are the basic data of our experiments. In the process of parsing the web page , we found there are many noises such as advertisements and copy rights in body part, so the Block web content parser \cite{2012-Lin-p256-264} ,developed by our lab, was introduced into this project to extract the main content. Third, a new index file with Lucene \cite{lucene} was built for subsequent experiments.  The reason was that our group had developed a web search system based on Lucene package.
 
 \section{Query Search}
 
@@ -115,11 +115,11 @@ Submited only one run this year and it didn't perform well. We think there are t
 
 \section{Conculion}
 
-Our approach was descripted in this paper. This year we used web content technology to remove the noise of web page and used the meta search and query expansion method to understand the topic. Since the dataset we had was only one tenth of the whole one,  the rate of two evaluation criteria was low. In the future , we will use the whole dataset of ClueWeb2012 to validate our ideas.
+Our approach was descripted in this paper. This year we used web content technology to remove the noise of web page and used the meta search and query expansion method to understand the topic. Since the dataset we had was less than one tenth of the whole one,  the rate of two evaluation criteria was low. In the future , we will use the whole dataset of ClueWeb2012 to validate our ideas.
 
 \section{Acknowledgements}
 
-Thank organizers of TREC and NIST.
+Thank organizers of TREC and NIST. This work is supported by the National Natural Science Foundation of China (no. 61250010) and  the 111 Project of Beijing Institute of Technology.
 
 
 \begin{thebibliography}{4}
