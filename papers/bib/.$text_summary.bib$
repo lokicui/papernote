@@ -1,0 +1,501 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF-8
+
+@INPROCEEDINGS{2001-Allan-p10-18,
+  author = {Allan, James and Gupta, Rahul and Khandelwal, Vikas},
+  title = {Temporal summaries of new topics},
+  booktitle = {Proceedings of the 24th annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2001},
+  pages = {10--18},
+  organization = {ACM},
+  date-added = {2013-10-09 16:58:43 +0000},
+  date-modified = {2013-10-09 16:58:43 +0000},
+  file = {allan2001temporal.pdf:text_summary/allan2001temporal.pdf:PDF}
+}
+
+@ARTICLE{-Binwahlan-p1-1,
+  author = {Binwahlan, Mohammed Salem and Suanmali, Ladda and Salim, Naomie},
+  title = {TEXT SUMMARIZATION},
+  journal = {Ahmad Zaki Abu Bakar Roliana Ibrahim},
+  pages = {1},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16}
+}
+
+@PHDTHESIS{2006-Bogdanovski-p-,
+  author = {Bogdanovski, Alexander},
+  title = {An Automatic Text Summarizer},
+  school = {Master thesis, COM3010, 3 May},
+  year = {2006},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16}
+}
+
+@INPROCEEDINGS{2001-Brunn-p-,
+  author = {Brunn, Meru and Chali, Yllias and Pinchak, Christopher J},
+  title = {Text summarization using lexical chains},
+  booktitle = {Workshop on Text Summarization in conjunction with the ACM SIGIR
+	Conference},
+  year = {2001},
+  organization = {Citeseer},
+  date-added = {2013-10-09 16:59:43 +0000},
+  date-modified = {2013-10-09 16:59:43 +0000},
+  file = {[20]Text Summarization using lexical chains.pdf:text_summary/[20]Text Summarization using lexical chains.pdf:PDF}
+}
+
+@INPROCEEDINGS{1998-Carbonell-p335-336,
+  author = {Carbonell, Jaime and Goldstein, Jade},
+  title = {The use of MMR, diversity-based reranking for reordering documents
+	and producing summaries},
+  booktitle = {Proceedings of the 21st annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {1998},
+  pages = {335--336},
+  organization = {ACM},
+  owner = {coder},
+  timestamp = {2013.10.10},
+  url = {http://dl.acm.org/citation.cfm?id=291025}
+}
+
+@INCOLLECTION{2003-Chen-p47-59,
+  author = {Chen, Chien Chin and Chen, Yao-Tsung and Sun, Yeali and Chen, Meng
+	Chang},
+  title = {Life cycle modeling of news events using aging theory},
+  booktitle = {Machine Learning: ECML 2003},
+  publisher = {Springer},
+  year = {2003},
+  pages = {47--59},
+  bdsk-file-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RElpOUy5vYmplY3RzViRjbGFzc1dOUy5rZXlzog8QgASABoAHohMUgAKAA1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgMGRpXTlMuZGF0YU8RAo4AAAAAAo4AAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAMxQS7BIKwAAAQ9TtR9bM11MaWZlIEN5Y2xlIG1vZGVsIzEwRjU0ODUucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABD1SFzdVNvAAAAAAAAAAAAAEAAwAACSAAAAAAAAAAAAAAAAAAAAAMdGV4dF9zdW1tYXJ5ABAACAAAzE/bMAAAABEACAAAzdTdPAAAAAEAIAEPU7UA6fOXAOnzlgBn8ioABsyiAAbMkgAFwjMAAgOnAAIAeE1hY2ludG9zaCBIRDpVc2VyczoAb21hcjoAd29ya3NwYWNlOgByb3J3b3Jrc3BhY2U6AHBhcGVyTm90ZToAcGFwZXJzOgBiaWI6AHRleHRfc3VtbWFyeToAWzNdTGlmZSBDeWNsZSBtb2RlbCMxMEY1NDg1LnBkZgAOAHoAPABbADMAXQBMAGkAZgBlACAAQwB5AGMAbABlACAAbQBvAGQAZQBsAGkAbgBnACAAbwBmACAAbgBlAHcAcwAgAGUAdgBlAG4AdABzACAAdQBzAGkAbgBnACAAYQBnAGkAbgBnACAAdABoAGUAbwByAHkALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAIBVc2Vycy9vbWFyL3dvcmtzcGFjZS9yb3J3b3Jrc3BhY2UvcGFwZXJOb3RlL3BhcGVycy9iaWIvdGV4dF9zdW1tYXJ5L1szXUxpZmUgQ3ljbGUgbW9kZWxpbmcgb2YgbmV3cyBldmVudHMgdXNpbmcgYWdpbmcgdGhlb3J5LnBkZgATAAEvAAAVAAIAC///AACABdIcHR4fWCRjbGFzc2VzWiRjbGFzc25hbWWjHyAhXU5TTXV0YWJsZURhdGFWTlNEYXRhWE5TT2JqZWN0XxBJdGV4dF9zdW1tYXJ5L1szXUxpZmUgQ3ljbGUgbW9kZWxpbmcgb2YgbmV3cyBldmVudHMgdXNpbmcgYWdpbmcgdGhlb3J5LnBkZtIcHSQloiUhXE5TRGljdGlvbmFyeRIAAYagXxAPTlNLZXllZEFyY2hpdmVyAAgAEQAWAB8AKAAyADUAOgA8AEUASwBSAF0AZABsAG8AcQBzAHUAeAB6AHwAhgCTAJgAoAMyAzQDOQNCA00DUQNfA2YDbwO7A8ADwwPQA9UAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAD5w==},
+  date-added = {2013-10-09 13:44:47 +0000},
+  date-modified = {2013-10-09 13:44:47 +0000},
+  file = {chen2003life.pdf:text_summary/chen2003life.pdf:PDF}
+}
+
+@ARTICLE{2007-Chen-p1016-1025,
+  author = {Chen, Kuan-Yu and Luesukprasert, Luesak and Chou, S and others},
+  title = {Hot topic extraction based on timeline analysis and multidimensional
+	sentence modeling},
+  journal = {Knowledge and Data Engineering, IEEE Transactions on},
+  year = {2007},
+  volume = {19},
+  pages = {1016--1025},
+  number = {8},
+  owner = {coder},
+  publisher = {IEEE},
+  timestamp = {2013.10.10},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4262533}
+}
+
+@INPROCEEDINGS{2004-Chieu-p425-432,
+  author = {Chieu, Hai Leong and Lee, Yoong Keok},
+  title = {Query based event extraction along a timeline},
+  booktitle = {Proceedings of the 27th annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2004},
+  pages = {425--432},
+  organization = {ACM},
+  date-added = {2013-10-09 16:59:02 +0000},
+  date-modified = {2013-10-09 16:59:02 +0000},
+  file = {chieu2004query.pdf:text_summary/chieu2004query.pdf:PDF}
+}
+
+@INPROCEEDINGS{2004-Corston-Oliver-p43-50,
+  author = {Corston-Oliver, Simon and Ringger, Eric and Gamon, Michael and Campbell,
+	Richard},
+  title = {Task-focused summarization of email},
+  booktitle = {ACL-04 Workshop: Text Summarization Branches Out},
+  year = {2004},
+  pages = {43--50},
+  date-added = {2013-10-09 16:57:12 +0000},
+  date-modified = {2013-10-09 16:57:12 +0000}
+}
+
+@ARTICLE{1990-Deerwester-p391-407,
+  author = {Deerwester, Scott C. and Dumais, Susan T and Landauer, Thomas K.
+	and Furnas, George W. and Harshman, Richard A.},
+  title = {Indexing by latent semantic analysis},
+  journal = {JASIS},
+  year = {1990},
+  volume = {41},
+  pages = {391--407},
+  number = {6},
+  date-added = {2013-10-09 13:47:40 +0000},
+  date-modified = {2013-10-09 13:47:40 +0000}
+}
+
+@ARTICLE{2004-Ding-p-,
+  author = {Ding, Yuan},
+  title = {A Survey on Multi-Document Summarization},
+  journal = {Department of Computer and Information Science University of Pennsylvania},
+  year = {2004},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  publisher = {Citeseer},
+  timestamp = {2013.10.16}
+}
+
+@INPROCEEDINGS{2004-Erkan-p365-371,
+  author = {Erkan, G{\"u}nes and Radev, Dragomir R},
+  title = {LexPageRank: Prestige in Multi-Document Text Summarization.},
+  booktitle = {EMNLP},
+  year = {2004},
+  volume = {4},
+  pages = {365--371},
+  date-added = {2013-10-09 16:54:19 +0000},
+  date-modified = {2013-10-09 16:54:19 +0000}
+}
+
+@INPROCEEDINGS{2000-Goldstein-p40-48,
+  author = {Goldstein, Jade and Mittal, Vibhu and Carbonell, Jaime and Kantrowitz,
+	Mark},
+  title = {Multi-document summarization by sentence extraction},
+  booktitle = {Proceedings of the 2000 NAACL-ANLPWorkshop on Automatic summarization-Volume
+	4},
+  year = {2000},
+  pages = {40--48},
+  organization = {Association for Computational Linguistics},
+  date-added = {2013-10-09 16:53:09 +0000},
+  date-modified = {2013-10-09 16:53:09 +0000}
+}
+
+@INPROCEEDINGS{2001-Gong-p19-25,
+  author = {Gong, Yihong and Liu, Xin},
+  title = {Generic text summarization using relevance measure and latent semantic
+	analysis},
+  booktitle = {Proceedings of the 24th annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2001},
+  pages = {19--25},
+  organization = {ACM},
+  owner = {coder},
+  pdf = {text_summary/[23]Generic text summarization using relevance measure and latent semantic analysis-373.pdf},
+  ps = {text_summary/[23]Generic text summarization using relevance measure and latent semantic analysis-373.pdf},
+  timestamp = {2013.10.10},
+  url = {http://dl.acm.org/citation.cfm?id=383955}
+}
+
+@INPROCEEDINGS{2005-Harabagiu-p202-209,
+  author = {Harabagiu, Sanda and Lacatusu, Finley},
+  title = {Topic themes for multi-document summarization},
+  booktitle = {Proceedings of the 28th annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2005},
+  pages = {202--209},
+  organization = {ACM},
+  date-added = {2013-10-09 16:55:35 +0000},
+  date-modified = {2013-10-09 16:55:35 +0000},
+  file = {[10]Topic Themes for Multi-Document Summarization-106.pdf:text_summary/[10]Topic Themes for Multi-Document Summarization-106.pdf:PDF}
+}
+
+@INPROCEEDINGS{2007-Hu-p901-904,
+  author = {Hu, Meishan and Sun, Aixin and Lim, Ee-Peng},
+  title = {Comments-oriented blog summarization by sentence extraction},
+  booktitle = {Proceedings of the sixteenth ACM conference on Conference on information
+	and knowledge management},
+  year = {2007},
+  pages = {901--904},
+  organization = {ACM},
+  date-added = {2013-10-09 16:58:04 +0000},
+  date-modified = {2013-10-09 16:58:04 +0000}
+}
+
+@INPROCEEDINGS{2004-Lin-p74-81,
+  author = {Lin, Chin-Yew},
+  title = {Rouge: A package for automatic evaluation of summaries},
+  booktitle = {Text Summarization Branches Out: Proceedings of the ACL-04 Workshop},
+  year = {2004},
+  pages = {74--81},
+  owner = {coder},
+  timestamp = {2013.10.10}
+}
+
+@INPROCEEDINGS{2002-Lin-p457-464,
+  author = {Lin, Chin-Yew and Hovy, Eduard},
+  title = {From single to multi-document summarization: A prototype system and
+	its evaluation},
+  booktitle = {Proceedings of the 40th Annual Meeting on Association for Computational
+	Linguistics},
+  year = {2002},
+  pages = {457--464},
+  organization = {Association for Computational Linguistics},
+  date-added = {2013-10-09 16:52:38 +0000},
+  date-modified = {2013-10-09 16:52:38 +0000}
+}
+
+@ARTICLE{1958-Luhn-p159-165,
+  author = {Luhn, Hans Peter},
+  title = {The automatic creation of literature abstracts},
+  journal = {IBM Journal of research and development},
+  year = {1958},
+  volume = {2},
+  pages = {159--165},
+  number = {2},
+  bdsk-file-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RElpOUy5vYmplY3RzViRjbGFzc1dOUy5rZXlzog8QgASABoAHohMUgAKAA1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgMGRpXTlMuZGF0YU8RAogAAAAAAogAAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAMxQS7BIKwAAAQ9TtR9bMV1MdWhuX1RoZSBBdXRvbWF0IzEwRjU0MjIucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABD1QizXjlcgAAAAAAAAAAAAEAAwAACSAAAAAAAAAAAAAAAAAAAAAMdGV4dF9zdW1tYXJ5ABAACAAAzE/bMAAAABEACAAAzXh08gAAAAEAIAEPU7UA6fOXAOnzlgBn8ioABsyiAAbMkgAFwjMAAgOnAAIAeE1hY2ludG9zaCBIRDpVc2VyczoAb21hcjoAd29ya3NwYWNlOgByb3J3b3Jrc3BhY2U6AHBhcGVyTm90ZToAcGFwZXJzOgBiaWI6AHRleHRfc3VtbWFyeToAWzFdTHVobl9UaGUgQXV0b21hdCMxMEY1NDIyLnBkZgAOAHYAOgBbADEAXQBMAHUAaABuAF8AVABoAGUAIABBAHUAdABvAG0AYQB0AGkAYwAgAEMAcgBlAGEAdABpAG8AbgAgAG8AZgAgAEwAaQB0AGUAcgBhAHQAdQByAGUAIABBAGIAcwB0AHIAYQBjAHQAcwAuAHAAZABmAA8AGgAMAE0AYQBjAGkAbgB0AG8AcwBoACAASABEABIAflVzZXJzL29tYXIvd29ya3NwYWNlL3JvcndvcmtzcGFjZS9wYXBlck5vdGUvcGFwZXJzL2JpYi90ZXh0X3N1bW1hcnkvWzFdTHVobl9UaGUgQXV0b21hdGljIENyZWF0aW9uIG9mIExpdGVyYXR1cmUgQWJzdHJhY3RzLnBkZgATAAEvAAAVAAIAC///AACABdIcHR4fWCRjbGFzc2VzWiRjbGFzc25hbWWjHyAhXU5TTXV0YWJsZURhdGFWTlNEYXRhWE5TT2JqZWN0XxBHdGV4dF9zdW1tYXJ5L1sxXUx1aG5fVGhlIEF1dG9tYXRpYyBDcmVhdGlvbiBvZiBMaXRlcmF0dXJlIEFic3RyYWN0cy5wZGbSHB0kJaIlIVxOU0RpY3Rpb25hcnkSAAGGoF8QD05TS2V5ZWRBcmNoaXZlcgAIABEAFgAfACgAMgA1ADoAPABFAEsAUgBdAGQAbABvAHEAcwB1AHgAegB8AIYAkwCYAKADLAMuAzMDPANHA0sDWQNgA2kDswO4A7sDyAPNAAAAAAAAAgEAAAAAAAAAKAAAAAAAAAAAAAAAAAAAA98=},
+  date-added = {2013-10-09 13:42:55 +0000},
+  date-modified = {2013-10-09 13:42:55 +0000},
+  file = {luhn1958automatic.pdf:text_summary/luhn1958automatic.pdf:PDF},
+  owner = {coder},
+  publisher = {IBM}
+}
+
+@INPROCEEDINGS{2005-Mihalcea-p-,
+  author = {Mihalcea, Rada and Tarau, Paul},
+  title = {A language independent algorithm for single and multiple document
+	summarization},
+  booktitle = {Proceedings of IJCNLP},
+  year = {2005},
+  volume = {5},
+  date-added = {2013-10-09 16:54:45 +0000},
+  date-modified = {2013-10-09 16:54:45 +0000}
+}
+
+@ARTICLE{1990-Miller-p235-244,
+  author = {Miller, George A and Beckwith, Richard and Fellbaum, Christiane and
+	Gross, Derek and Miller, Katherine J},
+  title = {Introduction to wordnet: An on-line lexical database*},
+  journal = {International journal of lexicography},
+  year = {1990},
+  volume = {3},
+  pages = {235--244},
+  number = {4},
+  date-added = {2013-10-09 17:00:28 +0000},
+  date-modified = {2013-10-09 17:00:28 +0000},
+  publisher = {Oxford Univ Press}
+}
+
+@INPROCEEDINGS{2008-Nedunchelian-p480-485,
+  author = {Nedunchelian, R},
+  title = {Centroid based summarization of multiple documents implemented using
+	timestamps},
+  booktitle = {Emerging Trends in Engineering and Technology, 2008. ICETET'08. First
+	International Conference on},
+  year = {2008},
+  pages = {480--485},
+  organization = {IEEE},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4579948}
+}
+
+@INPROCEEDINGS{2000-Radev-p99-109,
+  author = {Radev, Dragomir R and Fan, Weiguo},
+  title = {Automatic summarization of search engine hit lists},
+  booktitle = {Proceedings of the ACL-2000 workshop on Recent advances in natural
+	language processing and information retrieval: held in conjunction
+	with the 38th Annual Meeting of the Association for Computational
+	Linguistics-Volume 11},
+  year = {2000},
+  pages = {99--109},
+  organization = {Association for Computational Linguistics},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://dl.acm.org/citation.cfm?id=1117768}
+}
+
+@INPROCEEDINGS{1999-Radev-p205-205,
+  author = {Radev, Dragomir R and Hatzivassiloglou, Vasileios and McKeown, Kathleen
+	R},
+  title = {A description of the CIDR system as used for TDT-2},
+  booktitle = {Broadcast News Workshop'99 Proceedings},
+  year = {1999},
+  pages = {205},
+  organization = {Morgan Kaufmann Pub},
+  __markedentry = {[omar:6]},
+  file = {A description of the CIDR system as used for TDT-2.pdf:text_summary/A description of the CIDR system as used for TDT-2.pdf:PDF},
+  owner = {omar},
+  pdf = {text_summary/A description of the CIDR system as used for TDT-2.pdf},
+  ps = {text_summary/A description of the CIDR system as used for TDT-2.pdf},
+  timestamp = {2013.10.16},
+  url = {http://books.google.com/books?hl=en&amp;lr=&amp;id=uuR3mpBI5ksC&amp;oi=fnd&amp;pg=PA205&amp;dq=A+description+of+the+CIDR+system+as+used+for+TDT-2&amp;ots=DMavi0NN5Q&amp;sig=qWzvHODBfpbVDXoBjMtll629mdE}
+}
+
+@INPROCEEDINGS{2000-Radev-p21-30,
+  author = {Radev, Dragomir R and Jing, Hongyan and Budzikowska, Malgorzata},
+  title = {Centroid-based summarization of multiple documents: sentence extraction,
+	utility-based evaluation, and user studies},
+  booktitle = {Proceedings of the 2000 NAACL-ANLP Workshop on Automatic Summarization},
+  year = {2000},
+  pages = {21--30},
+  organization = {Association for Computational Linguistics},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://dl.acm.org/citation.cfm?id=1567567}
+}
+
+@ARTICLE{2004-Radev-p919-938,
+  author = {Radev, Dragomir R and Jing, Hongyan and Sty{\'s}, Ma{\l}gorzata and
+	Tam, Daniel},
+  title = {Centroid-based summarization of multiple documents},
+  journal = {Information Processing \& Management},
+  year = {2004},
+  volume = {40},
+  pages = {919--938},
+  number = {6},
+  date-added = {2013-10-09 16:55:11 +0000},
+  date-modified = {2013-10-09 16:55:11 +0000},
+  file = {radev2004centroid.pdf:text_summary/radev2004centroid.pdf:PDF},
+  publisher = {Elsevier}
+}
+
+@INCOLLECTION{2004-Ravindra-p289-300,
+  author = {Ravindra, G and Balakrishnan, N and Ramakrishnan, KR},
+  title = {Multi-document automatic text summarization using entropy estimates},
+  booktitle = {SOFSEM 2004: Theory and Practice of Computer Science},
+  publisher = {Springer},
+  year = {2004},
+  pages = {289--300},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://link.springer.com/chapter/10.1007/978-3-540-24618-3_25}
+}
+
+@ARTICLE{1997-Salton-p193-207,
+  author = {Salton, Gerard and Singhal, Amit and Mitra, Mandar and Buckley, Chris},
+  title = {Automatic text structuring and summarization},
+  journal = {Information Processing \& Management},
+  year = {1997},
+  volume = {33},
+  pages = {193--207},
+  number = {2},
+  date-added = {2013-10-09 16:53:41 +0000},
+  date-modified = {2013-10-09 16:53:41 +0000},
+  publisher = {Elsevier}
+}
+
+@INCOLLECTION{2008-Seno-p133-142,
+  author = {Seno, Eloize Rossi Marques and Nunes, Maria das Gra{\c{c}}as Volpe},
+  title = {Some experiments on clustering similar sentences of texts in portuguese},
+  booktitle = {Computational Processing of the Portuguese Language},
+  publisher = {Springer},
+  year = {2008},
+  pages = {133--142},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://link.springer.com/chapter/10.1007/978-3-540-85980-2_14}
+}
+
+@INPROCEEDINGS{2009-Sigogne-p281-286,
+  author = {Sigogne, Anthony and Constant, Matthieu},
+  title = {Real-time unsupervised classification of web documents},
+  booktitle = {Computer Science and Information Technology, 2009. IMCSIT'09. International
+	Multiconference on},
+  year = {2009},
+  pages = {281--286},
+  organization = {IEEE},
+  __markedentry = {[omar:6]},
+  owner = {omar},
+  timestamp = {2013.10.16},
+  url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5352714}
+}
+
+@INPROCEEDINGS{2000-Swan-p49-56,
+  author = {Swan, Russell and Allan, James},
+  title = {Automatic generation of overview timelines},
+  booktitle = {Proceedings of the 23rd annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2000},
+  pages = {49--56},
+  organization = {ACM},
+  date-added = {2013-10-09 16:58:24 +0000},
+  date-modified = {2013-10-09 16:58:24 +0000},
+  file = {[16]Automatic Generation of Overview Timelines.pdf:text_summary/[16]Automatic Generation of Overview Timelines.pdf:PDF}
+}
+
+@INPROCEEDINGS{2008-Wan-p299-306,
+  author = {Wan, Xiaojun and Yang, Jianwu},
+  title = {Multi-document summarization using cluster-based link analysis},
+  booktitle = {Proceedings of the 31st annual international ACM SIGIR conference
+	on Research and development in information retrieval},
+  year = {2008},
+  pages = {299--306},
+  organization = {ACM},
+  date-added = {2013-10-09 16:55:59 +0000},
+  date-modified = {2013-10-09 16:55:59 +0000}
+}
+
+@INPROCEEDINGS{2008-Wong-p985-992,
+  author = {Wong, Kam-Fai and Wu, Mingli and Li, Wenjie},
+  title = {Extractive summarization using supervised and semi-supervised learning},
+  booktitle = {Proceedings of the 22nd International Conference on Computational
+	Linguistics-Volume 1},
+  year = {2008},
+  pages = {985--992},
+  organization = {Association for Computational Linguistics}
+}
+
+@INPROCEEDINGS{2011-Yan-p745-754,
+  author = {Yan, Rui and Wan, Xiaojun and Otterbacher, Jahna and Kong, Liang
+	and Li, Xiaoming and Zhang, Yan},
+  title = {Evolutionary timeline summarization: a balanced optimization framework
+	via iterative substitution},
+  booktitle = {Proceedings of the 34th international ACM SIGIR conference on Research
+	and development in Information Retrieval},
+  year = {2011},
+  pages = {745--754},
+  organization = {ACM},
+  date-added = {2013-10-09 16:59:22 +0000},
+  date-modified = {2013-10-09 16:59:22 +0000},
+  file = {yan2011evolutionary.pdf:text_summary/yan2011evolutionary.pdf:PDF}
+}
+
+@ARTICLE{2007-Ye-p1643-1662,
+  author = {Ye, Shiren and Chua, Tat-Seng and Kan, Min-Yen and Qiu, Long},
+  title = {Document concept lattice for text understanding and summarization},
+  journal = {Information Processing \& Management},
+  year = {2007},
+  volume = {43},
+  pages = {1643--1662},
+  number = {6},
+  date-added = {2013-10-09 17:00:02 +0000},
+  date-modified = {2013-10-09 17:00:02 +0000},
+  file = {[21]Document concept lattice for text understanding and summarization.pdf:text_summary/[21]Document concept lattice for text understanding and summarization.pdf:PDF},
+  pdf = {text_summary/[21]Document concept lattice for text understanding and summarization.pdf},
+  ps = {text_summary/[21]Document concept lattice for text understanding and summarization.pdf},
+  publisher = {Elsevier}
+}
+
+@ARTICLE{2005-Yeh-p75-95,
+  author = {Yeh, Jen-Yuan and Ke, Hao-Ren and Yang, Wei-Pang and Meng, I and
+	others},
+  title = {Text summarization using a trainable summarizer and latent semantic
+	analysis},
+  journal = {Information Processing \& Management},
+  year = {2005},
+  volume = {41},
+  pages = {75--95},
+  number = {1},
+  date-added = {2013-10-09 16:56:48 +0000},
+  date-modified = {2013-10-09 16:56:48 +0000},
+  file = {Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:PDF},
+  pdf = {text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf},
+  ps = {text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf},
+  publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{2006-Zhou-p237-237,
+  author = {Zhou, Liang and Hovy, Eduard H},
+  title = {On the Summarization of Dynamically Introduced Information: Online
+	Discussions and Blogs.},
+  booktitle = {AAAI Spring Symposium: Computational Approaches to Analyzing Weblogs},
+  year = {2006},
+  pages = {237},
+  date-added = {2013-10-09 16:57:39 +0000},
+  date-modified = {2013-10-09 16:57:39 +0000}
+}
+
+@comment{jabref-meta: selector_publisher:}
+
+@comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_journal:}
+
+@comment{jabref-meta: selector_keywords:}
+
