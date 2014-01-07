@@ -71,17 +71,17 @@
 
 
 \begin{abstract}
-\emph{To reduce people’s time of obtaining the valuable information from amounts of web news, many summarization approaches have been researched. However, most of these approaches ignore the temporal characteristics of news reporting a same event. In this paper, we focus on summarizing the development and changes of events by taking timeline and semantic into consideration. There are three steps in our method. First, we extract hot terms from news which report the same event according to their energy during the time interval we choose (i.e. one day). Second, we use an incremental latent semantic analysis model to recognize the semantic units of news. Third, we construct a semantic text relationship map and choose sentences both important and diverse to generate timeline summaries. Experiment results show that our method can improve the timeline summarization significantly.}
+\emph{To reduce people’s time for obtaining the valuable information from amounts of web news, many summarization approaches have been researched. However, most of these approaches ignore the temporal characteristics of news reporting a same event. In this paper, we focus on summarizing the development and changes of events by taking timeline and semantic into consideration. There are three steps in our method. First, we extract hot terms from news which report the same event according to their energy during the time interval we choose (i.e. one day). Second, we use an incremental latent semantic analysis model to recognize the semantic units of news. Third, we construct a semantic text relationship map and choose sentences both important and diverse to generate timeline summaries. Experiment results show that our method can improve the timeline summarization significantly.}
 
 \keywords{Summarization, timeline, aging theory, incremental LSA}
 \end{abstract}
 \section{Introduction}
 
-Everyday thousands of news stories reporting different events are published on the Internet. These reports are disordered and people have to read most of them to know what is happening which is a time-consuming job undoubtedly. How can we get useful information about an event efficiently? Automatic summarization has been such a method solving this kind of information overloading since Luhn \cite{1958-Luhn-p159-165} proposed it in 1958. And numerous pages have been published in the field, ranging from single document to multiple documents, from extraction to abstraction, from traditional document to web document, email, blog and other types of genre. However, most of these papers focus on the central idea of document or document set ignoring the temporal characteristics of events. As a result, people cannot catch the changes of events over time efficiently. 
+Everyday thousands of news stories reporting different events are published on the Internet. These reports are disordered and people have to read most of them to know what is happening which is a time-consuming job undoubtedly. How can we get useful information about an event efficiently? Automatic summarization has been such a method solving this kind of information overloading since Luhn \cite{1958-Luhn-p159-165} proposed it in 1958. And numerous pages have been published in the field, ranging from single document to multiple documents, from extraction to abstraction, from traditional document to web document, email, blog and other types of genre. However, these research work focus on the central idea of document or document set ignoring the temporal characteristics of events. As a result, people cannot catch the changes of events over time efficiently. 
 
 Recent years, topic detection and tracking (TDT) which detects new events from the large scale news stream and tracks them as events going on draws researchers' attention. But it did not display events properly, and people still have to read all the relevant reports to get what they want to know about the event. However, we are still enlightened by its usage of tracking which make us decide to generate a timeline summary consisting of a series of individual small summaries with sentences both important and diverse to help people understand the development of an event more quickly.
 
-Every event goes through a life cycle of birth, growth, maturity and death, which means that special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{2003-Chen-p47-59} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also been used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
+Every event goes through a life cycle of birth, growth, maturity and death, which means that special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{2003-Chen-p47-59} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
 
 The importance of sentences is decided by terms occurring at the documents in keywords-based summarization. But different authors use different words to express a same meaning and many words has several meanings. So identifying the implicit semantics of news can improve summary quality greatly. Here, we propose an incremental model based on latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} which is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
@@ -89,7 +89,7 @@ As descripted above, in this paper, we generate news event summary by considerin
 
 The remainder of this paper is organized as follows: Section 2 reviews some related works on summarization. We discuss our approach of event timeline summarization using aging theory and incremental latent semantic analysis model in section 3. Our experiments and some discusses are described in section 4. Section 5 presents our conclusions and some future plans.
 
-\section{Related works}
+\section{Related Work}
 
 It has been more than 50 years since Luhn \cite{1958-Luhn-p159-165} proposed automatic summarization. During these years numerous papers have been published on this topic and it has been adopted in many fields. In the beginning, researchers focus on single document summarization. With the rapid development of Internet, the amount of information is increasing in an exponential manner and people easily get lost when faced with such overwhelming information. In order to resolve this kind of information overload, multi-document summarization has attracted researchers' eyes. Centroid-based method is one of the most popular multi-document summarization methods generating summaries using centroids, position and first-sentence overlapping \cite{2004-Radev-p919-938}. While in clustering approaches researchers cluster similar sentences together and select one representative sentence from each main cluster \cite{1997-Salton-p193-207,2005-Harabagiu-p202-209}. Later, machine learning \cite{2008-Wong-p985-992} and graph-based method \cite{2004-Erkan-p365-371,2005-Mihalcea-p-} are exploited to multi-document summarization. But they all did not consider temporal characteristic.
 Swan et al. \cite{2000-Swan-p49-56} presented temporal characteristics while displaying events under the task of Topic Detection and Tracking. Allan et al. \cite{2001-Allan-p10-18} built a temporal summary of news stories to help people monitor changes in news coverage over time. Chieu et al. \cite{2004-Chieu-p425-432} generated a timeline summary combing a series of events related to an entity with interest and burstiness. Yan et al.\cite{2011-Yan-p745-754} built a query-based evolutionary timeline summarization via a balanced optimization framework considering four attributes. However, they all missed the daily hot points of events. Aging theory was put forward by Chen et al. \cite{1990-Deerwester-p391-407} in the task of hot topic detecting, and now we transfer it to our timeline summarization to solve this problem.
@@ -107,7 +107,7 @@ As aging theory using the concept of energy to indicate the liveliness of an eve
 \begin{equation}
   E_{w,t} =F(F^{-1}E_{w,t-1}+\alpha\cdot\chi^2_{w,t})
 \end{equation}
-where $E_{w,t}$ is the energy of word $w$  in time interval$t$ , and $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
+where $E_{w,t}$ is the energy of word $w$  in time interval $t$ , and $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
 
 However, no words descripting a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor β at the end of every time interval. And if the decayed energy value became negative, we change it to 0.
 
@@ -159,7 +159,7 @@ A'				& 	\vdots 	&	\ddots 	& \vdots 		\\
 				& a_{m_Mn_1} &   \ldots 	&a_{m_Mn_N}
 \end{array}\right)
 \end{displaymath}
-where $A'$ is the semantic space obtained before that date, $0$ indicates the weight of new words in old sentences are 0 since they did not occur in the old ones utterly, while others are the weight of words in the new sentences.  
+where $A'$ is the semantic space obtained before that date, $0$ indicates the weight of new words in old sentences since they did not occur , while others are the weight of words in the new sentences.  
 Then we can perform the same latent semantic analysis process to the incremental matrix with the description above and get a new semantic space at a wider range.
 
 \subsection{Summary generation}
@@ -197,8 +197,9 @@ However, simply ranking sentences based on the weighted score above may result i
 \subsection{Dataset}
 Here we use dataset from TAC2010 which contains 46 events taken from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service. Since our experiment is based on the timeline which can track the development of events and there are no standard summaries for timeline summarization evaluation, we generate a timeline summary for each event manually and save it as the standard. Here we take 5 events as examples.
 \subsection{Experiment}
+\label{methodsection}
 
-We start our experiment with some preprocesses like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We also implement some widely used multi-document summarization methods as the baselines.
+We start our experiment with some preprocessing like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We also implement some widely used multi-document summarization methods as the baselines.
 
 $Centroid$ extracts sentences based on centroid value, positional value and first-sentence overlap.
 
@@ -223,7 +224,7 @@ F-measure = \frac{2PR}{P+R}
 Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
 
 \subsection{Results and discussions}
-We conduct our proposed method AIL and some other widely used approaches descripted in section 4.2 as well as the methods without aging theory (AIL1) and incremental LSA (AIL2) to the events and the overall results are shown in Fig ~\ref{fig:zhuzhuangtu}. Table ~\ref{evalutions} describes some details about the results of the 5 example events.
+We compared our proposed method AIL and some other widely used approaches descripted in section~\ref{methodsection} as well as the methods without aging theory (AIL1) or incremental LSA (AIL2) to the events and the overall results are shown in Fig ~\ref{fig:zhuzhuangtu}. Table ~\ref{evalutions} describes some details about the results of the 5 example events.
 \begin{figure}
 \centering
 \includegraphics[height=6.2cm]{zhuzhuangtu}
@@ -239,30 +240,30 @@ We conduct our proposed method AIL and some other widely used approaches descrip
                   &             		& $Centroid$ & $Cluster$ & $Allan$    & $AIL$       & $AIL_1$    & $AIL_2$ \\
 \hline
                  &  recall		& 0.3641     & 0.3639 & 0.3967 & 0.4258 & 0.4186 & 0.4098 \\
-Event1   &  precise		& 0.3789     & 0.3867 & 4939    & 0.5190 & 0.5046 & 0.4962 \\
+Event1   &  precision	& 0.3789     & 0.3867 & 4939    & 0.5190 & 0.5046 & 0.4962 \\
 	       &  F-measure	& 0.3713     & 0.3749 & 0.4399 & 0.4678 & 0.4575 & 0.4488 \\
 \hline
                  &  recall 		& 0.3201     & 0.3540 & 0.4029 & 0.4230 & 0.4146 & 0.4115 \\
-Event2   &  precise 		& 0.3538     & 0.3730 & 0.4940 & 0.5238 & 0.5068 & 0.5032 \\
+Event2   &  precision	& 0.3538     & 0.3730 & 0.4940 & 0.5238 & 0.5068 & 0.5032 \\
 	       &  F-measure 	& 0.3361     & 0.3632 & 0.4438 & 0.4680 & 0.4560 & 0.4527 \\
 \hline
                  &  recall 		& 0.3273     & 0.3736 & 0.4136 & 0.4330 & 0.4238 & 0.4189 \\
-Event3   &  precise 		& 0.3523     & 0.3846 & 0.4846 & 0.5297 & 0.5153 & 0.4911 \\
+Event3   &  precision	& 0.3523     & 0.3846 & 0.4846 & 0.5297 & 0.5153 & 0.4911 \\
 	       &  F-measure 	& 0.3393     & 0.3790 & 0.4462 & 0.4764 & 0.4651 & 0.4521 \\
 \hline
                  &  recall 		& 0.3112     & 0.3264 & 0.4292 & 0.4492 & 0.4380 & 0.4338 \\
-Event4   &  precise 		& 0.3384     & 0.3692 & 0.4664 & 0.5130 & 0.5068 & 0.5029 \\
+Event4   &  precision	& 0.3384     & 0.3692 & 0.4664 & 0.5130 & 0.5068 & 0.5029 \\
 	       &  F-measure 	& 0.3242     & 0.3465 & 0.4470 & 0.4789 & 0.4698 & 0.4658 \\
 \hline
                  &  recall 		& 0.3001     & 0.3153 & 0.4153 & 0.4201 & 0.4183 & 0.4168 \\
-Event5   &  precise 		& 0.3540     & 0.3679 & 0.4679 & 0.5162 & 0.5048 & 0.5006 \\
+Event5   &  precision	& 0.3540     & 0.3679 & 0.4679 & 0.5162 & 0.5048 & 0.5006 \\
 	       &  F-measure 	& 0.3248     & 0.3395 & 0.4401 & 0.4632 & 0.4574 & 0.4548 \\
 \hline
 \end{tabular}
 \label{evalutions}
 \end{table*}
 
-From the results, we can see that:$Centroid$ has the worst performance mainly because it selects sentences according to the centroids of document set which makes it capture the main points of events but loses the coverage of other points. $Cluster$ divides sentences with different meanings into different clusters and selects one representative sentence from each cluster which improves its overall performance but still works worse than $Allan$ and our methods due to neglecting the temporal characteristics. For $Allan$, it ranks sentences with useful and novelty and take into account timeline so it outperforms $Centroid$ and $Cluster$. And unsurprisingly, our proposed method outperforms all these baselines, indicating that aging theory and incremental $LSA$ is applicable to timeline summarization. Comparison within our approach enhances our proposition further for without either aging theory or incremental $LSA$ the performance will drop obviously.
+From the results, we can see that: $Centroid$ has the worst performance mainly because it selects sentences according to the centroids of document set which makes it capture the main points of events but loses the coverage of other points. $Cluster$ divides sentences with different meanings into different clusters and selects one representative sentence from each cluster which improves its overall performance but still works worse than $Allan$ and our methods due to neglecting the temporal characteristics. For $Allan$, it ranks sentences with useful and novelty and take into account timeline so it outperforms $Centroid$ and $Cluster$. And unsurprisingly, our proposed method outperforms all these baselines, indicating that aging theory and incremental $LSA$ is applicable to timeline summarization. Comparison within our approach enhances our proposition further for without either aging theory or incremental $LSA$ the performance will drop obviously.
 In order to balance importance and diversity metrics when combine them together in Eq.9, we change the parameter λ from 0.1 to 0.9. And its effect on the results is shown in Fig \ref{fig:lambda}.
 
 \begin{figure}

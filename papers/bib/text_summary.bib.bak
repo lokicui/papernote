@@ -172,6 +172,7 @@
   organization = {ACM},
   owner = {coder},
   pdf = {text_summary/[23]Generic text summarization using relevance measure and latent semantic analysis-373.pdf},
+  ps = {text_summary/[23]Generic text summarization using relevance measure and latent semantic analysis-373.pdf},
   timestamp = {2013.10.10},
   url = {http://dl.acm.org/citation.cfm?id=383955}
 }
@@ -308,6 +309,7 @@
   file = {A description of the CIDR system as used for TDT-2.pdf:text_summary/A description of the CIDR system as used for TDT-2.pdf:PDF},
   owner = {omar},
   pdf = {text_summary/A description of the CIDR system as used for TDT-2.pdf},
+  ps = {text_summary/A description of the CIDR system as used for TDT-2.pdf},
   timestamp = {2013.10.16},
   url = {http://books.google.com/books?hl=en&amp;lr=&amp;id=uuR3mpBI5ksC&amp;oi=fnd&amp;pg=PA205&amp;dq=A+description+of+the+CIDR+system+as+used+for+TDT-2&amp;ots=DMavi0NN5Q&amp;sig=qWzvHODBfpbVDXoBjMtll629mdE}
 }
@@ -456,6 +458,7 @@
   date-modified = {2013-10-09 17:00:02 +0000},
   file = {[21]Document concept lattice for text understanding and summarization.pdf:text_summary/[21]Document concept lattice for text understanding and summarization.pdf:PDF},
   pdf = {text_summary/[21]Document concept lattice for text understanding and summarization.pdf},
+  ps = {text_summary/[21]Document concept lattice for text understanding and summarization.pdf},
   publisher = {Elsevier}
 }
 
@@ -473,6 +476,7 @@
   date-modified = {2013-10-09 16:56:48 +0000},
   file = {Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:PDF},
   pdf = {text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf},
+  ps = {text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf},
   publisher = {Elsevier}
 }
 
