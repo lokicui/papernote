@@ -1,6 +1,79 @@
 % This file was created with JabRef 2.9.2.
 % Encoding: UTF8
 
+@INPROCEEDINGS{2011-Louis-p62-67,
+  author = {Annie Louis and Eric Crestan and Youssef Billawala and Rao Shen and
+	Fernando Diaz and Jean-Francois Crespo},
+  title = {Use of Query Similarity for Improving Presentation of News Verticals},
+  booktitle = {VLDS},
+  year = {2011},
+  pages = {62-67},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  crossref = {DBLP:conf/vlds/2011},
+  ee = {http://ceur-ws.org/Vol-880/VLDS-p62-Louis.pdf},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
+@INPROCEEDINGS{2006-Mao-p229-236,
+  author = {Ching-Hao Mao and Ta-Wei Hung and Jan-Ming Ho and Hahn-Ming Lee},
+  title = {Semantic Similarity Measurement of Chinese Financial News Titles
+	Based on Event Frame Extracting},
+  booktitle = {ICEBE},
+  year = {2006},
+  pages = {229-236},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  crossref = {DBLP:conf/icebe/2006},
+  ee = {http://doi.ieeecomputersociety.org/10.1109/ICEBE.2006.86},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
+@INPROCEEDINGS{2007-Montalvo-p107-114,
+  author = {Soto Montalvo and Raquel Mart\'{\i}nez-Unanue and Arantza Casillas
+	and V\'{\i}ctor Fresno},
+  title = {Bilingual News Clustering Using Named Entities and Fuzzy Similarity},
+  booktitle = {TSD},
+  year = {2007},
+  pages = {107-114},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  crossref = {DBLP:conf/tsd/2007},
+  ee = {http://dx.doi.org/10.1007/978-3-540-74628-7_16},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
+@INPROCEEDINGS{2013-Nie-p8312-8316,
+  author = {Xuecheng Nie and Wei Feng and Liang Wan and Lei Xie},
+  title = {Measuring semantic similarity by contextualword connections in Chinese
+	news story segmentation},
+  booktitle = {ICASSP},
+  year = {2013},
+  pages = {8312-8316},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  crossref = {DBLP:conf/icassp/2013},
+  ee = {http://dx.doi.org/10.1109/ICASSP.2013.6639286},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
+@INPROCEEDINGS{2011-Zelenik-p302-307,
+  author = {Dusan Zelen\'{\i}k and M{\'a}ria Bielikov{\'a}},
+  title = {News Recommending based on Text Similarity and user Behaviour},
+  booktitle = {WEBIST},
+  year = {2011},
+  pages = {302-307},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  crossref = {DBLP:conf/webist/2011},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
 @ARTICLE{2010--p157-158,
   author = { and },
   title = { },
@@ -131,20 +204,6 @@
   url = {http://d.wanfangdata.com.cn/periodical_jsjgcysj200812053.aspx}
 }
 
-@ARTICLE{2008--p38-39,
-  author = { },
-  title = { LAMP },
-  journal = { },
-  year = {2008},
-  volume = {163},
-  pages = {38--39},
-  number = {9},
-  owner = {coder},
-  publisher = { },
-  timestamp = {2013.10.28},
-  url = {http://d.wanfangdata.com.cn/periodical_nmgkjyjj200809021.aspx}
-}
-
 @ARTICLE{2008--p4-6,
   author = { and },
   title = { },
@@ -256,7 +315,7 @@
   volume = {6},
   pages = {3341--3346},
   organization = {IEEE},
-  __markedentry = {[coder:6]},
+  __markedentry = {[coder:]},
   owner = {coder},
   timestamp = {2013.10.29},
   url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5580677}
@@ -293,7 +352,6 @@
   year = {2004},
   volume = {7},
   pages = {032},
-  __markedentry = {[coder:]},
   owner = {coder},
   timestamp = {2013.10.29},
   url = {http://en.cnki.com.cn/Article_en/CJFDTOTAL-JFYZ200407032.htm}
@@ -455,6 +513,21 @@
   timestamp = {2013.10.29}
 }
 
+@ARTICLE{2000-Watters-p793-804,
+  author = {Carolyn R. Watters and Hong Wang},
+  title = {Rating news documents for similarity},
+  journal = {JASIS},
+  year = {2000},
+  volume = {51},
+  pages = {793-804},
+  number = {9},
+  __markedentry = {[coder:6]},
+  bibsource = {DBLP, http://dblp.uni-trier.de},
+  ee = {http://dx.doi.org/10.1002/(SICI)1097-4571(2000)51:9$<$793::AID-ASI20$>$3.0.CO;2-Q},
+  owner = {coder},
+  timestamp = {2013.11.28}
+}
+
 @INPROCEEDINGS{2010-Yang-p372-374,
   author = {Yang, Sen and Cheng, Xueqi and Chen, You and Zhang, Jin and Xu, Hongbo
 	and Fang, Gaolin},
@@ -489,5 +562,18 @@
   organization = {Citeseer},
   owner = {coder},
   timestamp = {2013.10.17}
+}
+
+@ARTICLE{2008--p38-39,
+  title = { LAMP },
+  journal = { },
+  year = {2008},
+  volume = {163},
+  pages = {38--39},
+  number = {9},
+  owner = {coder},
+  publisher = { },
+  timestamp = {2013.10.28},
+  url = {http://d.wanfangdata.com.cn/periodical_nmgkjyjj200809021.aspx}
 }
 
