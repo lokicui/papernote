@@ -1,0 +1,25 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF8
+
+@INPROCEEDINGS{Carlson:2010:CSL:1718487.1718501,
+  author = {Carlson, Andrew and Betteridge, Justin and Wang, Richard C. and Hruschka,Jr.,
+	Estevam R. and Mitchell, Tom M.},
+  title = {Coupled Semi-supervised Learning for Information Extraction},
+  booktitle = {Proceedings of the Third ACM International Conference on Web Search
+	and Data Mining},
+  year = {2010},
+  series = {WSDM '10},
+  pages = {101--110},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1718501},
+  doi = {10.1145/1718487.1718501},
+  isbn = {978-1-60558-889-6},
+  keywords = {bootstrap learning, information extraction, semi-supervised learning,
+	web mining},
+  location = {New York, New York, USA},
+  numpages = {10},
+  review = {基于半监督学习的信息抽取},
+  url = {http://doi.acm.org/10.1145/1718487.1718501}
+}
+
