@@ -166,6 +166,28 @@
   url = {http://doi.acm.org/10.1145/1871437.1871523}
 }
 
+@ARTICLE{Tang:2010:CAW:1870096.1870098,
+  author = {Tang, Jie and Yao, Limin and Zhang, Duo and Zhang, Jing},
+  title = {A Combination Approach to Web User Profiling},
+  journal = {ACM Trans. Knowl. Discov. Data},
+  year = {2010},
+  volume = {5},
+  pages = {2:1--2:44},
+  number = {1},
+  month = dec,
+  acmid = {1870098},
+  address = {New York, NY, USA},
+  articleno = {2},
+  doi = {10.1145/1870096.1870098},
+  issn = {1556-4681},
+  issue_date = {December 2010},
+  keywords = {User profiling, information extraction, name disambiguation, social
+	network, text mining, topic modeling},
+  numpages = {44},
+  publisher = {ACM},
+  url = {http://doi.acm.org/10.1145/1870096.1870098}
+}
+
 @INPROCEEDINGS{Yan:2009:RER:1697959.1697965,
   author = {Yan, Xin and Jeschke, Sabina and Dubey, Amit and Wilke, Marc and
 	Sch\"{u}tze, Hinrich},
