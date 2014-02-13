@@ -23,6 +23,7 @@
   publisher = {ACM},
   acmid = {1718501},
   doi = {10.1145/1718487.1718501},
+  file = {Coupled Semi-Supervised Learning for Information Extraction.pdf:ie_cv/Coupled Semi-Supervised Learning for Information Extraction.pdf:PDF},
   isbn = {978-1-60558-889-6},
   keywords = {bootstrap learning, information extraction, semi-supervised learning,
 	web mining},
@@ -41,7 +42,49 @@
   year = {2010},
   volume = {1},
   pages = {99--103},
-  organization = {IEEE}
+  organization = {IEEE},
+  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF}
+}
+
+@ARTICLE{kumariautomated,
+  author = {Kumari, Sneha and Giri, Punam and Choudhury, Swati and Patil, SR},
+  title = {AUTOMATED RESUME EXTRACTION AND CANDIDATE SELECTION SYSTEM},
+  journal = {International Journal of Research in Engineering and Technology},
+  year = {2014},
+  file = {kumariautomated.pdf:ie_cv/kumariautomated.pdf:PDF},
+  review = {IJRET 是个已经被EI踢出去的韩国垃圾期刊...已经没有必要去投了..
+	
+	
+	本文写的巨垃圾无比..
+	
+	总共3页，还有1页半的图，而且非常不清晰..
+	
+	绝笔的渣渣..
+	
+	
+	IJRET可以无视了.
+	
+	
+	本文毫无参考意义}
+}
+
+@ARTICLE{maheshwari2010mining,
+  author = {Maheshwari, Sumit},
+  title = {Mining special features to improve the performance of product selection
+	in e-commerce environment and resume extraction system},
+  journal = {International Institute of Information Technology},
+  year = {2010}
+}
+
+@INCOLLECTION{maheshwari2010approach,
+  author = {Maheshwari, Sumit and Sainani, Abhishek and Reddy, P Krishna},
+  title = {An approach to extract special skills to improve the performance
+	of resume selection},
+  booktitle = {Databases in Networked Information Systems},
+  publisher = {Springer},
+  year = {2010},
+  pages = {256--273},
+  file = {An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:ie_cv/An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:PDF}
 }
 
 @ARTICLE{sainani2012mining,
@@ -60,6 +103,7 @@
   author = {Saxena, Charul},
   title = {Enhancing Productivity of Recruitment Process Using Data mining \&
 	Text Mining Tools},
-  year = {2011}
+  year = {2011},
+  file = {Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:ie_cv/Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:PDF}
 }
 

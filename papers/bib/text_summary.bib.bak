@@ -217,7 +217,8 @@
   pages = {901--904},
   organization = {ACM},
   date-added = {2013-10-09 16:58:04 +0000},
-  date-modified = {2013-10-09 16:58:04 +0000}
+  date-modified = {2013-10-09 16:58:04 +0000},
+  file = {Comments-Oriented Blog Summarization by Sentence Extraction.pdf:text_summary/Comments-Oriented Blog Summarization by Sentence Extraction.pdf:PDF}
 }
 
 @ARTICLE{lievolutionary,
@@ -457,6 +458,7 @@
   year = {2007},
   volume = {7},
   pages = {2903--2908},
+  file = {wan2007manifold.pdf:text_summary/wan2007manifold.pdf:PDF},
   url = {http://www.aaai.org/Papers/IJCAI/2007/IJCAI07-467.pdf}
 }
 

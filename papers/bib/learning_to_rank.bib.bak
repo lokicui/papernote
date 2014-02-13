@@ -55,6 +55,7 @@
   year = {2010},
   pages = {11--20},
   organization = {ACM},
+  file = {towards recency ranking in web search.pdf:papers-not-read/ranking/towards recency ranking in web search.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.14},
   url = {http://dl.acm.org/citation.cfm?id=1718490}
@@ -67,7 +68,9 @@
 	(ICML-10)},
   year = {2010},
   pages = {327--334},
-  review = {机器学习泰斗Michael I. Jordan他们做的排序学习的理论和算法研究，研究了一种条件更宽松下的排序学习问题的损失函数设计}
+  file = {duchi2010consistency.pdf:l2r/duchi2010consistency.pdf:PDF},
+  review = {机器学习泰斗Michael I. Jordan他们做的排序学习的理论和算法研究，研究了一种条件更宽松下的排序学习问题的损失函数设计},
+  url = {http://machinelearning.wustl.edu/mlpapers/paper_files/icml2010_DuchiMJ10.pdf}
 }
 
 @ARTICLE{2012-Geng-p374-383,
@@ -154,6 +157,7 @@
   address = {New York, NY, USA},
   articleno = {20},
   doi = {10.1145/2382438.2382439},
+  file = {an online learning framework for refining recency search results with user click feedback.pdf:papers-not-read/ranking/an online learning framework for refining recency search results with user click feedback.pdf:PDF},
   issn = {1046-8188},
   issue_date = {November 2012},
   numpages = {28},
@@ -197,6 +201,7 @@
   year = {2010},
   pages = {1129--1139},
   organization = {Association for Computational Linguistics},
+  file = {Learning Recurrent Event Queries for Web Search.pdf:papers-not-read/rencency ranking/Learning Recurrent Event Queries for Web Search.pdf:PDF},
   owner = {coder},
   timestamp = {2013.10.14},
   url = {http://dl.acm.org/citation.cfm?id=1870768}
