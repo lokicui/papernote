@@ -221,6 +221,19 @@
   file = {Comments-Oriented Blog Summarization by Sentence Extraction.pdf:text_summary/Comments-Oriented Blog Summarization by Sentence Extraction.pdf:PDF}
 }
 
+@INPROCEEDINGS{jiang2008incremental,
+  author = {Jiang, Hsin-Yi and Nguyen, Tien N and Chen, Xiang and Jaygarl, Hojun
+	and Chang, Carl K},
+  title = {Incremental latent semantic indexing for automatic traceability link
+	evolution management},
+  booktitle = {Automated Software Engineering, 2008. ASE 2008. 23rd IEEE/ACM International
+	Conference on},
+  year = {2008},
+  pages = {59--68},
+  organization = {IEEE},
+  __markedentry = {[coder:1]}
+}
+
 @ARTICLE{lievolutionary,
   author = {Li, Jiwei and Li, Sujian},
   title = {Evolutionary Hierarchical Dirichlet Process for Timeline Summarization},
@@ -458,6 +471,7 @@
   year = {2007},
   volume = {7},
   pages = {2903--2908},
+  __markedentry = {[coder:1]},
   file = {wan2007manifold.pdf:text_summary/wan2007manifold.pdf:PDF},
   url = {http://www.aaai.org/Papers/IJCAI/2007/IJCAI07-467.pdf}
 }
@@ -469,6 +483,7 @@
 	Summarization},
   booktitle = {Proceedings of ACL},
   year = {2013},
+  __markedentry = {[coder:]},
   file = {wang2013sentence.pdf:text_summary/wang2013sentence.pdf:PDF},
   url = {http://www.cs.cornell.edu/~luwang/papers/ACL2013a.pdf}
 }
@@ -483,6 +498,18 @@
   organization = {Association for Computational Linguistics},
   file = {Extractive Summarization Using Supervised and Semi-supervised Learning.pdf:text_summary/Extractive Summarization Using Supervised and Semi-supervised Learning.pdf:PDF},
   url = {http://delivery.acm.org/10.1145/1600000/1599205/p985-wong.pdf?ip=219.143.205.21&id=1599205&acc=OPEN&key=F9B7F4BB951339C12170E67C436BC2829D49BEFAA7BAD10F1D61B289166C0248&CFID=409859778&CFTOKEN=76424652&__acm__=1392277892_f30288005b9af653dd7810687373b4a6}
+}
+
+@INPROCEEDINGS{yan2011timeline,
+  author = {Yan, Rui and Kong, Liang and Huang, Congrui and Wan, Xiaojun and
+	Li, Xiaoming and Zhang, Yan},
+  title = {Timeline generation through evolutionary trans-temporal summarization},
+  booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language
+	Processing},
+  year = {2011},
+  pages = {433--443},
+  organization = {Association for Computational Linguistics},
+  __markedentry = {[coder:1]}
 }
 
 @INPROCEEDINGS{2011-Yan-p745-754,
@@ -545,6 +572,18 @@
   file = {AdaSum\: An Adaptive Model for Summarization.pdf:text_summary/AdaSum\: An Adaptive Model for Summarization.pdf:PDF;zhang2008adasum.pdf:text_summary/zhang2008adasum.pdf:PDF},
   review = {面向话题的多文本聚类算法},
   url = {http://delivery.acm.org/10.1145/1460000/1458201/p901-zhang.pdf?ip=219.143.205.72&id=1458201&acc=ACTIVE%20SERVICE&key=C2716FEBFA981EF127A6F735449B9D9AE612D5E6DC5246E9&CFID=394387031&CFTOKEN=36549997&__acm__=1389064401_522aaef3ae6d7e4a8892e09cedbe534e}
+}
+
+@INPROCEEDINGS{zhao2013timeline,
+  author = {Zhao, Xin Wayne and Guo, Yanwei and Yan, Rui and He, Yulan and Li,
+	Xiaoming},
+  title = {Timeline generation with social attention},
+  booktitle = {Proceedings of the 36th international ACM SIGIR conference on Research
+	and development in information retrieval},
+  year = {2013},
+  pages = {1061--1064},
+  organization = {ACM},
+  __markedentry = {[coder:1]}
 }
 
 @INPROCEEDINGS{2006-Zhou-p237-237,
