@@ -77,6 +77,17 @@
   file = {chen2003life.pdf:text_summary/chen2003life.pdf:PDF}
 }
 
+@ARTICLE{chen2014summarization,
+  author = {Chen, Jingqiang and Zhuge, Hai},
+  title = {Summarization of scientific documents by detecting common facts in
+	citations},
+  journal = {Future Generation Computer Systems},
+  year = {2014},
+  volume = {32},
+  pages = {246--252},
+  publisher = {Elsevier}
+}
+
 @ARTICLE{2007-Chen-p1016-1025,
   author = {Chen, Kuan-Yu and Luesukprasert, Luesak and Chou, S and others},
   title = {Hot topic extraction based on timeline analysis and multidimensional
@@ -231,7 +242,42 @@
   year = {2008},
   pages = {59--68},
   organization = {IEEE},
-  __markedentry = {[coder:1]}
+  __markedentry = {[coder:1]},
+  file = {Incremental latent semantic indexing for automatic traceability link evolution management.pdf:text_summary/Incremental latent semantic indexing for automatic traceability link evolution management.pdf:PDF},
+  review = {采用扩展初始矩阵的方式进行增量矩阵，可以推导。
+	
+	
+	A1 = U1 S1 V1
+	
+	
+	U1e <= U1
+	
+	
+	V12 <= V1
+	
+	
+	P = U1e A2 V1e
+	
+	
+	  = Ut S2 Vt
+	
+	
+	=> A2 = U1e' Ut S2 Vt V1e'
+	
+	
+	U1e' Ut Ut' U1e  = I
+	
+	
+	=>
+	
+	
+	A2 = Utt S2 Vtt
+	
+	
+	Utt = U1e' Ut
+	
+	
+	Vtt = Vt V1e'}
 }
 
 @ARTICLE{lievolutionary,
@@ -500,6 +546,24 @@
   url = {http://delivery.acm.org/10.1145/1600000/1599205/p985-wong.pdf?ip=219.143.205.21&id=1599205&acc=OPEN&key=F9B7F4BB951339C12170E67C436BC2829D49BEFAA7BAD10F1D61B289166C0248&CFID=409859778&CFTOKEN=76424652&__acm__=1392277892_f30288005b9af653dd7810687373b4a6}
 }
 
+@INPROCEEDINGS{Yan:2011:TGT:2145432.2145483,
+  author = {Yan, Rui and Kong, Liang and Huang, Congrui and Wan, Xiaojun and
+	Li, Xiaoming and Zhang, Yan},
+  title = {Timeline Generation Through Evolutionary Trans-temporal Summarization},
+  booktitle = {Proceedings of the Conference on Empirical Methods in Natural Language
+	Processing},
+  year = {2011},
+  series = {EMNLP '11},
+  pages = {433--443},
+  address = {Stroudsburg, PA, USA},
+  publisher = {Association for Computational Linguistics},
+  acmid = {2145483},
+  isbn = {978-1-937284-11-4},
+  location = {Edinburgh, United Kingdom},
+  numpages = {11},
+  url = {http://dl.acm.org/citation.cfm?id=2145432.2145483}
+}
+
 @INPROCEEDINGS{yan2011timeline,
   author = {Yan, Rui and Kong, Liang and Huang, Congrui and Wan, Xiaojun and
 	Li, Xiaoming and Zhang, Yan},
@@ -509,7 +573,8 @@
   year = {2011},
   pages = {433--443},
   organization = {Association for Computational Linguistics},
-  __markedentry = {[coder:1]}
+  __markedentry = {[coder:1]},
+  file = {Timeline Generation through Evolutionary Trans-Temporal Summarization.pdf:text_summary/Timeline Generation through Evolutionary Trans-Temporal Summarization.pdf:PDF}
 }
 
 @INPROCEEDINGS{2011-Yan-p745-754,
@@ -583,7 +648,8 @@
   year = {2013},
   pages = {1061--1064},
   organization = {ACM},
-  __markedentry = {[coder:1]}
+  __markedentry = {[coder:1]},
+  file = {Timeline generation with social attention.pdf:text_summary/Timeline generation with social attention.pdf:PDF}
 }
 
 @INPROCEEDINGS{2006-Zhou-p237-237,
