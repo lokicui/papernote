@@ -14,6 +14,20 @@
   file = {allan2001temporal.pdf:text_summary/allan2001temporal.pdf:PDF}
 }
 
+@INPROCEEDINGS{binh2013predicting,
+  author = {Binh Tran, Giang and Alrifai, Mohammad and Quoc Nguyen, Dat},
+  title = {Predicting relevant news events for timeline summaries},
+  booktitle = {Proceedings of the 22nd international conference on World Wide Web
+	companion},
+  year = {2013},
+  pages = {91--92},
+  organization = {International World Wide Web Conferences Steering Committee},
+  review = {2013 WWW 
+	
+	
+	http://www.l3s.de/~gtran/timeline/}
+}
+
 @ARTICLE{-Binwahlan-p1-1,
   author = {Binwahlan, Mohammed Salem and Suanmali, Ladda and Salim, Naomie},
   title = {TEXT SUMMARIZATION},
@@ -259,13 +273,13 @@
 	P = U1e A2 V1e
 	
 	
-	  = Ut S2 Vt
+	 = Ut S2 Vt
 	
 	
 	=> A2 = U1e' Ut S2 Vt V1e'
 	
 	
-	U1e' Ut Ut' U1e  = I
+	U1e' Ut Ut' U1e = I
 	
 	
 	=>
@@ -497,6 +511,20 @@
   file = {[16]Automatic Generation of Overview Timelines.pdf:text_summary/[16]Automatic Generation of Overview Timelines.pdf:PDF}
 }
 
+@ARTICLE{tran2013leveraging,
+  author = {Tran, Giang Binh and Tran, Anh Tuan and Tran, Nam Khanh and Alrifai,
+	Mohammad and Kanhabua, Nattiya},
+  title = {Leveraging Learning To Rank in an Optimization Framework for Timeline
+	Summarization},
+  year = {2013},
+  __markedentry = {[coder:2]},
+  file = {Leveraging Learning To Rank in an Optimization Framework for Timeline Summarization.pdf:text_summary/Leveraging Learning To Rank in an Optimization Framework for Timeline Summarization.pdf:PDF},
+  review = {SIGIR 2013 workshop taia 的文章
+	
+	
+	提供了标注数据集}
+}
+
 @INPROCEEDINGS{2008-Wan-p299-306,
   author = {Wan, Xiaojun and Yang, Jianwu},
   title = {Multi-document summarization using cluster-based link analysis},
@@ -519,6 +547,42 @@
   pages = {2903--2908},
   __markedentry = {[coder:1]},
   file = {wan2007manifold.pdf:text_summary/wan2007manifold.pdf:PDF},
+  review = {采用流式学习方法
+	
+	
+	第一步：采用manifold learning的方法将句子的权重计算出来
+	
+	
+	1）先将句子进行相似度计算，cosin
+	
+	
+	2）计算句子的矩阵，将相似度矩阵分为 同一个文档的句子 和 不同文档的句子 的相似度之和
+	
+	W = lambda1 W1 + (1-lambda) W2
+	
+	
+	3）找出转义矩阵 S = D^(-1/2) W D^(-1/2) 
+	
+	
+	前人以证明该东西可以收敛
+	
+	
+	4）学习部分：f(t+1) = alpha S f(t) + (1-alpha) y
+	
+	
+	其中，用这个公式做传播，直到收敛
+	
+	
+	第二部：在上面计算结果的基础上减掉句子多样性的分数
+	
+	
+	1）按照第一步的计算将句子排序，从分数大到分数小
+	
+	
+	2）先取出第一个，然后用公式减掉后面句子与其的相似度，R - w S fi , 其中w是个系数，用来当惩罚因子的
+	
+	
+	最终实现了 不但考虑了相似度，又考虑了多样性的问题，最终得到一个完整的结果。},
   url = {http://www.aaai.org/Papers/IJCAI/2007/IJCAI07-467.pdf}
 }
 
@@ -558,6 +622,7 @@
   address = {Stroudsburg, PA, USA},
   publisher = {Association for Computational Linguistics},
   acmid = {2145483},
+  file = {Timeline Generation through Evolutionary Trans-Temporal Summarization.pdf:text_summary/Timeline Generation through Evolutionary Trans-Temporal Summarization.pdf:PDF},
   isbn = {978-1-937284-11-4},
   location = {Edinburgh, United Kingdom},
   numpages = {11},
