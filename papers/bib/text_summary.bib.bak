@@ -14,6 +14,16 @@
   file = {allan2001temporal.pdf:text_summary/allan2001temporal.pdf:PDF}
 }
 
+@INPROCEEDINGS{binh2013structured,
+  author = {Binh Tran, Giang},
+  title = {Structured summarization for news events},
+  booktitle = {Proceedings of the 22nd international conference on World Wide Web
+	companion},
+  year = {2013},
+  pages = {343--348},
+  organization = {International World Wide Web Conferences Steering Committee}
+}
+
 @INPROCEEDINGS{binh2013predicting,
   author = {Binh Tran, Giang and Alrifai, Mohammad and Quoc Nguyen, Dat},
   title = {Predicting relevant news events for timeline summaries},
@@ -522,7 +532,7 @@
   review = {SIGIR 2013 workshop taia 的文章
 	
 	
-	提供了标注数据集}
+	提供了标注数据集  http://www.l3s.de/~gtran/timeline/}
 }
 
 @INPROCEEDINGS{2008-Wan-p299-306,
