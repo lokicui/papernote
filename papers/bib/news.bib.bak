@@ -565,6 +565,18 @@
   timestamp = {2013.10.17}
 }
 
+@INPROCEEDINGS{zhao2012novel,
+  author = {Zhao, Wayne Xin and Chen, Rishan and Fan, Kai and Yan, Hongfei and
+	Li, Xiaoming},
+  title = {A novel burst-based text representation model for scalable event
+	detection},
+  booktitle = {Proceedings of the 50th Annual Meeting of the Association for Computational
+	Linguistics: Short Papers-Volume 2},
+  year = {2012},
+  pages = {43--47},
+  organization = {Association for Computational Linguistics}
+}
+
 @INPROCEEDINGS{2001-Zheng-p-,
   author = {Zheng, Zhiping},
   title = {International news connection: A real-time online news filtering
