@@ -12,6 +12,16 @@
   issue = {3}
 }
 
+@INCOLLECTION{chawla2003smoteboost,
+  author = {Chawla, Nitesh V and Lazarevic, Aleksandar and Hall, Lawrence O and
+	Bowyer, Kevin W},
+  title = {SMOTEBoost: Improving prediction of the minority class in boosting},
+  booktitle = {Knowledge Discovery in Databases: PKDD 2003},
+  publisher = {Springer},
+  year = {2003},
+  pages = {107--119}
+}
+
 @ARTICLE{heinrich2011infinite,
   author = {Heinrich, Gregor},
   title = {Infinite LDA implementing the HDP with minimum code complexity},
@@ -35,6 +45,19 @@
   publisher = {TUP},
   timestamp = {2013.10.18},
   url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6216755}
+}
+
+@ARTICLE{seiffert2010rusboost,
+  author = {Seiffert, Chris and Khoshgoftaar, Taghi M and Van Hulse, Jason and
+	Napolitano, Amri},
+  title = {RUSBoost: A hybrid approach to alleviating class imbalance},
+  journal = {Systems, Man and Cybernetics, Part A: Systems and Humans, IEEE Transactions
+	on},
+  year = {2010},
+  volume = {40},
+  pages = {185--197},
+  number = {1},
+  publisher = {IEEE}
 }
 
 @ARTICLE{teh2006hierarchical,

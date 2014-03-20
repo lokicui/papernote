@@ -21,7 +21,8 @@
 	companion},
   year = {2013},
   pages = {343--348},
-  organization = {International World Wide Web Conferences Steering Committee}
+  organization = {International World Wide Web Conferences Steering Committee},
+  file = {Structured Summarization for News Events.pdf:text_summary/Structured Summarization for News Events.pdf:PDF}
 }
 
 @INPROCEEDINGS{binh2013predicting,
@@ -32,6 +33,7 @@
   year = {2013},
   pages = {91--92},
   organization = {International World Wide Web Conferences Steering Committee},
+  file = {Predicting Relevant News Events for Timeline Summaries.pdf:text_summary/Predicting Relevant News Events for Timeline Summaries.pdf:PDF},
   review = {2013 WWW 
 	
 	
@@ -95,6 +97,7 @@
   publisher = {Springer},
   year = {2003},
   pages = {47--59},
+  __markedentry = {[coder:3]},
   bdsk-file-1 = {YnBsaXN0MDDUAQIDBAUIJidUJHRvcFgkb2JqZWN0c1gkdmVyc2lvblkkYXJjaGl2ZXLRBgdUcm9vdIABqAkKFRYXGyIjVSRudWxs0wsMDQ4RElpOUy5vYmplY3RzViRjbGFzc1dOUy5rZXlzog8QgASABoAHohMUgAKAA1lhbGlhc0RhdGFccmVsYXRpdmVQYXRo0hgMGRpXTlMuZGF0YU8RAo4AAAAAAo4AAgAADE1hY2ludG9zaCBIRAAAAAAAAAAAAAAAAAAAAMxQS7BIKwAAAQ9TtR9bM11MaWZlIEN5Y2xlIG1vZGVsIzEwRjU0ODUucGRmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABD1SFzdVNvAAAAAAAAAAAAAEAAwAACSAAAAAAAAAAAAAAAAAAAAAMdGV4dF9zdW1tYXJ5ABAACAAAzE/bMAAAABEACAAAzdTdPAAAAAEAIAEPU7UA6fOXAOnzlgBn8ioABsyiAAbMkgAFwjMAAgOnAAIAeE1hY2ludG9zaCBIRDpVc2VyczoAb21hcjoAd29ya3NwYWNlOgByb3J3b3Jrc3BhY2U6AHBhcGVyTm90ZToAcGFwZXJzOgBiaWI6AHRleHRfc3VtbWFyeToAWzNdTGlmZSBDeWNsZSBtb2RlbCMxMEY1NDg1LnBkZgAOAHoAPABbADMAXQBMAGkAZgBlACAAQwB5AGMAbABlACAAbQBvAGQAZQBsAGkAbgBnACAAbwBmACAAbgBlAHcAcwAgAGUAdgBlAG4AdABzACAAdQBzAGkAbgBnACAAYQBnAGkAbgBnACAAdABoAGUAbwByAHkALgBwAGQAZgAPABoADABNAGEAYwBpAG4AdABvAHMAaAAgAEgARAASAIBVc2Vycy9vbWFyL3dvcmtzcGFjZS9yb3J3b3Jrc3BhY2UvcGFwZXJOb3RlL3BhcGVycy9iaWIvdGV4dF9zdW1tYXJ5L1szXUxpZmUgQ3ljbGUgbW9kZWxpbmcgb2YgbmV3cyBldmVudHMgdXNpbmcgYWdpbmcgdGhlb3J5LnBkZgATAAEvAAAVAAIAC///AACABdIcHR4fWCRjbGFzc2VzWiRjbGFzc25hbWWjHyAhXU5TTXV0YWJsZURhdGFWTlNEYXRhWE5TT2JqZWN0XxBJdGV4dF9zdW1tYXJ5L1szXUxpZmUgQ3ljbGUgbW9kZWxpbmcgb2YgbmV3cyBldmVudHMgdXNpbmcgYWdpbmcgdGhlb3J5LnBkZtIcHSQloiUhXE5TRGljdGlvbmFyeRIAAYagXxAPTlNLZXllZEFyY2hpdmVyAAgAEQAWAB8AKAAyADUAOgA8AEUASwBSAF0AZABsAG8AcQBzAHUAeAB6AHwAhgCTAJgAoAMyAzQDOQNCA00DUQNfA2YDbwO7A8ADwwPQA9UAAAAAAAACAQAAAAAAAAAoAAAAAAAAAAAAAAAAAAAD5w==},
   date-added = {2013-10-09 13:44:47 +0000},
   date-modified = {2013-10-09 13:44:47 +0000},
@@ -121,6 +124,7 @@
   volume = {19},
   pages = {1016--1025},
   number = {8},
+  __markedentry = {[coder:3]},
   file = {[24]Hot Topic Extraction Based on Timeline Analysis and Multidimensional Sentence Modeling-77.pdf:text_summary/[24]Hot Topic Extraction Based on Timeline Analysis and Multidimensional Sentence Modeling-77.pdf:PDF},
   owner = {coder},
   publisher = {IEEE},
@@ -139,6 +143,17 @@
   date-added = {2013-10-09 16:59:02 +0000},
   date-modified = {2013-10-09 16:59:02 +0000},
   file = {chieu2004query.pdf:text_summary/chieu2004query.pdf:PDF}
+}
+
+@INPROCEEDINGS{conroy2006topic,
+  author = {Conroy, John M and Schlesinger, Judith D and O'Leary, Dianne P},
+  title = {Topic-focused multi-document summarization using an approximate oracle
+	score},
+  booktitle = {Proceedings of the COLING/ACL on Main conference poster sessions},
+  year = {2006},
+  pages = {152--159},
+  organization = {Association for Computational Linguistics},
+  file = {Topic-Focused Multi-document Summarization Using an Approximate Oracle Score.pdf:text_summary/Topic-Focused Multi-document Summarization Using an Approximate Oracle Score.pdf:PDF}
 }
 
 @INPROCEEDINGS{2004-Corston-Oliver-p43-50,
@@ -532,7 +547,7 @@
   review = {SIGIR 2013 workshop taia 的文章
 	
 	
-	提供了标注数据集  http://www.l3s.de/~gtran/timeline/}
+	提供了标注数据集 http://www.l3s.de/~gtran/timeline/}
 }
 
 @INPROCEEDINGS{2008-Wan-p299-306,
