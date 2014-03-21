@@ -17,7 +17,7 @@
 %
 \section{abstract}
 
-Topic-focused multi-document summarization plays an important role to help readers to get the main information from any topic. Many approaches are proposed to generate the timeline summarization, but seldom consider the life circle of each topic. In this paper, we leveraging aging theory to present the sentence feature, and train the classification model with the SMOTEBoost technology. We also evaluate our approach on two corpus, one of which is a public data sets, the other one is our manual annotation data set. 
+Topic-focused multi-document summarization plays an important role in helping readers to get the main information from any topic. Many approaches are proposed to generate the timeline summarization, but seldom consider the life circle of each topic. In this paper, we leveraging aging theory to present the sentence feature, and train the classification model with the SMOTEBoost technology. We also evaluate our approach on two corpus, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly. 
 
 
 %
@@ -41,15 +41,64 @@ The remainder of this paper is organized as follows: Section 2 reviews some rela
 %
 \section{Related Work}
 %
+\textbf{Topic-focused multi-document summarization} aims at gain main information from multiple text about the same topic. There are two ways to achive this goal, one is extract important sentences, the other one is build new sentence to express the key idea. In this paper, we focuse on the former method.
+
+One of the most popular extractive multi-document summarization method is MEAD, which take term frequency, sentence position, first-sentence overlap to present the feature of each sentece. Giang Binh Tran\cite{tran2013leveraging} investigate five different sentence feature and leverage SVMRank to optimize the summarization task. 
+
+\textbf{Timeline summarization} is 
+
+\textbf{Aging thory}
+
+
 
 
 %
 \section{Our Approach}
 %
 
+\subsection{Sentence Feature Selection}
+
+In order to represent sentence, we extract five kinds of features as flows:
+
+\textbf{Surface feature}: this contains features computed by basic statistics, such as the length of sentence, the counts of nourm words and stop words, the position in this document and parapraf, and wheather it contains person name or not.
+
+\textbf{Importance feature}: this feature aim to respesent the impantance of this sentence. The weight of sentence is computed through linear combination of term weights with latem senmatic analysis.
+
+\textbf{Aging feature}: We use this feature to show the life cycle of this sentence.
+
+\textbf{Noviety feature}: 
+
+\textbf{Topic feature}: 
+
+
+\subsection{Model Trainning}
+
+With the help of labled data, we convert this summarization task to pairwise classification problem. The positive data is sentences labeld to summary, otherwise is negative. 
+
+Because the count of summary sentence is much less than the normal sentence, the train data set is unblanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
+
+
+
 %
-\section{Experiments}
+\section{Evaluation}
 %
+
+\subsection{Evaluation metric}
+
+Rogue
+
+Prcesesiction
+
+\subsection{Experiment on public data set}
+
+The public data set form Giang Binh Tran\cite{tran2013leveraging} is used in this research.  
+
+
+
+\subsection{Experiment on muannl labeld data}
+
+
+
 
 %
 \section{Future}
