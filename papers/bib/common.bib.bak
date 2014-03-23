@@ -21,6 +21,14 @@
   pages = {853--867}
 }
 
+@ARTICLE{chawla2011smote,
+  author = {Chawla, Nitesh V. and Bowyer, Kevin W. and Hall, Lawrence O. and
+	Kegelmeyer, W. Philip},
+  title = {SMOTE: synthetic minority over-sampling technique},
+  journal = {arXiv preprint arXiv:1106.1813},
+  year = {2011}
+}
+
 @INCOLLECTION{chawla2003smoteboost,
   author = {Chawla, Nitesh V and Lazarevic, Aleksandar and Hall, Lawrence O and
 	Bowyer, Kevin W},
