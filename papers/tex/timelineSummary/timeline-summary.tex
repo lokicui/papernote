@@ -65,7 +65,9 @@ We give the formal definition of topic-focused mult-document timeline summarizat
 
 \textbf{Input}: Given a set of documents $D=\{d_1, d_2, \dots, d_n\}$ which should cover progress of the topic in the time span $T=\{t_1, t_2, \dots, t_m\}$. We segment each document to sentences and group them by the date to form sentences $S=\{s_1, s_2, \dots, s_m\}$. 
 
-\textbf{Output}: The TMTS should ouput the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the documents of that day $s_i$.
+\textbf{Output}: The TMTS should ouput the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the documents of that day $s_i$. 
+
+In order to respresent the most important thing happened in that day, the summary should consider the importance, the noviety, the  
 
 \subsection{Sentence Feature Selection}
 
