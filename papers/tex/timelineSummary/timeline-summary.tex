@@ -73,11 +73,28 @@ In order to respresent the most important thing happened in that day, the summar
 
 In order to represent sentence, we extract five kinds of features as flows:
 
-\textbf{Surface feature}: this contains features computed by basic statistics, such as the length of sentence, the counts of nourm words and stop words, the position in this document and parapraf, and wheather it contains person name or not.
+\textbf{Surface feature}: this contains features computed by basic statistics, such as the length of sentence, the counts of nourm words and stop words, the position in this document and parapraf, and wheather it contains person name or not. %$Weight_{surface} = \{Length_{sentence}, Count_{nourms}, Count_{stopwords}, Position_{indocument}, Position_{inparagrph}, Boolean_{containspersonname}\}$
 
-\textbf{Importance feature}: this feature aim to respesent the impantance of this sentence. The weight of sentence is computed through linear combination of term weights with latem senmatic analysis.
+\textbf{Importance feature}: this feature aim to respesent the impantance of this sentence. The weight of sentence is computed through linear combination of term weights with latem senmatic analysis. $Weight_{importance} = TF_i * LSA_i$
 
-\textbf{Aging feature}: We use this feature to show the life cycle of this sentence.
+\textbf{Aging feature}: We use this feature to show the life cycle of this sentence. The frequency of a word will change as event going on, so we use the association between word  and time interval  to indicate its energy which is defined as follows:
+\begin{equation}
+  E_{w,t} =F(F^{-1}E_{w,t-1}+\alpha\cdot\chi^2_{w,t})
+\end{equation}
+where $E_{w,t}$ is the energy of word $w$  in time interval $t$ , and $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
+
+However, no words descripting a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor β at the end of every time interval. And if the decayed energy value became negative, we change it to 0.
+
+According to the description above, if the energies of some words increase greatly, we can draw a conclusion that there is a hot event spot. So we need to calculate the variance of word energy next. Here we use standard deviation:
+\begin{equation}
+Var_{w,t} = \sqrt{ \frac{1}{N} \sum_{t \in period}(E_{w,t}- \overline{E_{w}})^2}
+\end{equation}
+where $N$ is the number of time intervals during the given period, $E_{w,t}$  is the energy of word $w$  in time interval $t$ , $\overline{E_{w}}$  is the average energy during the period, and $Var_{w,t}$  is the variance of $w$ .
+Then each word will be assigned a new weight besides the traditional TFIDF which can be defined as:
+ \begin{equation}
+NewWeight(w)=TF*IDF_{w} + \mu \cdot Var_{w}
+\end{equation}
+This kind of new weight can help us identify both central and hot information, so people can capture the main line and new changes of events simultaneously.
 
 \textbf{Noviety feature}: 
 
@@ -90,32 +107,66 @@ With the help of labled data, we convert this summarization task to pairwise cla
 
 Because the count of summary sentence is much less than the normal sentence, the train data set is unblanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
 
-
-
 %
 \section{Evaluation}
 %
 
 \subsection{Evaluation metric}
 
-Rogue
+Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate three scores (recall (R), precision (P) and F-measure). Take ROUGE-N as an example:
 
-Prcesesiction
+\begin{equation}
+R=\frac{\sum_{s \in manual } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s \in manual} \sum_{N-gram \in s} Count(N-gram)  } \end{equation}
+\begin{equation}
+P=\frac{\sum_{s \in auto } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s \in auto} \sum_{N-gram \in s} Count(N-gram)  }
+\end{equation}
+\begin{equation}
+F-measure = \frac{2PR}{P+R}
+\end{equation}
+
+Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
+
+\subsection{Methods to compare}
+
+We start our experiment with some preprocessing like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We also implement some widely used multi-document summarization methods as the baselines.
+
+$Centroid$ extracts sentences based on centroid value, positional value and first-sentence overlap.
+
+$Cluster$ considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
+
+$Allan$ is a similar timeline system from different aspect proposed by Allan et al., dividing sentences into on-event and off-event while ranking them with useful and novelty.
+
+$ETS$ is 
+
+$L2RTS$
 
 \subsection{Experiment on public data set}
 
-The public data set form Giang Binh Tran\cite{tran2013leveraging} is used in this research.  
+The public data set form Giang Binh Tran\cite{tran2013leveraging} is used in this research. This data set collects 17 timelines in 9 topics and it obtained 4650 news articles. The data set provider take the news editor's event summary as the topic summary, and some of labled summary is created by themselves. So there are many summary sentences are not extracted from the document, which brings extra problem about evaluate the results from TMTS.
 
+Pictures and evaluation will available until Wednesday.
 
 
 \subsection{Experiment on muannl labeld data}
 
+We also create a data set, which come from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originly because of no summary label. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
+
+Pictures and evaluation will available until Wednesday.
 
 
 
 %
-\section{Future}
+\section{Conclusion and Future}
 %
+
+In this paper, we present a novel approach for evolove aging theory and SMOTEBoost to timeline summarization. In our approach, we firstly construct feature of each sentence, which contains surface feature, importance feature, aging feature, noviety feature and topic feature. Then we treate the multi-document summarization task as pair-wise classification task and generate the training data. At last SMOTEBoost is used to train the model. Experiment results show that our approach performs better compared with other widely used methods.
+
+In the future, we will identify semantic units using other methods for $LSA$ can process synonym but is unable to handle polysemy. And we will also extend our approach to short text such as microblogs and comments.
+
+%Acknowledge%
+\section{Acknowledgements}
+something and somebody should be thanks...
+
 
 
 \bibliographystyle{ieeetr}
