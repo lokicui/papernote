@@ -64,7 +64,7 @@ We give the formal definition of topic-focused multi-document timeline summariza
 
 \textbf{Output}: The TMTS should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the documents of that day $s_i$. 
 
-In order to respresent the most important thing happened in that day, the summary should consider the importance, the movelty, the  .......
+In order to respresent the most important thing happened in that day, the summary should consider the importance, the movelty, and contains the topic hot terms. Under the condition of this assumption, the features we use to represent the sentence as follows:
 
 \subsection{Sentence Feature Selection}
 
@@ -119,18 +119,22 @@ Because the count of summary sentence is much less than the normal sentences, th
 
 \subsection{Evaluation metric}
 
-Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate three scores (recall (R), precision (P) and F-measure). Take ROUGE-N as an example:
+Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate three scores (recall (R), precision (P) %and F-measure%
+). The function is:
 
 \begin{equation}
 R=\frac{\sum_{s \in manual } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s \in manual} \sum_{N-gram \in s} Count(N-gram)  } \end{equation}
 \begin{equation}
 P=\frac{\sum_{s \in auto } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s \in auto} \sum_{N-gram \in s} Count(N-gram)  }
 \end{equation}
-\begin{equation}
-F-measure = \frac{2PR}{P+R}
-\end{equation}
 
-Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
+%\begin{equation}
+%F-measure = \frac{2PR}{P+R}
+%\end{equation}
+
+Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. As a result of all the training datas are labeled data, the precision and recall rate can be computed easily and these two metric are helpful get a quick understanding about the performance.
+%Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
+
 
 \subsection{Methods to compare}
 
@@ -142,24 +146,61 @@ $Cluster$ considers that there are different themes in an event, so it first clu
 
 $Allan$ is a similar timeline system from different aspects proposed by Allan et al., dividing sentences into on-event and off-event while ranking them with useful and novelty.
 
-$ETS$ is 
+$Wong$ combined the supervised and semi-supervised learning and used co-training method to train the labeled data and unlabeled data. 
 
-$L2RTS$ leveages the SVMRank to gain the summary.
+$L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank to gain the summary.
 
 \subsection{Experiment on public data set}
 
 The public data set from Giang Binh Tran\cite{tran2013leveraging} is used in this research. This data set collects 17 timelines in 9 topics and obtains 4650 news articles. The data set provider takes the news editor's event summary as the topic summary, and some of labeled summaries are created by themselves. So there are many summary sentences are not extracted from the document, which brings extra problem about evaluate the results from TMTS.
 
-Pictures and evaluation will available until Wednesday.
-
+\begin{table}
+\caption{Performance on public data set}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Method  & Precision(1) & Recall(1)& Precision(2) & Recall(2) \\
+\hline
+Centroid &				& 			 			&				& 			 				\\
+\hline
+Cluster	&				&						&				& 			 				\\
+\hline
+Allan		&				&						&				& 			 				\\
+\hline
+Wong		&				&						&				& 							\\
+\hline
+L2RTS	&				&						&				& 			 				\\
+\hline
+TMTS	&				&						&				& 							\\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{Experiment on manual labeled data}
 
 We also create a data set, which comes from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originally because of no summary labeled. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
 
-Pictures and evaluation will available until Wednesday.
+\begin{table}
+\caption{Performance on manual labeled data set}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Method  & Precision(1) & Recall(1)  & Precision(3) & Recall(3) \\
+\hline
+Centroid &	0.129			& 		0.076	 			&	0.228			& 0.129			 				\\
+\hline
+Cluster	&	0.057			&		0.045				&	0.185			& 	0.133		 				\\
+\hline
+Allan		&	0.143			&		0.083				&	0.232			& 0.184			 				\\
+\hline
+Wong		&	0.214			&		0.085				&	0.363			& 0.135							\\
+\hline
+L2RTS	&	0.221			&		0.095				&	0.394			& 0.157			 				\\
+\hline
+TMTS	&	0.233			&		0.090				&	0.391			& 0.159							\\
+\hline
+\end{tabular}
+\end{table}
 
-
+From the two experiments, we can get the information that summarization methods based on machine learning are performance better than others. The result of $Centroid$ are better than $Cluster$, mainly because this method use some surface feature. The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster, which makes the result ignore the novelty. The $Allan$ method's performance better than $Centroid$ cause this method consider the novelty and importance. Our method $TMTS$ performance better than $Wong$ and $L2RTS$ on Top-1 summary mainly because we use the SMOTE method to train the model, which makes the minorty class can be classified better. But when testing in Top-3, the $L2RTS$ wins the match, because the SVMRanking can gain a better classification model.
 
 %
 \section{Conclusion and Future}
