@@ -93,6 +93,30 @@
   url = {http://dl.acm.org/citation.cfm?id=291025}
 }
 
+@ARTICLE{chawla2011smote,
+  author = {Chawla, Nitesh V. and Bowyer, Kevin W. and Hall, Lawrence O. and
+	Kegelmeyer, W. Philip},
+  title = {SMOTE: synthetic minority over-sampling technique},
+  journal = {arXiv preprint arXiv:1106.1813},
+  year = {2011},
+  file = {chawla2011smote.pdf:papers-not-read/chawla2011smote.pdf:PDF},
+  owner = {coder},
+  timestamp = {2014.03.27}
+}
+
+@INCOLLECTION{chawla2003smoteboost,
+  author = {Chawla, Nitesh V and Lazarevic, Aleksandar and Hall, Lawrence O and
+	Bowyer, Kevin W},
+  title = {SMOTEBoost: Improving prediction of the minority class in boosting},
+  booktitle = {Knowledge Discovery in Databases: PKDD 2003},
+  publisher = {Springer},
+  year = {2003},
+  pages = {107--119},
+  file = {chawla2003smoteboost.pdf:papers-have-read/chawla2003smoteboost.pdf:PDF},
+  owner = {coder},
+  timestamp = {2014.03.27}
+}
+
 @INCOLLECTION{2003-Chen-p47-59,
   author = {Chen, Chien Chin and Chen, Yao-Tsung and Sun, Yeali and Chen, Meng
 	Chang},
@@ -584,7 +608,8 @@
   organization = {ACM},
   date-added = {2013-10-09 16:55:59 +0000},
   date-modified = {2013-10-09 16:55:59 +0000},
-  file = {2008-Wan-p299-306.pdf:text_summary/2008-Wan-p299-306.pdf:PDF}
+  file = {2008-Wan-p299-306.pdf:text_summary/2008-Wan-p299-306.pdf:PDF},
+  review = {利用马尔科夫模型和神马聚类模型对句子之间的链接进行分析}
 }
 
 @INPROCEEDINGS{wan2007manifold,

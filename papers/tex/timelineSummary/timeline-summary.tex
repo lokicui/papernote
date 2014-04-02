@@ -33,7 +33,7 @@ Every event goes through a life cycle of birth, growth, maturity and death, whic
 
 One challenge lies in computing the importance of sentences, which is decided by terms occurring at the documents in keywords-based summarization. But different authors use different words to express the same meaning and lots of synonyms. In order to find the core words in the news without the influence caused by the synonym and polysemy, we use latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} to handle the dataset. LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
-The other challenge is how to handle the sentences. In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. This situation causes a problem that the training model will prefer the normal sentences. SMOTEBoost \cite{chawla2013smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. This has been proved effective for imbalanced data set. 
+The other challenge is how to handle the sentences. In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. This situation causes a problem that the training model will prefer the normal sentences. SMOTEBoost \cite{chawla2003smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. This has been proved effective for imbalanced data set. 
 
 In this paper, we generate news event timeline summary by considering both temporal and semantic characteristics. We first extract the features from five aspects to represent each sentence. Then, classification model is built with SMOTEBoost. Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
 
@@ -218,6 +218,7 @@ something and somebody should be thanks...
 
 \bibliographystyle{ieeetr}
 \bibliography{../../bib/text_summary}
+
 
 
 \end{document}
