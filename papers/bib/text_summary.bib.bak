@@ -470,6 +470,14 @@
   url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4579948}
 }
 
+@INPROCEEDINGS{nelken2006towards,
+  author = {Nelken, Rani and Shieber, Stuart M},
+  title = {Towards Robust Context-Sensitive Sentence Alignment for Monolingual
+	Corpora.},
+  booktitle = {EACL},
+  year = {2006}
+}
+
 @INPROCEEDINGS{2000-Radev-p99-109,
   author = {Radev, Dragomir R and Fan, Weiguo},
   title = {Automatic summarization of search engine hit lists},
