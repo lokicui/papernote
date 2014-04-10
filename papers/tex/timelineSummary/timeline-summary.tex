@@ -28,42 +28,42 @@ Topic-focused multi-document summarization plays an important role in helping re
 
 %Recent years, topic detection and tracking (TDT) which detects new events from the large scale news stream and tracks them as events going on draws researchers' attention. But it did not display events properly, and people still have to read all the relevant reports to get what they want to know about the event. However, we are still enlightened by its usage of tracking which makes us decide to generate a timeline summary consisting of a series of individual small summaries with sentences both important and diverse to help people understand the progress of an event more quickly.
 
-Everyday thousands of news stories reporting different events are published on the internet. With the help of topic detection and tracking(TDT), people can know what events happened and this save a lot of time for readers. However, most news reports are not prepared for the progress of event, so that there are lots of duplication message among reports about the same event. Topic-focused multi-document summarization(TFMDS) aims to gain the main information from the topic-focused documents and the timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
+Everyday thousands of news reporting different events are published on the internet. With the help of topic detection and tracking(TDT), people can know what events happened and this save a lot of time for readers. However, most news reports are not prepared for the progress of event, so that there are lots of duplication message among reports about the same event. Topic-focused multi-document summarization(TFMDS) aims to gain the main information from the topic-focused documents. The timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
 
-As we know, event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{2003-Chen-p47-59} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
+As we know, event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{2003-Chen-p47-59} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. Inspired by it, aging theory can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
 
-In the keywords-based summarization field, there are two main challenges for choosing summary sentences. One challenge lies in computing the importance of sentences, which is decided by terms occurring at the documents . But different authors use different words to express the same meaning and lots of synonyms. In order to find the core words in the news without the influence caused by the synonym and polysemy, we use latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} to handle the dataset. LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
+In the keywords-based summarization field, there are two main challenges for choosing summary sentences. One challenge lies in computing the importance of sentences, which is decided by terms occurring at the documents . But different authors may use different words to express the same meaning which makes bag of words is very big. In order to find the core words in the news without the influence caused by the synonym and polysemy, we use latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} to handle the dataset. LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
 The other challenge is how to handle the sentences. In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. This situation causes a problem that the training model will prefer the normal sentences. SMOTEBoost \cite{chawla2003smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. This has been proved effective for imbalanced data set. 
 
-In this paper, we generate news event timeline summary by considering both temporal and semantic characteristics. We first extract the features from five aspects to represent each sentence. Then, classification model is built with SMOTEBoost. Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
+In this paper, we generate timeline summary by considering both temporal and semantic characteristics from the news around the same event. We first extract the features from five aspects to represent each sentence. Then, classification model is built with SMOTEBoost. Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
 
-The remainder of this paper is organized as follows: Section 2 reviews some related works on summarization. We discuss our approach about how to leverage aging theory to gain sentence feature and train the classification model with SMOTEBoost technology in section 3. Our experiments and some discusses are described in section 4. Section 5 presents our conclusions and some future plans.
+The remainder of this paper is organized as follows: Section 3 reviews some related works on summarization. We discuss our approach about how to leverage aging theory to gain sentence feature and train the classification model with SMOTEBoost technology in section 4. Experiments and some discusses are described in section 5. Section 6 presents our conclusions and some future plans.
 
 
 %
 \section{Related Work}
 %
-\textbf{Topic-focused multi-document summarization(TFMDS)} aims at gaining main information from multiple texts about the same topic. There are two ways to achieve this goal, one is extract important sentences, the other one is build new sentence to express the key idea. In this paper, we focus on the former method.
+\textbf{Topic-focused multi-document summarization(TFMDS)} aims at gaining main information from multiple texts about the same topic. There are two ways to achieve this, one is extract important sentences, the other one is build new sentence to express the key idea. In this paper, we focus on the former method.
 
-One of the most popular extractive multi-document summarization methods is MEAD \cite{2004-Radev-p919-938}, which takes term frequency, sentence position, first-sentence overlap to present the feature of each sentence. Xiaojun Wan \cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty. Wan \cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. Wong \cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
+One of the most popular extractive multi-document summarization methods is MEAD \cite{2004-Radev-p919-938}, which takes term frequency, sentence position, first-sentence overlap to present the feature of each sentence. Wan \cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty. Wan \cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. Wong \cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
 
-\textbf{Timeline summarization(TS)} gains enough attraction with the development of Topic Detection and Track(TDT). Lots of timeline summarization methods have been developed recently. ETS \cite{2011-Yan-p745-754} formulated the task as an optimization  problem via iterative substitution from a set of sentences with four requirements. Giang Binh Tran\cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task. Wayne \cite{zhao2013timeline} took social attention involved to compute the importance. ETTS \cite{yan2011timeline} utilized trans-temporal characteristics to gain the summary. Giang \cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. Nedunchelian \cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
+\textbf{Timeline summarization(TS)} gains enough attraction with the development of Topic Detection and Track(TDT). Lots of timeline summarization methods have been developed recently. ETS \cite{2011-Yan-p745-754} formulated the task as an optimization  problem via iterative substitution from a set of sentences with four requirements. Giang \cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task. Wayne \cite{zhao2013timeline} took social attention involved to compute the importance. ETTS \cite{yan2011timeline} utilized trans-temporal characteristics to gain the summary. Giang \cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. Nedunchelian \cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
  
-\textbf{Aging theory} has been proved effictive to track which stage of life cycle for news. Chen et al. \cite{2007-Chen-p1016-1025} \cite{2003-Chen-p47-59} applied this to model the news event's life cycle and utilized the concept of energy to track it. Because our aim is to gain the summary of multi-documents of news domain, we consider aging theory is worth using to extract the feature of sentence.
+\textbf{Aging theory} has been proved effictive to track which stage of life cycle for news. Chen et al. \cite{2007-Chen-p1016-1025} \cite{2003-Chen-p47-59} applied this to model the news event's life cycle and utilized the concept of energy to track it. In order to gain the summary of multi-documents of news domain, we consider aging theory is worth using to extract the feature of sentence.
 
 %
 \section{Our Approach}
 %
 
 \subsection{Key Concepts}
-\textbf{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the topic. Most of our summarrization technology's application scenario is working for TDT system. \textbf{Timeline Summaries:} Generally speaking, timeline is a kind of display forms for the summaries. But timeline summaries should show us the progress of this topic not just display according to the time sequence. Under this condition of the requirement, timeline summary of each day should describe the most important thing happened in that day.
+\textbf{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the event. Most of our summarrization technology's application scenario is working for TDT system. \textbf{Timeline Summaries:} Generally speaking, timeline is a kind of display forms for the summaries. Timeline summaries should show us the progress of this topic instand of just displaying the message according to the time sequence. Under this condition of the requirement, timeline summary of each day should describe the most important thing happened in that day.
 
 We give the formal definition of topic-focused multi-document timeline summarization(TMTS) as follows:
 
 \textbf{Input}: Given a set of documents $D=\{d_1, d_2, \dots, d_n\}$ which should cover progress of the topic in the time span $T=\{t_1, t_2, \dots, t_m\}$. We segment each document to sentences and group them by the date to form sentences $S=\{s_1, s_2, \dots, s_m\}$. 
 
-\textbf{Output}: The TMTS should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the documents of that day $s_i$. 
+\textbf{Output}: The TMTS should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the sentences of that day $s_i$. 
 
 In order to respresent the most important thing happened in that day, the summary should consider the importance, the movelty, and contains the topic hot terms. Under the condition of this assumption, the features we use to represent the sentence as follows:
 
@@ -71,12 +71,13 @@ In order to respresent the most important thing happened in that day, the summar
 
 In order to represent sentence, we extract five kinds of features as flows:
 
-\textbf{Surface feature}: this contains features computed by basic statistics, such as the length of sentence, the counts of noun words and stop words, the position in this document and paragraph, and whether it contains person name or not. %$Weight_{surface} = \{Length_{sentence}, Count_{nourms}, Count_{stopwords}, Position_{indocument}, Position_{inparagrph}, Boolean_{containspersonname}\}$
+\textbf{Surface feature}: This contains features computed by basic statistics, such as the length of sentence, the counts of noun words and stop words, the position in this document and paragraph, and whether it contains person name or not. %$Weight_{surface} = \{Length_{sentence}, Count_{nourms}, Count_{stopwords}, Position_{indocument}, Position_{inparagrph}, Boolean_{containspersonname}\}$
 
-\textbf{Importance feature}: this feature aims to respesent the importance of this sentence. The weight of sentence is computed through linear combination of term weights with latent semantic analysis. The function is 
+\textbf{Importance feature}: This feature aims to respesent the importance of the sentence. The weight of sentence is computed through linear combination of term weights with latent semantic analysis. The function is 
 \begin{equation}
 Weight_{importance} = \sum_{w \in sentence}TF_w * LSA_w
 \end{equation}
+where $TF_w$ is the term frequency of word $w$ and $LSA_w$ is the weight of word in the LSA results.
 
 \textbf{Aging feature}: We use this feature to show the life cycle of the sentence. The frequency of a word will change as event going on, so we use the association between word  and time interval  to indicate its energy which is defined as follows:
 \begin{equation}
@@ -91,13 +92,13 @@ According to the description above, if the energies of some words increase great
 Var_{w,t} = \sqrt{ \frac{1}{N} \sum_{t \in period}(E_{w,t}- \overline{E_{w}})^2}
 \end{equation}
 where $N$ is the number of time intervals during the given period, $E_{w,t}$  is the energy of word $w$  in time interval $t$ , $\overline{E_{w}}$  is the average energy during the period, and $Var_{w,t}$  is the variance of $w$ .
-Then each word will be assigned a new weight besides the traditional TFIDF which can be defined as:
+Then each word will be assigned a new weight besides the traditional TF.IDF which can be defined as:
  \begin{equation}
 Weight_{aging}=\sum_{w \in sentence_i}TF*IDF_{w} + \mu \cdot Var_{w}
 \end{equation}
 This kind of new weight can help us identify both central and hot information, so people can capture the main line and new changes of events simultaneously.
 
-\textbf{Topic feature}: Each topic contains lots of sentences, that is, every sentence contribute some information to the whole set to express the topic. In this study, we consider use the link analysis to compute the latent semantic between sentences. First, topic terms and topic elements can be found through the word frequency analysis. Then, the similarity among sentences are computed with the cosine function to construct the event map. Last, pageRank algorithm is used to assigin the weight to each node in this map. We treat the pageRank value as the topic feature of the sentence. The function is :
+\textbf{Topic feature}: Each topic contains lots of sentences, that is, every sentence contribute some information to the whole set to express the topic. In this study, we use the link analysis to compute the latent semantic between sentences. First, topic terms and topic elements can be found through the word frequency analysis. Then, the similarity among sentences are computed with the cosine function to construct the event map. Last, pageRank algorithm is used to assigin the weight to each node in this map. We treat the pageRank value as the topic feature of the sentence. The function is :
 \begin{equation}
 Weight_{topic} = PageRank(sentence_i)
 \end{equation}
@@ -106,13 +107,14 @@ Weight_{topic} = PageRank(sentence_i)
 \begin{equation}
 Weight_{novelty} = 1 - Jaccard(sentence_i, summary_{ex})
 \end{equation}
+where $summary_{ex}$ is the summary sentence in the last day.
 
 
 \subsection{Model Training}
 
 With the help of labled data, we convert this summarization task to pairwise classification problem. The positive data is sentences labeled to summary, otherwise is negative. 
 
-Because the count of summary sentence is much less than the normal sentences, the train data set is unbalanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
+As the result of the number of summary sentence is much less than the ordinary sentences, the train data set is unbalanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
 
 %
 \section{Evaluation}
@@ -120,7 +122,7 @@ Because the count of summary sentence is much less than the normal sentences, th
 
 \subsection{Evaluation metric}
 
-Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate three scores (recall (R), precision (P) %and F-measure%
+Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate two scores (recall (R), precision (P) %and F-measure%
 ). The function is:
 
 \begin{equation}
@@ -133,19 +135,19 @@ P=\frac{\sum_{s \in auto } \sum_{N-gram \in s} Count_{match}(N-gram) } { \sum_{s
 %F-measure = \frac{2PR}{P+R}
 %\end{equation}
 
-Where $N$ stands for the length of the $N-gram$, $Countmatch(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. As a result of all the training datas are labeled data, the precision and recall rate can be computed easily and these two metric are helpful get a quick understanding about the performance.
+Where $N$ stands for the length of the $N-gram$, $Count_{match}(N-gram)$ is the maximum number of N-grams co-occurring in the auto-generated summary and the manual summary. For all the training data are labeled data, the precision and recall rate can be computed easily, these two metrics are helpful to get a quick understanding about the performance.
 %Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
 
 
 \subsection{Methods to compare}
 
-We start our experiment with some preprocessing like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We also implement some widely used multi-document summarization methods as the baselines.
+We start our experiment with some preprocessings like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We implement some widely used multi-document summarization methods as the baselines.
 
 $Centroid$ extracts sentences based on centroid value, positional value and first-sentence overlap.
 
 $Cluster$ considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
 
-$Allan$ is a similar timeline system from different aspects proposed by Allan et al., dividing sentences into on-event and off-event while ranking them with useful and novelty.
+$Allan$ is a similar timeline system from different aspects, which dividing sentences into on-event and off-event while ranking them with useful and novelty.
 
 $Wong$ combined the supervised and semi-supervised learning and used co-training method to train the labeled data and unlabeled data. 
 
