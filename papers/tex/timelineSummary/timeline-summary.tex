@@ -17,7 +17,8 @@
 %
 \section{Abstract}
 
-Topic-focused multi-document summarization plays an important role in helping readers to get the main information from any topic. Many approaches are proposed to generate the timeline summarization, but ignore the life circle of each topic. In this paper, aging theory is leveraged to compute the sentence feature in the first step, and then train the classification model with the SMOTEBoost technology. We evaluate our approach on two corpora, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly.
+Topic-focused multi-document summarization plays an important role in helping readers to get the main information from any topic. Many approaches are proposed to generate the timeline summarization, but ignore the life circle of each topic. In this paper, aging theory is leveraged to compute the sentence feature in the first step, and then train the classification model with the SMOTEBoost technology. %We evaluate our approach on two corpora, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly.
+Experiment results show that our method can improve the timeline summarization significantly.
 
 %
 \section{Introduction}
@@ -30,7 +31,7 @@ Topic-focused multi-document summarization plays an important role in helping re
 
 Everyday thousands of news stories reporting different events are published on the internet. With the help of topic detection and tracking(TDT), people can know what events happened and this save a lot of time for readers. However, most news reports are not prepared for the progress of event, so that there are lots of duplication message among reports about the same event. Topic-focused multi-document summarization(TFMDS) aims to gain the main information from the topic-focused documents and the timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
 
-As we know, event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{2003-Chen-p47-59} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
+As we know, event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
 
 In the keywords-based summarization field, there are two main challenges for choosing summary sentences. One challenge lies in computing the importance of sentences, which is decided by terms occurring at the documents . But different authors use different words to express the same meaning and lots of synonyms. In order to find the core words in the news without the influence caused by the synonym and polysemy, we use latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} to handle the dataset. LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
@@ -153,32 +154,33 @@ $L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank
 
 \subsection{Experiment on public data set}
 
-The public data set from Giang Binh Tran\cite{tran2013leveraging} is used in this research. This data set collects 17 timelines in 9 topics and obtains 4650 news articles. The data set provider takes the news editor's event summary as the topic summary, and some of labeled summaries are created by themselves. So there are many summary sentences are not extracted from the document, which brings extra problem about evaluate the results from TMTS.
+%The public data set from Giang Binh Tran\cite{tran2013leveraging} is used in this research. This data set collects 17 timelines in 9 topics and obtains 4650 news articles. The data set provider takes the news editor's event summary as the topic summary, and some of labeled summaries are created by themselves. So there are many summary sentences are not extracted from the document, which brings extra problem about evaluate the results from TMTS.
 
-\begin{table}
-\caption{Performance on public data set}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-Method  & Precision(1) & Recall(1)& Precision(2) & Recall(2) \\
-\hline
-Centroid &				& 			 			&				& 			 				\\
-\hline
-Cluster	&				&						&				& 			 				\\
-\hline
-Allan		&				&						&				& 			 				\\
-\hline
-Wong		&				&						&				& 							\\
-\hline
-L2RTS	&				&						&				& 			 				\\
-\hline
-TMTS	&				&						&				& 							\\
-\hline
-\end{tabular}
-\end{table}
+%\begin{table}
+%\caption{Performance on public data set}
+%\begin{tabular}{|c|c|c|c|c|c|c|}
+%\hline
+%Method  & Precision(1) & Recall(1)& Precision(2) & Recall(2) \\
+%\hline
+%Centroid &				& 			 			&				& 			 				\\
+%\hline
+%Cluster	&				&						&				& 			 				\\
+%\hline
+%Allan		&				&						&				& 			 				\\
+%\hline
+%Wong		&				&						&				& 							\\
+%\hline
+%L2RTS	&				&						&				& 			 				\\
+%\hline
+%TMTS	&				&						&				& 							\\
+%\hline
+%\end{tabular}
+%\end{table}
 
-\subsection{Experiment on manual labeled data}
+%\subsection{Experiment on manual labeled data}
 
-We also create a data set, which comes from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originally because of no summary labeled. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
+%We also create a data set, which comes from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originally because of no summary labeled. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
+We labeled a dataset which comes from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originally because of no summary labeled. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
 
 \begin{table}
 \caption{Performance on manual labeled data set}
@@ -201,7 +203,8 @@ TMTS	&	0.233			&		0.090				&	0.391			& 0.159							\\
 \end{tabular}
 \end{table}
 
-From the two experiments, we can get the information that summarization methods based on machine learning are performance better than others. The result of $Centroid$ are better than $Cluster$, mainly because this method use some surface feature. The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster, which makes the result ignore the novelty. The $Allan$ method's performance better than $Centroid$ cause this method consider the novelty and importance. Our method $TMTS$ performance better than $Wong$ and $L2RTS$ on Top-1 summary mainly because we use the SMOTE method to train the model, which makes the minorty class can be classified better. But when testing in Top-3, the $L2RTS$ wins the match, because the SVMRanking can gain a better classification model.
+%From the two experiments, we can get the information that summarization methods based on machine learning are performance better than others. The result of $Centroid$ are better than $Cluster$, mainly because this method use some surface feature. The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster, which makes the result ignore the novelty. The $Allan$ method's performance better than $Centroid$ cause this method consider the novelty and importance. Our method $TMTS$ performance better than $Wong$ and $L2RTS$ on Top-1 summary mainly because we use the SMOTE method to train the model, which makes the minorty class can be classified better. But when testing in Top-3, the $L2RTS$ wins the match, because the SVMRanking can gain a better classification model.
+From this experiment, we can get the information that summarization methods based on machine learning are performance better than others. The result of $Centroid$ are better than $Cluster$, mainly because this method use some surface feature. The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster, which makes the result ignore the novelty. The $Allan$ method's performance better than $Centroid$ cause this method consider the novelty and importance. Our method $TMTS$ performance better than $Wong$ and $L2RTS$ on Top-1 summary mainly because we use the SMOTE method to train the model, which makes the minorty class can be classified better. But when testing in Top-3, the $L2RTS$ wins the match, because the SVMRanking can gain a better classification model.
 
 %
 \section{Conclusion and Future}
@@ -212,8 +215,8 @@ In this paper, we present a novel approach of involving aging theory and SMOTEBo
 In the future, we will identify semantic units using other methods since $LSA$ can process synonym but is unable to handle polysemy. And we will also extend our approach to short text such as microblogs and comments.
 
 %Acknowledge%
-\section{Acknowledgements}
-something and somebody should be thanks...
+%\section{Acknowledgements}
+%something and somebody should be thanks...
 
 
 
