@@ -8,6 +8,7 @@
   year = {2014},
   volume = {69},
   pages = {492--499},
+  file = {A Fast Distributed Focused-Web Crawling.pdf:crawler/A Fast Distributed Focused-Web Crawling.pdf:PDF},
   publisher = {Elsevier},
   url = {http://www.sciencedirect.com/science/article/pii/S187770581400263X}
 }
@@ -15,7 +16,8 @@
 @ARTICLE{bjerkander2013distributed,
   author = {Bjerkander, Hans and Karlsson, Erik},
   title = {Distributed Web-Crawler},
-  year = {2013}
+  year = {2013},
+  file = {Distributed Web-Crawler.pdf:crawler/Distributed Web-Crawler.pdf:PDF}
 }
 
 @INCOLLECTION{cambazoglu2011scalability,
@@ -66,7 +68,8 @@
   year = {2012},
   volume = {2},
   pages = {531--534},
-  number = {4}
+  number = {4},
+  file = {Web Crawler in Mobile Systems.pdf:crawler/Web Crawler in Mobile Systems.pdf:PDF}
 }
 
 @ARTICLE{sharma2011novel,
@@ -100,5 +103,15 @@
   year = {2011},
   volume = {6},
   number = {12}
+}
+
+@ARTICLE{杨瑞2013一种分布式网络爬虫的设计与实现,
+  author = {杨瑞 and 胡弘思 and 张文波 and 姚天昉},
+  title = {一种分布式网络爬虫的设计与实现},
+  journal = {江西师范大学学报: 自然科学版},
+  year = {2013},
+  volume = {37},
+  pages = {382--386},
+  number = {4}
 }
 

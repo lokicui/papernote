@@ -20,6 +20,17 @@
   url = {http://dblp.uni-trier.de/db/conf/aaai/aaai2010.html#InagakiSDDLCZ10}
 }
 
+@INPROCEEDINGS{bindu2014search,
+  author = {Bindu, K Hima and Rao, C Raghavendra},
+  title = {Search Result Clustering Through Expectation Maximization Based Pruning
+	of Terms},
+  booktitle = {Proceedings of the Second International Conference on Soft Computing
+	for Problem Solving (SocProS 2012), December 28-30, 2012},
+  year = {2014},
+  pages = {1285--1292},
+  organization = {Springer}
+}
+
 @INPROCEEDINGS{2005-Burges-p89-96,
   author = {Burges, Chris and Shaked, Tal and Renshaw, Erin and Lazier, Ari and
 	Deeds, Matt and Hamilton, Nicole and Hullender, Greg},
@@ -149,7 +160,7 @@
   publisher = {Springer},
   year = {2013},
   pages = {184--195},
-  file = {Accelerating topic model training on a single machine.pdf:papers-not-read/Accelerating topic model training on a single machine.pdf:PDF;Accelerating Topic Model Training on a Single Machine.pdf:papers-not-read/Accelerating Topic Model Training on a Single Machine.pdf:PDF},
+  file = {Accelerating topic model training on a single machine.pdf:papers-not-read/Accelerating topic model training on a single machine.pdf:PDF},
   review = {APWEB-2013},
   url = {http://link.springer.com/chapter/10.1007/978-3-642-37401-2_20}
 }
@@ -176,6 +187,20 @@
   __markedentry = {[coder:6]},
   owner = {coder},
   timestamp = {2013.10.28}
+}
+
+@INPROCEEDINGS{mihalcea2004textrank,
+  author = {Mihalcea, Rada and Tarau, Paul},
+  title = {TextRank: Bringing order into texts},
+  booktitle = {Proceedings of EMNLP},
+  year = {2004},
+  volume = {4},
+  number = {4},
+  pages = {275},
+  organization = {Barcelona, Spain},
+  __markedentry = {[coder:1]},
+  file = {mihalcea2004textrank.pdf:papers-not-read/mihalcea2004textrank.pdf:PDF},
+  review = {似乎效果还不错的算法，值得一看}
 }
 
 @ARTICLE{2012-Moon-p1-28,

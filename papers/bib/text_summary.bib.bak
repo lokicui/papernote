@@ -509,7 +509,8 @@
   title = {Towards Robust Context-Sensitive Sentence Alignment for Monolingual
 	Corpora.},
   booktitle = {EACL},
-  year = {2006}
+  year = {2006},
+  file = {nelken2006towards.pdf:text_summary/nelken2006towards.pdf:PDF}
 }
 
 @INPROCEEDINGS{2000-Radev-p99-109,
