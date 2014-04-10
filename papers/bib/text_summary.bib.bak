@@ -745,7 +745,10 @@
   numpages = {11},
   review = {ETTS
 	
-	利用temprol 信息进行摘要，效果比ETS好一点},
+	利用temprol 信息进行摘要，效果比ETS好一点
+	
+	
+	en},
   url = {http://dl.acm.org/citation.cfm?id=2145432.2145483}
 }
 
