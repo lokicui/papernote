@@ -521,6 +521,18 @@
   file = {nelken2006towards.pdf:text_summary/nelken2006towards.pdf:PDF}
 }
 
+@ARTICLE{radev2005newsinessence,
+  author = {Radev, Dragomir and Otterbacher, Jahna and Winkel, Adam and Blair-Goldensohn,
+	Sasha},
+  title = {NewsInEssence: summarizing online news topics},
+  journal = {Communications of the ACM},
+  year = {2005},
+  volume = {48},
+  pages = {95--98},
+  number = {10},
+  publisher = {ACM}
+}
+
 @INPROCEEDINGS{2000-Radev-p99-109,
   author = {Radev, Dragomir R and Fan, Weiguo},
   title = {Automatic summarization of search engine hit lists},
