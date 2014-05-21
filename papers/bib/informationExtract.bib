@@ -93,7 +93,23 @@
   volume = {1},
   pages = {99--103},
   organization = {IEEE},
-  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF}
+  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF},
+  review = {该篇文章的目的是aid search，于是并不是关心全部解析简历，而只要其中关键部分。
+	
+	
+	通过一遍过滤文档的方式，找出所需要的工作经验/技能/教育等信息。
+	
+	
+	主要用的nlp技术是规则匹配，其实就是用一堆关键词去查找。
+	
+	
+	存在问题，1）需要首先构建一个知识库，而且有人工标注
+	
+	
+	2）规则匹配过程中的那些规则人工创建的局限性太大
+	
+	
+	3）部分抽取有明显问题，如人名抽取，只看前几行找人名实在是太navie了}
 }
 
 @ARTICLE{kumariautomated,
@@ -267,7 +283,22 @@
   file = {Resume Information Extraction with Cascaded Hybrid Model.pdf:ie_cv/Resume Information Extraction with Cascaded Hybrid Model.pdf:PDF},
   location = {Ann Arbor, Michigan},
   numpages = {8},
-  review = {引用数很高},
+  review = {引用数很高
+	
+	
+	主要采用HMM和SVM来进行简历解析。
+	
+	
+	首先，假设简历的模块以自然段为分割。在这个假设的基础上用HMM模型来预测每一段可能的归属，然后进行分类标注。
+	
+	
+	然后，将上一步完成的分类标注进行细粒度的抽取。利用svm多分类器方法，对不同的属性进行单独抽取。
+	
+	
+	实验在1200个简历上进行，效果还可以。
+	
+	
+	缺点：只是抽取重要信息，具体的工作经历/工作单位等等都没有详细处理。},
   url = {http://dx.doi.org/10.3115/1219840.1219902}
 }
 
