@@ -30,6 +30,27 @@
   url = {https://www.iiitd.edu.in/~spbda2014/papers/spbda2014_submission_2_Sangeetha.pdf}
 }
 
+@ARTICLE{al2012survey,
+  author = {Al-Otaibi, Shaha T and Ykhlef, Mourad},
+  title = {A survey of job recommender systems},
+  journal = {International Journal of the Physical Sciences},
+  year = {2012},
+  volume = {7},
+  pages = {5127--5142},
+  number = {29}
+}
+
+@ARTICLE{bilenko2003adaptive,
+  author = {Bilenko, Mikhail and Mooney, Raymond and Cohen, William and Ravikumar,
+	Pradeep and Fienberg, Stephen},
+  title = {Adaptive name matching in information integration},
+  journal = {IEEE Intelligent Systems},
+  year = {2003},
+  volume = {18},
+  pages = {16--23},
+  number = {5}
+}
+
 @INPROCEEDINGS{Carlson:2010:CSL:1718487.1718501,
   author = {Carlson, Andrew and Betteridge, Justin and Wang, Richard C. and Hruschka,Jr.,
 	Estevam R. and Mitchell, Tom M.},
@@ -53,6 +74,35 @@
   url = {http://doi.acm.org/10.1145/1718487.1718501}
 }
 
+@INPROCEEDINGS{Chen:2010:EAM:1871437.1871448,
+  author = {Chen, Yi-Cheng and Jiang, Ji-Chiang and Peng, Wen-Chih and Lee, Suh-Yin},
+  title = {An Efficient Algorithm for Mining Time Interval-based Patterns in
+	Large Database},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {49--58},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871448},
+  doi = {10.1145/1871437.1871448},
+  file = {An efficient algorithm for mining time interval-based patterns in large database.pdf:ie_cv/An efficient algorithm for mining time interval-based patterns in large database.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {data mining, interval-based mining, sequential pattern, temporal pattern},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1871437.1871448}
+}
+
+@ARTICLE{cunningham2002gate,
+  author = {Cunningham, Hamish},
+  title = {GATE: an Architecture for Development of Robust HLT Applications
+	Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan
+	Department of Computer Science University of Sheffield},
+  year = {2002}
+}
+
 @ARTICLE{galar2011overview,
   author = {Galar, Mikel and Fern{\'a}ndez, Alberto and Barrenechea, Edurne and
 	Bustince, Humberto and Herrera, Francisco},
@@ -64,6 +114,16 @@
   pages = {1761--1776},
   number = {8},
   publisher = {Elsevier}
+}
+
+@INPROCEEDINGS{gonzalez2012adaptive,
+  author = {Gonzalez, Tere and Santos, Pano and Orozco, Fernando and Alcaraz,
+	Mildreth and Zaldivar, Victor and Obeso, Alberto De and Garcia, Alan},
+  title = {Adaptive employee profile classification for resource planning tool},
+  booktitle = {SRII Global Conference (SRII), 2012 Annual},
+  year = {2012},
+  pages = {544--553},
+  organization = {IEEE}
 }
 
 @INPROCEEDINGS{Huang:2012:BTE:2380816.2380853,
@@ -83,6 +143,16 @@
   url = {http://dl.acm.org/citation.cfm?id=2380816.2380853}
 }
 
+@INPROCEEDINGS{hudli2012application,
+  author = {Hudli, SA and Hudli, AV and Hudli, AA},
+  title = {Application of data mining to candidate screening},
+  booktitle = {Advanced Communication Control and Computing Technologies (ICACCCT),
+	2012 IEEE International Conference on},
+  year = {2012},
+  pages = {287--290},
+  organization = {IEEE}
+}
+
 @INPROCEEDINGS{kopparapu2010automatic,
   author = {Kopparapu, Sunil Kumar},
   title = {Automatic extraction of usable information from unstructured resumes
@@ -93,7 +163,35 @@
   volume = {1},
   pages = {99--103},
   organization = {IEEE},
-  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF}
+  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF},
+  review = {该篇文章的目的是aid search，于是并不是关心全部解析简历，而只要其中关键部分。
+	
+	
+	通过一遍过滤文档的方式，找出所需要的工作经验/技能/教育等信息。
+	
+	
+	主要用的nlp技术是规则匹配，其实就是用一堆关键词去查找。
+	
+	
+	存在问题，1）需要首先构建一个知识库，而且有人工标注
+	
+	
+	2）规则匹配过程中的那些规则人工创建的局限性太大
+	
+	
+	3）部分抽取有明显问题，如人名抽取，只看前几行找人名实在是太navie了}
+}
+
+@ARTICLE{kumaran2013towards,
+  author = {Kumaran, V Senthil and Sankar, A},
+  title = {Towards an automated system for intelligent screening of candidates
+	for recruitment using ontology mapping (EXPERT)},
+  journal = {International Journal of Metadata, Semantics and Ontologies},
+  year = {2013},
+  volume = {8},
+  pages = {56--64},
+  number = {1},
+  publisher = {Inderscience}
 }
 
 @ARTICLE{kumariautomated,
@@ -156,6 +254,27 @@
   file = {An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:ie_cv/An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:PDF}
 }
 
+@INPROCEEDINGS{Pu:2010:OAT:1871437.1871446,
+  author = {Pu, Ken Q. and Hassanzadeh, Oktie and Drake, Richard and Miller,
+	Ren{\'e}e J.},
+  title = {Online Annotation of Text Streams with Structured Entities},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {29--38},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871446},
+  doi = {10.1145/1871437.1871446},
+  file = {Online annotation of text streams with structured entities.pdf:ie_cv/Online annotation of text streams with structured entities.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {annotation, entity, online, text stream},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1871437.1871446}
+}
+
 @INPROCEEDINGS{saffari2010online,
   author = {Saffari, Amir and Godec, Martin and Pock, Thomas and Leistner, Christian
 	and Bischof, Horst},
@@ -208,6 +327,28 @@
   location = {Toronto, ON, Canada},
   numpages = {10},
   url = {http://doi.acm.org/10.1145/1871437.1871523}
+}
+
+@INPROCEEDINGS{Song:2010:AEW:1871437.1871447,
+  author = {Song, Xinying and Liu, Jing and Cao, Yunbo and Lin, Chin-Yew and
+	Hon, Hsiao-Wuen},
+  title = {Automatic Extraction of Web Data Records Containing User-generated
+	Content},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {39--48},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871447},
+  doi = {10.1145/1871437.1871447},
+  file = {Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:ie_cv/Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {information extraction, structured data, user-generated content},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1871437.1871447}
 }
 
 @ARTICLE{Tang:2010:CAW:1870096.1870098,
@@ -267,7 +408,22 @@
   file = {Resume Information Extraction with Cascaded Hybrid Model.pdf:ie_cv/Resume Information Extraction with Cascaded Hybrid Model.pdf:PDF},
   location = {Ann Arbor, Michigan},
   numpages = {8},
-  review = {引用数很高},
+  review = {引用数很高
+	
+	
+	主要采用HMM和SVM来进行简历解析。
+	
+	
+	首先，假设简历的模块以自然段为分割。在这个假设的基础上用HMM模型来预测每一段可能的归属，然后进行分类标注。
+	
+	
+	然后，将上一步完成的分类标注进行细粒度的抽取。利用svm多分类器方法，对不同的属性进行单独抽取。
+	
+	
+	实验在1200个简历上进行，效果还可以。
+	
+	
+	缺点：只是抽取重要信息，具体的工作经历/工作单位等等都没有详细处理。},
   url = {http://dx.doi.org/10.3115/1219840.1219902}
 }
 
