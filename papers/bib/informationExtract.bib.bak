@@ -37,7 +37,9 @@
   year = {2012},
   volume = {7},
   pages = {5127--5142},
-  number = {29}
+  number = {29},
+  file = {A survey of job recommender systems.pdf:ie_cv/A survey of job recommender systems.pdf:PDF},
+  review = {各种目前的职位与简历match的方法}
 }
 
 @ARTICLE{bilenko2003adaptive,
@@ -48,7 +50,8 @@
   year = {2003},
   volume = {18},
   pages = {16--23},
-  number = {5}
+  number = {5},
+  file = {Adaptive name matching in information integration.pdf:ie_cv/Adaptive name matching in information integration.pdf:PDF}
 }
 
 @INPROCEEDINGS{Carlson:2010:CSL:1718487.1718501,
@@ -95,14 +98,6 @@
   url = {http://doi.acm.org/10.1145/1871437.1871448}
 }
 
-@ARTICLE{cunningham2002gate,
-  author = {Cunningham, Hamish},
-  title = {GATE: an Architecture for Development of Robust HLT Applications
-	Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan
-	Department of Computer Science University of Sheffield},
-  year = {2002}
-}
-
 @ARTICLE{galar2011overview,
   author = {Galar, Mikel and Fern{\'a}ndez, Alberto and Barrenechea, Edurne and
 	Bustince, Humberto and Herrera, Francisco},
@@ -124,6 +119,13 @@
   year = {2012},
   pages = {544--553},
   organization = {IEEE}
+}
+
+@ARTICLE{cunningham2002gate,
+  author = {Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan
+	},
+  title = {GATE: an Architecture for Development of Robust HLT Applications},
+  year = {2002}
 }
 
 @INPROCEEDINGS{Huang:2012:BTE:2380816.2380853,
