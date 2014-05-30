@@ -1,4 +1,5 @@
 nohup.out
+.project
 *.log
 *.aux
 .DS_Store
@@ -6,3 +7,4 @@ nohup.out
 *.bbl
 *.blg
 *.gz
+Thumbs.db
