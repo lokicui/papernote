@@ -1,33 +1,33 @@
-% This file was created with JabRef 2.10.
+% This file was created with JabRef 2.9.2.
 % Encoding: UTF8
 
-
-@InProceedings{Celik:2012:OIE:2456270.2456284,
-  Title                    = {An Ontology-based Information Extraction Approach for Resumes},
-  Author                   = {\c{C}elik, Duygu and El\c{c}i, Atilla},
-  Booktitle                = {Proceedings of the 2012 International Conference on Pervasive Computing and the Networked World},
-  Year                     = {2013},
-
-  Address                  = {Berlin, Heidelberg},
-  Pages                    = {165--179},
-  Publisher                = {Springer-Verlag},
-  Series                   = {ICPCA/SWS'12},
-
-  Acmid                    = {2456284},
-  Doi                      = {10.1007/978-3-642-37015-1_14},
-  ISBN                     = {978-3-642-37014-4},
-  Keywords                 = {information extraction, r{\'e}sum{\'e}, semantic search agents, web ontology language, web semantics},
-  Location                 = {Istanbul, Turkey},
-  Numpages                 = {15},
-  Url                      = {http://dx.doi.org/10.1007/978-3-642-37015-1_14}
+@INPROCEEDINGS{Celik:2012:OIE:2456270.2456284,
+  author = {\c{C}elik, Duygu and El\c{c}i, Atilla},
+  title = {An Ontology-based Information Extraction Approach for Resumes},
+  booktitle = {Proceedings of the 2012 International Conference on Pervasive Computing
+	and the Networked World},
+  year = {2013},
+  series = {ICPCA/SWS'12},
+  pages = {165--179},
+  address = {Berlin, Heidelberg},
+  publisher = {Springer-Verlag},
+  acmid = {2456284},
+  doi = {10.1007/978-3-642-37015-1_14},
+  isbn = {978-3-642-37014-4},
+  keywords = {information extraction, r{\'e}sum{\'e}, semantic search agents, web
+	ontology language, web semantics},
+  location = {Istanbul, Turkey},
+  numpages = {15},
+  url = {http://dx.doi.org/10.1007/978-3-642-37015-1_14}
 }
 
-@Article{abiramiontology,
-  Title                    = {Ontology based ranking of documents using Graph Databases: a Big Data Approach},
-  Author                   = {Abirami, AM and Askarunisa, A and Sangeetha, R and Padmavathi, C and Priya, M},
-
-  File                     = {:ie_cv/Ontology based ranking of documents using Graph  Databases- a Big Data Approach.pdf:PDF},
-  Url                      = {https://www.iiitd.edu.in/~spbda2014/papers/spbda2014_submission_2_Sangeetha.pdf}
+@ARTICLE{abiramiontology,
+  author = {Abirami, AM and Askarunisa, A and Sangeetha, R and Padmavathi, C
+	and Priya, M},
+  title = {Ontology based ranking of documents using Graph Databases: a Big
+	Data Approach},
+  file = {:ie_cv/Ontology based ranking of documents using Graph  Databases- a Big Data Approach.pdf:PDF},
+  url = {https://www.iiitd.edu.in/~spbda2014/papers/spbda2014_submission_2_Sangeetha.pdf}
 }
 
 @ARTICLE{al2012survey,
@@ -42,315 +42,333 @@
   review = {各种目前的职位与简历match的方法}
 }
 
-
-@Article{cunningham2002gate,
-  Title                    = {GATE: an Architecture for Development of Robust HLT Applications},
-  Author                   = {Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan },
-  Year                     = {2002},
-
-  File                     = {cunningham2002gate.pdf:ie_cv/cunningham2002gate.pdf:PDF}
+@ARTICLE{cunningham2002gate,
+  author = {Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan
+	},
+  title = {GATE: an Architecture for Development of Robust HLT Applications},
+  year = {2002},
+  file = {cunningham2002gate.pdf:ie_cv/cunningham2002gate.pdf:PDF}
 }
 
-@InProceedings{Huang:2012:BTE:2380816.2380853,
-  Title                    = {Bootstrapped Training of Event Extraction Classifiers},
-  Author                   = {Huang, Ruihong and Riloff, Ellen},
-  Booktitle                = {Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics},
-  Year                     = {2012},
-
-  Address                  = {Stroudsburg, PA, USA},
-  Pages                    = {286--295},
-  Publisher                = {Association for Computational Linguistics},
-  Series                   = {EACL '12},
-
-  Acmid                    = {2380853},
-  ISBN                     = {978-1-937284-19-0},
-  Location                 = {Avignon, France},
-  Numpages                 = {10},
-  Url                      = {http://dl.acm.org/citation.cfm?id=2380816.2380853}
+@INPROCEEDINGS{Huang:2012:BTE:2380816.2380853,
+  author = {Huang, Ruihong and Riloff, Ellen},
+  title = {Bootstrapped Training of Event Extraction Classifiers},
+  booktitle = {Proceedings of the 13th Conference of the European Chapter of the
+	Association for Computational Linguistics},
+  year = {2012},
+  series = {EACL '12},
+  pages = {286--295},
+  address = {Stroudsburg, PA, USA},
+  publisher = {Association for Computational Linguistics},
+  acmid = {2380853},
+  file = {Bootstrapped Training of Event Extraction Classifiers.pdf:news/Bootstrapped Training of Event Extraction Classifiers.pdf:PDF},
+  isbn = {978-1-937284-19-0},
+  location = {Avignon, France},
+  numpages = {10},
+  url = {http://dl.acm.org/citation.cfm?id=2380816.2380853}
 }
 
-@InProceedings{hudli2012application,
-  Title                    = {Application of data mining to candidate screening},
-  Author                   = {Hudli, SA and Hudli, AV and Hudli, AA},
-  Booktitle                = {Advanced Communication Control and Computing Technologies (ICACCCT), 2012 IEEE International Conference on},
-  Year                     = {2012},
-  Organization             = {IEEE},
-  Pages                    = {287--290}
+@INPROCEEDINGS{hudli2012application,
+  author = {Hudli, SA and Hudli, AV and Hudli, AA},
+  title = {Application of data mining to candidate screening},
+  booktitle = {Advanced Communication Control and Computing Technologies (ICACCCT),
+	2012 IEEE International Conference on},
+  year = {2012},
+  pages = {287--290},
+  organization = {IEEE},
+  file = {Application of Data Mining to Candidate Screening.pdf:ie_cv/Application of Data Mining to Candidate Screening.pdf:PDF}
 }
 
-@InProceedings{kopparapu2010automatic,
-  Title                    = {Automatic extraction of usable information from unstructured resumes to aid search},
-  Author                   = {Kopparapu, Sunil Kumar},
-  Booktitle                = {Progress in Informatics and Computing (PIC), 2010 IEEE International Conference on},
-  Year                     = {2010},
-  Organization             = {IEEE},
-  Pages                    = {99--103},
-  Volume                   = {1},
-
-  File                     = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF},
-  Review                   = {该篇文章的目的是aid search，于是并不是关心全部解析简历，而只要其中关键部分。
-
-通过一遍过滤文档的方式，找出所需要的工作经验/技能/教育等信息。
-
-主要用的nlp技术是规则匹配，其实就是用一堆关键词去查找。
-
-存在问题，1）需要首先构建一个知识库，而且有人工标注
-
-2）规则匹配过程中的那些规则人工创建的局限性太大
-
-3）部分抽取有明显问题，如人名抽取，只看前几行找人名实在是太navie了}
+@INPROCEEDINGS{kopparapu2010automatic,
+  author = {Kopparapu, Sunil Kumar},
+  title = {Automatic extraction of usable information from unstructured resumes
+	to aid search},
+  booktitle = {Progress in Informatics and Computing (PIC), 2010 IEEE International
+	Conference on},
+  year = {2010},
+  volume = {1},
+  pages = {99--103},
+  organization = {IEEE},
+  file = {Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:ie_cv/Automatic Extraction of Usable Information from Unstructured Resumes to Aid Search .pdf:PDF},
+  review = {该篇文章的目的是aid search，于是并不是关心全部解析简历，而只要其中关键部分。
+	
+	通过一遍过滤文档的方式，找出所需要的工作经验/技能/教育等信息。
+	
+	主要用的nlp技术是规则匹配，其实就是用一堆关键词去查找。
+	
+	存在问题，1）需要首先构建一个知识库，而且有人工标注
+	
+	2）规则匹配过程中的那些规则人工创建的局限性太大
+	
+	3）部分抽取有明显问题，如人名抽取，只看前几行找人名实在是太navie了}
 }
 
-@Article{kumaran2013towards,
-  Title                    = {Towards an automated system for intelligent screening of candidates for recruitment using ontology mapping (EXPERT)},
-  Author                   = {Kumaran, V Senthil and Sankar, A},
-  Journal                  = {International Journal of Metadata, Semantics and Ontologies},
-  Year                     = {2013},
-  Number                   = {1},
-  Pages                    = {56--64},
-  Volume                   = {8},
-
-  File                     = {kumaran2013towards.pdf:ie_cv/kumaran2013towards.pdf:PDF},
-  Publisher                = {Inderscience}
+@ARTICLE{kumaran2013towards,
+  author = {Kumaran, V Senthil and Sankar, A},
+  title = {Towards an automated system for intelligent screening of candidates
+	for recruitment using ontology mapping (EXPERT)},
+  journal = {International Journal of Metadata, Semantics and Ontologies},
+  year = {2013},
+  volume = {8},
+  pages = {56--64},
+  number = {1},
+  file = {kumaran2013towards.pdf:ie_cv/kumaran2013towards.pdf:PDF},
+  publisher = {Inderscience}
 }
 
-@Article{kumariautomated,
-  Title                    = {AUTOMATED RESUME EXTRACTION AND CANDIDATE SELECTION SYSTEM},
-  Author                   = {Kumari, Sneha and Giri, Punam and Choudhury, Swati and Patil, SR},
-  Journal                  = {International Journal of Research in Engineering and Technology},
-  Year                     = {2014},
-
-  File                     = {kumariautomated.pdf:ie_cv/kumariautomated.pdf:PDF},
-  Review                   = {IJRET 是个已经被EI踢出去的韩国垃圾期刊...已经没有必要去投了..
-
-本文写的巨垃圾无比..
-总共3页，还有1页半的图，而且非常不清晰..
-绝笔的渣渣..
-
-IJRET可以无视了.
-
-本文毫无参考意义}
+@ARTICLE{kumariautomated,
+  author = {Kumari, Sneha and Giri, Punam and Choudhury, Swati and Patil, SR},
+  title = {AUTOMATED RESUME EXTRACTION AND CANDIDATE SELECTION SYSTEM},
+  journal = {International Journal of Research in Engineering and Technology},
+  year = {2014},
+  file = {kumariautomated.pdf:ie_cv/kumariautomated.pdf:PDF},
+  review = {IJRET 是个已经被EI踢出去的韩国垃圾期刊...已经没有必要去投了..
+	
+	本文写的巨垃圾无比.. 总共3页，还有1页半的图，而且非常不清晰.. 绝笔的渣渣..
+	
+	IJRET可以无视了.
+	
+	本文毫无参考意义}
 }
 
-@Article{li2011multi,
-  Title                    = {Multi-class text categorization based on LDA and SVM},
-  Author                   = {Li, Kunlun and Xie, Jing and Sun, Xue and Ma, Yinghui and Bai, Hui},
-  Journal                  = {Procedia Engineering},
-  Year                     = {2011},
-  Pages                    = {1963--1967},
-  Volume                   = {15},
-
-  File                     = {Multi-class text categorization based on LDA and SVM.pdf:papers-not-read/Multi-class text categorization based on LDA and SVM.pdf:PDF},
-  Publisher                = {Elsevier}
+@ARTICLE{li2011multi,
+  author = {Li, Kunlun and Xie, Jing and Sun, Xue and Ma, Yinghui and Bai, Hui},
+  title = {Multi-class text categorization based on LDA and SVM},
+  journal = {Procedia Engineering},
+  year = {2011},
+  volume = {15},
+  pages = {1963--1967},
+  file = {Multi-class text categorization based on LDA and SVM.pdf:papers-not-read/Multi-class text categorization based on LDA and SVM.pdf:PDF},
+  publisher = {Elsevier}
 }
 
-@Article{luyckx2011authorship,
-  Title                    = {Authorship attribution of e-mail as a multi-class task},
-  Author                   = {Luyckx, Kim},
-  Year                     = {2011},
-
-  File                     = {Authorship Attribution of E-mail as a Multi-Class Task.pdf:papers-not-read/Authorship Attribution of E-mail as a Multi-Class Task.pdf:PDF}
+@ARTICLE{luyckx2011authorship,
+  author = {Luyckx, Kim},
+  title = {Authorship attribution of e-mail as a multi-class task},
+  year = {2011},
+  file = {Authorship Attribution of E-mail as a Multi-Class Task.pdf:papers-not-read/Authorship Attribution of E-mail as a Multi-Class Task.pdf:PDF}
 }
 
-@Article{maheshwari2010mining,
-  Title                    = {Mining special features to improve the performance of product selection in e-commerce environment and resume extraction system},
-  Author                   = {Maheshwari, Sumit},
-  Journal                  = {International Institute of Information Technology},
-  Year                     = {2010},
-
-  File                     = {Mining special features to improve the performance of product selection in e-commerce environment and resume extraction system.pdf:ie_cv/Mining special features to improve the performance of product selection in e-commerce environment and resume extraction system.pdf:PDF}
+@ARTICLE{maheshwari2010mining,
+  author = {Maheshwari, Sumit},
+  title = {Mining special features to improve the performance of product selection
+	in e-commerce environment and resume extraction system},
+  journal = {International Institute of Information Technology},
+  year = {2010},
+  file = {Mining special features to improve the performance of product selection in e-commerce environment and resume extraction system.pdf:ie_cv/Mining special features to improve the performance of product selection in e-commerce environment and resume extraction system.pdf:PDF}
 }
 
-@InCollection{maheshwari2010approach,
-  Title                    = {An approach to extract special skills to improve the performance of resume selection},
-  Author                   = {Maheshwari, Sumit and Sainani, Abhishek and Reddy, P Krishna},
-  Booktitle                = {Databases in Networked Information Systems},
-  Publisher                = {Springer},
-  Year                     = {2010},
-  Pages                    = {256--273},
-
-  __markedentry            = {[coder:1]},
-  File                     = {An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:ie_cv/An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:PDF}
+@INCOLLECTION{maheshwari2010approach,
+  author = {Maheshwari, Sumit and Sainani, Abhishek and Reddy, P Krishna},
+  title = {An approach to extract special skills to improve the performance
+	of resume selection},
+  booktitle = {Databases in Networked Information Systems},
+  publisher = {Springer},
+  year = {2010},
+  pages = {256--273},
+  __markedentry = {[coder:1]},
+  file = {An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:ie_cv/An Approach to Extract Special Skills to Improve the Performance of Resume Selection.pdf:PDF}
 }
 
-@InProceedings{Pu:2010:OAT:1871437.1871446,
-  Title                    = {Online Annotation of Text Streams with Structured Entities},
-  Author                   = {Pu, Ken Q. and Hassanzadeh, Oktie and Drake, Richard and Miller, Ren{\'e}e J.},
-  Booktitle                = {Proceedings of the 19th ACM International Conference on Information and Knowledge Management},
-  Year                     = {2010},
-
-  Address                  = {New York, NY, USA},
-  Pages                    = {29--38},
-  Publisher                = {ACM},
-  Series                   = {CIKM '10},
-
-  Acmid                    = {1871446},
-  Doi                      = {10.1145/1871437.1871446},
-  File                     = {Online annotation of text streams with structured entities.pdf:ie_cv/Online annotation of text streams with structured entities.pdf:PDF},
-  ISBN                     = {978-1-4503-0099-5},
-  Keywords                 = {annotation, entity, online, text stream},
-  Location                 = {Toronto, ON, Canada},
-  Numpages                 = {10},
-  Url                      = {http://doi.acm.org/10.1145/1871437.1871446}
+@INPROCEEDINGS{Pu:2010:OAT:1871437.1871446,
+  author = {Pu, Ken Q. and Hassanzadeh, Oktie and Drake, Richard and Miller,
+	Ren{\'e}e J.},
+  title = {Online Annotation of Text Streams with Structured Entities},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {29--38},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871446},
+  doi = {10.1145/1871437.1871446},
+  file = {Online annotation of text streams with structured entities.pdf:ie_cv/Online annotation of text streams with structured entities.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {annotation, entity, online, text stream},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1871437.1871446}
 }
 
-@InProceedings{saffari2010online,
-  Title                    = {Online multi-class lpboost},
-  Author                   = {Saffari, Amir and Godec, Martin and Pock, Thomas and Leistner, Christian and Bischof, Horst},
-  Booktitle                = {Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference on},
-  Year                     = {2010},
-  Organization             = {IEEE},
-  Pages                    = {3570--3577},
-
-  File                     = {Online Multi-Class LPBoost.pdf:papers-not-read/Online Multi-Class LPBoost.pdf:PDF}
+@INPROCEEDINGS{saffari2010online,
+  author = {Saffari, Amir and Godec, Martin and Pock, Thomas and Leistner, Christian
+	and Bischof, Horst},
+  title = {Online multi-class lpboost},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference
+	on},
+  year = {2010},
+  pages = {3570--3577},
+  organization = {IEEE},
+  file = {Online Multi-Class LPBoost.pdf:papers-not-read/Online Multi-Class LPBoost.pdf:PDF}
 }
 
-@Article{sainani2012mining,
-  Title                    = {Mining special features to improve the performance of e--commerce product selection and resume processing},
-  Author                   = {Sainani, Abhishek and Reddy, P Krishna and Maheshwari, Sumit},
-  Journal                  = {International Journal of Computational Science and Engineering},
-  Year                     = {2012},
-  Number                   = {1},
-  Pages                    = {82--95},
-  Volume                   = {7},
-
-  Publisher                = {Inderscience}
+@ARTICLE{sainani2012mining,
+  author = {Sainani, Abhishek and Reddy, P Krishna and Maheshwari, Sumit},
+  title = {Mining special features to improve the performance of e--commerce
+	product selection and resume processing},
+  journal = {International Journal of Computational Science and Engineering},
+  year = {2012},
+  volume = {7},
+  pages = {82--95},
+  number = {1},
+  publisher = {Inderscience}
 }
 
-@Article{saxena2011enhancing,
-  Title                    = {Enhancing Productivity of Recruitment Process Using Data mining \& Text Mining Tools},
-  Author                   = {Saxena, Charul},
-  Year                     = {2011},
-
-  File                     = {Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:ie_cv/Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:PDF},
-  Review                   = {2011年 的一篇美国硕士论文}
+@ARTICLE{saxena2011enhancing,
+  author = {Saxena, Charul},
+  title = {Enhancing Productivity of Recruitment Process Using Data mining \&
+	Text Mining Tools},
+  year = {2011},
+  file = {Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:ie_cv/Enhancing Productivity of Recruitment Process Using Data mining & Text Mining Tools.pdf:PDF},
+  review = {2011年 的一篇美国硕士论文}
 }
 
-@InProceedings{Singh:2010:PSS:1871437.1871523,
-  Title                    = {PROSPECT: A System for Screening Candidates for Recruitment},
-  Author                   = {Singh, Amit and Rose, Catherine and Visweswariah, Karthik and Chenthamarakshan, Vijil and Kambhatla, Nandakishore},
-  Booktitle                = {Proceedings of the 19th ACM International Conference on Information and Knowledge Management},
-  Year                     = {2010},
-
-  Address                  = {New York, NY, USA},
-  Pages                    = {659--668},
-  Publisher                = {ACM},
-  Series                   = {CIKM '10},
-
-  Acmid                    = {1871523},
-  Doi                      = {10.1145/1871437.1871523},
-  File                     = {PROSPECT\: a system for screening candidates for recruitment.pdf:ie_cv/PROSPECT\: a system for screening candidates for recruitment.pdf:PDF},
-  ISBN                     = {978-1-4503-0099-5},
-  Keywords                 = {resume information extraction, resume search},
-  Location                 = {Toronto, ON, Canada},
-  Numpages                 = {10},
-  Review                   = {这篇文章描述了整个系统框架和各部分功能，是一个完整的简历系统。包括候选人排序、简历全文搜索、技能统计、重复简历检查、技能建议这几个部分。
-在简历解析部分采用CRF的方式进行序列标注。然后结合table分析和概念识别，对具体内容进行抽取。对比了三方面的特征：文本特征，视觉特征、命名实体特征、文本特征和上下文特征。
-实验在志愿者标注的7200份简历上进行，从准确率和召回率和F值进行对比，对属性抽取、技能等级和表格数据进行了实验分析。},
-  Url                      = {http://doi.acm.org/10.1145/1871437.1871523}
+@INPROCEEDINGS{Singh:2010:PSS:1871437.1871523,
+  author = {Singh, Amit and Rose, Catherine and Visweswariah, Karthik and Chenthamarakshan,
+	Vijil and Kambhatla, Nandakishore},
+  title = {PROSPECT: A System for Screening Candidates for Recruitment},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {659--668},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871523},
+  doi = {10.1145/1871437.1871523},
+  file = {PROSPECT\: a system for screening candidates for recruitment.pdf:ie_cv/PROSPECT\: a system for screening candidates for recruitment.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {resume information extraction, resume search},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  review = {这篇文章描述了整个系统框架和各部分功能，是一个完整的简历系统。包括候选人排序、简历全文搜索、技能统计、重复简历检查、技能建议这几个部分。
+	在简历解析部分采用CRF的方式进行序列标注。然后结合table分析和概念识别，对具体内容进行抽取。对比了三方面的特征：文本特征，视觉特征、命名实体特征、文本特征和上下文特征。
+	实验在志愿者标注的7200份简历上进行，从准确率和召回率和F值进行对比，对属性抽取、技能等级和表格数据进行了实验分析。},
+  url = {http://doi.acm.org/10.1145/1871437.1871523}
 }
 
-@InProceedings{Song:2010:AEW:1871437.1871447,
-  Title                    = {Automatic Extraction of Web Data Records Containing User-generated Content},
-  Author                   = {Song, Xinying and Liu, Jing and Cao, Yunbo and Lin, Chin-Yew and Hon, Hsiao-Wuen},
-  Booktitle                = {Proceedings of the 19th ACM International Conference on Information and Knowledge Management},
-  Year                     = {2010},
-
-  Address                  = {New York, NY, USA},
-  Pages                    = {39--48},
-  Publisher                = {ACM},
-  Series                   = {CIKM '10},
-
-  Acmid                    = {1871447},
-  Doi                      = {10.1145/1871437.1871447},
-  File                     = {Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:ie_cv/Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:PDF},
-  ISBN                     = {978-1-4503-0099-5},
-  Keywords                 = {information extraction, structured data, user-generated content},
-  Location                 = {Toronto, ON, Canada},
-  Numpages                 = {10},
-  Url                      = {http://doi.acm.org/10.1145/1871437.1871447}
+@INPROCEEDINGS{Sluban:2013:UTE:2505515.2505654,
+  author = {Sluban, Borut and Gr\v{c}ar, Miha},
+  title = {URL Tree: Efficient Unsupervised Content Extraction from Streams
+	of Web Documents},
+  booktitle = {Proceedings of the 22Nd ACM International Conference on Conference
+	on Information \&\#38; Knowledge Management},
+  year = {2013},
+  series = {CIKM '13},
+  pages = {2267--2272},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {2505654},
+  doi = {10.1145/2505515.2505654},
+  isbn = {978-1-4503-2263-8},
+  keywords = {boilerplate removal, content extraction, stream data, unsupervised
+	learning, web content},
+  location = {San Francisco, California, USA},
+  numpages = {6},
+  url = {http://doi.acm.org/10.1145/2505515.2505654}
 }
 
-@Article{Tang:2010:CAW:1870096.1870098,
-  Title                    = {A Combination Approach to Web User Profiling},
-  Author                   = {Tang, Jie and Yao, Limin and Zhang, Duo and Zhang, Jing},
-  Journal                  = {ACM Trans. Knowl. Discov. Data},
-  Year                     = {2010},
-
-  Month                    = dec,
-  Number                   = {1},
-  Pages                    = {2:1--2:44},
-  Volume                   = {5},
-
-  Acmid                    = {1870098},
-  Address                  = {New York, NY, USA},
-  Articleno                = {2},
-  Doi                      = {10.1145/1870096.1870098},
-  File                     = {A Combination Approach to Web User profiling.pdf:ie_cv/A Combination Approach to Web User profiling.pdf:PDF},
-  ISSN                     = {1556-4681},
-  Issue_date               = {December 2010},
-  Keywords                 = {User profiling, information extraction, name disambiguation, social network, text mining, topic modeling},
-  Numpages                 = {44},
-  Publisher                = {ACM},
-  Url                      = {http://doi.acm.org/10.1145/1870096.1870098}
+@INPROCEEDINGS{Song:2010:AEW:1871437.1871447,
+  author = {Song, Xinying and Liu, Jing and Cao, Yunbo and Lin, Chin-Yew and
+	Hon, Hsiao-Wuen},
+  title = {Automatic Extraction of Web Data Records Containing User-generated
+	Content},
+  booktitle = {Proceedings of the 19th ACM International Conference on Information
+	and Knowledge Management},
+  year = {2010},
+  series = {CIKM '10},
+  pages = {39--48},
+  address = {New York, NY, USA},
+  publisher = {ACM},
+  acmid = {1871447},
+  doi = {10.1145/1871437.1871447},
+  file = {Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:ie_cv/Automatic Extraction of Web Data Records Containing User-Generated Content.pdf:PDF},
+  isbn = {978-1-4503-0099-5},
+  keywords = {information extraction, structured data, user-generated content},
+  location = {Toronto, ON, Canada},
+  numpages = {10},
+  url = {http://doi.acm.org/10.1145/1871437.1871447}
 }
 
-@InProceedings{Yan:2009:RER:1697959.1697965,
-  Title                    = {RENS --- Enabling a Robot to Identify a Person},
-  Author                   = {Yan, Xin and Jeschke, Sabina and Dubey, Amit and Wilke, Marc and Sch\"{u}tze, Hinrich},
-  Booktitle                = {Proceedings of the 2Nd International Conference on Intelligent Robotics and Applications},
-  Year                     = {2009},
-
-  Address                  = {Berlin, Heidelberg},
-  Pages                    = {43--54},
-  Publisher                = {Springer-Verlag},
-  Series                   = {ICIRA '09},
-
-  Acmid                    = {1697965},
-  Doi                      = {10.1007/978-3-642-10817-4_5},
-  ISBN                     = {978-3-642-10816-7},
-  Location                 = {Singapore},
-  Numpages                 = {12},
-  Url                      = {http://dx.doi.org/10.1007/978-3-642-10817-4_5}
+@ARTICLE{Tang:2010:CAW:1870096.1870098,
+  author = {Tang, Jie and Yao, Limin and Zhang, Duo and Zhang, Jing},
+  title = {A Combination Approach to Web User Profiling},
+  journal = {ACM Trans. Knowl. Discov. Data},
+  year = {2010},
+  volume = {5},
+  pages = {2:1--2:44},
+  number = {1},
+  month = dec,
+  acmid = {1870098},
+  address = {New York, NY, USA},
+  articleno = {2},
+  doi = {10.1145/1870096.1870098},
+  file = {A Combination Approach to Web User profiling.pdf:ie_cv/A Combination Approach to Web User profiling.pdf:PDF},
+  issn = {1556-4681},
+  issue_date = {December 2010},
+  keywords = {User profiling, information extraction, name disambiguation, social
+	network, text mining, topic modeling},
+  numpages = {44},
+  publisher = {ACM},
+  url = {http://doi.acm.org/10.1145/1870096.1870098}
 }
 
-@InProceedings{Yu:2005:RIE:1219840.1219902,
-  Title                    = {Resume Information Extraction with Cascaded Hybrid Model},
-  Author                   = {Yu, Kun and Guan, Gang and Zhou, Ming},
-  Booktitle                = {Proceedings of the 43rd Annual Meeting on Association for Computational Linguistics},
-  Year                     = {2005},
-
-  Address                  = {Stroudsburg, PA, USA},
-  Pages                    = {499--506},
-  Publisher                = {Association for Computational Linguistics},
-  Series                   = {ACL '05},
-
-  Acmid                    = {1219902},
-  Doi                      = {10.3115/1219840.1219902},
-  File                     = {Resume Information Extraction with Cascaded Hybrid Model.pdf:ie_cv/Resume Information Extraction with Cascaded Hybrid Model.pdf:PDF},
-  Location                 = {Ann Arbor, Michigan},
-  Numpages                 = {8},
-  Review                   = {引用数很高
-
-主要采用HMM和SVM来进行简历解析。
-
-首先，假设简历的模块以自然段为分割。在这个假设的基础上用HMM模型来预测每一段可能的归属，然后进行分类标注。
-
-然后，将上一步完成的分类标注进行细粒度的抽取。利用svm多分类器方法，对不同的属性进行单独抽取。
-
-实验在1200个简历上进行，效果还可以。
-
-缺点：只是抽取重要信息，具体的工作经历/工作单位等等都没有详细处理。},
-  Url                      = {http://dx.doi.org/10.3115/1219840.1219902}
+@INPROCEEDINGS{Yan:2009:RER:1697959.1697965,
+  author = {Yan, Xin and Jeschke, Sabina and Dubey, Amit and Wilke, Marc and
+	Sch\"{u}tze, Hinrich},
+  title = {RENS --- Enabling a Robot to Identify a Person},
+  booktitle = {Proceedings of the 2Nd International Conference on Intelligent Robotics
+	and Applications},
+  year = {2009},
+  series = {ICIRA '09},
+  pages = {43--54},
+  address = {Berlin, Heidelberg},
+  publisher = {Springer-Verlag},
+  acmid = {1697965},
+  doi = {10.1007/978-3-642-10817-4_5},
+  isbn = {978-3-642-10816-7},
+  location = {Singapore},
+  numpages = {12},
+  url = {http://dx.doi.org/10.1007/978-3-642-10817-4_5}
 }
 
-@Article{耿耘2013基于组合验证的,
-  Title                    = {基于组合验证的 Web 页面抽取算法研究},
-  Author                   = {耿耘 and 蒋严冰 and 郭岩 and 刘悦 and 余钧 and 程学旗},
-  Journal                  = {江西师范大学学报: 自然科学版},
-  Year                     = {2013},
-  Number                   = {2},
-  Pages                    = {142--147},
-  Volume                   = {37}
+@INPROCEEDINGS{Yu:2005:RIE:1219840.1219902,
+  author = {Yu, Kun and Guan, Gang and Zhou, Ming},
+  title = {Resume Information Extraction with Cascaded Hybrid Model},
+  booktitle = {Proceedings of the 43rd Annual Meeting on Association for Computational
+	Linguistics},
+  year = {2005},
+  series = {ACL '05},
+  pages = {499--506},
+  address = {Stroudsburg, PA, USA},
+  publisher = {Association for Computational Linguistics},
+  acmid = {1219902},
+  doi = {10.3115/1219840.1219902},
+  file = {Resume Information Extraction with Cascaded Hybrid Model.pdf:ie_cv/Resume Information Extraction with Cascaded Hybrid Model.pdf:PDF},
+  location = {Ann Arbor, Michigan},
+  numpages = {8},
+  review = {引用数很高
+	
+	主要采用HMM和SVM来进行简历解析。
+	
+	首先，假设简历的模块以自然段为分割。在这个假设的基础上用HMM模型来预测每一段可能的归属，然后进行分类标注。
+	
+	然后，将上一步完成的分类标注进行细粒度的抽取。利用svm多分类器方法，对不同的属性进行单独抽取。
+	
+	实验在1200个简历上进行，效果还可以。
+	
+	缺点：只是抽取重要信息，具体的工作经历/工作单位等等都没有详细处理。},
+  url = {http://dx.doi.org/10.3115/1219840.1219902}
+}
+
+@ARTICLE{耿耘2013基于组合验证的,
+  author = {耿耘 and 蒋严冰 and 郭岩 and 刘悦 and 余钧 and 程学旗},
+  title = {基于组合验证的 Web 页面抽取算法研究},
+  journal = {江西师范大学学报: 自然科学版},
+  year = {2013},
+  volume = {37},
+  pages = {142--147},
+  number = {2}
 }
 
