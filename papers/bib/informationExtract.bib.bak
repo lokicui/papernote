@@ -42,103 +42,6 @@
   review = {各种目前的职位与简历match的方法}
 }
 
-@ARTICLE{bilenko2003adaptive,
-  author = {Bilenko, Mikhail and Mooney, Raymond and Cohen, William and Ravikumar,
-	Pradeep and Fienberg, Stephen},
-  title = {Adaptive name matching in information integration},
-  journal = {IEEE Intelligent Systems},
-  year = {2003},
-  volume = {18},
-  pages = {16--23},
-  number = {5},
-  file = {Adaptive name matching in information integration.pdf:ie_cv/Adaptive name matching in information integration.pdf:PDF}
-@Article{al2012survey,
-  Title                    = {A survey of job recommender systems},
-  Author                   = {Al-Otaibi, Shaha T and Ykhlef, Mourad},
-  Journal                  = {International Journal of the Physical Sciences},
-  Year                     = {2012},
-  Number                   = {29},
-  Pages                    = {5127--5142},
-  Volume                   = {7},
-
-  File                     = {A survey of job recommender systems.pdf:ie_cv/A survey of job recommender systems.pdf:PDF}
-}
-
-@Article{bilenko2003adaptive,
-  Title                    = {Adaptive name matching in information integration},
-  Author                   = {Bilenko, Mikhail and Mooney, Raymond and Cohen, William and Ravikumar, Pradeep and Fienberg, Stephen},
-  Journal                  = {IEEE Intelligent Systems},
-  Year                     = {2003},
-  Number                   = {5},
-  Pages                    = {16--23},
-  Volume                   = {18},
-
-  File                     = {Adaptive name matching in information integration.pdf:ie_cv/Adaptive name matching in information integration.pdf:PDF}
-}
-
-@InProceedings{Carlson:2010:CSL:1718487.1718501,
-  Title                    = {Coupled Semi-supervised Learning for Information Extraction},
-  Author                   = {Carlson, Andrew and Betteridge, Justin and Wang, Richard C. and Hruschka,Jr., Estevam R. and Mitchell, Tom M.},
-  Booktitle                = {Proceedings of the Third ACM International Conference on Web Search and Data Mining},
-  Year                     = {2010},
-
-  Address                  = {New York, NY, USA},
-  Pages                    = {101--110},
-  Publisher                = {ACM},
-  Series                   = {WSDM '10},
-
-  Acmid                    = {1718501},
-  Doi                      = {10.1145/1718487.1718501},
-  File                     = {Coupled Semi-Supervised Learning for Information Extraction.pdf:ie_cv/Coupled Semi-Supervised Learning for Information Extraction.pdf:PDF},
-  ISBN                     = {978-1-60558-889-6},
-  Keywords                 = {bootstrap learning, information extraction, semi-supervised learning, web mining},
-  Location                 = {New York, New York, USA},
-  Numpages                 = {10},
-  Review                   = {基于半监督学习的信息抽取},
-  Url                      = {http://doi.acm.org/10.1145/1718487.1718501}
-}
-
-@InProceedings{Chen:2010:EAM:1871437.1871448,
-  Title                    = {An Efficient Algorithm for Mining Time Interval-based Patterns in Large Database},
-  Author                   = {Chen, Yi-Cheng and Jiang, Ji-Chiang and Peng, Wen-Chih and Lee, Suh-Yin},
-  Booktitle                = {Proceedings of the 19th ACM International Conference on Information and Knowledge Management},
-  Year                     = {2010},
-
-  Address                  = {New York, NY, USA},
-  Pages                    = {49--58},
-  Publisher                = {ACM},
-  Series                   = {CIKM '10},
-
-  Acmid                    = {1871448},
-  Doi                      = {10.1145/1871437.1871448},
-  File                     = {An efficient algorithm for mining time interval-based patterns in large database.pdf:ie_cv/An efficient algorithm for mining time interval-based patterns in large database.pdf:PDF},
-  ISBN                     = {978-1-4503-0099-5},
-  Keywords                 = {data mining, interval-based mining, sequential pattern, temporal pattern},
-  Location                 = {Toronto, ON, Canada},
-  Numpages                 = {10},
-  Url                      = {http://doi.acm.org/10.1145/1871437.1871448}
-}
-
-@Article{galar2011overview,
-  Title                    = {An overview of ensemble methods for binary classifiers in multi-class problems: Experimental study on one-vs-one and one-vs-all schemes},
-  Author                   = {Galar, Mikel and Fern{\'a}ndez, Alberto and Barrenechea, Edurne and Bustince, Humberto and Herrera, Francisco},
-  Journal                  = {Pattern Recognition},
-  Year                     = {2011},
-  Number                   = {8},
-  Pages                    = {1761--1776},
-  Volume                   = {44},
-
-  Publisher                = {Elsevier}
-}
-
-@InProceedings{gonzalez2012adaptive,
-  Title                    = {Adaptive employee profile classification for resource planning tool},
-  Author                   = {Gonzalez, Tere and Santos, Pano and Orozco, Fernando and Alcaraz, Mildreth and Zaldivar, Victor and Obeso, Alberto De and Garcia, Alan},
-  Booktitle                = {SRII Global Conference (SRII), 2012 Annual},
-  Year                     = {2012},
-  Organization             = {IEEE},
-  Pages                    = {544--553}
-}
 
 @Article{cunningham2002gate,
   Title                    = {GATE: an Architecture for Development of Robust HLT Applications},
@@ -148,21 +51,22 @@
   File                     = {cunningham2002gate.pdf:ie_cv/cunningham2002gate.pdf:PDF}
 }
 
-@INPROCEEDINGS{Huang:2012:BTE:2380816.2380853,
-  author = {Huang, Ruihong and Riloff, Ellen},
-  title = {Bootstrapped Training of Event Extraction Classifiers},
-  booktitle = {Proceedings of the 13th Conference of the European Chapter of the
-	Association for Computational Linguistics},
-  year = {2012},
-  series = {EACL '12},
-  pages = {286--295},
-  address = {Stroudsburg, PA, USA},
-  publisher = {Association for Computational Linguistics},
-  acmid = {2380853},
-  isbn = {978-1-937284-19-0},
-  location = {Avignon, France},
-  numpages = {10},
-  url = {http://dl.acm.org/citation.cfm?id=2380816.2380853}
+@InProceedings{Huang:2012:BTE:2380816.2380853,
+  Title                    = {Bootstrapped Training of Event Extraction Classifiers},
+  Author                   = {Huang, Ruihong and Riloff, Ellen},
+  Booktitle                = {Proceedings of the 13th Conference of the European Chapter of the Association for Computational Linguistics},
+  Year                     = {2012},
+
+  Address                  = {Stroudsburg, PA, USA},
+  Pages                    = {286--295},
+  Publisher                = {Association for Computational Linguistics},
+  Series                   = {EACL '12},
+
+  Acmid                    = {2380853},
+  ISBN                     = {978-1-937284-19-0},
+  Location                 = {Avignon, France},
+  Numpages                 = {10},
+  Url                      = {http://dl.acm.org/citation.cfm?id=2380816.2380853}
 }
 
 @InProceedings{hudli2012application,
@@ -340,6 +244,9 @@ IJRET可以无视了.
   Keywords                 = {resume information extraction, resume search},
   Location                 = {Toronto, ON, Canada},
   Numpages                 = {10},
+  Review                   = {这篇文章描述了整个系统框架和各部分功能，是一个完整的简历系统。包括候选人排序、简历全文搜索、技能统计、重复简历检查、技能建议这几个部分。
+在简历解析部分采用CRF的方式进行序列标注。然后结合table分析和概念识别，对具体内容进行抽取。对比了三方面的特征：文本特征，视觉特征、命名实体特征、文本特征和上下文特征。
+实验在志愿者标注的7200份简历上进行，从准确率和召回率和F值进行对比，对属性抽取、技能等级和表格数据进行了实验分析。},
   Url                      = {http://doi.acm.org/10.1145/1871437.1871523}
 }
 
