@@ -21,9 +21,49 @@ The experiments on the real word data, our approach can reach the proformance of
 In the information age, head-hunting companies collect millions of resumes. 
 However, these resumes are not wrote with the standard format.
 In order to improve the success rate of recommand person to fit the requirement of employee, those resumes should be parsed exactly and detailed.
-It's the challenge to analysis the resume to get the structure information.
+The process helps human resources to easily and quickly search for the right candidate.
+The challenge is how to analysis the resume to get the details.
+
+However, resumes are easy to restructer than other texts, such as news. 
+Different people have different writing style about personal resume, but the content of these work all around the same topic, their personal information, which contains contacts, educations, work experimences etc.
+As a result of this, resumes can be segmented by servel groups.
+In other words, resumes share the document-level hierarchical contextual structure \cite{maheshwari2010approach}.
+
+There are two main methods to deal with resumes in the practical engineering. One is mainly for resumes follows the same format, from some big recruiting platform like monster, linkedin.
+This kind of resumes can be parsed through special template file or regex rules.
+The advantage is very high accuracy, but not suitable for normal resume.
+Another one is keyword extraction from resume.
+This method use search technology to query keyword from resume to check whether it match the require.
+The advantage is suitable for every resume, but losing the accuracy.
+In the real application, resumes are mixed with those follow some template and normal ones.
+The system's ability to deal with resumes should be known to control the the robustness of the software.
+
+In this paper, we want to build a baseline of paring resume for the system. 
+Because when we meet a resume follows some template file, the specify parsing file will parse it exactly. 
+We have made an effort to propose an easy implement and effective solution based on pattern recognition and the decision tree.
+
+The rese of paper is organized as follows. In Section 2, we disscuss the related work. In Section 3, we explain our approach. In Section 4, experimental results are presented and analysised. Conclusion and future work are provided in Section 5.
 
 \section{Related works}
+
+Jsoup \cite{jsoup} and POI \cite{poi} can be used to parse resumes that follows some template file.
+Jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
+It also implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers do.
+The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards and Microsoft's OLE 2 Compound Document format.
+These two opensource tools help to extract resumes that follows some template file.
+
+In \cite{Yu:2005:RIE:1219840.1219902}, a cascaded information extraction framework was designed to support automatic resume management and routing.
+The first pass is used to segment the resume into cnsecutive blocks with labels indicating the information types. 
+Then detailed information, such as Name and Address, are identified in certain blocks without searching globally in the whole resume.
+
+In \cite{Singh:2010:PSS:1871437.1871523}, a system that aids in the shortlisting of candidates for jobs was designed. 
+The part of parsing resume combines three technologies. 
+Table analysis is used to detect the type of values in table. 
+CRF model is used to segment the resume text into different blocks. 
+Content Recognizer mines the named entities salient to candidate profile.
+
+In \cite{kopparapu2010automatic} and \cite{maheshwari2010approach}, only the specific data is extracted to filtered the resume streams. 
+Both of them are aim to accelerate the efficiency of search candicates for the job.
 
 \section{Our approach}
 
@@ -35,3 +75,29 @@ It's the challenge to analysis the resume to get the structure information.
 
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
