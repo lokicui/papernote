@@ -1,35 +1,135 @@
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
+%
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
+%
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
+%
+% For tracking purposes - this is V3.1SP - APRIL 2009
+
+\documentclass{acm_proc_article-sp}
 \begin{document}
 
-\title{PBECV: fast extract information from cv with based on pattern reconixxx}
+\title{PBECV: a fast resume extracting algorithm based on pattern recognition}
+
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{8} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Chen Jie\\
+       \affaddr{Beijing Institute of Technology}\\
+       \affaddr{ 5 South Zhongguancun Street }\\
+       \affaddr{Haidian District, Beijing}\\
+       \email{sonyfe25cp@gmail.com}
+% 2nd. author
+\alignauthor
+Zhendong Niu\\
+         \affaddr{Beijing Institute of Technology}\\
+       \affaddr{ 5 South Zhongguancun Street }\\
+       \affaddr{Haidian District, Beijing}\\
+       \email{zniu@bit.edu.cn}
+%3rd.author
+\alignauthor
+Hongping Fu\\
+         \affaddr{Beijing Institute of Technology}\\
+       \affaddr{ 5 South Zhongguancun Street }\\
+       \affaddr{Haidian District, Beijing}\\
+       \email{fhongping@bit.edu.cn}
+}
 
 \maketitle
-
 \begin{abstract}
 
-#In the information age, internet do big favor to job seekers to deliver their resume to companies. 
+
 In the information age, companies receive thousands of resumes from job seekers everyday. 
-#It's  a heavy work to read all the resumes in order to find the candicate.
-#Currently technologies usually extract some keywords to filter the resume set.
-Most of resumes are writed with different sytle, including font size and writing style, except those with the same template.
-For the resume adopt the common template file, they can be accurate interpred with the specific parser, but how to control the transfer efficiency?
-In this paper, we propose a fast approach to extract the resume information from text file which drop the structure information like the font size and table constraint.
-The aim of this application scene is to build the baseline of resume extraction.
-The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
+Most of resumes are wrote in different style, including font size and writing style, except those follow the same template.
+%For resumes adopt the common template file, they can be accurate interpred with the specific parser, but how to control the transfer efficiency?
+Since these resumes are different, it's difficult to structure these data.
+%In this paper, we propose a fast approach to extract the resume information from text file which drop the structure information like the font size and table constraint.
+In this paper, we propose a fast approach to extract the resume information from text file without structure information like the font size and table constraint.
+%The aim of this application scene is to build the baseline of resume extraction.
+%The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
+The experimental results on the real word data-set of millions of resumes show that our approach can reach the performance of those algorithms trained with the structure information and the proposed approach is fastest.
+
+\end{abstract}
+
+\keywords{resume extractor}
 
 \section{Introduction}
 
-In the information age, head-hunting companies collect millions of resumes. 
-However, these resumes are not wrote with the standard format.
+%In the information age, head-hunting companies collect millions of resumes. 
+In the information age, head-hunting companies collect millions of resumes to occupy more market share.
+%However, these resumes are not wrote with the standard format.
+However, most of resumes are not wrote with the standard format or follow some special template file.
 In order to improve the success rate of recommand person to fit the requirement of employee, those resumes should be parsed exactly and detailed.
 The process helps human resources to easily and quickly search for the right candidate.
 The challenge is how to analysis the resume to get the details.
 
 However, resumes are easy to restructer than other texts, such as news. 
 Different people have different writing style about personal resume, but the content of these work all around the same topic, their personal information, which contains contacts, educations, work experimences etc.
-As a result of this, resumes can be segmented by servel groups.
+%As a result of this, resumes can be segmented by servel groups.
+As a result of this, resumes can be segmented into servel groups, which is one of the basic ideas to solve the problem.
 In other words, resumes share the document-level hierarchical contextual structure \cite{maheshwari2010approach}.
 
-There are two main methods to deal with resumes in the practical engineering. One is mainly for resumes follows the same format, from some big recruiting platform like monster, linkedin.
+There are two main methods to deal with resumes in the practical engineering. 
+One is mainly for resumes follows the same format, from some big recruiting platform like monster, linkedin.
 This kind of resumes can be parsed through special template file or regex rules.
 The advantage is very high accuracy, but not suitable for normal resume.
 Another one is keyword extraction from resume.
@@ -47,10 +147,12 @@ The rese of paper is organized as follows. In Section 2, we disscuss the related
 \section{Related works}
 
 Jsoup \cite{jsoup} and POI \cite{poi} can be used to parse resumes that follows some template file.
-Jsoup is a Java library for working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
-It also implements the WHATWG HTML5 specification, and parses HTML to the same DOM as modern browsers do.
-The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards and Microsoft's OLE 2 Compound Document format.
-These two opensource tools help to extract resumes that follows some template file.
+Jsoup is a Java library for working with real-world HTML. 
+It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
+It also implements the HTML5 specification, and parses HTML to the same DOM as modern browsers do.
+%The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards and Microsoft's OLE 2 Compound Document format.
+The Apache POI is a useful Java library for working with Office file, based on the Open XML standards which proposed by Microsoft company.
+These two open source tools help to extract resumes that follows some template file.
 
 In \cite{Yu:2005:RIE:1219840.1219902}, a cascaded information extraction framework was designed to support automatic resume management and routing.
 The first pass is used to segment the resume into cnsecutive blocks with labels indicating the information types. 
@@ -62,15 +164,133 @@ Table analysis is used to detect the type of values in table.
 CRF model is used to segment the resume text into different blocks. 
 Content Recognizer mines the named entities salient to candidate profile.
 
-In \cite{kopparapu2010automatic} and \cite{maheshwari2010approach}, only the specific data is extracted to filtered the resume streams. 
+In \cite{kopparapu2010automatic} and \cite{maheshwari2010approach}, only the specific data is extracted to filter the resume streams. 
 Both of them are aim to accelerate the efficiency of search candicates for the job.
 
 \section{Our approach}
 
+In this section, we explain the details of our approach. 
+The process can be devided into three part. 
+First, the origin resume file is converted into text format no matter is word format, pdf format or html format with the help of Apache POI. 
+Some rules is created to normalize each line of the text. 
+Second, patten recongized method is used to find the laten block. 
+Third, name entities are matched to the candicate profile based on the information statist of the content of each block. 
+
+\subsection{Prepared processing}
+
+The raw text files are hardly to use directly, cause of the ambigurty. 
+The figure 1 show some samples. 
+We created some histrual rules to do the data cleaning work so that each line can be seperated into three class, simple, key-value and complex.
+$Simple$ means this line is short text or contains few blanks. 
+$KeyValue$ means this line follows the key and value structure, with colon signal.
+$Complex$ means this line is a long text, which contains more than one signal.
+
+
+\begin{table}
+\centering
+\caption{heuristic ruls for cleaning data}
+\begin{tabular}{|c|c|} \hline
+rules & operation\\ \hline
+multiple continuous blank & merge \\ \hline
+value pair & merge \\ \hline
+begin with date pair & split\\ \hline
+begin with part of date & merge \\ \hline
+begin with block key words & split \\ \hline
+begin with colon & merge\\ \hline
+short text end with colon & merge \\
+\hline\end{tabular}
+\end{table}
+
+$Merge$ means this line should be merged with the next line. $Split$ means this line should be split into two lines.
+
+\subsection{Pattern reconginzed}
+
+After cleanning up the noise of raw lines, we need to devided these lines to blocks such as basic information, education, work experiments and so on. 
+It's not hard to find that there are some latent pattern within each block.
+Entities are introduced into pattern recongined, however in this applicantion sence simple name entity is enough.
+For each line, we only detect whether this line contains date entity or some basic entity like school name, job position, company name.
+With the help of name entities, each line can be transfered to the pattern mode.
+Through loop the whole lines set, the latent block pattern can be found, which is the basic to extract the details content.
+
+
+\subsection{Name entities Match}
+
+Avoiding labled the data by human too much, we statist the whole set to find some useful information which may be the latent value for the profile.
+First, each resume is processed as the Prepared processing section 3.1 descripted.
+Second, those lines with key-value structure are considered to be the candicate attribute.
+Third, after removing some noises
+
+\begin{table}
+\centering
+\caption{Algorithm to extract the resume}
+\begin{tabular}{|l|} \hline
+Input: L: Set of n lines of each resume;\\
+Output: R: resume with structured data \\ \hline
+1. for line in L\\
+	if line match heuristic rules\\
+		do operation\\
+2. for line in L\\
+	find pattern of line\\
+	match the pattern to others\\
+	if match\\
+		record the number\\
+	else\\
+		continue\\
+	get all blocks\\
+3. for block in B\\
+	match the name entities\\
+\hline
+\end{tabular}
+\end{table}
+
 \section{Experiments}
+
+In order to verify our approach works, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
+These resumes are contains different industry field people and different source.
+We use precision, recall and F value to evaluate this approach.
+Cause the dataset is huge, the standard precision and recall can not be compute without the label data.
+We involved a score function, which treat each field of the block as a unit, then compute the total score of each resume.
+We supposed each resume text has basic information, education, work experiences and self evaluation things.
+This hyperspace is not match the real data, but as a result of the huge volume it does not matter to get the basic overview.
+
+\begin{table}
+\centering
+\caption{The evaluation of results}
+\begin{tabular}{|c|c|c|c|} \hline
+block name & prcision & recall & F value\\ \hline
+name & 0.952 & 0.919 & 0.935 \\ \hline
+email & 0.992 & 0.714 &0.830 \\  \hline
+other basic information & 0.923 & 0.75 & 0.823 \\ \hline
+education & 0.912 & 0.701 & 0.792\\ \hline
+work experimences & 0.873  & 0.720 & 0.789 \\ \hline
+self evaluation & 0.897  &0.796 &0.843 \\
+\hline\end{tabular}
+\end{table}
+
+From the results, we can get an overview about the resume dataset that not all the resume is valid.
+Because person name has a strong feature, it's easy to detect and regconized.
+The email also has an obvious feature, which is contrustred by servel characters and only one @ singal.
+Other basic information concludes how many years he/she worked, address, sex, id number, phone num.
+Most resume contains the basic information but not sure each of them, which inflect the recall.
+Not each resume text is really a personal resume, this is noticed after the experient, for example, the presudo resume is a description about someone from a head-hunter or just an unfinished resume.
+This is the mainly reason of the low rate of education and work experience, whose block need carefully detected.
+
+%Compared to other approach about extracting details from resume, our method is easy to implement and also gain a considerable result.
+Compared to other approachs published in related works, our method is easy to implement and also gain a considerable result.
+Without too many human label data is another advantage.
+
 
 \section{Conculsion and Future}
 
+In this paper, we propose an approach to extract the details from unstructual resume text. 
+This work helps the human resource mangagement system clear that what's the baseline about resume parsing.
+The most contribution of our work is extract the details of resume without too much labeled data with simple model.
+
+In the future, we will try to introduce our approach to English resumes and try to auto-generate the e-recuriting domain knowledge base in order to gain better extractor performance.
+
+
+\bibliographystyle{abbrv}
+\bibliography{../../bib/informationExtract.bib} 
 
 
 
