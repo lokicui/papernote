@@ -29,7 +29,7 @@
 \documentclass{acm_proc_article-sp}
 \begin{document}
 
-\title{PBECV: a fast resume extracting algorithm based on pattern recognition}
+\title{PBECV: a fast resume extracting framework based on writing style recognition}
 
 %
 % You need the command \numberofauthors to handle the 'placement
@@ -60,7 +60,7 @@
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
-\author{
+%\author{
 % You can go ahead and credit any number of authors here,
 % e.g. one 'row of three' or two rows (consisting of one row of three
 % and a second row of one, two or three).
@@ -72,45 +72,54 @@
 % e-mail address with \email.
 %
 % 1st. author
-\alignauthor
-Chen Jie\\
-       \affaddr{Beijing Institute of Technology}\\
-       \affaddr{ 5 South Zhongguancun Street }\\
-       \affaddr{Haidian District, Beijing}\\
-       \email{sonyfe25cp@gmail.com}
+%\alignauthor
+%Chen Jie\\
+%     \affaddr{Beijing Institute of Technology}\\
+%       \affaddr{ 5 South Zhongguancun Street }\\
+%       \affaddr{Haidian District, Beijing}\\
+%       \email{sonyfe25cp@gmail.com}
 % 2nd. author
-\alignauthor
-Zhendong Niu\\
-         \affaddr{Beijing Institute of Technology}\\
-       \affaddr{ 5 South Zhongguancun Street }\\
-       \affaddr{Haidian District, Beijing}\\
-       \email{zniu@bit.edu.cn}
+%\alignauthor
+%Zhendong Niu\\
+%         \affaddr{Beijing Institute of Technology}\\
+%       \affaddr{ 5 South Zhongguancun Street }\\
+%       \affaddr{Haidian District, Beijing}\\
+%       \email{zniu@bit.edu.cn}
 %3rd.author
-\alignauthor
-Hongping Fu\\
-         \affaddr{Beijing Institute of Technology}\\
-       \affaddr{ 5 South Zhongguancun Street }\\
-       \affaddr{Haidian District, Beijing}\\
-       \email{fhongping@bit.edu.cn}
-}
+%\alignauthor
+%Hongping Fu\\
+%         \affaddr{Beijing Institute of Technology}\\
+%       \affaddr{ 5 South Zhongguancun Street }\\
+%       \affaddr{Haidian District, Beijing}\\
+%       \email{fhongping@bit.edu.cn}
+%}
 
 \maketitle
 \begin{abstract}
 
 
 In the information age, companies receive thousands of resumes from job seekers everyday. 
-Most of resumes are wrote in different style, including font size and writing style, except those follow the same template.
+Most of resumes are wrote in different format, including font size, font color and cells. %, except those follow the same template.
 %For resumes adopt the common template file, they can be accurate interpred with the specific parser, but how to control the transfer efficiency?
-Since these resumes are different, it's difficult to structure these data.
+%Since these resumes are different, it's difficult to structure these data.
+As a result, it's difficult to structure these data with a general extracting method. 
 %In this paper, we propose a fast approach to extract the resume information from text file which drop the structure information like the font size and table constraint.
-In this paper, we propose a fast approach to extract the resume information from text file without structure information like the font size and table constraint.
+In this paper, we propose PBECV to extract the resume information from text file without format information. 
+Our appoach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse. 
 %The aim of this application scene is to build the baseline of resume extraction.
 %The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
-The experimental results on the real word data-set of millions of resumes show that our approach can reach the performance of those algorithms trained with the structure information and the proposed approach is fastest.
+The experimental results on the real world data-set of millions of resumes show that our approach can reach the performance of algorithms that trained with the structure information and the proposed approach's algorithm complexity is O(n).
 
 \end{abstract}
 
-\keywords{resume extractor}
+% A category with the (minimum) three required fields
+%\category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+%\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Algorithms, Design, Experimentation}
+
+\keywords{resume information extraction, structure resume data}
 
 \section{Introduction}
 
@@ -119,10 +128,10 @@ In the information age, head-hunting companies collect millions of resumes to oc
 %However, these resumes are not wrote with the standard format.
 However, most of resumes are not wrote with the standard format or follow some special template file.
 In order to improve the success rate of recommand person to fit the requirement of employee, those resumes should be parsed exactly and detailed.
-The process helps human resources to easily and quickly search for the right candidate.
-The challenge is how to analysis the resume to get the details.
+This helps human resources to easily and quickly search for the right candidate.
+The challenge is how to analysis the different kinds of resume to get the content.
 
-However, resumes are easy to restructer than other texts, such as news. 
+However, resumes are easier to structure than other texts, such as news. 
 Different people have different writing style about personal resume, but the content of these work all around the same topic, their personal information, which contains contacts, educations, work experimences etc.
 %As a result of this, resumes can be segmented by servel groups.
 As a result of this, resumes can be segmented into servel groups, which is one of the basic ideas to solve the problem.
@@ -146,7 +155,7 @@ The rese of paper is organized as follows. In Section 2, we disscuss the related
 
 \section{Related works}
 
-Jsoup \cite{jsoup} and POI \cite{poi} can be used to parse resumes that follows some template file.
+Jsoup\footnote{http://jsoup.org} and POI\footnote{http://poi.apache.org} can be used to parse resumes that follows some template file.
 Jsoup is a Java library for working with real-world HTML. 
 It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
 It also implements the HTML5 specification, and parses HTML to the same DOM as modern browsers do.
@@ -171,28 +180,36 @@ Both of them are aim to accelerate the efficiency of search candicates for the j
 
 In this section, we explain the details of our approach. 
 The process can be devided into three part. 
-First, the origin resume file is converted into text format no matter is word format, pdf format or html format with the help of Apache POI. 
-Some rules is created to normalize each line of the text. 
-Second, patten recongized method is used to find the laten block. 
-Third, name entities are matched to the candicate profile based on the information statist of the content of each block. 
+First, the origin resume file is converted into text format no matter what the origin format is.
+Apache Tika\footnote{http://tika.apache.org/} provides some api to support this operation.
+And some heuristic rules is created to regularize each line so as to remove some noises like continuous blank. 
+%Second, patten recongized method is used to find the laten block. 
+Second, writing style is used to identify the appropriate  block of each resume.
+Third, name entities are matched to the candicate profile based on the information statistics of the content of all the resumes in the data set. 
 
 \subsection{Prepared processing}
 
-The raw text files are hardly to use directly, cause of the ambigurty. 
-The figure 1 show some samples. 
-We created some histrual rules to do the data cleaning work so that each line can be seperated into three class, simple, key-value and complex.
-$Simple$ means this line is short text or contains few blanks. 
-$KeyValue$ means this line follows the key and value structure, with colon signal.
-$Complex$ means this line is a long text, which contains more than one signal.
 
+From the figure 1, it's clear to know that the raw resume text is not suitable to process directly. 
+There are a lot of noises among the lines in each text file, such as continues blank, wrong newline, the necessary space missing. 
+All these noised should be cleaned before the main part of extracting resume information module. 
+We suppose the distribution of resume accordance with normal distribution, that most people will not cause serious errors on text format.
+Since we have millions of resume, it's easy to statistics the most common structure of sentence, especially the sentence begin with date or number. 
+According to these rules, three kinds of operation are made ,shown in Table 1.
+
+$Merge$ means this line should be merged with the next line. 
+
+$Split$ means this line should be split into two lines.
+
+$Short$ means the blanks in this line should be remove. 
 
 \begin{table}
 \centering
-\caption{heuristic ruls for cleaning data}
+\caption{heuristic rules for cleaning data}
 \begin{tabular}{|c|c|} \hline
-rules & operation\\ \hline
-multiple continuous blank & merge \\ \hline
-value pair & merge \\ \hline
+heuristic rules & operation\\ \hline
+multiple continuous blank & short \\ \hline
+value pair & short \\ \hline
 begin with date pair & split\\ \hline
 begin with part of date & merge \\ \hline
 begin with block key words & split \\ \hline
@@ -201,9 +218,15 @@ short text end with colon & merge \\
 \hline\end{tabular}
 \end{table}
 
-$Merge$ means this line should be merged with the next line. $Split$ means this line should be split into two lines.
+We also defined three kinds of line type to facilitate the follow-up work. These three types provide the basic sentence structure which is helpful to identify the writing style.
 
-\subsection{Pattern reconginzed}
+$Simple$ means this line is short text or contains few blanks. 
+
+$KeyValue$ means this line follows the key and value structure, with colon signal.  
+
+$Complex$ means this line is a long text, which contains more than one signal. 
+
+\subsection{Writing style recognition}
 
 After cleanning up the noise of raw lines, we need to devided these lines to blocks such as basic information, education, work experiments and so on. 
 It's not hard to find that there are some latent pattern within each block.
@@ -211,7 +234,6 @@ Entities are introduced into pattern recongined, however in this applicantion se
 For each line, we only detect whether this line contains date entity or some basic entity like school name, job position, company name.
 With the help of name entities, each line can be transfered to the pattern mode.
 Through loop the whole lines set, the latent block pattern can be found, which is the basic to extract the details content.
-
 
 \subsection{Name entities Match}
 
@@ -233,25 +255,31 @@ Output: R: resume with structured data \\ \hline
 	find pattern of line\\
 	match the pattern to others\\
 	if match\\
-		record the number\\
+		record the block\\
 	else\\
 		continue\\
-	get all blocks\\
+	return all blocks\\
 3. for block in B\\
 	match the name entities\\
+4. return resume\\
 \hline
 \end{tabular}
 \end{table}
 
 \section{Experiments}
 
-In order to verify our approach works, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
+%In order to verify our approach works, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
+In order to verify our approach, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
 These resumes are contains different industry field people and different source.
 We use precision, recall and F value to evaluate this approach.
 Cause the dataset is huge, the standard precision and recall can not be compute without the label data.
 We involved a score function, which treat each field of the block as a unit, then compute the total score of each resume.
 We supposed each resume text has basic information, education, work experiences and self evaluation things.
 This hyperspace is not match the real data, but as a result of the huge volume it does not matter to get the basic overview.
+
+$$
+F-1 = \frac{P+R}{2PR}
+$$
 
 \begin{table}
 \centering
