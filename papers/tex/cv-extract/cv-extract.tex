@@ -195,7 +195,7 @@ There are a lot of noises among the lines in each text file, such as continues b
 All these noised should be cleaned before the main part of extracting resume information module. 
 We suppose the distribution of resume accordance with normal distribution, that most people will not cause serious errors on text format.
 Since we have millions of resume, it's easy to statistics the most common structure of sentence, especially the sentence begin with date or number. 
-According to these rules, three kinds of operation are made ,shown in Table 1.
+According to these rules, three kinds of operation are made, shown in Table 1.
 
 $Merge$ means this line should be merged with the next line. 
 
@@ -220,7 +220,7 @@ short text end with colon & merge \\
 
 We also defined three kinds of line type to facilitate the follow-up work. These three types provide the basic sentence structure which is helpful to identify the writing style.
 
-$Simple$ means this line is short text or contains few blanks. 
+$Simple$ means this line is a short text and may contains few blanks. 
 
 $KeyValue$ means this line follows the key and value structure, with colon signal.  
 
@@ -228,12 +228,17 @@ $Complex$ means this line is a long text, which contains more than one signal.
 
 \subsection{Writing style recognition}
 
-After cleanning up the noise of raw lines, we need to devided these lines to blocks such as basic information, education, work experiments and so on. 
-It's not hard to find that there are some latent pattern within each block.
-Entities are introduced into pattern recongined, however in this applicantion sence simple name entity is enough.
+After cleanning up the noise of raw lines, lines of resume text are devided into blocks such as basic information, education, work experiments and so on. 
+It's not hard to find that there are some latent pattern in education and work experience block, which often has more than one item. 
+Everyone write his/her resume will follow the local format, such as ``2005-2010 [company name] [job position]", ``[company name] [job position] [working time]'', ``[university] [major] [degree] [time range]''. 
+These local format forms the writer's personal writing style, and the writer will follow the same format during the same block, which inspaired us to identity the blocks through the writing style.
+
+Entities are introduced into writing style recongined and in this applicantion sence simple name entity is enough, Which means for a continous text we just need know whether this is a date range entity or company name entity or university name entity.
+The signals between the continous text plays an important role in recognitize the writing style. 
 For each line, we only detect whether this line contains date entity or some basic entity like school name, job position, company name.
-With the help of name entities, each line can be transfered to the pattern mode.
-Through loop the whole lines set, the latent block pattern can be found, which is the basic to extract the details content.
+Each line can be transfered into entities pattern mode, as show in Figure 2. 
+It's easy to cut the lines into blocks with the help of entities pattern and the algorithm complexty is O(n).
+
 
 \subsection{Name entities Match}
 
