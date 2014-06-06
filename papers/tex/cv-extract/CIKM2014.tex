@@ -1,0 +1,566 @@
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
+%
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
+%
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
+%
+% For tracking purposes - this is V3.1SP - APRIL 2009
+
+\documentclass{sig-alternate}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\providecommand\algorithmname{algorithm}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfigure}
+%\usepackage{URL}
+\usepackage{listings}
+\usepackage{slashbox}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\renewcommand{\sectionautorefname}{Section}
+\definecolor{keywordcolor}{rgb}{0.8,0.1,0.5}
+\setlength{\floatsep} {3pt plus 1pt minus 1pt}
+\setlength{\textfloatsep} {3pt plus 1pt minus 1pt}
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{3pt}
+
+\floatname{algorithm}{Algorithm}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\begin{document}
+
+\title{Resorting Relevance Evidences to Cumulative Citation Recommendation for Knowledge Base Acceleration\thanks{This work was done when the first two authors were visiting the Knowledge Mining Group of Microsoft Reseach.}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{5} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Jingang Wang\\
+       \affaddr{School of Computer Science}\\
+       \affaddr{Beijing Institute of Technology}\\
+       \affaddr{Beijing, China}\\
+       \email{bitwjg@bit.edu.cn}
+% 2nd. author
+\alignauthor
+Dandan Song\thanks{Corresponding Author}\\
+       \affaddr{School of Computer Science}\\
+       \affaddr{Beijing Institute of Technology}\\
+       \affaddr{Beijing, China}\\
+       \email{sdd@bit.edu.cn}
+% 3rd. author
+\alignauthor Chin-Yew Lin \\
+       \affaddr{Knowledge Mining Group}\\
+       \affaddr{Microsoft Research}\\
+       \affaddr{Beijing, China}\\
+       \email{cyl@microsoft.com}
+\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+\alignauthor Lejian Liao\\
+       \affaddr{School of Computer Science}\\
+       \affaddr{Beijing Institute of Technology}\\
+       \affaddr{Beijing, China}\\
+       \email{liaolj@bit.edu.cn}
+\alignauthor Yong Rui\\
+       \affaddr{Knowledge Mining Group}\\
+       \affaddr{Microsoft Research}\\
+       \affaddr{Beijing, China}\\
+       \email{yongrui@microsoft.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+Most knowledge bases (KBs) can hardly be kept up-to-date due to time-consuming manual maintenance. Cumulative Citation Recommendation (CCR) is a task to address this problem, whose objective is filtering relevant documents from a chronological stream corpus and recommending them as candidate citations with different relevance levels (i.e., vital, useful, neutral and garbage) to target entities in knowledge bases. The biggest challenge of CCR is how to separate relevant documents into different levels, especially vital and useful.
+We mainly evaluate three kinds of relevance evidences, i.e., entities' profile pages, existing citations in KBs, and temporal signals, in two CCR tasks. In addition, a novel pseudo citation generation strategy is proposed to supplement annotation data for less popular entities. The effectiveness and robustness of these evidences are validated by integrating them into different approaches, including query expansion, classification and learning to rank. All the approaches outperform their own baselines. These evidences are not of the same significance in different CCR tasks, and our analysis reveals that classification approach has more potential. 
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Knowledge Bases (KBs), such as Wikipedia and DBpedia, have shown great power in many applications including question answering, entity linking and entity retrieval. With the explosion of information on the web, it becomes critical to detect relevant documents and assimilate new information to entities in KBs in a timely manner. However, most KBs are maintained manually by volunteer editors, which are hard to keep up-to-date because of the limit number of editors and the huge volume of entities in KBs. As reported in \cite{trec-kba-overview-2012}, the median time lag between the publishing date of cited articles and the date of the citations created in Wikipedia is almost one year. Moreover, some less popular entities in KBs do not attract enough attentions from the editors, which makes the maintenance more challenging. This gap could be reduced if relevant documents could be automatically found as soon as they are published online and then recommended to the editors with different priorities. Because not all found relevant documents are of the same significance to the target entity, the editors could focus on the documents with high relevance levels firstly, evaluate them and supplement newly found vital information by citing the most relevant documents.
+
+To address the above problem, Cumulative Citation Recommendation (CCR) was launched by the Text REtrieval Conference (TREC) Knowledge Base Acceleration (KBA) \footnote{\url{http://trec-kba.org/}} Track from 2012. CCR is defined as filtering a time-ordered stream corpus for documents related to a predefined set of entities in KBs, such as Wikipedia and Twitter, and assigning a relevance level for each document-entity pair. \autoref{fg:overview} shows the overview of a CCR system.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.35\textwidth]{overview.pdf}
+\caption{Overview of a CCR System}
+\label{fg:overview}
+\end{figure}
+
+Unlike traditional information retrieval and filtering tasks, CCR  not only need to retrieve relevant documents from the stream, but also need to distinguish relevant documents according to their citation-worthiness to the target entities. However, there not exist an acknowledged regulation for editors to refer to decide whether a document be cited into the knowledge base. Therefore, A document judged as vitally relevant by an editor may be treated as relevant by another one. Although KBA has defined 4 different relevance levels for CCR: \textit{vital}, \textit{useful}, \textit{neutral} and \textit{garbage} to represent various citation-worthiness, the community has not come to an agreement on their explicit definitions and differences except some heuristic guidelines. KBA recognizes a vital document as the document which contributes timely update to a target entity, but it's still quite difficult to draw an obvious  borderline between vital and useful documents. For example, for a famous person in Wikipedia, only the documents that trigger an update of her profile can be annotated as vital. However, if the person is a less noteworthy person from Twitter, a document simply describe how she spends her time may be treated as vital documents.
+Even in the ground truth data of KBA 2013, 361 instances of  all 7413 ones contain inconsistent annotations by different annotators. In a word, it's a great challenge to define and verify the differences between the different relevance levels.
+
+In this paper, we resort three extra evidences to differentiate them, including the profile pages of the target entity, existing citations in KBs and temporal signals in timeline. These evidences contain rich information we can utilize to distinguish documents with different levels of relevance. For a target entity, a relevant document would more or less repeat or supplement the content in its profile page. Besides, the documents possess same patterns with the existing citations are more likely to be relevant documents. In addition, most of the relevant documents appear around the time period in which the target entity are spotlighted.
+
+CCR are divided into two sub-tasks: (i)\textbf{vital + useful:} distinguishing relevant (\textit{vital + useful}) and irrelevant (\textit{neutral + garbage})documents, and (ii)\textbf{vital only:} distinguishing between \textit{vital} and \textit{useful} documents further. After taking these evidences into account, all the test approaches achieve the state-of-the-art performances in both tasks. Lots of approaches has been applied in the two tasks, such as query expansion, text classification and learning to rank, the proposed evidences indeed improve the distinguishing capabilities of them. Our analysis reveals that classification approach has more potential than the other approaches.
+
+In addition, CCR are more challenging to less popular entities than popular ones because popular entities usually have enough annotations that can provide some clues for relevant document discovery. Nevertheless, for less popular entities, such as Twitter entities, there exist few annotations by assessors because of their few appearance in stream, which makes it difficult to capture relevance information for them. We propose a novel pseudo-citation generation method to supplement the training data.
+
+To the best of our knowledge, this is the first work to verify the different relevance levels in CCR by exploring additional relevance evidences. The contributions are summarized as follows: 
+\begin{enumerate}
+\item We implement a straightforward but effective filtering approach to discard irrelevant documents as many as possible beforehand, which makes our approach more efficient and practical.
+\item We investigate three extra evidences and evaluate different roles they play in two CCR tasks. 
+\item We propose a novel pseudo-citation generation method to supplement training data for less popular entity with few annotation, relieving the impact of lack of training data for less popular entities in CCR.
+\end{enumerate}
+
+The rest of this paper is organized as follows. After discussing related work in \autoref{sec:related-work}, \autoref{sec:problem-statement} formulates the problem and details the dataset used. Then, \autoref{sec:filtering} introduces an effective and high-recall filtering strategy to reduce the workload to process the volume stream corpus. In \autoref{sec:approaches}, we first present the relevance evidences utilized to distinguish documents with different relevance levels, then depicts our approaches in detail. This is followed by experimental results and further discussions in \autoref{sec:results}. Finally, we conclude this paper and introduce future work in \autoref{sec:conclusion}.
+
+\section{related work}\label{sec:related-work}
+We discuss several research topics which are related to CCR in this section.
+\paragraph{Information Filtering}
+Information filtering (IF) is a long-standing problem to split (usually large) data stream into useful and unuseful components and direct the useful part to interested end users, such as personal email filters based on personal profiles. Early researches treat IF as a text classification problem and mainly utilize content-based features \cite{Caulkins2006144, Sriram:2010:STC:1835449.1835643, Azzopardi:2009LNCS} to address it. Currently, most works in IF focus on sociology filtering by incorporating relationships between users \cite{Nanas:2010:NMH:1835449.1835485}. An IF system is fed with queries based on topics described by a set of keywords or short descriptions, while CCR adopts entities as queries, which possess strongly typed attributes and relationships.
+
+\paragraph{Entity Linking}
+Entity linking describes the task of linking a textural name of an entity to a knowledge base entry \cite{mcnamee2009overview}. In \cite{bunescu:eacl06}, cosine similarity was utilized to rank candidate entities based on the relatedness of the context of an entity mention to a Wikipedia article. \cite{cucerzan:2007:EMNLP-CoNLL2007} proposed a large-scale named entity disambiguation approach through maximizing the agreement between the contextual information from Wikipedia and the context of an entity mention. \cite{mihalcea2007wikify} implemented a system named as WikiFy! to identify the important concepts in a document and automatically link these concepts to the corresponding Wikipedia pages. Similarly, \cite{Han:2009:NED:1645953.1645983} parsed the Wikipedia to extract a concept graph, measuring the similarity by means of the distance of co-occurring terms to candidate concepts. Besides identifying entity mentions in documents, CCR is required to evaluate the relevance levels between the document and the mentioned entity.
+
+\paragraph{Query Expansion}
+Query expansion (QE) is the process of supplementing a basic query with additional related terms to improve retrieval performance in information retrieval system \cite{Carpineto:2012:SAQ:2071389.2071390}. The key idea of QE is expanding the query terms to the direction maximizing the similarity between the query terms and the terms in relevant documents. The existing query expansion approaches can be classified into two categories: automatic relevance feedback approaches and log-based query methods. Automatic relevance feedback methods, including explicit relevance feedback and pseudo relevance feedback, mine relevant terms through analyzing a subset of initial search results \cite{Bendersky:2012:EQF:2124295.2124349, Collins-Thompson:2005:QEU:1099554.1099727}. Log-based QE methods derive expansion terms for a query from the document set identified by user clicks recorded in search logs \cite{Cui:2003:QEM:1435677.858986,Broder:2009:OER:1526709.1526778,Gao:2013:QEU:2484028.2484058}. QE is adopted as a unsupervised baseline for comparison in this work.
+
+\paragraph{Knowledge Base Acceleration}
+TREC has hosted the CCR track in 2012 and 2013. In the past tracks, there are three mainstream approaches submitted by the participants: query expansion \cite{Liu:2013:LRE:2512405.2512407, wang2013bit}, classification, such as SVM \cite{HLTCOE2012KBA} and Random Forest classifier \cite{UVA2012KBA, Bonnefoy:2013:WDE:2484028.2484180, Balog:2013:MCA:2491748.2491775}, and ranking-based approaches \cite{PRIS2012KBA, Balog:2013:CCR:2484028.2484151}. In \cite{grossnamed}, a graph-based entity filtering method is implemented though calculating the similarity of word co-occurring graphs between an entity's profile and a document. \cite{Dietz:2013:TEC} developed a time-aware evaluation paradigm to study time-dependent characteristics of CCR. However, most of these approaches only work well for entities with abundant annotation and are not suitable for less popular entities with few annotation.
+
+\section{Problem Statement and Dataset}\label{sec:problem-statement}
+Given a target entity $E$ from KBs (e.g., Wikipedia and Twitter) and a document $D$, our goal is to generate a confidence score $r(E, D) \in (0,1000]$ for each document-entity pair, representing the citation-worthiness of $D$ to $E$. The higher $r(E, D)$ is, the more likely $D$ should be considered as a citation for $E$.
+
+We use the stream corpus\footnote{\url{http://trec-kba.org/kba-stream-corpus-2013.shtml}} of KBA 2013 in this paper. The stream corpus are composed of document collection and the target entity set.
+\paragraph{Document Collection}
+The document collection, stream corpus, is a time-ordered document collection provided by the TREC KBA 2013. The stream corpus contains nearly 1 billion documents published between Oct. 2011 and Feb. 2013. 
+
+\paragraph{Target Entity}
+The target entity set is composed of 141 entities, 121 of them come from Wikipedia and the remaining ones come from Twitter. These entities consist of 98 persons, 24 facilities and 19 organizations. It's worth noting that the entity set contains a lot of less popular entities, especially some Twitter entities. For example, the entity \textit{Danville Engineering (@danvillekyengr)} from Twitter only has 7 tweets and 17 followers in total.
+
+\paragraph{Annotation}
+The documents from Oct. 2011 to Feb. 2012 are annotated as training data and the remainder from Mar. 2012 to Feb. 2013 as testing data. Each document-entity pair is annotated as one of the four relevance levels as follows.
+\begin{itemize}
+\item Garbage: No information about the target entity could be learnt from the document, e.g. spam.
+\item Neutral: Informative but not citable, e.g. tertiary source like Wikipedia article itself not relevant.
+\item Useful: possibly citable but not timely, e.g. background bio, primary or secondary source.
+\item Vital: timely info about the entity's current state, actions, or situation. This would motivate a change to an already up-to-date knowledge base article.
+\end{itemize}
+Even given the heuristic definition of different relevance levels, there still exist annotation disagreements in the ground truth data, especially between vital and useful.
+
+\begin{table}[thbp]
+\centering
+\caption{Inconsistent Annotation in ground truth data from Oct. 2011 to Feb. 2012}\label{tb:InconsistentAnnotation}
+\begin{tabular}{ccccc}\hline
+&Vital & Useful & Neutral & Garbage\\ \hline
+Vital &  \backslashbox{}{} & 179 & 57 & 19 \\  \hline
+Useful & 179 & \backslashbox{}{} & 55 & 17 \\ \hline
+\end{tabular}
+\end{table}
+
+The details of the annotations for Wikipedia and Twitter entities are shown in \autoref{tb:SeparateAnnotation} separately.
+\begin{table}[thbp]
+\centering
+\caption{Annotation statistics for Wikipedia and Twitter entities from Oct. 2011 to Feb. 2012}\label{tb:SeparateAnnotation}
+\begin{tabular}{ccccc} \hline
+ & Vital & Useful & Neutral & Garbage \\ \hline
+Wikipedia & 2096 & 2257	& 1162 & 1756 \\ \hline
+Twitter & 182 &	326	& 72 & 569 \\ \hline
+\end{tabular}
+\end{table}
+In the target entity set,  only 131 entities have been annotated. And according to \autoref{tb:VitalAnnotation}, only 32.8\% entities are labeled with more than 10 \textit{vital} instances in training data.
+\begin{table}[thbp]
+\centering
+\caption{\textit{Vital} Annotation Statistics in Training Data}\label{tb:VitalAnnotation}
+\begin{tabular}{ccc} \hline
+Vital Annotation \# & Entity \#  & Percentage\\ \hline
+0 & 31 & 23.7\% \\ \hline
+1 $\sim$ 5 & 37 & 28.2\% \\ \hline
+6 $\sim$ 10 & 20 & 15.3\% \\ \hline
+> 10 & 43 & 32.8\%\\ \hline
+\end{tabular}
+\end{table}
+
+\section{Filtering}\label{sec:filtering}
+This section introduces our filtering strategy, which aims to reduce the size of the stream corpus through discarding obviously irrelevant documents. Remember that there are 141 entities in the target entity set and nearly 1 billion documents in the stream corpus, it is too time-consuming and laborious to process all the documents in the stream corpus for each entity.
+
+According to the annotation analysis shown in \autoref{tb:AnnotationStats}, we can speculate that the majority of vital and useful documents mention the target entity explicitly. Therefore, we implement a filtering step to remove the documents that do not mention target entities at all after indexing all the documents with ElasticSearch\footnote{\url{http://www.elasticsearch.org/}}. To achieve this goal, we construct a high-recall phrase query for each entity to ensure that retrieved document must mention the target entity at least once, either exactly by its name or other surface forms. For example, \textit{Barack Hussein Obama}, the current president of the U.S., can be referred to by multiple surface forms (e.g., \textit{Barak Obama} and \textit{Obama}) in texts. Therefore, the prerequisite of filtering is expanding as many reliable surface forms as possible for each target entity.
+
+For each Wikipedia entity, we treat the redirect\footnote{\url{http://en.wikipedia.org/wiki/Wikipedia:Redirect}} names as its surface forms. For instance, \textit{Geoffrey E. Hinton}, who is a computer scientist in machine learning field, has the following redirect names in Wikipedia: \textit{Geoffrey Hinton}, \textit{Geoff Hinton}, and \textit{Geoffrey Everest Hinton}.
+For each Twitter entity, we add its display name into its surface form set. Take \textit{@AlexJoHamilton} for example, we acquire its display name \textit{Alexandra Hamilton} via Twitter's APIs.
+
+For a given entity $E_{t}$, the surface form set of entity $E_{t}$ is $Rel(E_{t})=\{E_{i}|i\in[1,M]\}$, the phrase query for $E_{t}$ is
+\begin{equation}\label{eq:base}
+\begin{split}
+ E_{t} \vee \ E_{1} \vee  E_{2} \vee \cdots \vee  E_{M},
+\end{split}
+\end{equation}
+where the $\vee$ operator ensures that at least one operand is true, which means the corresponding term is matched in the document. This query Is named as basic query.
+
+\begin{table}[thbp]
+\centering
+\caption{Annotation Details of Training Data}\label{tb:AnnotationStats}
+\begin{tabular}{ccccc} \hline
+ & Garbage & Neutral & Useful & Vital \\ \hline
+Mentions & 1516 & 1226 & 2543 & 2271 \\ \hline
+Zero Mention & 809 & 8 & 40 & 7 \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Relevance Estimation}\label{sec:approaches}
+In this section, we first describe three relevance evidences that we employ to distinguish documents with different relevance levels. Next, we introduce our relevance level estimation approaches in detail, including query expansion and two supervised approaches, classification and learning to rank.
+
+\subsection{Evidences of Relevance}
+\paragraph{Profile Page}
+All the target entities possess profile pages either in Wikipedia or on Twitter. The profile page includes the basic information of an entity such as name, birth date, profession, related entities etc. These information could be leveraged to differentiate the documents with different levels of relevance given a target entity.
+
+These profile page are utilized in different ways in different approaches.
+In query expansion, we extract related entities from the profile page as expanding terms for a target entity. Furthermore, we develop some features based on the profile pages for supervised approaches. Given a document-entity pair, one solution to capture their relevance is calculating similarity between the entity's profile page and the document. In Wikipedia, the profile page is organized as a list of sections. Each section introduces a specific aspect of the target entity. Vital documents for a target entity are possibly highly related with a few of these sections rather than all of them. Therefore, we calculate the similarity (cosine and jaccard) between the documents with different sections respectively instead of the whole profile page.
+
+\paragraph{Existing Citations}
+For a Wikipedia entity, there usually already exists a list of citations in its entry page. As we know, Wikipedia is collaboratively maintained by volunteer editors all around the world. The collective intelligence ensures low-quality citations are replaced by better ones persistently. Therefore, the remaining citations after several edits are extremely valuable in identifying vital or useful documents for the target entity.
+
+However, few citation exists in the profile pages for most Twitter entities and some less popular Wikipedia entities. We create pseudo citations for them using pseudo feedback from public search engines as \autoref{alg:pseudo} shows.
+\begin{algorithm}
+\caption{Pseudo Citation Generation}\label{alg:pseudo}
+\begin{algorithmic}[1]
+\Require Entity $e$, Citation Number $n$
+\Ensure Pesudo Citation Set $C$
+\State query $e$ in search engine
+\State crawl the hit link list $L$
+\ForAll {$l\in L $ }
+\If {$l$ is a dead link or advertisement link}
+	\State continue
+\Else
+	\State extract the document $c$ from $l$
+	\If{$c \in C$ }
+		\State continue
+	\Else
+		\State add $c$ into $C$
+		\If {$|C| == n$}
+			\State break
+		\EndIf
+	\EndIf
+\EndIf
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+In query expansion, related entities are extracted from the existing and pseudo citations as query expanding terms. In supervised approaches, the similarity (cosine or jaccard) between each citation and the document are taken into account. To avoid taking documents from a future time, we take great care to ensure that all the citations crawled are generated before the publishing time of the stream document.
+
+\paragraph{Temporal Signals}
+As CCR is a sequential task, some temporal signals have been employed to in previous work \cite{Balog:2013:MCA:2491748.2491775, bonnefoy2013lsis, Bonnefoy:2013:WDE:2484028.2484180}. The view statistics of Wikipedia pages is adopted as a useful signal to capture if something significant happen around the target entity at a given time point. Another signal is the fluctuation of occurrence of an entity in a stream. Based on our observations of Wikipedia entities, a sudden increase, or a burst, in daily page views of an entity entails an increase of the number of vital and useful documents in stream corpus.
+This phenomenon may be caused by the sudden increase of vital edits of entity page, triggering lots of visits from the web. \autoref{fg:burst} shows an example for entity \textit{Nassim Nicholas Taleb}. All the obvious bursts of Wikipedia page views are accompanied with the burst of occurrences in the stream. Because the stream corpus is a sample of the whole web documents, in which some entities may occur too rarely to reflect the real web environment, we choose Wikipedia page view statistics as our temporal signal.
+\begin{figure}[thbp]
+\centering
+\includegraphics[width=0.35\textwidth]{burst_value.pdf}
+\caption{Wikipedia Page Views and Entity Occurrences in the Stream for \textit{Nassim Nicholas Taleb} }
+\label{fg:burst}
+\end{figure}
+
+The magnitudes of Wikipedia page views of different entities varies sharply depending on their popularity. A popular entity may be viewed thousands of times every day, but an less popular entity can only attract a few views in the same period of time. We define a normalized burst\_value for each document-entity pair as follows.
+\begin{equation}\label{eq:burstvalue}
+burst\_value = \frac{N * wpv(d_{n})}{\sum_{i=1}^N wpv(d_{i})}
+\end{equation}
+where $N$ is the total days the stream corpus covers.
+$d_{n}$ means the document is published on the $n_{th}$ day of the stream corpus. $wpv(d_{i})$ is the views of the target entity's Wikipedia page during the $i_{th}$ day of the stream corpus.
+For Twitter entities, page view statistics are not provided via Twitter APIs nor in any other forms, so we do not include temporal signals for Twitter entities in our experiments.
+
+\subsection{Approaches}
+\subsubsection{Query Expansion}\label{subsec:query-expansion}
+Query expansion is a common approach to retrieve relevant documents for a given query. In \autoref{sec:filtering}, we have implemented a basic query to retrieve documents mentioning the target entities. While the base query neither can disambiguate ambiguous entities with a same name, such as \textit{basic\_element\_(company)} and \textit{basic\_element\_(music\_group)}, nor can distinguish the relevance levels of the hit documents. In summary, the basic query can not provide sufficient evidence to select relevant documents effectively. Query expansion is an intuitive approach to address this problem by expanding the basic query with additional information.
+
+We expand the basic query with contextual related entities extracted from the proposed evidences: the target entities' profile pages, and existing citations in KBs. For Wikipedia entities, we extract the anchor texts of inlinks in their Wikipedia pages as related entities. For Twitter entities, Stanford Named Entity Recognizer \cite{Finkel:2005:INI:1219840.1219885} is employed to recognize entities from their profile pages. Besides, the relevant (vital or useful) documents in the ground truth data is of great help to differentiate documents with different relevance levels. The related entities appear in a vital (useful) document can help us find more vital (useful) documents. So we also extract related entities for target entities from annotation data. Note that we only extract related entities from documents annotated as vital or useful.
+
+For example, $\{E_{i}| i \in [1,N]$ \} is the related entity set we acquired for the target entity $E_{t}$, the query is formulated as follows:
+\begin{equation}
+ Basic_{must} \wedge \{ E_{1} \vee  E_{2} \vee \cdots \vee  E_{N} \}
+\end{equation}
+$Basic$ is the basic query demonstrated in \autoref{eq:base}. The subscript \textit{must} indicates this term is prerequisite in query. After extracting related entities, we incorporate them with basic query and then search against the built index. The hit documents are treated as relevant documents and the ranking scores returned by \textit{ElasticSearch} are scaled to (0,1000] as the final confidence scores.
+
+To validate the effectiveness of pseudo citations for Twitter entities, we implement two query expansion approaches: QE and QEP. The only difference between them is that we incorporate related entities extracted from pseudo citations into the query in QEP.
+
+\subsubsection{Supervised Methods}\label{sec:supervise}
+Classification and learning to rank approaches are two main approaches employed in previous work \cite{Balog:2013:CCR:2484028.2484151, Bonnefoy:2013:WDE:2484028.2484180,araujo2013cwi}.
+Most of them build a classifier or a ranking model for each target entity individually, which is not feasible in practical applications. A practical CCR system is required to process hundreds or even thousands of entities simultaneously, so it's impossible to label enough training data for each entity. Hence, we employ entity-independent supervised approaches by training a uniform supervised model with all the training instances.
+
+Before taking the above proposed evidences into account, we develop a basic feature set for supervised learning approaches. The basic feature set is listed in the first block of \autoref{tb:features}. These features are mainly designed to capture the intrinsic characteristics of a document and the occurrence distribution of the target entity in the document. Since not all entities' occurrences in documents are exactly the full name, we split entity name into different components as partial names and include them in features. We also demonstrate the extra features from the proposed relevance evidences in \autoref{tb:features}.
+\begin{table}[thbp]
+\centering
+\caption{Feature set used in supervised approaches}\label{tb:features}
+\begin{tabular}{lp{0.28\textwidth}} \hline
+Feature&Description \\ \hline
+\multicolumn{2}{l}{\textbf{Basic Features}} \\ \hline
+$log(length)$ & logarithm of document length \\
+Source & document source \\
+Weekday & post date of document \\
+$N(E_{rel})$ & \# of entity $E$'s related entities found in its profile page \\
+$N(D, E)$ & \# of occurrences of $E$ in document $D$  \\
+$N(D, E_{p})$ & \# of occurrences of the partial name of $E$ in $D$ \\
+$N(D, E_{rel})$ & \# of occurrence of the related entities in $D$ \\
+$FPOS(D, E)$ & first occurrence position of $E$ in $D$ \\
+$FPOS_{n}(D, E)$ & $FPOS(D, E)$ normalized by document length \\
+$FPOS(D, E_{p})$ &first occurrence  position of $E$'s partial name in $D$ \\
+$FPOS_{n}(D, E_{p})$ & $FPOS(D, E_{p})$ normalized by document length \\
+$LPOS(D, E)$ & last occurrence position of $E$ in $D$\\
+$LPOS_{n}(D, E)$ & $LPOS(D, E)$ normalized by document length\\
+$LPOS(D, E_{p})$ &  last occurrence position of $E$'s partial name  in $D$\\
+$LPOS_{n}(D, E_{p})$ & $LPOS(D, E_{p})$ normalized by document length\\
+$Spread(D, E)$ & $LPOS(D, E)-FPOS(D, E)$ \\
+$Spread_{n}(D, E)$ & $Spread(D, E)$ normalized by document length \\
+$Spread(D, E_{p})$ & $LPOS(D, E_{p})-FPOS(D, E_{p})$ \\
+$Spread_{n}(D, E_{p})$ & $Spread(D, E_{p})$ normalized by document length \\ \hline
+\multicolumn{2}{l}{\textbf{Profile Evidence Features}} \\ \hline
+$Sim_{cos}(D, S_{i}(E))$ & cosine similarity between document and the $i_{th}$ section of entity $E$'s profile page \\
+$Sim_{jac}(D, S_{i}(E))$ & jaccard similarity between document and the $i_{th}$ section of entity $E$'s profile page \\ \hline
+\multicolumn{2}{l}{\textbf{Citation Evidence Features}} \\ \hline
+$Sim_{cos}(D, C_{i})$ & cosine similarity between document $D$ and the $i_{th}$ citation \\
+$Sim_{cos}(D, C_{i})$ & jaccard similarity between document $D$ and the $i_{th}$ citation \\ \hline
+\multicolumn{2}{l}{\textbf{Temporal Evidence Feature}} \\ \hline
+$Burst\_Value (D)$  & the $burst\_value$ of Document $D$, see details in \autoref{eq:burstvalue} \\ \hline
+\end{tabular}
+\end{table}
+
+\paragraph{Classification}
+CCR is usually considered as a binary classification task which aims to classify documents into different relevance levels. In terms of the two sub-tasks of CCR, two classification problems need to be dealt with: relevant/irrelevant classification and vital/useful classification. So two classifiers are trained with different training data: (i) only \textit{vital} documents are treated as positive instances, and (ii) both \textit{vital} and \textit{useful} documents are treated as positive instances. The former one is a vital classifier that classify documents into vital and non-vital categories. The latter one is a relevant/irrelevant classifier that classifies documents into relevant (vital + useful) and irrelevant (neutral + garbage) categories. In summary, we can view the classification step in differentiating vital from useful as an additional relevance classification step which aims to separate relevant documents identified in the first step further into ``{\em very relevant}'' (vital) and ``{\em relevant}'' (useful).
+
+Based on our internal experiments, random forests classifier outperforms other classifiers, such as Support Vector Machine (SVM) and  logistic regression. Therefore, we employ random forests classifier implemented with Weka toolkit with default parameter settings \cite{Hall:2009:WDM:1656274.1656278}. The classifier outputs a probability for each classification operation, we scale this probability to (0, 1000] as the final confidence score. We evaluate these relevance evidences by integrating them into the feature set. Two different  classification approaches are implemented as follows.
+\begin{itemize}
+\item{UniClass:} trains an uniform classifier for all entities using the basic feature set.
+\item{UniClass+:} train an uniform classifier for all entities with additional evidences proposed in \autoref{sec:evidences} and the basic feature set.
+\end{itemize}
+
+\paragraph{Learning to Rank}
+If we treat the different relevance levels as an ordered sequence, i.e., $vital > useful > neutral > garbage$, CCR becomes a learning to rank (LTR) problem. In \cite{Balog:2013:CCR:2484028.2484151}, random forests LTR algorithm is reported as the best approach to complete last year's CCR tasks. In addition, to keep consistent with classification methods and facilitate  comparisons, we also choose random forests ranking approaches. Same with classification approaches, two ranking models are trained for all the entities as follows.
+\begin{itemize}
+\item{UniRank:} trains an uniform ranking model for all entities using the basic feature set.
+\item{UniRank+:} trains an uniform ranking model for all entities with additional evidences proposed in \autoref{sec:evidences} and the basic feature set together.
+\end{itemize}
+All the ranking approaches are implemented with RankLib\footnote{\url{http://sourceforge.net/p/lemur/wiki/RankLib/}} with default parameter settings.  Also, the estimated ranking scores by rannking model are scaled to (0,1000] as the final confidence scores.
+
+\section{Results and Discussions}\label{sec:results}
+\subsection{Filtering Evaluation}
+In this section, we evaluate the performance of our filtering strategy. As indicated in \autoref{sec:filtering}, the prerequisite of filtering is expanding as many surface forms as possible for target entities. We compare our expanding method with several methods proposed to expand surface forms in previous research. In \cite{overviewkba2013}, the official baseline system splits the entity name into different name tokens and manually select reliable ones as surface forms. In \cite{Balog:2013:MCA:2491748.2491775, Liu:2013:LRE:2512405.2512407}, DBpedia\footnote{\url{http://dbpedia.org}}, a structural knowledge base extracted from Wikipedia, are used to extract name variants for target entities. in \cite{araujo2013cwi}, google cross-lingual dictionary (GCLD) \cite{spitkovsky2012lrec}, mapping language-independent strings of words and Wikipedia articles bidirectionally, is used to expand variant strings for each target entity, and adopt these strings to query documents from the stream.
+
+To evaluate the expanding effectiveness of these methods, we compare the $\max(macro\_avg(Recall))$ metrics in \autoref{tb:recall} through setting the cutoff value as 0, which means all the retrieved documents are considered as positive instances. Our redirect-based expanding method achieves the best overall recall in the \textit{vital only} task.
+In the \textit{vital + useful} task, the $\max(macro\_average(R))$ of our expanding approach is very close to the best one. Our filtering step can retrieve 85\% relevant documents and 72.8\% vital documents from the volume stream corpus, proving our redirect-based surface form expanding method is effective in both CCR tasks.. 
+\begin{table}[thbp]
+\centering
+\caption{Recall measures of different expansion methods.}\label{tb:recall}
+\begin{tabular}{ccc} \hline
+\multirow{2}{*}{Filtering Method} & \multicolumn{2}{c}{ $\max(macro\_average(R))$} \\ \cline{2-3} & Vital & Vital + Useful \\ \hline
+Name Tokens & .713  & \textbf{.856} \\\hline
+DBPedia  & .601  & .707 \\ \hline
+GCLD & .235  & .581 \\ \hline
+Redirect & \textbf{.728} & .850 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Relevance Level Estimation}
+\subsubsection{Evaluation Metrics}\label{subsec:evaluation}
+A CCR system is fed with the stream documents in chronological order and outputs a confidence score in the range of (0,1000] for each document-entity pair. There are two evaluation metrics to evaluate the performance of a CCR system: $\max(F(avg(P), avg(R)))$ and $\max(SU)$. Scaled Utility (SU) is a metric introduced in filtering track to evaluate the ability of a system to separate relevant and irrelevant documents in a stream \cite{Robertson02thetrec}. A cutoff value is varied from 0 to 1000 with some step size and the documents with the scores above the cutoff are treated as positive instances; while the documents with the scores below the cutoff are negative instances. The primary metric $\max(F(avg(P), avg(R)))$ is calculated based on the average precision and average recall of all entities. The calculation formulas of precision and recall are shown in \autoref{eq:precision} and \autoref{eq:recall} respectively.
+\begin{equation}\label{eq:precision}
+Precision = \frac{\#(TP)}{\#(TP) + \#(FP)}
+\end{equation}
+\begin{equation}\label{eq:recall}
+Recall = \frac{\#(TP)}{\#(TP) + \#(FN)}
+\end{equation}
+$TP$ represents the true positive instances, $FP$ represents false positive instances, and $FN$ represents false negative instances in the classification results.
+The primary metric $\max(F(avg(P), avg(R)))$ is calculated as follows:
+given a cutoff $c$ and an entity $E_{i}$, $P_{i}(c)$ and $R_{i}(c)$ are calculated respectively, then macro-average them in all entities, $avg(P)=\frac{\sum_{i=1}^{N}P_{i}(c)}{N}$. $avg(R)=\frac{\sum_{i=1}^{N}R_{i}(c)}{N}$, $N$ represents the quantities of entities in the target entity set. Therefore, $F$ is actually a function of the relevance cutoff $c$, and we select the maximum $F$ to evaluate the overall performance of a CCR system. In a similar manner, $\max(SU)$ are calculated as an auxiliary metric. 
+
+\subsubsection{Approaches Comparison}
+All the results of our approaches are shown in \autoref{tb:results}. It includes the overall metrics for all entities, the most primary metric of the performance. These measures are reported for Wikipedia and Twitter entities separately to evaluate the performance of these approaches in different entity sets. Please note that the cutoffs to reach maximum of F (or SU) for overall entity set and for separate entity set may be different, so the value of an overall metric is not always between the values of two separate measures. 
+
+For reference, the KBA official baseline, the 2nd and 3rd place approaches in KBA 2013 are also included. The KBA official baseline assigns a ``{\em vita}l'' rating to every document that matches a surface form name of an entity and assigning a confidence score based on the length of the observed name \cite{overviewkba2013}. The 2nd place approach (\# 2) derives a sequential dependence retrieval model which scores the stream documents by frequency of unigrams, bigrams and windowed bigrams of the target entity name, taking document length and corpus statistics into account \cite{Dietz:2013:KBA}. The 3rd place approach (\# 3) pools related entities from the profile page of the target entity, estimate the weight of the related entities based on the training data, and apply the weighted related entities to estimate the confidence scores for stream documents \cite{UdelFang:2013:KBA}. The bottom block of \autoref{tb:results} lists the overall mean and median of the results aggregated from all the submissions in KBA CCR 2013 track.
+\begin{table*}
+\centering
+\caption{Approaches comparison. All the measures are reported by the KBA official scorer with cutoff-step-size=10. Best scores are typeset boldface.}\label{tb:results}
+\begin{tabular}{ccccccccccccc} \hline
+\multirow{3}{*}{Run} & \multicolumn{6}{c}{Vital Only} & \multicolumn{6}{c}{Vital + Useful}\\ \cline{2-13}
+& \multicolumn{3}{c}{$\max(F(avg(P), avg(R)))$} & \multicolumn{3}{c}{$\max(SU)$} & \multicolumn{3}{c}{$\max(F(avg(P), avg(R)))$} & \multicolumn{3}{c}{$\max(SU)$} \\ \cline{2-13}
+& Overall & Wiki & Twitter & Overall & Wiki & Twitter & Overall & Wiki & Twitter & Overall & Wiki & Twitter \\\hline
+$QE$ & .281 & .288 & .257 & .170 &.178 & .174 & .645 & .658 & .567 & .544 & .557 & .466 \\ 
+$QEP$ & .281 & .288 & .274 & .173 & .178 & .194 & .645 & .658 & .600 & .544 &.557& .536 \\ \hline
+$UniClass$ &.291 & \textbf{.297} & .248 & .219 & .215 & .240 & .644 & .659 & .567 & .544 & .562 & .466 \\ 
+$UniClass+$  &\textbf{.300} & .296 & .311 & .222 & .214 & \textbf{.268} &\textbf{ .660} & \textbf{ .663} & .634 & \textbf{.568} & \textbf{.570} & .586 \\ \hline
+$UniRank$ & .285 & \textbf{.297} & .275 & \textbf{.260} & \textbf{ .269} & .239 &  .644 &  .657 &  .588 &  .544 & .557 & .490\\ 
+$UniRank+$ & .290 & .293 & \textbf{ .315} & .253 &.257 & .258 & .651 & .657 & \textbf{ .658} & .560 & .557 & \textbf{.600} \\ \hline
+ \hline
+$Official Baseline$ & .267 & .276 &  .217 & .174 & .179 & .154 & .637 & .646 & .593  &.531 & .548 & .427\\ 
+$\# 2$ \cite{Dietz:2013:KBA} & .273 & .273 & .289 & .247 & .251 & .240 & .610 & .613 & .594 & .496 & .507 & .470 \\ 
+$\# 3$ \cite{UdelFang:2013:KBA} & .267 & .270 & .244 & .158 & .162 & .138 & .611 & .619 & .552 & .515 & .526 & .444 \\ \hline
+\hline
+$Median$ & .174  & .179 & .164 & .255 & .259 & .233 & .406 & .382 & .333 & .423 &.433 & .389 \\ 
+$mean$ & .166 & .172 & .136 & .137 & .240 & .224  & .376 & .433 & .360 & .425 & .438 & .364 \\ \hline
+\end{tabular}
+\end{table*}
+
+\autoref{fg:vital-only-prf} and \autoref{fg:vital-useful-prf} illustrate the macro-averaged recall and precision measures of all approaches listed in \autoref{tb:results}. The parallel curves are contour lines of macro-averaged F-measure. Those approaches falling in upper right are better than the lower left ones.
+
+\begin{figure}[thbp]
+\centering
+\includegraphics[width=0.45\textwidth]{vital-only-PRF.pdf}
+\caption{Macro-averaged recall versus precision with curves of constant F\_1 in \textit{vital only}}
+\label{fg:vital-only-prf}
+\end{figure}
+\begin{figure}[thbp]
+\centering
+\includegraphics[width=0.45\textwidth]{vital-useful-PRF.pdf}
+\caption{Macro-averaged recall versus precision with curves of constant F\_1 in \textit{vital + useful}}
+\label{fg:vital-useful-prf}
+\end{figure}
+
+\paragraph{Overall Analysis}
+As shown in \autoref{tb:results}, our approaches outperform the official baseline on all metrics. In the \textit{vital + useful} task, both the 2nd and 3rd place approaches do not do as well as the official baseline. In the \textit{vital only} task, the 2nd place approach beats the official baseline less than 1\% on overall $\max(F)$ measure. All our approaches outperform the official baseline notably, which validates the effectiveness of the proposed basic feature set and relevance evidences in both CCR tasks. Moreover, our approaches not only perform outstandingly on overall measures, but also outperform the others on separate measures for Wikipedia and Twitter entities. This demonstrates that our entity-independent approaches indeed work for both popular (Wikipedia) entities and less popular (Twitter) entities. Please note that the official baseline is a strong baseline in which human annotators went through target entities and came up with a list of keywords for filtering.
+\paragraph{Supervised vs. Unsupervised} 
+Supervised approaches are more potential than unsupervised approaches in both tasks. Even the classification and ranking approaches merely using the basic feature set, i.e., \textit{UniClass} and \textit{UniRank} in \autoref{tb:results}, achieve comparative performance with unsupervised approaches including relevance evidences. After being augmented with additional relevance evidences, supervised approaches can achieve more promising results.	
+\paragraph{Query Expansion}
+As illustrated in \autoref{fg:vital-only-prf} and \autoref{fg:vital-useful-prf}, though our query expansion approaches can achieve the best recall measures among all the approaches, their precision measures are not satisfactory. This may be resulted from our equally weighting strategy for all expansion terms. The approach of \textbf{\# 3} is similar to query expansion, which weights expansion terms with the help of training data. \textbf{\# 3} has achieved a high precision in the \textit{vital + useful} task. We believe our query expansion approach could be improved by introducing better weighting strategies.
+\paragraph{Effect of Pseudo Citation}
+According to the comparison between two query expansion approaches, although they perform similarly on the overall metrics, all the metrics for Twitter entities are improved. This proves the effectiveness of pseudo citations for Twitter entities. For the entities with few annotation, we could crawl pseudo citations to mitigate the impact of lack of annotation data. Pseudo citations could provide more training data. It is especially useful for the entity with few annotation data.
+\paragraph{Classification}
+\textbf{UniClass+} outperforms \textbf{UniClass} on all metrics prominently as illustrated in\autoref{tb:results}. The difference between them is whether integrating relevance evidences into the feature set. This proves that the proposed relevance evidences play an positive role in classification approaches to address the two CCR tasks. Furthermore, according to \autoref{fg:vital-only-prf} and \autoref{fg:vital-useful-prf}, we conclude that the relevance evidences help improve both precision and recall of classification approaches.
+\paragraph{Learning to Rank}
+Similar to classification approaches, in both tasks, the ranking model trained with relevance evidences, i.e.,\textbf{UniRank+}, achieves better results than the baseline ranking model trained with the basic feature set, i.e., \textbf{UniRank}. The proposed evidences also enhance the performance of learning to rank approaches. 
+\paragraph{Classification vs. Ranking} 
+Both classification and ranking approaches leveraging additional evidences outperform their own baselines in \textit{vital only} and \textit{vital + useful} tasks. Classification approaches achieve better results than ranking-based approaches on F-measure in both tasks. However, ranking approaches achieve a higher $SU$ than classification approaches in \textit{vital only} task, which reveals that the ranking methods show stronger filtering ability. However, ranking approaches is not stable as classification approaches. As shown in \autoref{fg:vital-only-prf} and \autoref{fg:vital-useful-prf}, although the \textbf{UniRank+} achieves higher precision than \textbf{UniRank}, the recall declines in the meantime.
+
+\subsection{Feature Analysis}
+In this section, we concentrate on the best classification approach \textbf{UniClass+} and explore the impacts of the relevance evidences in different tasks. We evaluate the effect of each evidence in classification by removing it from the feature set and observing whether $max(F)$ and $max(SU)$ decline in the same time. The results are exhibited in \autoref{tb:variation-F-SU}. Note that the negative percentages represent the corresponding measure arises. The full feature set contains both the basic feature set and relevance evidences.
+In general, \textbf{UniClass+} augmented with all relevance evidences achieved the best $max(F)$ and $max(SU)$ in both tasks. The $max(F)$ declines if burst evidence or citation evidence is removed in both figures This reveals that these two evidences are critical either in detecting vital and useful documents together or in detecting vital documents solely. The profile evidence is not of the same significance in two tasks. In \textit{vital + useful}, the performance declines if the profile evidence is removed. Nevertheless, in \textit{vitla only}, although $max(SU)$ decreases without the profile evidence, $max(F)$ seems not affected at all. This phenomenon can be explained from the characteristics of profile page. For an entity, either from Wikipedia or Twitter, its profile page usually focus on background information such as biography. This background evidences are not so essential in detecting vital documents.
+
+\begin{table*}[thbp]
+\centering
+\caption{$\max(F)$ and $\max(SU)$ variations after removing evidence from feature set in \textit{vital only} and \textit{vital + useful}}\label{tb:variation-F-SU}
+\begin{tabular}{ccccc|cccc} \hline
+\multirow{2}{*}{Feature Set} & \multicolumn{4}{c|}{Vital Only} & \multicolumn{4}{c}{Vital + Useful} \\ \cline{2-9}
+  & $\max(F)$ & $\swarrow \max(F)$ &  $\max(SU)$ & $\swarrow \max(SU)$   & $\max{ F}$ & $\swarrow \max(F)$ & $\max(SU)$ & $\swarrow \max(SU)$  \\ \hline
+ $Full$ & .300&  & .222 & & .660 &  & .568 &  \\ 
+ $Burst^{-}$ &.296 &1.30\% & .221 & 0.12\% &.655 & 0.64\% &.568 & 0\% \\
+ $Citation^{-}$ & .296& 1.30\% & .213 & 4.15\%  & .647& 1.93\% & .547 & 3.56\% \\ 
+ $Profile^{-}$& .305& -0.13\% & .214& 3.50\% & .657 & 0.45\% & .560 & 1.38\% \\ 
+ $Basic$  &.291 & 2.94\% & .219 & 1.44\% & .644 & 2.37\% & .545 & 4.03\% \\ \hline
+\end{tabular}
+\end{table*}
+
+To explore the different roles these evidences play in both tasks, we perform an analysis of the features with the help of information gain. \autoref{tb:feature_analysis} reports the information gains of the proposed features for two CCR tasks.
+\begin{table}[thbp]
+\centering
+\caption{Information gain values of the proposed features}
+\label{tb:feature_analysis}
+\begin{tabular}{ccc} \hline
+\multicolumn{3}{c}{Information Gain} \\
+ Feature & vital only & vital+useful \\ \hline
+ $Burst\_Value(D)$ & 0.130 & 0.287 \\ \hline
+$avg(Sim_{cos}(D, S_{i}(E)))$ &0.069  &0.145 \\
+$avg(Sim_{jac}(D, S_{i}(E)))$ & 0.058  & 0.150 \\ \hline
+$avg(Sim_{cos}(D, C_{i}))$ & 0.028 &  0.083  \\
+$avg(Sim_{jac}(D, C_{i}))$ & 0.052 & 0.108  \\ \hline
+$N(E_{rel})$ & 0.121 & 0.175\\ \hline
+\end{tabular}
+\textit{$N(E_{rel})$ is the best feature in basic feature set according to the IG.}
+\end{table}
+\subsection{Error Analysis}
+We carry out qualitative and quantitative error analysis based on the classification results of the best classification approach \textbf{UniClass+}. In the \textit{vital only} task, false negative instances are the actual vital documents that we miss in the filtering step. Most of them are the documents mentioning the target entity with a misspelled name or an unusual alias, both of which are not taken into account in our current approaches. We could address this problem by undertaking spelling correction before filtering or employ more effective resources to expand surface forms for entities. However, as the current best recall has reached 85\%, this is not an urgent problem for CCR.
+
+Compared with the high recall, we are more concerned about the poor precision, which is the bottleneck of current approaches. As shown in \autoref{fg:vital-only-prf}, even the best approach can not achieve a precision higher than 20\%. Precision is mainly affected by the amount of false positive instances, such as the actual non-vital documents classified as vital documents in the \textit{vital only} task. \autoref{tb:FalsePositive} shows the actual source distribution of false positive instances in the two tasks.
+\begin{table}[thbp]
+\centering
+\caption{Source distribution of misclassification instances}\label{tb:FalsePositive}
+\begin{tabular}{cccc} \hline
+ Task & Garbage & Neutral & Useful  \\ \hline
+ Vital Only & 39.3\% & 16.4\% & 44.3\%  \\ \hline
+ Vital + Useful & 63.4\% & 36.6\% & \backslashbox{}{} \\ \hline
+\end{tabular}
+\end{table}
+Both in the \textit{vital only} and the \textit{vital + useful} tasks, garbage documents affect the classification performance apparently. Although our filtering step retrieves enough relevant documents, it also retains some garbage documents mentioning the target entity. Some spam documents camouflage themselves as vital or useful documents and mislead our classifiers. Applying a spam detection step in the filtering process is an optional solution for this problem. In the \textit{vital + only} task, 44.3\% of the false positive errors are caused by useful documents. Though effective evidences are utilized to distinguish between vital and useful documents, we have to admit that it's still a difficult problem. In some cases, even human beings can not easily decide whether a document is vital or useful.
+
+\section{conclusion and future work}\label{sec:conclusion}
+The objective of CCR is filtering vitally relevant documents from a time-ordered stream corpus. The key challenge is how to detecting vital documents accurately. Apart from annotation data, we leveraged to additional relevance evidences to improve our system performance. These additional evidences were mined from the profile page of an entity, existing citations and temporal signals, all of them can improve both unsupervised and supervised approaches. We also evaluated their significance in detecting only vital documents or both vital and useful documents together. Another challenge is lacking of training data for less popular entities, especially Twitter entities. We created pseudo citations for them and improved the overall performance. In addition, we developed an effective filtering step through executing a high recall query to handle the big stream corpus. Our classification approaches augmented with the proposed evidences achieved the state-of-the-art performance in the CCR task. 
+
+There is much room for improvement in the two tasks of CCR, especially discriminating vital documents from useful documents accurately. In future, we will focus on exploiting relevance evidences further to increase the precision of separating vital from useful documents. In addition, spam detection in a stream corpus is an interesting problem need to be addressed in the CCR task.
+
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{CIKM2014}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+
+%\balancecolumns
+%\balancecolumns
+% That's all folks!
+\end{document}

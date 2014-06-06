@@ -155,6 +155,8 @@ The rese of paper is organized as follows. In Section 2, we disscuss the related
 
 \section{Related works}
 
+In this section, we review some of the popular methods for resume extracting.
+The first group of methods are based  on template file.
 Jsoup\footnote{http://jsoup.org} and POI\footnote{http://poi.apache.org} can be used to parse resumes that follows some template file.
 Jsoup is a Java library for working with real-world HTML. 
 It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
@@ -163,26 +165,28 @@ It also implements the HTML5 specification, and parses HTML to the same DOM as m
 The Apache POI is a useful Java library for working with Office file, based on the Open XML standards which proposed by Microsoft company.
 These two open source tools help to extract resumes that follows some template file.
 
+The second group of methods treat the resume extracting work as the nature language processing work. 
 In \cite{Yu:2005:RIE:1219840.1219902}, a cascaded information extraction framework was designed to support automatic resume management and routing.
 The first pass is used to segment the resume into cnsecutive blocks with labels indicating the information types. 
 Then detailed information, such as Name and Address, are identified in certain blocks without searching globally in the whole resume.
-
 In \cite{Singh:2010:PSS:1871437.1871523}, a system that aids in the shortlisting of candidates for jobs was designed. 
 The part of parsing resume combines three technologies. 
 Table analysis is used to detect the type of values in table. 
 CRF model is used to segment the resume text into different blocks. 
 Content Recognizer mines the named entities salient to candidate profile.
 
+The third group of methods treat this as key words retrieval task.
 In \cite{kopparapu2010automatic} and \cite{maheshwari2010approach}, only the specific data is extracted to filter the resume streams. 
 Both of them are aim to accelerate the efficiency of search candicates for the job.
+
 
 \section{Our approach}
 
 In this section, we explain the details of our approach. 
 The process can be devided into three part. 
-First, the origin resume file is converted into text format no matter what the origin format is.
-Apache Tika\footnote{http://tika.apache.org/} provides some api to support this operation.
-And some heuristic rules is created to regularize each line so as to remove some noises like continuous blank. 
+First, some necessary preparations are done to the origin resume file. 
+We converted the resume file into text format no matter what the origin format is, which is supported by Apache Tika\footnote{http://tika.apache.org/}. 
+%And some heuristic rules is created to regularize each line so as to remove some noises like continuous blank. 
 %Second, patten recongized method is used to find the laten block. 
 Second, writing style is used to identify the appropriate  block of each resume.
 Third, name entities are matched to the candicate profile based on the information statistics of the content of all the resumes in the data set. 
