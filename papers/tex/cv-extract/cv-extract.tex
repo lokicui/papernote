@@ -30,6 +30,9 @@
 \begin{document}
 
 \title{PBECV: a fast resume extracting framework based on writing style recognition}
+\subtitle{Resume extraction}
+\titlenote{A full version of this paper is available}
+\textit{}
 
 %
 % You need the command \numberofauthors to handle the 'placement
@@ -56,7 +59,7 @@
 % without further effort on your part as the last section in
 % the body of your article BEFORE References or any Appendices.
 
-\numberofauthors{8} %  in this sample file, there are a *total*
+%\numberofauthors{8} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
 % reasons) and the remaining two appear in the \additionalauthors section.
 %
@@ -127,33 +130,48 @@ The experimental results on the real world data-set of millions of resumes show 
 In the information age, head-hunting companies collect millions of resumes to occupy more market share.
 %However, these resumes are not wrote with the standard format.
 However, most of resumes are not wrote with the standard format or follow some special template file.
-In order to improve the success rate of recommand person to fit the requirement of employee, those resumes should be parsed exactly and detailed.
-This helps human resources to easily and quickly search for the right candidate.
-The challenge is how to analysis the different kinds of resume to get the content.
+In order to improve the success rate of recommending some person to fit the requirements of employer, those resumes should be parsed exactly and detailed.
+This helps headhunters to easily and quickly search for the right candidate.
+The challenge is how to analysis the different kinds of resume to get the detailed information.
 
 However, resumes are easier to structure than other texts, such as news. 
-Different people have different writing style about personal resume, but the content of these work all around the same topic, their personal information, which contains contacts, educations, work experimences etc.
+Different people have different writing style about personal resume, but the content of these work all around the same topic, their personal information, which contains contacts, educations, work experimences and so on.
 %As a result of this, resumes can be segmented by servel groups.
 As a result of this, resumes can be segmented into servel groups, which is one of the basic ideas to solve the problem.
 In other words, resumes share the document-level hierarchical contextual structure \cite{maheshwari2010approach}.
 
-There are two main methods to deal with resumes in the practical engineering. 
-One is mainly for resumes follows the same format, from some big recruiting platform like monster, linkedin.
+There are three main methods to deal with resumes in the practical engineering. 
+Firstly, since many engineers has the knowledge background about how to parse a web page based on the DOM structure, they treate the resume text as a web page to extracte the details. 
+In particular, some big recruiting platform like Monster\footnote{http://www.monster.com/} and LinkedIn\footnote{http://www.linkedin.com} provide many beautiful template which make many resumes follow them.
 This kind of resumes can be parsed through special template file or regex rules.
-The advantage is very high accuracy, but not suitable for normal resume.
-Another one is keyword extraction from resume.
+%The advantage is very high accuracy, but not suitable for normal resume.
+%Another one is keyword extraction from resume.
+
+Secondly, as the result of hard extracting, key word extraction approach are good to be an alterative choice.
 This method use search technology to query keyword from resume to check whether it match the require.
-The advantage is suitable for every resume, but losing the accuracy.
-In the real application, resumes are mixed with those follow some template and normal ones.
-The system's ability to deal with resumes should be known to control the the robustness of the software.
+%The advantage is suitable for every resume, but losing the accuracy.
 
-In this paper, we want to build a baseline of paring resume for the system. 
-Because when we meet a resume follows some template file, the specify parsing file will parse it exactly. 
-We have made an effort to propose an easy implement and effective solution based on pattern recognition and the decision tree.
+Thirdly, some researchers treat the resume extracting task as a sequence label task.
+The resume text can be supposed to be a mixed information heap, which contains the basic information about the person.
+So that this task is transfered to label the words attribute and line attribute.
 
-The rese of paper is organized as follows. In Section 2, we disscuss the related work. In Section 3, we explain our approach. In Section 4, experimental results are presented and analysised. Conclusion and future work are provided in Section 5.
+%In the real application, resumes are mixed with those follow some template and normal ones.
+%The system's ability to deal with resumes should be known to control the the robustness of the software.
 
-\section{Related works}
+%In this paper, we want to build a baseline of paring resume for the system. 
+In this paper, we aim to propose a rapid and effective framework to extract the detailed information from resumes. 
+This framework can work with the methods based on template file very well to increase the accuracy of extracting task.
+We consider that everyone has his/her writing style about the resume, which means that there are some latent format information during the text.
+
+
+
+%The framework combins 
+%Because when we meet a resume follows some template file, the specify parsing file will parse it exactly. 
+%We have made an effort to propose an easy implement and effective solution based on pattern recognition and the decision tree.
+
+The rest of paper is organized as follows. In Section 2, we disscuss the related work. In Section 3, we explain our approach. In Section 4, experimental results are presented and analysised. Conclusion and future work are provided in Section 5.
+
+\section{Related works}\label{sec:related-work}
 
 In this section, we review some of the popular methods for resume extracting.
 The first group of methods are based  on template file.
@@ -161,7 +179,6 @@ Jsoup\footnote{http://jsoup.org} and POI\footnote{http://poi.apache.org} can be 
 Jsoup is a Java library for working with real-world HTML. 
 It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
 It also implements the HTML5 specification, and parses HTML to the same DOM as modern browsers do.
-%The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards and Microsoft's OLE 2 Compound Document format.
 The Apache POI is a useful Java library for working with Office file, based on the Open XML standards which proposed by Microsoft company.
 These two open source tools help to extract resumes that follows some template file.
 
@@ -192,6 +209,13 @@ Second, writing style is used to identify the appropriate  block of each resume.
 Third, name entities are matched to the candicate profile based on the information statistics of the content of all the resumes in the data set. 
 
 \subsection{Prepared processing}
+
+
+\begin{figure}
+\centering
+\epsfig{file=resumes.eps, height=5in, width=7in}
+\caption{Some Chinese resumes text sample}
+\end{figure}
 
 
 From the figure 1, it's clear to know that the raw resume text is not suitable to process directly. 
