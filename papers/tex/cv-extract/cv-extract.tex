@@ -28,11 +28,9 @@
 
 \documentclass{acm_proc_article-sp}
 \begin{document}
-
 \title{PBECV: a fast resume extracting framework based on writing style recognition}
 \subtitle{Resume extraction}
-\titlenote{A full version of this paper is available}
-\textit{}
+%\titlenote{A full version of this paper is available}
 
 %
 % You need the command \numberofauthors to handle the 'placement
@@ -171,7 +169,7 @@ We consider that everyone has his/her writing style about the resume, which mean
 
 The rest of paper is organized as follows. In Section 2, we disscuss the related work. In Section 3, we explain our approach. In Section 4, experimental results are presented and analysised. Conclusion and future work are provided in Section 5.
 
-\section{Related works}\label{sec:related-work}
+\section{Related works}
 
 In this section, we review some of the popular methods for resume extracting.
 The first group of methods are based  on template file.
@@ -268,12 +266,17 @@ Each line can be transfered into entities pattern mode, as show in Figure 2.
 It's easy to cut the lines into blocks with the help of entities pattern and the algorithm complexty is O(n).
 
 
-\subsection{Name entities Match}
+\subsection{Attributes Match}
 
-Avoiding labled the data by human too much, we statist the whole set to find some useful information which may be the latent value for the profile.
+%Avoiding labled the data by human too much, we statist the whole set to find some useful information which may be the latent value for the profile.
+Instead of labeling too much data, we did a lot of statistic work to collect the name entity candicates key, which often shown in the text with key value pair with the attribute name.
+The similarity of the entity can help to do attribute cluster, then they can be labled to the standard attribute name.
+The process are as follows.
 First, each resume is processed as the Prepared processing section 3.1 descripted.
 Second, those lines with key-value structure are considered to be the candicate attribute.
-Third, after removing some noises
+Third, after removing some noises in the text, cosine similarity is computed based on $TF-IDF$, and the K-means cluster algorithm shows the attribute cluster.
+Fourth, these clusters are matched to the profile attribute.
+
 
 \begin{table}
 \centering
@@ -302,17 +305,14 @@ Output: R: resume with structured data \\ \hline
 \section{Experiments}
 
 %In order to verify our approach works, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
-In order to verify our approach, we did the experiment with one million resumes which provided by a commercial head-hunting company. 
+In order to verify our approach, we did the experiment with one million resumes in Chinese which provided by a commercial head-hunting company. 
 These resumes are contains different industry field people and different source.
 We use precision, recall and F value to evaluate this approach.
 Cause the dataset is huge, the standard precision and recall can not be compute without the label data.
-We involved a score function, which treat each field of the block as a unit, then compute the total score of each resume.
+A score function is involved to compute these three criterion, which is defined based on the importancy of each field in the resume. 
+The score function treats each field of the block as a unit, then compute the total score of each resume. 
 We supposed each resume text has basic information, education, work experiences and self evaluation things.
 This hyperspace is not match the real data, but as a result of the huge volume it does not matter to get the basic overview.
-
-$$
-F-1 = \frac{P+R}{2PR}
-$$
 
 \begin{table}
 \centering
@@ -330,10 +330,10 @@ self evaluation & 0.897  &0.796 &0.843 \\
 
 From the results, we can get an overview about the resume dataset that not all the resume is valid.
 Because person name has a strong feature, it's easy to detect and regconized.
-The email also has an obvious feature, which is contrustred by servel characters and only one @ singal.
+The email also has an obvious feature, which is contrustred by servel characters and only one $@$ punctuation.
 Other basic information concludes how many years he/she worked, address, sex, id number, phone num.
-Most resume contains the basic information but not sure each of them, which inflect the recall.
-Not each resume text is really a personal resume, this is noticed after the experient, for example, the presudo resume is a description about someone from a head-hunter or just an unfinished resume.
+Most resume contains the basic information but not each of them, which inflect the recall.
+%Not each resume text is really a personal resume, this is noticed after the experient, for example, the presudo resume is a description about someone from a head-hunter or just an unfinished resume.
 This is the mainly reason of the low rate of education and work experience, whose block need carefully detected.
 
 %Compared to other approach about extracting details from resume, our method is easy to implement and also gain a considerable result.
