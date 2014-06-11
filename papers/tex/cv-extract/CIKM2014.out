@@ -1,0 +1,17 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{related work}{}% 2
+\BOOKMARK [1][-]{section.3}{Problem Statement and Dataset}{}% 3
+\BOOKMARK [1][-]{section.4}{Filtering}{}% 4
+\BOOKMARK [1][-]{section.5}{Relevance Estimation}{}% 5
+\BOOKMARK [2][-]{subsection.5.1}{Evidences of Relevance}{section.5}% 6
+\BOOKMARK [2][-]{subsection.5.2}{Approaches}{section.5}% 7
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Query Expansion}{subsection.5.2}% 8
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Supervised Methods}{subsection.5.2}% 9
+\BOOKMARK [1][-]{section.6}{Results and Discussions}{}% 10
+\BOOKMARK [2][-]{subsection.6.1}{Filtering Evaluation}{section.6}% 11
+\BOOKMARK [2][-]{subsection.6.2}{Relevance Level Estimation}{section.6}% 12
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Evaluation Metrics}{subsection.6.2}% 13
+\BOOKMARK [3][-]{subsubsection.6.2.2}{Approaches Comparison}{subsection.6.2}% 14
+\BOOKMARK [2][-]{subsection.6.3}{Feature Analysis}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.4}{Error Analysis}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{conclusion and future work}{}% 17
