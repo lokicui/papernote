@@ -109,7 +109,9 @@ In this paper, we propose PBECV to extract the resume information from text file
 Our appoach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse. 
 %The aim of this application scene is to build the baseline of resume extraction.
 %The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
-The experimental results on the real world data-set of millions of resumes show that our approach can reach the performance of algorithms that trained with the structure information and the proposed approach's algorithm complexity is O(n).
+The experimental results on the real world data-set of resumes in Chinese show that our approach can reach the performance of algorithms that trained with the structure information and the proposed approach's algorithm complexity is O(n).
+We made our demo system public for future research in the same area at http://t.cn/xxxx
+
 
 \end{abstract}
 
@@ -153,19 +155,9 @@ Thirdly, some researchers treat the resume extracting task as a sequence label t
 The resume text can be supposed to be a mixed information heap, which contains the basic information about the person.
 So that this task is transfered to label the words attribute and line attribute.
 
-%In the real application, resumes are mixed with those follow some template and normal ones.
-%The system's ability to deal with resumes should be known to control the the robustness of the software.
-
-%In this paper, we want to build a baseline of paring resume for the system. 
 In this paper, we aim to propose a rapid and effective framework to extract the detailed information from resumes. 
 This framework can work with the methods based on template file very well to increase the accuracy of extracting task.
 We consider that everyone has his/her writing style about the resume, which means that there are some latent format information during the text.
-
-
-
-%The framework combins 
-%Because when we meet a resume follows some template file, the specify parsing file will parse it exactly. 
-%We have made an effort to propose an easy implement and effective solution based on pattern recognition and the decision tree.
 
 The rest of paper is organized as follows. In Section 2, we disscuss the related work. In Section 3, we explain our approach. In Section 4, experimental results are presented and analysised. Conclusion and future work are provided in Section 5.
 
@@ -206,12 +198,23 @@ We converted the resume file into text format no matter what the origin format i
 Second, writing style is used to identify the appropriate  block of each resume.
 Third, name entities are matched to the candicate profile based on the information statistics of the content of all the resumes in the data set. 
 
+\subsection{Framework Structure}
+
+Figure 2 outlines the structure of our framework. 
+
+
+\begin{figure}
+\centering
+\epsfig{file=11.eps}
+\caption{Some Chinese resumes text sample}
+\end{figure}
+
 \subsection{Prepared processing}
 
 
 \begin{figure}
 \centering
-\epsfig{file=resumes.eps, height=5in, width=7in}
+\epsfig{file=framework.eps}
 \caption{Some Chinese resumes text sample}
 \end{figure}
 
