@@ -1,0 +1,16 @@
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF8
+
+@INPROCEEDINGS{dai-EtAl:2014:P14-5,
+  author = {Dai, Xianjun and Liu, Yuanchao and Wang, Xiaolong and Liu, Bingquan},
+  title = {WINGS:Writing with Intelligent Guidance and Suggestions},
+  booktitle = {Proceedings of 52nd Annual Meeting of the Association for Computational
+	Linguistics: System Demonstrations},
+  year = {2014},
+  pages = {25--30},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-5005}
+}
+

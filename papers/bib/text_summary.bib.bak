@@ -14,6 +14,19 @@
   file = {allan2001temporal.pdf:text_summary/allan2001temporal.pdf:PDF}
 }
 
+@INPROCEEDINGS{attokurov-bayazit:2014:P14-3,
+  author = {Attokurov, Ulukbek and Bayazit, Ulug},
+  title = {Multi-document summarization using distortion-rate ratio},
+  booktitle = {Proceedings of the ACL 2014 Student Research Workshop},
+  year = {2014},
+  pages = {64--70},
+  address = {Baltimore, Maryland, USA},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Multi-Document Summarization Using Distortion-Rate Ratio.pdf:papers-not-read/acl2014/Multi-Document Summarization Using Distortion-Rate Ratio.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-3009}
+}
+
 @INPROCEEDINGS{barzilay1999information,
   author = {Barzilay, Regina and McKeown, Kathleen R and Elhadad, Michael},
   title = {Information fusion in the context of multi-document summarization},
@@ -24,6 +37,20 @@
   organization = {Association for Computational Linguistics},
   file = {Information fusion in the context of multi-document summarization.pdf:text_summary/Information fusion in the context of multi-document summarization.pdf:PDF},
   review = {提取型摘要}
+}
+
+@INPROCEEDINGS{baumel-cohen-elhadad:2014:P14-1,
+  author = {Baumel, Tal and Cohen, Raphael and Elhadad, Michael},
+  title = {Query-Chain Focused Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 1: Long Papers)},
+  year = {2014},
+  pages = {913--922},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Query-Chain Focused Summarization.pdf:papers-not-read/acl2014/Query-Chain Focused Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-1086}
 }
 
 @INPROCEEDINGS{binh2013structured,
@@ -62,7 +89,7 @@
   journal = {Ahmad Zaki Abu Bakar Roliana Ibrahim},
   pages = {1},
   __markedentry = {[omar:6]},
-  file = {A new sentence similarity measure and sentence based extractive technique for automatic text summarization.pdf:text_summary/A new sentence similarity measure and sentence based extractive technique for automatic text summarization.pdf:PDF;Generic Text Summarization Using Relevance Measure and Latent Semantic Analysis.pdf:text_summary/Generic Text Summarization Using Relevance Measure and Latent Semantic Analysis.pdf:PDF;Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:PDF;A survey on automatic text summarization.pdf:text_summary/A survey on automatic text summarization.pdf:PDF;LexRank Graph-based Lexical Centrality as Salience in Text Summarization.pdf:text_summary/LexRank Graph-based Lexical Centrality as Salience in Text Summarization.pdf:PDF;Text Summarization using lexical chains.pdf:text_summary/Text Summarization using lexical chains.pdf:PDF;The Automated Acquisition of Topic Signatures for Text Summarization.pdf:text_summary/The Automated Acquisition of Topic Signatures for Text Summarization.pdf:PDF},
+  file = {A new sentence similarity measure and sentence based extractive technique for automatic text summarization.pdf:text_summary/A new sentence similarity measure and sentence based extractive technique for automatic text summarization.pdf:PDF;Generic Text Summarization Using Relevance Measure and Latent Semantic Analysis.pdf:text_summary/Generic Text Summarization Using Relevance Measure and Latent Semantic Analysis.pdf:PDF;Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:text_summary/Text summarization using a trainable summarizer and latent semantic analysis-119.pdf:PDF;A survey on automatic text summarization.pdf:text_summary/A survey on automatic text summarization.pdf:PDF;LexRank Graph-based Lexical Centrality as Salience in Text Summarization.pdf:text_summary/LexRank Graph-based Lexical Centrality as Salience in Text Summarization.pdf:PDF;Text Summarization using lexical chains.pdf:text_summary/Text Summarization using lexical chains.pdf:PDF;The Automated Acquisition of Topic Signatures for Text Summarization.pdf:text_summary/The Automated Acquisition of Topic Signatures for Text Summarization.pdf:PDF;A Bayesian Method to Incorporate Background Knowledge during Automatic Text Summarization.pdf:papers-not-read/acl2014/A Bayesian Method to Incorporate Background Knowledge during Automatic Text Summarization.pdf:PDF},
   owner = {omar},
   timestamp = {2013.10.16}
 }
@@ -89,6 +116,19 @@
   date-added = {2013-10-09 16:59:43 +0000},
   date-modified = {2013-10-09 16:59:43 +0000},
   file = {Text Summarization using lexical chains.pdf:text_summary/Text Summarization using lexical chains.pdf:PDF}
+}
+
+@INPROCEEDINGS{canobasave-he-xu:2014:P14-2,
+  author = {Cano Basave, Amparo Elizabeth and He, Yulan and Xu, Ruifeng},
+  title = {Automatic Labelling of Topic Models Learned from Twitter by Summarisation},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 2: Short Papers)},
+  year = {2014},
+  pages = {618--624},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-2101}
 }
 
 @INPROCEEDINGS{1998-Carbonell-p335-336,
@@ -193,6 +233,21 @@
 	
 	
 	本文提出了个框架，通过计算这俩属性，然后来选出摘要句。}
+}
+
+@INPROCEEDINGS{christensen-EtAl:2014:P14-1,
+  author = {Christensen, Janara and Soderland, Stephen and Bansal, Gagan and
+	Mausam},
+  title = {Hierarchical Summarization: Scaling Up Multi-Document Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 1: Long Papers)},
+  year = {2014},
+  pages = {902--912},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Hierarchical Summarization\: Scaling Up Multi-Document Summarization.pdf:papers-not-read/acl2014/Hierarchical Summarization\: Scaling Up Multi-Document Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-1085}
 }
 
 @INPROCEEDINGS{conroy2006topic,
@@ -401,6 +456,21 @@
   review = {weibo上都说效果很好的卷积神经网络模型}
 }
 
+@INPROCEEDINGS{kikuchi-EtAl:2014:P14-2,
+  author = {Kikuchi, Yuta and Hirao, Tsutomu and Takamura, Hiroya and Okumura,
+	Manabu and Nagata, Masaaki},
+  title = {Single Document Summarization based on Nested Tree Structure},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 2: Short Papers)},
+  year = {2014},
+  pages = {315--320},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Single Document Summarization based on Nested Tree Structure.pdf:papers-not-read/acl2014/Single Document Summarization based on Nested Tree Structure.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-2052}
+}
+
 @ARTICLE{lievolutionary,
   author = {Li, Jiwei and Li, Sujian},
   title = {Evolutionary Hierarchical Dirichlet Process for Timeline Summarization},
@@ -439,6 +509,21 @@
   pages = {495--501},
   organization = {Association for Computational Linguistics},
   file = {The Automated Acquisition of Topic Signatures for Text Summarization.pdf:text_summary/The Automated Acquisition of Topic Signatures for Text Summarization.pdf:PDF}
+}
+
+@INPROCEEDINGS{louis:2014:P14-2,
+  author = {Louis, Annie},
+  title = {A Bayesian Method to Incorporate Background Knowledge during Automatic
+	Text Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 2: Short Papers)},
+  year = {2014},
+  pages = {333--338},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {A Bayesian Method to Incorporate Background Knowledge during Automatic Text Summarization.pdf:papers-not-read/acl2014/A Bayesian Method to Incorporate Background Knowledge during Automatic Text Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-2055}
 }
 
 @ARTICLE{1958-Luhn-p159-165,
@@ -520,6 +605,36 @@
   booktitle = {EACL},
   year = {2006},
   file = {nelken2006towards.pdf:text_summary/nelken2006towards.pdf:PDF}
+}
+
+@INPROCEEDINGS{ng-EtAl:2014:P14-1,
+  author = {Ng, Jun-Ping and Chen, Yan and Kan, Min-Yen and Li, Zhoujun},
+  title = {Exploiting Timelines to Enhance Multi-document Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 1: Long Papers)},
+  year = {2014},
+  pages = {923--933},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Exploiting Timelines to Enhance Multi-document Summarization.pdf:papers-not-read/acl2014/Exploiting Timelines to Enhance Multi-document Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-1087}
+}
+
+@INPROCEEDINGS{pighin-EtAl:2014:P14-1,
+  author = {Pighin, Daniele and Cornolti, Marco and Alfonseca, Enrique and Filippova,
+	Katja},
+  title = {Modelling Events through Memory-based, Open-IE Patterns for Abstractive
+	Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 1: Long Papers)},
+  year = {2014},
+  pages = {892--901},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Modelling Events through Memory-based, Open-IE Patterns for Abstractive Summarization.pdf:papers-not-read/acl2014/Modelling Events through Memory-based, Open-IE Patterns for Abstractive Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-1084}
 }
 
 @ARTICLE{radev2005newsinessence,
@@ -651,6 +766,21 @@
 	
 	
 	IJCAI}
+}
+
+@INPROCEEDINGS{suzuki-fukumoto:2014:P14-2,
+  author = {Suzuki, Yoshimi and Fukumoto, Fumiyo},
+  title = {Detection of Topic and its Extrinsic Evaluation Through Multi-Document
+	Summarization},
+  booktitle = {Proceedings of the 52nd Annual Meeting of the Association for Computational
+	Linguistics (Volume 2: Short Papers)},
+  year = {2014},
+  pages = {241--246},
+  address = {Baltimore, Maryland},
+  month = {June},
+  publisher = {Association for Computational Linguistics},
+  file = {Detection of Topic and its Extrinsic Evaluation Through Multi-Document Summarization.pdf:papers-not-read/acl2014/Detection of Topic and its Extrinsic Evaluation Through Multi-Document Summarization.pdf:PDF},
+  url = {http://www.aclweb.org/anthology/P/P14/P14-2040}
 }
 
 @INPROCEEDINGS{2000-Swan-p49-56,
