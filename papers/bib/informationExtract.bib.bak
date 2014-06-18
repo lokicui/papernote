@@ -42,6 +42,18 @@
   review = {各种目前的职位与简历match的方法}
 }
 
+@ARTICLE{2004-Ciravegna-p-,
+  author = {Ciravegna, F; Lavelli},
+  title = {Learning Pinocchio: Adaptive information extraction for real world
+	applications},
+  journal = {Natural Language Engineering},
+  year = {2004},
+  volume = {10},
+  pages = {145-165},
+  owner = {coder},
+  timestamp = {2014.06.12}
+}
+
 @ARTICLE{cunningham2002gate,
   author = {Hamish Cunningham, Diana Maynard, Kalina Bontcheva, Valentin Tablan
 	},
@@ -266,6 +278,13 @@
 	learning, web content},
   location = {San Francisco, California, USA},
   numpages = {6},
+  review = {同一个数据源来的网页的格式的大部分相同
+	
+	
+	利用这个东西来抽取structure。
+	
+	
+	这东西居然还能发个最新的论文呢？！},
   url = {http://doi.acm.org/10.1145/2505515.2505654}
 }
 

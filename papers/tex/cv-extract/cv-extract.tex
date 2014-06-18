@@ -118,11 +118,11 @@ Most of resumes are wrote in different format, including font size, font color a
 As a result, it's difficult to structure these data with a general extracting method. 
 %In this paper, we propose a fast approach to extract the resume information from text file which drop the structure information like the font size and table constraint.
 In this paper, we propose PBECV to extract the resume information from text file without format information. 
-Our appoach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse. 
+Our approach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse. 
 %The aim of this application scene is to build the baseline of resume extraction.
 %The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
 The experimental results on the real world data-set of resumes in Chinese show that our approach can reach the performance of algorithms that trained with the format information and the proposed approach's algorithm complexity is $O(NlogN)$.
-We made our demo system public for future research in the same area at http://t.cn/RvardcW 
+%We made our demo system public for future research at http://t.cn/RvardcW 
 
 
 \end{abstract}
@@ -140,6 +140,10 @@ We made our demo system public for future research in the same area at http://t.
 
 %In the information age, head-hunting companies collect millions of resumes. 
 In the information age, head-hunting companies collect millions of resumes to occupy more market share.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+More and more internet-based recruiting platforms become a primary recruitment channel \cite{al2012survey}.
+As the base of them, job seekers' resumes are the core of recruitment and how to extract the information hidden in the resume text is very important.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %However, these resumes are not wrote with the standard format.
 However, most of resumes are not wrote with the standard format or follow some special template file.
 In order to improve the success rate of recommending some person to fit the requirements of employer, those resumes should be parsed exactly and detailed.
@@ -147,7 +151,7 @@ This helps headhunters to easily and quickly search for the right candidate.
 The challenge is how to analysis the different kinds of resume to get the detailed information.
 
 However, resumes are easier to structure than other texts, such as news. 
-Different people have different writing style about personal resume, but the content of these are all around the same topic, their personal information, which contains contacts, educations, work experimences and so on.
+Different people have different writing style about personal resume, but the content of these are all around the same topic, their personal information, which contains contacts, educations, work experiences and so on.
 %As a result of this, resumes can be segmented by servel groups.
 As a result of this, resumes can be segmented into servel groups, which is one of the basic ideas to solve the problem.
 In other words, resumes share the document-level hierarchical contextual structure \cite{maheshwari2010approach}.
@@ -191,21 +195,29 @@ It provides a very convenient API for extracting and manipulating data, using th
 It also implements the HTML5 specification, and parses HTML to the same DOM as modern browsers do.
 The Apache POI is a useful Java library for working with Office file, based on the Open XML standards which proposed by Microsoft company.
 It's easy to create a specific program to extract the information from those resumes which follow the specific template file.
+In cite{2004-Ciravegna-p145-165}, the system performed the IE by annotating texts using XML tags to identify elements such as name,street, city, province, email, etc.
+
 
 The second group of methods treat the resume extracting work as the nature language processing work. 
 In \cite{Yu:2005:RIE:1219840.1219902}, a cascaded information extraction framework was designed to support automatic resume management and routing.
-The first pass is used to segment the resume into cnsecutive blocks with labels indicating the information types. 
+The first pass is used to segment the resume into consecutive blocks with labels indicating the information types. 
 Then detailed information, such as Name and Address, are identified in certain blocks without searching globally in the whole resume.
 In \cite{Singh:2010:PSS:1871437.1871523}, a system that aids in the shortlisting of candidates for jobs was designed. 
 The part of parsing resume combines three technologies as follows.
 Table analysis is used to detect the type of values in table. 
 CRF model is used to segment the resume text into different blocks. 
 Content Recognizer mines the named entities salient to candidate profile.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In \cite{Celik:2012:OIE:2456270.2456284}, they proposed an ontology driven information parsing system that is planned to operate on few millions of resumes to convert them structured format for the purpose of expert finding through the Semantic Web approach.
+In \cite{kumaran2013towards}, researchers presented EXPERT, an intelligent tool for screening candidates for recruitment using ontology mapping. EXPERT has three phases in screening candidates for recruitment. In first phase, the system collects candidates' resumes and constructs ontology document for the features of the candidates. Job openings/job requirements are represented as ontology in the second phase and in third phase, EXPERT maps the job requirement ontology onto the candidate ontology document and retrieves the eligible candidates.
+%%%%%%%%%%%%%%%%%%%%%%%
 
 The third group of methods treat this as key words retrieval task.
 In \cite{kopparapu2010automatic} and \cite{maheshwari2010approach}, only the specific data is extracted to filter the resume streams. 
 Both of them are aim to accelerate the efficiency of search candicates for the job.
 Some of the important queries were created to filter the resume set, so that this can help to improve the working efficiency of the staff.
+
+
 
 
 \section{Our approach}\label{our-approach}
@@ -233,11 +245,15 @@ Before the parsing task, basic knowledge data set should be constructed from the
 
 \subsection{Prepared processing}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{figure*}\label{resumes-sample}
-\centering
-\epsfig{file=resumes.pdf, height=3in, width=7in}
+
+\epsfig{file=resumes.eps, height=3in, width=3.6in}%, width=in
 \caption{Samples of the resume set}
 \end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 From the Figure 3, it's clear to know that the raw resume text is not suitable to process directly. 
 There are a lot of noises among the lines in each text file, such as continues blank, wrong newline, the necessary space missing. 
@@ -292,39 +308,14 @@ It's easy to cut the lines into blocks with the help of entities pattern and the
 \subsection{Attributes Match}
 
 Instead of labeling too much data, we did a lot of statistic work to collect the name entity candicates key, which often shown in the text with key value pair with the attribute name.
-The similarity of the entity can help to do attribute cluster, then they can be labled to the standard attribute name.
+The similarity of the entity can help to do attribute cluster, then they can be labeled to the standard attribute name.
 The process are as follows.
 First, each resume is processed as the Prepared processing section 3.1 descripted.
 Second, those lines with key-value structure are considered to be the candicate attribute.
 Third, after removing some noises in the text, cosine similarity is computed based on $TF-IDF$, and the K-means cluster algorithm shows the attribute cluster.
-The algorithm complexity of this is $O(NlogN)$.
+The algorithm complexity of this step is $O(NlogN)$.
 Fourth, these clusters are matched to the profile attribute.
 Table 2 summarizes the proposed framework.
-
-\begin{table}
-\centering
-\caption{Algorithm to extract the resume}
-\begin{tabular}{|l|} \hline
-Input: L: Set of n lines of each resume;\\
-Output: R: resume with structured data \\ \hline
-1. for line in L\\
-	if line match heuristic rules\\
-		do operation\\
-2. for line in L\\
-	find pattern of line\\
-	match the pattern to others\\
-	if match\\
-		record the block\\
-	else\\
-		continue\\
-	return all blocks\\
-3. for block in B\\
-	match the name entities\\
-4. return resume\\
-\hline
-\end{tabular}
-\end{table}
-
 
 \begin{algorithm}[h] 
 
@@ -367,13 +358,13 @@ Output: R: resume with structured data \\ \hline
 
 
 In order to verify our approach, we did the experiment with fifteen thousand resumes in Chinese which provided by a commercial head-hunting company. 
-These resumes are contains different industry field people and different source.
+These resumes are crawled by search engine crawler, so that they contains different industry field people from different websites.
 
 We use precision, recall and F value to evaluate this approach.
 Cause the dataset is huge, the standard precision and recall can not be compute without the label data directly.
 A score function is involved to compute these three criterion, which is defined based on the importancy of each field in the resume as shown belows.
 $$Score = 5 * importantItem + 3 * optionalItem$$
-The score function treats each field of the block as a unit, then compute the total score of each resume.
+The score function treats each field of the block as a unit, then compute the total score of each unit to get the total score of the resume.
 
 We supposed each resume text has basic information, education, work experiences and self evaluation things.
 This hyperspace is not match the real data, but as a result of the huge volume it does not matter to get the basic overview.
@@ -405,15 +396,15 @@ work experiences & 0.790 & 0.780 & 0.785 \\ \hline
 \end{table}
 
 Table 3 shows the result of our experiment and Table 4 shows the result of PROSPECT.
-From the results, we can get an overview about the resume dataset that most resume can be detected by our approach and the prcision and the recal are acceptable.
+From the results, we can get an overview about the resume dataset that most resumes can be detected by our approach and the precision and the recall are acceptable.
 To analyze the details of each part of the resume, we used the score function to evaluate the results.
 
 \textbf{Basic information.}
 From the table above, it's easy to know that most resumes contains the name and email information, which consistent with our intuition since job seekers must leave their contact information on their resumes.
-In addition, person name has obvious characteristics so that it's easy to detect and regconized.
-The email also has an obvious feature, which is contrustred by servel characters and only one $@$ symbol.
-Other basic information concludes how many years he/she worked, address, sex, id number, phone num.
-Most resume contains the basic information but not each of them, which inflect the recall.
+In addition, person name has obvious characteristics so that it's easy to detect and recognized.
+The email also has an obvious feature, which is constructed by several characters and only one $@$ symbol.
+Other basic information concludes how many years he/she worked, address, sex, id number and phone num.
+Most resumes contain the basic information but not each of them, which inflects the recall.
 
 
 \begin{figure}\label{edu-scores}
@@ -428,8 +419,8 @@ From the statistics in the Figure 3, most of the data nodes are around the 15 sc
 Those data node that scores are above 50 are very likely to be wrong extraction result.
 
 Compared to the PROSPECT, the gap on precision is not big, but the gap is obvious on recall.
-This gap caused by the data set, since the data of 	PROSPECT are more pure to complete resume. 
-But the data in our experiment comes from the crawler of search engine, lots of ``resume'' data are not complete and some of them are notes from the head-hunters.
+This gap caused by the data set, since the data of PROSPECT are more pure to complete resume. 
+As a result of the data in our experiment that comes from the crawler of search engine, lots of ``resume'' data are not complete and some of them are notes from the head-hunters.
 
 \begin{figure}\label{wk-scores}
 \centering
@@ -439,9 +430,10 @@ But the data in our experiment comes from the crawler of search engine, lots of 
 
 \textbf{Work experiences.}
 For work experiences module, the score function is made up of company name, work date, job position and description which is optional part.
-As shown in Figure 4, most of the data within the range, between 10 and 70.
+As shown in Figure 4, most of the data  are within the range between 10 and 70.
 In other words, most job seekers have served for less than three companies.
-This is very reasonable to the fact that the resumes are collected from the internet and the mainstream users of recuriting platform are less than 30 old.
+This is very reasonable to the fact that the resumes are collected from the internet and the mainstream users of recruiting platform are less than 30 old.
+Those scores over 80 are likely to be wrong extraction result, cause seldom people have more than five work experiences still need to get a job by normal recruiting process in fact.
 
 
 \begin{figure}\label{total-scores}
@@ -451,23 +443,26 @@ This is very reasonable to the fact that the resumes are collected from the inte
 \end{figure}
 
 \textbf{Global evaluation}
-
 %Not each resume text is really a personal resume, this is noticed after the experient, for example, the presudo resume is a description about someone from a head-hunter or just an unfinished resume.
-This is the mainly reason of the low rate of education and work experience, whose block need carefully detected.
-
-%Compared to other approach about extracting details from resume, our method is easy to implement and also gain a considerable result.
-Compared to other approachs published in related works, our method is easy to implement and also gain a considerable result.
-Without too many human label data is another advantage.
+From this statistics data, the volume of resume content are more or less, which can be understood as the distribution matches the normal distribution.
+Each resume is extracted to be structured which is easy to store in database.
+Compared to other approaches published in related works, our method is easy to implement and also gain a considerable result.
 
 
 \section{Conculsion and Future}\label{conculsion-future}
 
-In this paper, we propose an approach to extract the details from unstructual resume text. 
-This work used to extract the detailed information from the raw resume text in order to improve the efficiency of reading resume for head-hunters.
-The most contribution of our work is that our framework can extract the details of resume without too much labeled data with simple model.
-The results are acceptable and can reach the state of art of solutions for this problem.
+In this paper, we propose an framework to extract the details from raw resume text. 
+This work aim to improve the efficiency of reading resume for head-hunters.
+The framework consists of three parts, prepared processing, writing style recognition and attribute match.
+For one specific resume text, it will be transfered to text file at the begining. 
+Then servel heuristic rules for cleaning noise are checked for each line of the text.
+Then, text will be devided into blocks and the writing style pattern will be detected with the help of name entities.
+Last, each name entity will be matched to the attribute of it belongs.
+Our framework can extract the details of resume without too much labeled data with simple model and the results are acceptable which can reach the state of art of solutions for this problem.
+Compared to those framework with HMM or CRF, the algorithm complexity of our framework is the best, $O(NlogN)$.
 
-In the future, we will try to introduce our framework to English resumes and try to auto-generate the e-recuriting domain knowledge base in order to gain better extractor performance.
+In the future, we will try to introduce our framework to English resumes and try to auto-generate the e-recuriting domain knowledge base in order to gain better performance.
+
 
 
 \bibliographystyle{abbrv}
