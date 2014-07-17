@@ -1,0 +1,483 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Reviews For Paper
+</title>
+<style>
+body
+{
+	font-family:verdana,arial,helvetica;
+}
+#header
+{
+    width: 100%;
+    font-size: small;
+    background-color:#F7F7F7;
+}
+.headerSeparator
+{
+    background-color: #105586;
+}
+.printThemeText
+{
+    font-size:small;
+}
+.printThemeTable td
+{
+    vertical-align:top;
+}
+.printThemeGrid th
+{
+    color:white;
+    background:#5D7B9D;
+    font-weight:bold;
+}
+.printThemeGrid
+{
+    border-collapse:collapse;
+}
+.printThemeGrid td, .printThemeGrid th
+{
+    border:solid 1px #D6D3CE;
+    padding:4px 4px 4px 4px;
+}
+.printThemeGrid .row
+{ 
+    background-color:#F7F6F3;
+    color:#333333;
+    vertical-align:top;
+}
+.printThemeGrid .altrow
+{ 
+    background-color:White;
+    color:#284775;
+    vertical-align:top;
+}
+.cellprompt
+{
+	font-weight:bold;
+	white-space:nowrap;
+    width:100px;	
+}
+.paperHeader
+{
+    background-color:#dee3e7;
+    margin:5px 5px 15px 0px;
+    width:99%;
+    font-family:Verdana;
+    font-size:medium;
+    font-weight:bold;
+}
+.sectionHeader
+{
+    background-color:#dee3e7;
+    padding:5px 5px 5px 0px;
+    width:99%;
+    text-decoration:underline;
+    font-family:Verdana;
+    font-size:small;
+    font-weight:bold;
+}
+.underlineheader
+{
+    text-decoration:underline;
+    font-weight:bold;
+    padding:5px 0px;
+}
+.response
+{
+    padding:5px 0px;
+}
+.reviewerlabel
+{
+    padding-right:20px;
+}
+.pageTitle
+{
+    background-color:#dee3e7;
+    padding:5px 5px 5px 5px;
+    margin-top:10px;
+    width:99%;
+    font-family:Verdana;
+    font-size:medium;
+    font-weight:bold;
+}
+.submissionDetailsView
+{
+}
+.submissionDetailsView tr
+{
+    vertical-align:top;
+}
+.submissionDetailsView td.prompt
+{
+    font-weight:bold;
+}
+.submissionDetailsView tr.sectionSeparator
+{
+
+}
+.submissionDetailsView tr.sectionSeparator td
+{
+    background-color:#dee3e7;
+    padding:5px 5px 5px 5px;
+    font-family:Verdana;
+    font-size:small;
+    font-weight:bold;
+    color:Navy;
+}
+/*CSS Grid View General Definitions*/
+.CssGridView
+{
+    font-size:small; 
+}
+
+.CssGridView td, .CssGridView th
+{
+    padding:4px 4px 4px 4px;
+}
+
+/*CSS Compact Grid View General Definitions*/
+.CssGridViewCompact img
+{
+    border-style:none;
+    border-width:0px;
+}
+
+.CssGridViewCompact
+{
+    font-size:1em;
+    border-style:solid;
+    border-color:#D6D3CE;
+    border-width:1px;
+}
+
+.CssGridViewCompact .hrow a
+{
+    font-size:1em;
+}
+
+.CssGridViewCompact .row a, .CssGridViewCompact .altrow a
+{
+    font-size:0.8em;
+}
+
+.CssGridViewCompact .row .normal a, .CssGridViewCompact .row .normal, .CssGridViewCompact .altrow .normal a, .CssGridViewCompact .altrow .normal
+{
+    font-size:1em;
+}
+
+/*CSS Grid View Header Styles*/
+.CssGridView .hrow, .CssGridViewCompact .hrow
+{ 
+    background-color:#5D7B9D;
+    font-weight:bold;
+    color:White;
+}
+
+
+.CssGridViewCompact .hrow td
+{ 
+    border-bottom-width:0px;
+}
+
+.CssGridViewCompact .hrow th
+{ 
+    border-top-width:0px;
+    font-size:0.8em;
+    vertical-align:top;
+    border-left-width:0px;
+    border-right-width:0px;
+}
+
+.CssGridViewCompact .smaller
+{
+    font-size:0.8em;
+}
+
+/*CSS Grid View Row Styles*/
+.CssGridViewCompact .row, .CssGridViewCompact .altrow
+{
+    border-top-style:solid;
+    border-top-color:#D6D3CE;
+    border-top-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:#D6D3CE;
+    border-bottom-width:1px;
+}
+
+/*CSS Grid View Header Styles*/
+.CssGridViewCompact .hrow .leftborder, .CssGridViewCompact .row .leftborder, .CssGridViewCompact .altrow .leftborder
+{
+    border-left-width:1px;
+    border-left-color:#D6D3CE;
+    border-left-style:solid;
+}
+
+.CssGridViewCompact .hrow .rightborder, .CssGridViewCompact .row .rightborder, .CssGridViewCompact .altrow .rightborder
+{
+    border-right-width:1px;
+    border-right-color:#D6D3CE;
+    border-right-style:solid;
+}
+
+.CssGridView .hrow a, .CssGridViewCompact .hrow a
+{ 
+    color:White;
+}
+ 
+.CssGridView .row, .CssGridViewCompact .row
+{ 
+    background-color:#F7F6F3;
+    color:#333333;
+    vertical-align:top;
+}
+
+.CssGridView .altrow, .CssGridViewCompact .altrow
+{ 
+    vertical-align:top;
+}
+
+.CssGridViewCompact .row td
+{ 
+    border-left-width:0px;
+    border-right-width:0px;
+}
+ 
+.CssGridViewCompact .altrow
+{ 
+    background-color:White;
+    color:#284775;
+    vertical-align:top;
+}
+
+.CssGridView .altrow tr, .CssGridViewCompact .altrow tr, .CssGridView .row tr, .CssGridViewCompact .row tr
+{ 
+    vertical-align:top;
+}
+</style>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="ViewReviewsForPaper.aspx?paperId=70" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAxNDM4ODU3Ng9kFgJmD2QWAgIDD2QWAmYPZBYCAgUPDxYCHgdWaXNpYmxlZ2QWBgIBD2QWAmYPZBYEAgMPDxYCHgRUZXh0BQI3MGRkAgUPDxYCHwEFTkxldmVyYWdpbmcgQWdpbmcgVGhlb3J5IGluIFRvcGljLWZvY3VzZWQgTXVsdGktZG9jdW1lbnQgVGltZWxpbmUgU3VtbWFyaXphdGlvbmRkAgMPDxYCHwBoZGQCBQ8WAh4LXyFJdGVtQ291bnQCAxYGZg9kFgYCAw9kFgJmDxUBE0Fzc2lnbmVkX1Jldmlld2VyXzFkAgcPPCsADQEADxYEHgtfIURhdGFCb3VuZGcfAgIIZBYCZg9kFhICAQ9kFgRmDw8WAh8BBQ5PdmVyYWxsIFJhdGluZ2RkAgEPZBYCZg8VAQ1TdHJvbmcgUmVqZWN0ZAICD2QWBGYPDxYCHwEFiQFTdW1tYXJ5IG9mIHRoZSBwYXBlciAod2hhdCBpcyBiZWluZyBwcm9wb3NlZCBhbmQgaW4gd2hhdCBjb250ZXh0KSBhbmQgYSBicmllZiBqdXN0aWZpY2F0aW9uIG9mIHlvdXIgb3ZlcmFsbCByZWNvbW1lbmRhdGlvbi4gT25lIHBhcmFncmFwaGRkAgEPZBYCZg8VAW9KdXN0IGNvbWJpbmluZyB0d28gbWV0aG9kcyBkb2VzIG5vdCBtZWFuIHRoZSBjb250cmlidXRpb24uIFRoZSBhdXRob3JzIGRpZCBub3QgbWFrZSBhbnkgdGVjaG5pY2FsIGNvbnRyaWJ1dGlvbi5kAgMPZBYEZg8PFgIfAQWJAVRocmVlIChvciBtb3JlKSBzdHJvbmcgcG9pbnRzIGFib3V0IHRoZSBwYXBlciAoUGxlYXNlIGJlIHByZWNpc2UgYW5kIGV4cGxpY2l0OyBjbGVhcmx5IGV4cGxhaW4gdGhlIHZhbHVlIGFuZCBuYXR1cmUgb2YgdGhlIGNvbnRyaWJ1dGlvbikuZGQCAQ9kFgJmDxUBGlRoZSBwYXBlciBpcyBoYXJkIHRvIHJlYWQuZAIED2QWBGYPDxYCHwEFgAJUaHJlZSAob3IgbW9yZSkgd2VhayBwb2ludHMgYWJvdXQgdGhlIHBhcGVyIChQbGVhc2UgaW5kaWNhdGUgY2xlYXJseSB3aGV0aGVyIHRoZSBwYXBlciBoYXMgYW55IG1pc3Rha2VzLCBtaXNzaW5nIHJlbGF0ZWQgd29yaywgb3IgcmVzdWx0cyB0aGF0IGNhbm5vdCBiZSBjb25zaWRlcmVkIGEgY29udHJpYnV0aW9uOyB3cml0ZSBpdCBzbyB0aGF0IHRoZSBhdXRob3JzIGNhbiB1bmRlcnN0YW5kIHdoYXQgYXJlIHNlZW4gYXMgbmVnYXRpdmUgYXNwZWN0ZGQCAQ9kFgJmDxUBdlRoZSBwYXBlciBpcyB2ZXJ5IGhhcmQgdG8gcmVhZC4gPGJyIC8+VGhlIHRlY2huaWNhbCBjb250cmlidXRpb24gaXMgdmVyeSBsaXR0bGUuPGJyIC8+VGhlIGV4cGVyaW1lbnRhbCBzdHVkeSBoYXMgZmxhdy5kAgUPZBYEZg8PFgIfAQUSUmVsZXZhbnQgZm9yIEFQV0VCZGQCAQ9kFgJmDxUBA1llc2QCBg9kFgRmDw8WAh8BBQxTaWduaWZpY2FuY2VkZAIBD2QWAmYPFQEJTm8gaW1wYWN0ZAIHD2QWBGYPDxYCHwEFJlRlY2huaWNhbCBEZXB0aCBhbmQgUXVhbGl0eSBvZiBDb250ZW50ZGQCAQ9kFgJmDxUBEVF1ZXN0aW9uYWJsZSB3b3JrZAIID2QWBGYPDxYCHwEFT0RldGFpbGVkIEV2YWx1YXRpb24gKENvbnRyaWJ1dGlvbiwgUHJvcy9Db25zLCBFcnJvcnMpOyBwbGVhc2UgbnVtYmVyIGVhY2ggcG9pbnRkZAIBD2QWAmYPFQFXVGhlIGV4cGVyaW1lbnRhbCBzdHVkeSBpcyBiYXNlZCBvbiB2ZXJ5IHNtYWxsIGRhdGEgc2V0cywgd2hpY2ggZG9lcyBub3QgcHJvdmUgYW55dGhpbmcuZAIJDw8WAh8AaGRkAggPFQEAZAIBD2QWBgIDD2QWAmYPFQETQXNzaWduZWRfUmV2aWV3ZXJfMmQCBw88KwANAQAPFgQfA2cfAgIIZBYCZg9kFhICAQ9kFgRmDw8WAh8BBQ5PdmVyYWxsIFJhdGluZ2RkAgEPZBYCZg8VAQ1TdHJvbmcgUmVqZWN0ZAICD2QWBGYPDxYCHwEFiQFTdW1tYXJ5IG9mIHRoZSBwYXBlciAod2hhdCBpcyBiZWluZyBwcm9wb3NlZCBhbmQgaW4gd2hhdCBjb250ZXh0KSBhbmQgYSBicmllZiBqdXN0aWZpY2F0aW9uIG9mIHlvdXIgb3ZlcmFsbCByZWNvbW1lbmRhdGlvbi4gT25lIHBhcmFncmFwaGRkAgEPZBYCZg8VAfQDVGhlIHBhcGVyIHByb3Bvc2VzIHRvIHRha2UgdGhlIGxpZmUtY3ljbGUgb2YgbmV3cyB0b3BpY3MgaW50byBjb25zaWRlcmF0aW9uIHRvIHByb2R1Y2UgYmV0dGVyIHN1bW1hcml6YXRpb25zLiBUaGF0IGF1dGhvciBjbGFpbXMgdG8gaGF2ZSBkZXZlbG9wZWQgYSBtZXRob2QgdGhhdCBpcyBiZXR0ZXIgdGhhbiBzdGF0ZS1vZi10aGUgYXJ0IG1ldGhvZHMuPGJyIC8+PGJyIC8+VGhlIHdyaXRpbmcgb2YgdGhlIHBhcGVyIGlzIGNyeXB0aWMuIEl0IHVzIG5vdCBzYWlkIHdoYXQgaXMgcHJvZHVjZWQgYW5kIGhvdy4gTGFjayBvZiBzcGFjZSBjYW5ub3QgaGF2ZSBiZWVuIGEgcHJvYmxlbSBzaW5jZSB0aGUgYXV0aG9yIHVzZWQgbGVzcyB0aGFuIDkgcGFnZXMuPGJyIC8+PGJyIC8+SW4gaXRzIHdyaXRpbmcgYW5kIHByZXNlbnRhdGlvbiB0aGUgcGFwZXIgaXMgc28gbXVjaCBiZWxvdyBhbnkgc2NpZW50aWZpYyBzdGFuZGFyZCB0aGF0IGl0IHNob3VsZCBiZSByZWplY3RlZC48YnIgLz5kAgMPZBYEZg8PFgIfAQWJAVRocmVlIChvciBtb3JlKSBzdHJvbmcgcG9pbnRzIGFib3V0IHRoZSBwYXBlciAoUGxlYXNlIGJlIHByZWNpc2UgYW5kIGV4cGxpY2l0OyBjbGVhcmx5IGV4cGxhaW4gdGhlIHZhbHVlIGFuZCBuYXR1cmUgb2YgdGhlIGNvbnRyaWJ1dGlvbikuZGQCAQ9kFgJmDxUBywEoMSkgTm92ZWx0eSBhbmQgYWdpbmcgb2YgbmV3cyBhcmUgbW9kZWxlZC48YnIgLz4gICA8YnIgLz4oMikgVGhlIG1ldGhvZCBoYXMgYmVlbiB0ZXN0ZWQgb24gYSBkYXRlIHNldCBvZiA5MDAgZG9jdW1lbnRzLjxiciAvPjxiciAvPigzKSBUaGUgbWV0aG9kIGdpdmVzIGJldHRlciByZXN1bHRzIHRoYW4gc3RhdGUtb2YtdGhlIGFydCBtZWh0b2RzLjxiciAvPmQCBA9kFgRmDw8WAh8BBYACVGhyZWUgKG9yIG1vcmUpIHdlYWsgcG9pbnRzIGFib3V0IHRoZSBwYXBlciAoUGxlYXNlIGluZGljYXRlIGNsZWFybHkgd2hldGhlciB0aGUgcGFwZXIgaGFzIGFueSBtaXN0YWtlcywgbWlzc2luZyByZWxhdGVkIHdvcmssIG9yIHJlc3VsdHMgdGhhdCBjYW5ub3QgYmUgY29uc2lkZXJlZCBhIGNvbnRyaWJ1dGlvbjsgd3JpdGUgaXQgc28gdGhhdCB0aGUgYXV0aG9ycyBjYW4gdW5kZXJzdGFuZCB3aGF0IGFyZSBzZWVuIGFzIG5lZ2F0aXZlIGFzcGVjdGRkAgEPZBYCZg8VAWgoMSkgVGhlIGF1dGhvciBkb2VzIG5vdCBleHBsYWluIGhpcyBtZXRob2QuPGJyIC8+ICAgPGJyIC8+KDIpIFRoZSBwYXBlciBpcyBwcmFjdGljYWxseSB1bnJlYWRhYmxlLjxiciAvPmQCBQ9kFgRmDw8WAh8BBRJSZWxldmFudCBmb3IgQVBXRUJkZAIBD2QWAmYPFQEDWWVzZAIGD2QWBGYPDxYCHwEFDFNpZ25pZmljYW5jZWRkAgEPZBYCZg8VAQlObyBpbXBhY3RkAgcPZBYEZg8PFgIfAQUmVGVjaG5pY2FsIERlcHRoIGFuZCBRdWFsaXR5IG9mIENvbnRlbnRkZAIBD2QWAmYPFQERUXVlc3Rpb25hYmxlIHdvcmtkAggPZBYEZg8PFgIfAQVPRGV0YWlsZWQgRXZhbHVhdGlvbiAoQ29udHJpYnV0aW9uLCBQcm9zL0NvbnMsIEVycm9ycyk7IHBsZWFzZSBudW1iZXIgZWFjaCBwb2ludGRkAgEPZBYCZg8VAcoGVGhpcyBpcyBub3QgYSBwYXBlciBidXQgYSBjb2xsZWN0aW9uIG9mIGFkLWhvYyBub3RlcyB0aGF0IGhhcmRseSBtYWtlIHNlbnNlLiBUaGUgZm9sbG93aW5nIGFyZSBleGFtcGxlcyBvZiB0ZXh0IHBhc3NhZ2VzIHRoYXQgc2hvdyB0aGUgbW9zdCBzZXJpb3VzIHNob3J0Y29taW5ncy48YnIgLz48YnIgLz5UaGUgYXV0aG9ycyBzYXlzIHRoYXQgc3VyZmFjZSBmZWF0dXJlcyBhcmUgZXh0cmFjdGVkIGZyb20gc2VudGVuY2VzLCBidXQgaXQgaXMgbm90IHNhaWQgd2hhdCBleGFjdGx5IHRoZXkgYXJlIG5vciBob3cgdGhleSBhcmUgdXNlZC48YnIgLz48YnIgLz5Gb3IgZXhhbXBsZSwgRXF1YXRpb24gKDIpIGludm9sdmVzIHdvcmQgZW5lcmdpZXMgYW5kIHRpbWUgaW50ZXJ2YWxzLiBXaGVyZSBkb2VzIHRoZSB0aW1lIGludGVydmFsIGNvbWUgZnJvbT8gV2hhdCBpcyB0aGUgdHJhbnNmZXIgZmFjdG9yIGFscGhhLiBSZWZlcnJpbmcgdG8gYW5vdGhlciBwYXBlciB3aXRob3V0IGV4cGxhbmF0aW9uIGlzIHVuYWNjZXB0YWJsZS48YnIgLz48YnIgLz5PbiBwYWdlIDQsIGluIHRoZSBwYXJhZ3JhcGggb24gdG9waWMgZmVhdHVyZXMsIHBhZ2VSYW5rIGlzIGNvbXB1dGVkLiBJdCBpcyBub3QgZXhwbGFpbmVkIGZvciB3aGljaCBpcyB0aGUgdW5kZXJseWluZyBncmFwaCBmb3IgdGhpcyBjb21wdXRhdGlvbiBub3Igd2hhdCBpcyB0aGUgcHVycG9zZSBvZiB0aGUgY29tcHV0YXRpb24uPGJyIC8+PGJyIC8+VGhpcyB0ZXh0IGRvZXMgbm90IG1lZXQgbWluaW1hbCBzdGFuZGFyZHMgb2Ygc2NpZW50aWZpYyB3cml0aW5nIGFuZCBzaG91bGQgbm90IGJlIGNvbnNpZGVyZWQgZnVydGhlci48YnIgLz5kAgkPDxYCHwBoZGQCCA8VAQBkAgIPZBYGAgMPZBYCZg8VARNBc3NpZ25lZF9SZXZpZXdlcl8zZAIHDzwrAA0BAA8WBB8DZx8CAghkFgJmD2QWEgIBD2QWBGYPDxYCHwEFDk92ZXJhbGwgUmF0aW5nZGQCAQ9kFgJmDxUBBlJlamVjdGQCAg9kFgRmDw8WAh8BBYkBU3VtbWFyeSBvZiB0aGUgcGFwZXIgKHdoYXQgaXMgYmVpbmcgcHJvcG9zZWQgYW5kIGluIHdoYXQgY29udGV4dCkgYW5kIGEgYnJpZWYganVzdGlmaWNhdGlvbiBvZiB5b3VyIG92ZXJhbGwgcmVjb21tZW5kYXRpb24uIE9uZSBwYXJhZ3JhcGhkZAIBD2QWAmYPFQGDAlRoaXMgcGFwZXIgZ2l2ZXMgYW4gYXBwcm9hY2ggdG8gYXV0b21hdGljIGV4dHJhY3Rpb24gb2YgYSBzZXJpZXMgb2Ygc2VudGVuY2VzIGRlc2NyaWJpbmcgdGhlIHByb2dyZXNzIG9mIGFuIGV2ZW50IG92ZXIgdGltZSBmcm9tIHBsYWluIHRleHQgc291cmNlcy4gSXQgYWNoaWV2ZXMgdGhpcyB2aWEgYSBjb21iaW5hdGlvbiBvZiBtZXRob2RzIGluY2x1ZGluZyB3ZWxsLWtub3duIHRleHQgYW5hbHlzaXMgYW5kIG1hY2hpbmUgbGVhcm5pbmcgbWV0aG9kcy5kAgMPZBYEZg8PFgIfAQWJAVRocmVlIChvciBtb3JlKSBzdHJvbmcgcG9pbnRzIGFib3V0IHRoZSBwYXBlciAoUGxlYXNlIGJlIHByZWNpc2UgYW5kIGV4cGxpY2l0OyBjbGVhcmx5IGV4cGxhaW4gdGhlIHZhbHVlIGFuZCBuYXR1cmUgb2YgdGhlIGNvbnRyaWJ1dGlvbikuZGQCAQ9kFgJmDxUBsQEoMSkgVGhlIHBhcGVyIGV4cGxhaW5zIHRoZSBwcm9ibGVtIGFuZCB0aGUgYXBwcm9hY2ggcmVhc29uYWJseSBjbGVhcmx5IChidXQgc2VlIGNvbW1lbnRzIGJlbG93KS4gKDIpIFRoZSBwYXBlciB0YWNrbGVzIGFuZCBpbnRlcmVzdGluZyBwcm9ibGVtLiAoMykgVGhlIGFwcHJvYWNoIGxvb2tzIHBsYXVzaWJsZS5kAgQPZBYEZg8PFgIfAQWAAlRocmVlIChvciBtb3JlKSB3ZWFrIHBvaW50cyBhYm91dCB0aGUgcGFwZXIgKFBsZWFzZSBpbmRpY2F0ZSBjbGVhcmx5IHdoZXRoZXIgdGhlIHBhcGVyIGhhcyBhbnkgbWlzdGFrZXMsIG1pc3NpbmcgcmVsYXRlZCB3b3JrLCBvciByZXN1bHRzIHRoYXQgY2Fubm90IGJlIGNvbnNpZGVyZWQgYSBjb250cmlidXRpb247IHdyaXRlIGl0IHNvIHRoYXQgdGhlIGF1dGhvcnMgY2FuIHVuZGVyc3RhbmQgd2hhdCBhcmUgc2VlbiBhcyBuZWdhdGl2ZSBhc3BlY3RkZAIBD2QWAmYPFQGhAigxKSBUaGUgYXBwcm9hY2ggY29tYmluZXMga25vd24gbWV0aG9kcy4gKDIpIFRoZSByZXN1bHRzLCBkZXNwaXRlIGJlaW5nIGEgbGl0dGxlIGJldHRlciB0aGFuIGtub3duIGFwcHJvYWNoZXMsIGFyZSBub3QgZ29vZCAobG93IHByZWNpc2lvbiBhbmQgcmVjYWxsKS4gKDMpIFRoZSBlbmdsaXNoIGV4cHJlc3Npb24gaXMgcG9vciBpbiBxdWl0ZSBhIGZldyBwbGFjZXMgKHNob3VsZCBnZXQgYSBuYXRpdmUgc3BlYWtlciB0byBlZGl0IHRoZSBwYXBlciBiZWZvcmUgcHVibGljYXRpb24gKGlmIGFjY2VwdGVkKS5kAgUPZBYEZg8PFgIfAQUSUmVsZXZhbnQgZm9yIEFQV0VCZGQCAQ9kFgJmDxUBA1llc2QCBg9kFgRmDw8WAh8BBQxTaWduaWZpY2FuY2VkZAIBD2QWAmYPFQEeSW1wcm92ZW1lbnQgb3ZlciBleGlzdGluZyB3b3JrZAIHD2QWBGYPDxYCHwEFJlRlY2huaWNhbCBEZXB0aCBhbmQgUXVhbGl0eSBvZiBDb250ZW50ZGQCAQ9kFgJmDxUBNFN5bnRhY3RpY2FsbHkgY29tcGxldGUgYnV0IHdpdGggbGltaXRlZCBjb250cmlidXRpb25kAggPZBYEZg8PFgIfAQVPRGV0YWlsZWQgRXZhbHVhdGlvbiAoQ29udHJpYnV0aW9uLCBQcm9zL0NvbnMsIEVycm9ycyk7IHBsZWFzZSBudW1iZXIgZWFjaCBwb2ludGRkAgEPZBYCZg8VAYgKVGhlIHBhcGVyIGFpbXMgdG8gZXh0cmFjdCBzZW50ZW5jZXMgdGhhdCBzdW1tYXJpemUgdGhlIHByb2dyZXNzIG9mIGFuIGV2ZW50IChvciwgcmF0aGVyLCB0aGUgbmV3cyBjb3ZlcmFnZSBvZiBhbiBldmVudCkgb3ZlciB0aW1lLiBTZW50ZW5jZXMgYXJlIHNlbGVjdGVkIHVzaW5nIGEgY29tYmluYXRpb24gb2YgdGV4dCBhbmFseXNpcyBhbmQgbWFjaGluZSBsZWFybmluZyBtZXRob2RzLjxiciAvPjxiciAvPiAgICAgICAgSG93IHVzZWZ1bCBhIHRpbWVsaW5lIHN1bW1hcnkgb2YgdGhlIGtpbmQgYmVpbmcgZXh0cmFjdGVkIGluIHRoaXMgd29yayB3b3VsZCBiZSwgYW5kIGhvdyBlZmZlY3RpdmVseSBpdCB3b3VsZCBjYXB0dXJlIHRoZSAiZmxvdyIgb2YgYW4gZXZlbnQgaXMgbm90IGNsZWFyLiBXZSB3aWxsIGFzc3VtZSB0aGF0IGl0IG1pZ2h0IGJlIHVzZWZ1bCAuLi48YnIgLz48YnIgLz4gICAgICAgIEEgbWFqb3IgcHJvYmxlbSBpcyB0aGF0IGFzcGVjdHMgb2YgdGhlIGFwcHJvYWNoIGFyZSBub3QgZXhwbGFpbmVkIHdpdGggZW5vdWdoIGRldGFpbCBvciBzdWZmaWNpZW50bHkgd2VsbC1qdXN0aWZpZWQuIEZvciBleGFtcGxlLCBob3cgaXMgYSB2YWx1ZSBmb3IgdGhlICJ0cmFuc2ZlciBmYWN0b3IiIGFscGhhIGRldGVybWluZWQ/IFdoeSB3YXMgdGhlIEphY2NhcmQgc2ltaWxhcml0eSBzZWxlY3RlZCBmb3IgdXNlIGluIGRldGVybWluaW5nIHRoZSBub3ZlbHR5IHdlaWdodCAod2hlbiBvdGhlciBzaW1pbGFyaXR5IG1ldGhvZHMgY291bGQgaGF2ZSBiZWVuIHVzZWQpPyBJZiB0aGUgbWV0aG9kIHdhcyB0byBiZSBwdXQgaW50byBwcmFjdGljZSwgaG93IHdvdWxkIHRoZSBzZWxlY3Rpb24gb2YgZG9jdW1lbnRzIGFuZCB0aGUgcmVxdWlyZWQgcHJlLXByb2Nlc3NpbmcgYmUgYWNoaWV2ZWQ/PGJyIC8+PGJyIC8+ICAgICAgICBVbHRpbWF0ZWx5LCB0aGUgbWV0aG9kIGlzIGV2YWx1YXRlZCBvbiBvbmUgKGFkbWl0dGVkbHkgc3RhbmRhcmQpIGRhdGEgc2V0IHVzaW5nIG1hbnVhbCBsYWJlbGxpbmcgb2YgdGhlIGRhdGEuIFRoZSByZXN1bHRzIGFyZSBzbGlnaHRseSBiZXR0ZXIgdGhhbiBzb21lIG90aGVyIGFwcHJvYWNoZXMgdG8gdGhlIHByb2JsZW0sIGJ1dCBhbGwgbWV0aG9kcyBnaXZlIGVzcGVjaWFsbHkgcG9vciByZXN1bHRzICh2ZXJ5IGxvdyByZWNhbGwgYW5kIHByZWNpc2lvbiksIGxlYWRpbmcgb25lIHRvIGNvbmNsdWRlIHRoYXQgdGhpcyBhcHByb2FjaCBoYXMgbm90IG1hZGUgbWFqb3IgcHJvZ3Jlc3MgdG93YXJkcyBzb2x2aW5nIHRoZSBwcm9ibGVtLmQCCQ8PFgIfAGhkZAIIDxUBAGQYAwUfY3RsMDAkY3BoJGd2UmV2aWV3cyRjdGwwMiRjdGwwMA88KwAKAQgCAWQFH2N0bDAwJGNwaCRndlJldmlld3MkY3RsMDEkY3RsMDAPPCsACgEIAgFkBR9jdGwwMCRjcGgkZ3ZSZXZpZXdzJGN0bDAwJGN0bDAwDzwrAAoBCAIBZCUobu0H7GTvk0yI2RIed+1IXbws" />
+</div>
+
+<table id="header">
+<tr>
+<td width="100%"><a href='' target='_blank'>APWEB</a><br /><b>The 16th International Asia-Pacific Web Conference</b><br /></td>
+</tr>
+<tr class='headerSeparator'>
+    <td style='height:5px'></td>
+</tr>
+</table>
+<table id="content"><tr><td class='contentBorder'>&nbsp;</td><td class="contentContainer">
+<span id="ctl00_cph_Label4" style="font-size:Small;font-weight:bold;">Reviews For Paper</span>
+<span id="ctl00_cph_lblErrorMessage" class="error" style="font-size:Small;"></span>
+<div id="ctl00_cph_pnlReviews">
+	
+    <span style="font-size:Small;">
+<table class="nicetable2" style="text-align:left; width: 100%;">
+    
+    <tr>
+        <td width="100px"><b>Paper ID</b></td>
+        <td><span id="ctl00_cph_infoSubmission_lblPaperId" style="font-size:Small;">70</span></td>
+    </tr>
+    <tr>
+        <td><b>Title</b></td>
+        <td><span id="ctl00_cph_infoSubmission_lblPaperTitle" style="font-size:Small;">Leveraging Aging Theory in Topic-focused Multi-document Timeline Summarization</span></td>
+    </tr>
+    
+    
+    
+    
+    
+</table></span>
+    
+    
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl00_Label2" style="font-size:Small;font-weight:bold;">Masked Reviewer ID:</span>
+                    </td>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl00_Label1" style="font-size:Small;">Assigned_Reviewer_1</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl00_Label3" style="font-size:Small;font-weight:bold;">Review:</span>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+            <div>
+		<table cellspacing="0" cellpadding="4" rules="all" border="1" style="color:#333333;border-width:1px;border-style:None;font-family:Verdana;font-size:Small;border-collapse:collapse;">
+			<tr style="color:White;background-color:#5D7B9D;font-weight:bold;">
+				<th scope="col">Question</th><th scope="col">&nbsp;</th>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Overall Rating</td><td style="width:80%;">
+                            Strong Reject
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Summary of the paper (what is being proposed and in what context) and a brief justification of your overall recommendation. One paragraph</td><td style="width:80%;">
+                            Just combining two methods does not mean the contribution. The authors did not make any technical contribution.
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Three (or more) strong points about the paper (Please be precise and explicit; clearly explain the value and nature of the contribution).</td><td style="width:80%;">
+                            The paper is hard to read.
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Three (or more) weak points about the paper (Please indicate clearly whether the paper has any mistakes, missing related work, or results that cannot be considered a contribution; write it so that the authors can understand what are seen as negative aspect</td><td style="width:80%;">
+                            The paper is very hard to read. <br />The technical contribution is very little.<br />The experimental study has flaw.
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Relevant for APWEB</td><td style="width:80%;">
+                            Yes
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Significance</td><td style="width:80%;">
+                            No impact
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Technical Depth and Quality of Content</td><td style="width:80%;">
+                            Questionable work
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Detailed Evaluation (Contribution, Pros/Cons, Errors); please number each point</td><td style="width:80%;">
+                            The experimental study is based on very small data sets, which does not prove anything.
+                        </td>
+			</tr>
+		</table>
+	</div>
+            
+        
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl01_Label2" style="font-size:Small;font-weight:bold;">Masked Reviewer ID:</span>
+                    </td>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl01_Label1" style="font-size:Small;">Assigned_Reviewer_2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl01_Label3" style="font-size:Small;font-weight:bold;">Review:</span>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+            <div>
+		<table cellspacing="0" cellpadding="4" rules="all" border="1" style="color:#333333;border-width:1px;border-style:None;font-family:Verdana;font-size:Small;border-collapse:collapse;">
+			<tr style="color:White;background-color:#5D7B9D;font-weight:bold;">
+				<th scope="col">Question</th><th scope="col">&nbsp;</th>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Overall Rating</td><td style="width:80%;">
+                            Strong Reject
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Summary of the paper (what is being proposed and in what context) and a brief justification of your overall recommendation. One paragraph</td><td style="width:80%;">
+                            The paper proposes to take the life-cycle of news topics into consideration to produce better summarizations. That author claims to have developed a method that is better than state-of-the art methods.<br /><br />The writing of the paper is cryptic. It us not said what is produced and how. Lack of space cannot have been a problem since the author used less than 9 pages.<br /><br />In its writing and presentation the paper is so much below any scientific standard that it should be rejected.<br />
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Three (or more) strong points about the paper (Please be precise and explicit; clearly explain the value and nature of the contribution).</td><td style="width:80%;">
+                            (1) Novelty and aging of news are modeled.<br />   <br />(2) The method has been tested on a date set of 900 documents.<br /><br />(3) The method gives better results than state-of-the art mehtods.<br />
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Three (or more) weak points about the paper (Please indicate clearly whether the paper has any mistakes, missing related work, or results that cannot be considered a contribution; write it so that the authors can understand what are seen as negative aspect</td><td style="width:80%;">
+                            (1) The author does not explain his method.<br />   <br />(2) The paper is practically unreadable.<br />
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Relevant for APWEB</td><td style="width:80%;">
+                            Yes
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Significance</td><td style="width:80%;">
+                            No impact
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Technical Depth and Quality of Content</td><td style="width:80%;">
+                            Questionable work
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Detailed Evaluation (Contribution, Pros/Cons, Errors); please number each point</td><td style="width:80%;">
+                            This is not a paper but a collection of ad-hoc notes that hardly make sense. The following are examples of text passages that show the most serious shortcomings.<br /><br />The authors says that surface features are extracted from sentences, but it is not said what exactly they are nor how they are used.<br /><br />For example, Equation (2) involves word energies and time intervals. Where does the time interval come from? What is the transfer factor alpha. Referring to another paper without explanation is unacceptable.<br /><br />On page 4, in the paragraph on topic features, pageRank is computed. It is not explained for which is the underlying graph for this computation nor what is the purpose of the computation.<br /><br />This text does not meet minimal standards of scientific writing and should not be considered further.<br />
+                        </td>
+			</tr>
+		</table>
+	</div>
+            
+        
+            <hr />
+            <table>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl02_Label2" style="font-size:Small;font-weight:bold;">Masked Reviewer ID:</span>
+                    </td>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl02_Label1" style="font-size:Small;">Assigned_Reviewer_3</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="ctl00_cph_gvReviews_ctl02_Label3" style="font-size:Small;font-weight:bold;">Review:</span>
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            </table>
+            <div>
+		<table cellspacing="0" cellpadding="4" rules="all" border="1" style="color:#333333;border-width:1px;border-style:None;font-family:Verdana;font-size:Small;border-collapse:collapse;">
+			<tr style="color:White;background-color:#5D7B9D;font-weight:bold;">
+				<th scope="col">Question</th><th scope="col">&nbsp;</th>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Overall Rating</td><td style="width:80%;">
+                            Reject
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Summary of the paper (what is being proposed and in what context) and a brief justification of your overall recommendation. One paragraph</td><td style="width:80%;">
+                            This paper gives an approach to automatic extraction of a series of sentences describing the progress of an event over time from plain text sources. It achieves this via a combination of methods including well-known text analysis and machine learning methods.
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Three (or more) strong points about the paper (Please be precise and explicit; clearly explain the value and nature of the contribution).</td><td style="width:80%;">
+                            (1) The paper explains the problem and the approach reasonably clearly (but see comments below). (2) The paper tackles and interesting problem. (3) The approach looks plausible.
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Three (or more) weak points about the paper (Please indicate clearly whether the paper has any mistakes, missing related work, or results that cannot be considered a contribution; write it so that the authors can understand what are seen as negative aspect</td><td style="width:80%;">
+                            (1) The approach combines known methods. (2) The results, despite being a little better than known approaches, are not good (low precision and recall). (3) The english expression is poor in quite a few places (should get a native speaker to edit the paper before publication (if accepted).
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Relevant for APWEB</td><td style="width:80%;">
+                            Yes
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Significance</td><td style="width:80%;">
+                            Improvement over existing work
+                        </td>
+			</tr><tr style="color:#333333;background-color:#F7F6F3;">
+				<td style="width:20%;">Technical Depth and Quality of Content</td><td style="width:80%;">
+                            Syntactically complete but with limited contribution
+                        </td>
+			</tr><tr style="color:#284775;background-color:White;">
+				<td style="width:20%;">Detailed Evaluation (Contribution, Pros/Cons, Errors); please number each point</td><td style="width:80%;">
+                            The paper aims to extract sentences that summarize the progress of an event (or, rather, the news coverage of an event) over time. Sentences are selected using a combination of text analysis and machine learning methods.<br /><br />        How useful a timeline summary of the kind being extracted in this work would be, and how effectively it would capture the "flow" of an event is not clear. We will assume that it might be useful ...<br /><br />        A major problem is that aspects of the approach are not explained with enough detail or sufficiently well-justified. For example, how is a value for the "transfer factor" alpha determined? Why was the Jaccard similarity selected for use in determining the novelty weight (when other similarity methods could have been used)? If the method was to be put into practice, how would the selection of documents and the required pre-processing be achieved?<br /><br />        Ultimately, the method is evaluated on one (admittedly standard) data set using manual labelling of the data. The results are slightly better than some other approaches to the problem, but all methods give especially poor results (very low recall and precision), leading one to conclude that this approach has not made major progress towards solving the problem.
+                        </td>
+			</tr>
+		</table>
+	</div>
+            
+        
+    <br />
+    <br />
+
+</div>
+</td><td class='contentBorder'>&nbsp;</td></tr></table>
+</form>
+</body>
+</html>

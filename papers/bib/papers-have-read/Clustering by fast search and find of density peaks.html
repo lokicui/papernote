@@ -1,0 +1,1109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Clustering by fast search and find of density peaks </title>
+      <meta name="googlebot" content="NOODP">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon57.png" sizes="57x57">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon72.png" sizes="72x72">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon76.png" sizes="76x76">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon114.png" sizes="114x114">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon120.png" sizes="120x120">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon144.png" sizes="144x144">
+      <link rel="apple-touch-icon" href="http://www.sciencemag.org/content/344/6191/icon152.png" sizes="152x152">
+      <meta name="msapplication-TileImage" content="icon144.png">
+      <meta name="msapplication-TileColor" content="#CE202C">
+      <meta name="application-name" content="Science Magazine">
+      <meta name="msapplication-square70x70logo" content="icon70.png">
+      <meta name="msapplication-square150x150logo" content="icon150.png">
+      <meta name="msapplication-wide310x150logo" content="icon350x150.png">
+      <meta name="msapplication-square310x310logo" content="icon310.png">
+      <meta name="HW.ad-path" content="/cgi/content/full/344/6191/1492">
+      <meta name="DC.Format" content="text/html">
+      <meta name="DC.Language" content="en">
+      <meta content="Clustering by fast search and find of density peaks" name="DC.Title">
+      <meta content="10.1126/science.1242072" name="DC.Identifier">
+      <meta content="2014-06-27" name="DC.Date">
+      <meta content="American Association for the Advancement of Science" name="DC.Publisher">
+      <meta content="Alex Rodriguez" name="DC.Contributor">
+      <meta content="Alessandro Laio" name="DC.Contributor">
+      <meta content="COMP/MATH" name="citation_collection_id">
+      <meta content="Science" name="citation_journal_title">
+      <meta content="Science" name="citation_journal_abbrev">
+      <meta content="0036-8075" name="citation_issn">
+      <meta content="1095-9203" name="citation_issn">
+      <meta name="citation_author" content="Alex Rodriguez">
+      <meta name="citation_author_institution" content="SISSA (Scuola Internazionale Superiore di Studi Avanzati), via Bonomea 265, I-34136 Trieste, Italy.">
+      <meta name="citation_author" content="Alessandro Laio">
+      <meta name="citation_author_institution" content="SISSA (Scuola Internazionale Superiore di Studi Avanzati), via Bonomea 265, I-34136 Trieste, Italy.">
+      <meta content="Clustering by fast search and find of density peaks" name="citation_title">
+      <meta content="06/27/2014" name="citation_date">
+      <meta content="344" name="citation_volume">
+      <meta content="6191" name="citation_issue">
+      <meta content="1492" name="citation_firstpage">
+      <meta content="1496" name="citation_lastpage">
+      <meta content="344/6191/1492" name="citation_id">
+      <meta content="344/6191/1492" name="citation_id_from_sass_path">
+      <meta content="sci;344/6191/1492" name="citation_mjid">
+      <meta content="10.1126/science.1242072" name="citation_doi">
+      <meta content="http://www.sciencemag.org/content/344/6191/1492.abstract" name="citation_abstract_html_url">
+      <meta content="http://www.sciencemag.org/content/344/6191/1492.full" name="citation_fulltext_html_url">
+      <meta content="http://www.sciencemag.org/content/344/6191/1492.full.pdf" name="citation_pdf_url">
+      <meta content="/content/344/6191.cover.gif" name="issue_cover_image">
+      <meta content="http://www.sciencemag.org/content/344/6191/1492" name="citation_public_url">
+      <meta content="24970081" name="citation_pmid">
+      <meta name="citation_section" content="Report">
+      <meta name="robots" content="noarchive,nofollow">
+      <meta name="citation_article_type" content="report">
+      <meta name="citation_taxonomy" content="comp/math">
+      <link href="http://www.sciencemag.org/content/344/6191/1489.short" rel="prev">
+      <link href="http://www.sciencemag.org/content/344/6191/1496.short" rel="next">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-global.css">
+      <link rel="stylesheet" type="text/css" media="print" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-print.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-publisher-global.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-publisher-sidebars.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-local-all.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-page-content.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-publisher-page-content.css">
+      <link rel="stylesheet" type="text/css" media="all" href="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/global_styles.css"><script src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/ca-pub-2288234982592986.js" type="text/javascript" async=""></script><script type="text/javascript" async="" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/2961.js"></script><script src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" id="session-d499926840e1">var gSmudge='1272075056';</script><script type="text/javascript" id="session-d499926840e3">var callbackToken='460EEC09D85BE20';</script><script type="text/javascript" id="session-d499926840e5">
+                      var subCode='scienceonline_sub';
+                    </script><script type="text/javascript" id="session-d499926840e7">
+						var subScriptionType = 'this-site';
+					</script><script type="text/javascript" id="session-d499926840e9">
+						var subScriptionType = 'inst-03-science-online';
+					</script><script type="text/javascript" id="session-d499926840e11">
+						var subScriptionType = 'inst-03x-science-express';
+					</script><script type="text/javascript" id="session-d499926840e13">
+						var subScriptionType = 'inst-04-science-now';
+					</script><script type="text/javascript" id="session-d499926840e15">
+						var subScriptionType = 'inst-07-science-signaling';
+					</script><script type="text/javascript" id="session-d499926840e17">
+			var OAS_country_code = 'CN';
+			var OAS_taxonomy = 'subject=COMP/MATH';
+			
+			var OAS_display_ad= 'display-ad=Computer_Science&amp;display-ad=Sociology&amp;display-ad=Chemistry';
+			
+			
+			
+					
+        var OAS_sitepage = window.location.hostname + window.location.pathname;
+    
+				
+		
+			var OAS_usertype = 'INST';
+		</script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery_002.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery-ui.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/publisher-library.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/fingerprint.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-shared.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/publisher-shared.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/oas_analytics.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-content.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery_004.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery_003.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/jquery.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/content.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/publisher-rightslink.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/hw-local-rightslink.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/oas_ads.js"></script><script type="text/javascript" language="JavaScript1.1" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/1163337475TopRight1Right2.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/google-analytics-include.js"></script><script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/global_js.js"></script><script src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/s-code-contents-325d54ac1d8b061a29ba0242b53a2f6fac7e9e18.js"></script></head>
+   <body>
+      <div class="hw-gen-page sci pagetype-content hw-pub-id-article hw-pub-section-report hw-pub-property-contains_inline_supplementary_material" id="pageid-content" itemscope="itemscope" itemtype="http://schema.org/ScholarlyArticle">
+         <div id="hd">
+            			
+            					
+            <div id="hd-main">
+               						
+               <div id="hd-logo"><a href="http://www.sciencemag.org/" title="*Science*/AAAS" tabindex="2"><em>Science</em>/AAAS</a>
+                  <script src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/satelliteLib-a9d46808a35b7b8034adfab1d8207407222304d5.js"></script>
+                  </div>
+               						
+               						
+               <ul id="nav-util">
+                  <li><a href="http://www.aaas.org/" tabindex="3">AAAS.ORG</a></li>
+                  <li><a href="http://www.sciencemag.org/feedback" tabindex="4">Feedback</a></li>
+                  <li><a href="http://www.sciencemag.org/help/" tabindex="5">Help</a></li>
+                  <li class="last"><a href="http://www.sciencemag.org/help/librarians/" tabindex="6">Librarians</a></li>
+               </ul>
+               						
+               <div id="hd-search">
+                  		
+                  <form id="global_search_form" name="global_search_form" action="/switch">
+                     <fieldset><select id="site_area" name="site_area" size="1" tabindex="7">
+                           <option value="sciencejournals" selected="selected">All Science Journals</option>
+                           <option value="sci">Science Magazine</option>
+                           <option value="sciencenow">Daily News</option>
+                           <option value="sigtrans">Science Signaling</option>
+                           <option value="scitransmed">Science Translational Medicine</option>
+                           <option value="sageke">SAGE KE</option>
+                           <option value="scirecruit">Science Careers</option>
+                           <option value="searchall">All HighWire Journals</option></select><input id="search-terms" name="fulltext" value="Enter Search Term" tabindex="8" type="text"><input src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/spacer.gif" class="search-submit" value="submit" tabindex="9" type="image"><a href="http://www.sciencemag.org/search" tabindex="10">Advanced</a></fieldset>
+                  </form>
+                  	
+               </div>
+               						
+               <div id="authstring">
+                  
+                  <ul>
+                     <li class="subscr-ref">Beijing Institute of Technology</li>
+                     <li class="no-left-border">
+                        <a href="http://www.sciencemag.org/cgi/alerts/main">
+                           Alerts
+                           </a>
+                        
+                     </li>
+                     <li>
+                        <a href="http://www.sciencemag.org/site/my_account/access_rights.xhtml">
+                           Access Rights
+                           </a>
+                        
+                     </li>
+                     <li>
+                        <a href="http://www.sciencemag.org/site/my_account/">
+                           My Account
+                           </a>
+                        
+                     </li>
+                     <li>
+                        <a href="http://www.sciencemag.org/login?uri=http%3A%2F%2Fwww.sciencemag.org%2Fcontent%2F344%2F6191%2F1492.full">
+                           
+                           
+                           <strong xmlns="">Sign In</strong>
+                           
+                           </a>
+                        
+                     </li>
+                  </ul>           
+                  
+               </div>
+               						
+               <ul id="nav-main" class="nav-main">
+                  <li class="item" id="nav_news"><a href="http://news.sciencemag.org/" id="nav-main-news" tabindex="14">News</a></li>
+                  <li id="nav_magazine" class="item Active"><a href="http://www.sciencemag.org/journals" id="nav-main-journals" tabindex="15">Science Journals</a></li>
+                  <li class="item" id="nav_careers"><a id="nav-main-careers" href="http://sciencecareers.sciencemag.org/" tabindex="16">Careers</a></li>
+                  <li class="item" id="nav_multimedia"><a href="http://www.sciencemag.org/multimedia/" id="nav-main-multimedia" tabindex="18">Multimedia</a></li>
+                  <li class="item" id="nav_collections"><a href="http://www.sciencemag.org/cgi/collection" id="nav-main-topics" tabindex="19">Topics</a></li>
+               </ul>
+               						<a href="http://www.sciencemag.org/subscriptions/indiv_sub.xhtml" id="hd-subscribe" tabindex="20">Subscribe</a>
+               						<a name="SectionNavigation" id="SectionNavigation"></a>
+               
+               <div id="hd-sub">
+                  
+                  <ul id="nav-sub" class="tab-list">
+                     <li id="subnav_science_home"><a href="http://www.sciencemag.org/magazine"><em>Science</em> Home</a></li>
+                     <li id="subnav_current_issue"><a href="http://www.sciencemag.org/content/current">Current Issue</a></li>
+                     <li id="subnav_prev_issues" class="Active"><a href="http://www.sciencemag.org/content">Previous Issues</a></li>
+                     <li id="subnav_science_express"><a href="http://www.sciencemag.org/content/early/recent"><em>Science</em> Express</a></li>
+                     <li id="subnav_science_products"><a href="http://www.sciencemag.org/products/"><em>Science</em> Products</a></li>
+                     <li id="subnav_my_science"><a href="http://www.sciencemag.org/my_science/">My <em>Science</em></a></li>
+                     <li id="subnav_about_journal"><a href="http://www.sciencemag.org/site/about/index.xhtml">About the Journal</a></li>
+                  </ul>
+                  
+               </div>
+               
+               					
+            </div>
+            					
+            <div id="site-breadcrumbs-wrapper">
+               		
+               <ul id="site-breadcrumbs">
+                  <li class="firstcrumb"><a href="http://www.sciencemag.org/">Home</a></li>
+                  <li><span class="bc-sep"> &gt; </span><a href="http://www.sciencemag.org/magazine"><em>Science</em> Magazine</a></li>
+                  <li><span class="bc-sep"> &gt; </span><a href="http://www.sciencemag.org/content/344/6191.toc">27 June 2014</a></li>
+                  <li class="lastcrumb"><span class="bc-sep"> &gt; </span><span class="quick-ref hw-pub-property-contains_inline_supplementary_material"><span class="cit-auth-list"><span class="first-item"><span>Rodriguez</span><span class="cit-sep cit-sep-two-item-separator"> and </span></span><span class="last-item"><span>Laio</span></span></span><span class="cit-sep cit-sep-after-article-author">, </span> <cite><span class="cit-vol">344 </span><span class="cit-issue"><span class="cit-sep cit-sep-before-article-issue">(</span>6191<span class="cit-sep cit-sep-after-article-issue">): </span> </span><span class="cit-pages"><span class="cit-first-page">1492</span><span class="cit-sep">-</span><span class="cit-last-page">1496</span></span></cite>  </span></li>
+               </ul>
+               	
+            </div>
+            							
+            		
+         </div>
+         <div id="leaderboard" class="leaderboard-ads">
+            			<script type="text/javascript">
+				OAS_AD('Top');
+			</script><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2288234982592986";
+/* ROS_728x90 */
+google_ad_slot = "6288104001";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" scrolling="no" width="728"></iframe></ins></ins>
+
+            			<div class="hw-ac-aaas-inst-logo no-inst-logo"></div>
+            			
+            		
+         </div>
+         <div id="BodyWrapper">
+            <div style="height: 5944px;" id="content-block"><div id="print-slug" class="print-only"><span class="jnl-title">Science</span><span class="jnl-url">www.sciencemag.org</span></div>
+               <div class="article-nav">
+                  <a href="http://www.sciencemag.org/content/344/6191/1489.short" title="Go to previous article" class="page-nav_prev">Prev</a>
+                  <span class="article-nav-sep"> | </span><span class="toc-link"><a href="http://www.sciencemag.org/content/344/6191.toc" title="Table of Contents">Table of Contents</a></span><span class="article-nav-sep"> | </span><a href="http://www.sciencemag.org/content/344/6191/1496.short" title="Go to next article" class="page-nav_next">Next</a>
+                  
+                  
+                  <div class="sci-comment-link"><a class="sci-comments-full-link" href="http://comments.sciencemag.org/content/10.1126/science.1242072"><span class="bubble">&nbsp;</span>Leave a comment (28)</a></div>
+                  
+               </div>
+               <div id="slugline">
+                  <cite>
+                     
+                     
+                     
+                     <abbr title="Science" class="slug-jnl-abbrev">
+                        Science</abbr><span class="slug-pub-date" itemprop="datePublished">
+                        27 June 2014:
+                        </span><br>
+                     <span class="slug-vol">
+                        Vol. 344 
+                        </span><span class="slug-issue">
+                        no. 6191 
+                        </span><span class="slug-pages">
+                        pp.
+                        
+                        1492-1496
+                        </span>
+                     <br>
+                     DOI:
+                     <span title="10.1126/science.1242072" class="slug-doi">10.1126/science.1242072
+                        </span>
+                     
+                     </cite>
+                  
+               </div>
+               <ul class="subject-headings last-child">
+                  <li>Report</li>
+               </ul>
+               <div class="article fulltext-view " itemprop="articleBody"><span class="highwire-journal-article-marker-start"></span><h1 id="article-title-1" itemprop="headline">Clustering by fast search and find of density peaks</h1>
+                  <div class="contributors">
+                     <ol class="contributor-list" id="contrib-group-1">
+                        <li class="contributor" id="contrib-1" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><span class="name" itemprop="name"><a class="name-search" href="http://www.sciencemag.org/search?author1=Alex+Rodriguez&amp;sortspec=date&amp;submit=Submit">Alex Rodriguez</a></span>, 
+                        </li>
+                        <li class="last" id="contrib-2"><span class="name"><a class="name-search" href="http://www.sciencemag.org/search?author1=Alessandro+Laio&amp;sortspec=date&amp;submit=Submit">Alessandro Laio</a></span></li>
+                     </ol><p class="affiliation-list-reveal"><a href="#" class="view-more">+</a> Author Affiliations</p>
+                     <ol class="affiliation-list hideaffil">
+                        <li class="aff"><a id="aff-1" name="aff-1"></a><address>SISSA (Scuola Internazionale Superiore di Studi Avanzati), via Bonomea 265, I-34136 Trieste, Italy.</address>
+                        </li>
+                     </ol>
+                     <ol class="corresp-list">
+                        <li class="corresp" id="corresp-1"><span class="corresp-label"></span>E-mail: <a href="mailto:laio@sissa.it">laio@sissa.it</a> (A.L.); <a href="mailto:alexrod@sissa.it">alexrod@sissa.it</a> (A.R.)
+                        </li>
+                     </ol>
+                  </div><ul class="mini-tab-list tab-boxed"><li><a class="current" href="http://www.sciencemag.org/content/344/6191/tab-abstract">Abstract</a></li><li><a class="" href="http://www.sciencemag.org/content/344/6191/tab-editor-summary">Editor's Summary</a></li></ul><div class="panes tab-boxed-content"><div style="display: block;" class="section abstract" id="abstract-3">
+                     
+                     
+                     <p id="p-4">Cluster analysis is aimed at 
+classifying elements into categories on the basis of their similarity. 
+Its applications range
+                        from astronomy to bioinformatics, bibliometrics,
+ and pattern recognition. We propose an approach based on the idea that 
+cluster
+                        centers are characterized by a higher density 
+than their neighbors and by a relatively large distance from points with
+ higher
+                        densities. This idea forms the basis of a 
+clustering procedure in which the number of clusters arises intuitively,
+ outliers
+                        are automatically spotted and excluded from the 
+analysis, and clusters are recognized regardless of their shape and of 
+the
+                        dimensionality of the space in which they are 
+embedded. We demonstrate the power of the algorithm on several test 
+cases.
+                     </p>
+                     
+                  </div><div style="display: none;" class="section editor-summary" id="abstract-1" itemprop="description">
+                     <h2>Discerning clusters of data points</h2>
+                     <p id="p-1">Cluster analysis is used in many 
+disciplines to group objects according to a defined measure of distance.
+ Numerous algorithms
+                        exist, some based on the analysis of the local 
+density of data points, and others on predefined probability 
+distributions.
+                        Rodriguez and Laio devised a method in which the
+ cluster centers are recognized as local density maxima that are far 
+away
+                        from any points of higher density. The algorithm
+ depends only on the relative densities rather than their absolute 
+values.
+                        The authors tested the method on a series of 
+data sets, and its performance compared favorably to that of established
+ techniques.
+                     </p>
+                     <p id="p-2"><em>Science</em>, this issue p. <a href="http://www.sciencemag.org/lookup/doi/10.1126/science.1242072">1492</a></p>
+                  </div></div>
+                  
+                  
+                  <p id="p-5">Clustering algorithms attempt to classify elements into categories, or clusters, on the basis of their similarity. Several
+                     different clustering strategies have been proposed (<em>1</em>), but no consensus has been reached even on the definition of a cluster. In K-means (<a id="xref-ref-2-1" class="xref-bibr" href="#ref-2"><em>2</em></a>) and K-medoids (<a id="xref-ref-3-1" class="xref-bibr" href="#ref-3"><em>3</em></a>) methods, clusters are groups of data characterized by a small distance to the cluster center. An objective function, typically
+                     the sum of the distance to a set of putative cluster centers, is optimized (<a id="xref-ref-3-2" class="xref-bibr" href="#ref-3"><em>3</em></a>–<a id="xref-ref-6-1" class="xref-bibr" href="#ref-6"><em>6</em></a>) until the best cluster centers candidates are found. However, because a data point is always assigned to the nearest center,
+                     these approaches are not able to detect nonspherical clusters (<a id="xref-ref-7-1" class="xref-bibr" href="#ref-7"><em>7</em></a>). In distribution-based algorithms, one attempts to reproduce the observed realization of data points as a mix of predefined
+                     probability distribution functions (<a id="xref-ref-8-1" class="xref-bibr" href="#ref-8"><em>8</em></a>); the accuracy of such methods depends on the capability of the trial probability to represent the data.
+                  </p>
+                  <p id="p-6">Clusters with an arbitrary shape are easily detected by approaches based on the local density of data points. In density-based
+                     spatial clustering of applications with noise (DBSCAN) (<a id="xref-ref-9-1" class="xref-bibr" href="#ref-9"><em>9</em></a>),
+ one chooses a density threshold, discards as noise the points in 
+regions with densities lower than this threshold, and
+                     assigns to different clusters disconnected regions 
+of high density. However, choosing an appropriate threshold can be 
+nontrivial,
+                     a drawback not present in the mean-shift clustering
+ method (<a id="xref-ref-10-1" class="xref-bibr" href="#ref-10"><em>10</em></a>, <a id="xref-ref-11-1" class="xref-bibr" href="#ref-11"><em>11</em></a>).
+ There a cluster is defined as a set of points that converge to the same
+ local maximum of the density distribution function.
+                     This method allows the finding of nonspherical 
+clusters but works only for data defined by a set of coordinates and is 
+computationally
+                     costly.
+                  </p>
+                  <p id="p-7">Here, we propose an alternative approach. 
+Similar to the K-medoids method, it has its basis only in the distance 
+between data
+                     points. Like DBSCAN and the mean-shift method, it 
+is able to detect nonspherical clusters and to automatically find the 
+correct
+                     number of clusters. The cluster centers are 
+defined, as in the mean-shift method, as local maxima in the density of 
+data points.
+                     However, unlike the mean-shift method, our 
+procedure does not require embedding the data in a vector space and 
+maximizing
+                     explicitly the density field for each data point.
+                  </p>
+                  <p id="p-8">The algorithm has its basis in the 
+assumptions that cluster centers are surrounded by neighbors with lower 
+local density and
+                     that they are at a relatively large distance from 
+any points with a higher local density. For each data point <span class="inline-formula" id="inline-formula-1"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-1.gif"></span>, we compute two quantities: its local density <span class="inline-formula" id="inline-formula-2"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-2.gif"></span> and its distance <span class="inline-formula" id="inline-formula-3"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-3.gif"></span> from points of higher density. Both these quantities depend only on the distances <span class="inline-formula" id="inline-formula-4"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-4.gif"></span> between data points, which are assumed to satisfy the triangular inequality. The local density <span class="inline-formula" id="inline-formula-5"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-5.gif"></span> of data point <span class="inline-formula" id="inline-formula-6"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-6.gif"></span> is defined as<span class="disp-formula" id="disp-formula-1"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-7.gif"> 
+                        <span class="disp-formula-label">(1)</span></span>where <span class="inline-formula" id="inline-formula-7"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-8.gif"></span> if <span class="inline-formula" id="inline-formula-8"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-9.gif"></span> and <span class="inline-formula" id="inline-formula-9"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-10.gif"></span> otherwise, and <span class="inline-formula" id="inline-formula-10"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-11.gif"></span> is a cutoff distance. Basically, <span class="inline-formula" id="inline-formula-11"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-12.gif"></span> is equal to the number of points that are closer than <span class="inline-formula" id="inline-formula-12"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-13.gif"></span> to point <span class="inline-formula" id="inline-formula-13"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-14.gif"></span>. The algorithm is sensitive only to the relative magnitude of <span class="inline-formula" id="inline-formula-14"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-15.gif"></span> in different points, implying that, for large data sets, the results of the analysis are robust with respect to the choice
+                     of <span class="inline-formula" id="inline-formula-15"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-16.gif"></span>.
+                  </p>
+                  <p id="p-9"><span class="inline-formula" id="inline-formula-16"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-17.gif"></span> is measured by computing the minimum distance between the point <span class="inline-formula" id="inline-formula-17"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-18.gif"></span> and any other point with higher density:
+                  </p><span class="disp-formula" id="disp-formula-2"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-19.gif"> 
+                     <span class="disp-formula-label">(2)</span></span><p id="p-10">For the point with highest density, we conventionally take <span class="inline-formula" id="inline-formula-18"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-20.gif"></span>. Note that <span class="inline-formula" id="inline-formula-19"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-21.gif"></span> is much larger than the typical nearest neighbor distance only for points that are local or global maxima in the density.
+                     Thus, cluster centers are recognized as points for which the value of <span class="inline-formula" id="inline-formula-20"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-22.gif"></span> is anomalously large.
+                  </p>
+                  <p id="p-11">This observation, which is the core of the algorithm, is illustrated by the simple example in <a id="xref-fig-1-1" class="xref-fig" href="#F1">Fig. 1</a>. Figure 1A shows 28 points embedded in a two-dimensional space. We find that the density maxima are at points 1 and 10, which
+                     we identify as cluster centers. Figure 1B shows the plot of <span class="inline-formula" id="inline-formula-21"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-23.gif"></span> as a function of <span class="inline-formula" id="inline-formula-22"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-24.gif"></span> for each point; we will call this representation the decision graph. The value of <span class="inline-formula" id="inline-formula-23"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-25.gif"></span> for points 9 and 10, with similar values of <span class="inline-formula" id="inline-formula-24"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-26.gif"></span>, is very different: Point 9 belongs to the cluster of point 1, and several other points with a higher <span class="inline-formula" id="inline-formula-25"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-27.gif"></span>
+ are very close to it, whereas the nearest neighbor of higher density of
+ point 10 belongs to another cluster. Hence, as anticipated,
+                     the only points of high <span class="inline-formula" id="inline-formula-26"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-28.gif"></span> and relatively high <span class="inline-formula" id="inline-formula-27"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-29.gif"></span> are the cluster centers. Points 26, 27, and 28 have a relatively high <span class="inline-formula" id="inline-formula-28"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-30.gif"></span> and a low <span class="inline-formula" id="inline-formula-29"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-31.gif"></span> because they are isolated; they can be considered as clusters composed of a single point, namely, outliers.
+                  </p>
+                  <div id="F1" class="fig pos-float type-figure  odd">
+                     <div class="fig-inline"><a href="http://www.sciencemag.org/content/344/6191/1492/F1.expansion.html"><img alt="Fig. 1" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/F1.gif"></a><div class="callout"><span>View larger version:</span><ul class="callout-links">
+                              <li><a href="http://www.sciencemag.org/content/344/6191/1492/F1.expansion.html">In this page</a></li>
+                              <li><a target="_blank" class="in-nw-vis" href="http://www.sciencemag.org/content/344/6191/1492/F1.expansion.html">In a new window</a></li>
+                           </ul>
+                           <ul class="fig-services">
+                              <li class="ppt-link"><a href="http://www.sciencemag.org/powerpoint/344/6191/1492/F1">Download PowerPoint Slide for Teaching</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="fig-caption"><span class="fig-label">Fig. 1</span> 
+                        <span class="caption-title">The algorithm in two dimensions.</span>
+                        
+                        <p id="p-12" class="first-child">(<strong>A</strong>) Point distribution. Data points are ranked in order of decreasing density. (<strong>B</strong>) Decision graph for the data in (A). Different colors correspond to different clusters.
+                        </p>
+                        
+                        <div class="sb-div caption-clear"></div>
+                     </div>
+                  </div>
+                  <p id="p-13">After the cluster centers have been 
+found, each remaining point is assigned to the same cluster as its 
+nearest neighbor of
+                     higher density. The cluster assignment is performed
+ in a single step, in contrast with other clustering algorithms where an
+                     objective function is optimized iteratively (<a id="xref-ref-2-2" class="xref-bibr" href="#ref-2"><em>2</em></a>, <a id="xref-ref-8-2" class="xref-bibr" href="#ref-8"><em>8</em></a>).
+                  </p>
+                  <p id="p-14">In cluster analysis, it is often useful to measure quantitatively the reliability of an assignment. In approaches based on
+                     the optimization of a function (<a id="xref-ref-2-3" class="xref-bibr" href="#ref-2"><em>2</em></a>, <a id="xref-ref-8-3" class="xref-bibr" href="#ref-8"><em>8</em></a>), its value at convergence is also a natural quality measure. In methods like DBSCAN (<a id="xref-ref-9-2" class="xref-bibr" href="#ref-9"><em>9</em></a>), one considers reliable points with density values above a threshold, which can lead to low-density clusters, such as those
+                     in <a id="xref-fig-2-1" class="xref-fig" href="#F2">Fig. 2E</a>, being classified as noise. In our algorithm, we do not introduce a noise-signal cutoff. Instead, we first find for each
+                     cluster a border region, defined as the set of points assigned to that cluster but being within a distance <span class="inline-formula" id="inline-formula-30"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-32.gif"></span> from data points belonging to other clusters. We then find, for each cluster, the point of highest density within its border
+                     region. We denote its density by <span class="inline-formula" id="inline-formula-31"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-33.gif"></span>. The points of the cluster whose density is higher than <span class="inline-formula" id="inline-formula-32"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-34.gif"></span> are considered part of the cluster core (robust assignation). The others are considered part of the cluster halo (suitable
+                     to be considered as noise).
+                  </p>
+                  <div id="F2" class="fig pos-float type-figure  odd">
+                     <div class="fig-inline"><a href="http://www.sciencemag.org/content/344/6191/1492/F2.expansion.html"><img alt="Fig. 2" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/F2.gif"></a><div class="callout"><span>View larger version:</span><ul class="callout-links">
+                              <li><a href="http://www.sciencemag.org/content/344/6191/1492/F2.expansion.html">In this page</a></li>
+                              <li><a target="_blank" class="in-nw-vis" href="http://www.sciencemag.org/content/344/6191/1492/F2.expansion.html">In a new window</a></li>
+                           </ul>
+                           <ul class="fig-services">
+                              <li class="ppt-link"><a href="http://www.sciencemag.org/powerpoint/344/6191/1492/F2">Download PowerPoint Slide for Teaching</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="fig-caption"><span class="fig-label">Fig. 2</span> 
+                        <span class="caption-title">Results for synthetic point distributions.</span>
+                        
+                        <p id="p-15" class="first-child">(<strong>A</strong>) The probability distribution from which point distributions are drawn. The regions with lowest intensity correspond to a
+                           background uniform probability of 20%. (<strong>B</strong> and <strong>C</strong>) Point distributions for samples of 4000 and 1000 points, respectively. Points are colored according to the cluster to which
+                           they are assigned. Black points belong to the cluster halos. (<strong>D</strong> and <strong>E</strong>) The corresponding decision graphs, with the centers colored by cluster. (<strong>F</strong>) The fraction of points assigned to the incorrect cluster as a function of the sample dimension. Error bars indicate the
+                           standard error of the mean.
+                        </p>
+                        
+                        <div class="sb-div caption-clear"></div>
+                     </div>
+                  </div>
+                  <p id="p-16">In order to benchmark our procedure, let us first consider the test case in <a id="xref-fig-2-2" class="xref-fig" href="#F2">Fig. 2</a>. The data points are drawn from a probability distribution with nonspherical and strongly overlapping peaks (<a id="xref-fig-2-3" class="xref-fig" href="#F2">Fig. 2A</a>); the probability values corresponding to the maxima differ by almost an order of magnitude. In <a id="xref-fig-2-4" class="xref-fig" href="#F2">Fig. 2, B and C</a>, 4000 and 1000 points, respectively, are drawn from the distribution in <a id="xref-fig-2-5" class="xref-fig" href="#F2">Fig. 2A</a>. In the corresponding decision graphs (<a id="xref-fig-2-6" class="xref-fig" href="#F2">Fig. 2, D and E</a>), we observe only five points with a large value of <span class="inline-formula" id="inline-formula-33"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-35.gif"></span>
+ and a sizeable density. These points are represented in the graphs as 
+large solid circles and correspond to cluster centers.
+                     After the centers have been selected, each point is
+ assigned either to a cluster or to the halo. The algorithm captures the
+                     position and shape of the probability peaks, even 
+those corresponding to very different densities (blue and light green 
+points
+                     in Fig. 2C) and nonspherical peaks. Moreover, 
+points assigned to the halo correspond to regions that by visual 
+inspection
+                     of the probability distribution in <a id="xref-fig-2-7" class="xref-fig" href="#F2">Fig. 2A</a> would not be assigned to any peak.
+                  </p>
+                  <p id="p-17">To demonstrate the robustness of the procedure more quantitatively, we performed the analysis by drawing 10,000 points from
+                     the distribution in <a id="xref-fig-2-8" class="xref-fig" href="#F2">Fig. 2A</a>, considering as a reference the cluster assignment obtained on that sample. We then obtained reduced samples by retaining
+                     only a fraction of points and performed cluster assignment for each reduced sample independently. <a id="xref-fig-2-9" class="xref-fig" href="#F2">Figure 2F</a>
+ shows, as a function of the size of the reduced sample, the fraction of
+ points assigned to a cluster different than the one
+                     they were assigned to in the reference case. The 
+fraction of misclassified points remains well below 1% even for small 
+samples
+                     containing 1000 points.
+                  </p>
+                  <p id="p-18">Varying <span class="inline-formula" id="inline-formula-34"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-36.gif"></span> for the data in <a id="xref-fig-2-10" class="xref-fig" href="#F2">Fig. 2B</a> produced mutually consistent results (fig. S1). As a rule of thumb, one can choose <span class="inline-formula" id="inline-formula-35"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-37.gif"></span> so that the average number of neighbors is around 1 to 2% of the total number of points in the data set. For data sets composed
+                     by a small number of points, <span class="inline-formula" id="inline-formula-36"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-38.gif"></span> might be affected by large statistical errors. In these cases, it might be useful to estimate the density by more accurate
+                     measures (<a id="xref-ref-10-2" class="xref-bibr" href="#ref-10"><em>10</em></a>, <a id="xref-ref-11-2" class="xref-bibr" href="#ref-11"><em>11</em></a>).
+                  </p>
+                  <p id="p-19">Next, we benchmarked the algorithm on the test cases presented in <a id="xref-fig-3-1" class="xref-fig" href="#F3">Fig. 3</a>. For computing the density for cases with few points, we adopted the exponential kernel described in (<a id="xref-ref-11-3" class="xref-bibr" href="#ref-11"><em>11</em></a>). In <a id="xref-fig-3-2" class="xref-fig" href="#F3">Fig. 3A</a>, we consider a data set from (<a id="xref-ref-12-1" class="xref-bibr" href="#ref-12"><em>12</em></a>), obtaining results comparable to those of the original article, where it was shown that other commonly used methods fail.
+                     In <a id="xref-fig-3-3" class="xref-fig" href="#F3">Fig. 3B</a>, we consider an example with 15 clusters with high overlap in data distribution taken from (<a id="xref-ref-13-1" class="xref-bibr" href="#ref-13"><em>13</em></a>); our algorithm successfully determines the cluster structure of the data set. In <a id="xref-fig-3-4" class="xref-fig" href="#F3">Fig. 3C</a>, we consider the test case for the FLAME (fuzzy clustering by local approximation of membership) approach (<a id="xref-ref-14-1" class="xref-bibr" href="#ref-14"><em>14</em></a>), with results comparable to the original method. In the data set originally introduced to illustrate the performance of
+                     path-based spectral clustering (<a id="xref-ref-15-1" class="xref-bibr" href="#ref-15"><em>15</em></a>) shown in <a id="xref-fig-4-1" class="xref-fig" href="#F4">Fig. 4D</a>, our algorithm correctly finds the three clusters without the need of generating a connectivity graph. As comparison, in
+                     figs. S3 and S4 we show the cluster assignations obtained by K-means (<a id="xref-ref-2-4" class="xref-bibr" href="#ref-2"><em>2</em></a>) for these four test cases and for the example in <a id="xref-fig-2-11" class="xref-fig" href="#F2">Fig. 2</a>. Even if the K-means optimization is performed with use of the correct value of K, the assignations are, in most of the cases,
+                     not compliant with visual intuition.
+                  </p>
+                  <div id="F3" class="fig pos-float type-figure  odd">
+                     <div class="fig-inline"><a href="http://www.sciencemag.org/content/344/6191/1492/F3.expansion.html"><img alt="Fig. 3" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/F3.gif"></a><div class="callout"><span>View larger version:</span><ul class="callout-links">
+                              <li><a href="http://www.sciencemag.org/content/344/6191/1492/F3.expansion.html">In this page</a></li>
+                              <li><a target="_blank" class="in-nw-vis" href="http://www.sciencemag.org/content/344/6191/1492/F3.expansion.html">In a new window</a></li>
+                           </ul>
+                           <ul class="fig-services">
+                              <li class="ppt-link"><a href="http://www.sciencemag.org/powerpoint/344/6191/1492/F3">Download PowerPoint Slide for Teaching</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="fig-caption"><span class="fig-label">Fig. 3</span> 
+                        <span class="caption-title">Results for test cases in the literature.</span>
+                        
+                        <p id="p-20" class="first-child">Synthetic point distributions from (<a id="xref-ref-12-2" class="xref-bibr" href="#ref-12"><em>12</em></a>) (<strong>A</strong>), (<a id="xref-ref-13-2" class="xref-bibr" href="#ref-13"><em>13</em></a>) (<strong>B</strong>), (<a id="xref-ref-14-2" class="xref-bibr" href="#ref-14"><em>14</em></a>) (<strong>C</strong>), and (<a id="xref-ref-15-2" class="xref-bibr" href="#ref-15"><em>15</em></a>) (<strong>D</strong>).
+                        </p>
+                        
+                        <div class="sb-div caption-clear"></div>
+                     </div>
+                  </div>
+                  <div id="F4" class="fig pos-float type-figure  odd">
+                     <div class="fig-inline"><a href="http://www.sciencemag.org/content/344/6191/1492/F4.expansion.html"><img alt="Fig. 4" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/F4.gif"></a><div class="callout"><span>View larger version:</span><ul class="callout-links">
+                              <li><a href="http://www.sciencemag.org/content/344/6191/1492/F4.expansion.html">In this page</a></li>
+                              <li><a target="_blank" class="in-nw-vis" href="http://www.sciencemag.org/content/344/6191/1492/F4.expansion.html">In a new window</a></li>
+                           </ul>
+                           <ul class="fig-services">
+                              <li class="ppt-link"><a href="http://www.sciencemag.org/powerpoint/344/6191/1492/F4">Download PowerPoint Slide for Teaching</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="fig-caption"><span class="fig-label">Fig. 4</span> 
+                        <span class="caption-title">Cluster analysis of the Olivetti Face Database.</span>
+                        
+                        <p id="p-21" class="first-child">(<strong>A</strong>) The decision graph for the first hundred images in the database (<em>18</em>). (<strong>B</strong>) The value of <span class="inline-formula" id="inline-formula-37"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-39.gif"></span> in decreasing order for the data in (A). (<strong>C</strong>)
+ The performance of the algorithm in recognizing subjects in the full 
+database as a function of the number of clusters: number
+                           of subjects recognized as individuals (black 
+line), number of clusters that include more than one subject (red line),
+ number
+                           of subjects split in more than one cluster 
+(green), and number of images assigned to a cluster divided by 10 
+(purple). (<strong>D</strong>) Pictorial representation of the cluster 
+assignations for the first 100 images. Faces with the same color belong 
+to the same
+                           cluster, whereas gray images are not assigned
+ to any cluster. Cluster centers are labeled with white circles.
+                        </p>
+                        
+                        <div class="sb-div caption-clear"></div>
+                     </div>
+                  </div>
+                  <p id="p-22">The method is robust with respect to changes in the metric that do not significantly affect the distances below <span class="inline-formula" id="inline-formula-38"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-40.gif"></span>, that is, that keep the density estimator in <a id="xref-disp-formula-1-1" class="xref-disp-formula" href="#disp-formula-1">Eq. 1</a> unchanged. Clearly, the distance in <a id="xref-disp-formula-2-1" class="xref-disp-formula" href="#disp-formula-2">Eq. 2</a>
+ will be affected by such a change of metric, but it is easy to realize 
+that the structure of the decision graph (in particular,
+                     the number of data points with a large value of δ) 
+is a consequence of the ranking of the density values, not of the actual
+                     distance between far away points. Examples 
+demonstrating this statement are shown in fig. S5.
+                  </p>
+                  <p id="p-23">Our approach only requires measuring (or computing) the distance between all the pairs of data points and does not require
+                     parameterizing a probability distribution (<a id="xref-ref-8-4" class="xref-bibr" href="#ref-8"><em>8</em></a>) or a multidimensional density function (<a id="xref-ref-10-3" class="xref-bibr" href="#ref-10"><em>10</em></a>).
+ Therefore, its performance is not affected by the intrinsic 
+dimensionality of the space in which the data points are embedded.
+                     We verified that, in a test case with 16 clusters 
+in 256 dimensions (<a id="xref-ref-16-1" class="xref-bibr" href="#ref-16"><em>16</em></a>), the algorithm finds the number of clusters and assigns the points correctly (fig. S6). For a data set with 210 measurements
+                     of seven x-ray features for three types of wheat seeds from (<a id="xref-ref-17-1" class="xref-bibr" href="#ref-17"><em>17</em></a>), the algorithm correctly predicts the existence of three clusters and classifies correctly 97% of the points assigned to
+                     the cluster cores (figs. S7 and S8).
+                  </p>
+                  <p id="p-24">We also applied the approach to the Olivetti Face Database (<a id="xref-ref-18-1" class="xref-bibr" href="#ref-18"><em>18</em></a>),
+ a widespread benchmark for machine learning algorithms, with the aim of
+ identifying, without any previous training, the
+                     number of subjects in the database. This data set 
+poses a serious challenge to our approach because the “ideal” number of
+                     clusters (namely of distinct subjects) is 
+comparable with the number of elements in the data set (namely of 
+different images,
+                     10 for each subject). This makes a reliable 
+estimate of the densities difficult. The similarity between two images 
+was computed
+                     by following (<a id="xref-ref-19-1" class="xref-bibr" href="#ref-19"><em>19</em></a>). The density is estimated by a Gaussian kernel (<a id="xref-ref-11-4" class="xref-bibr" href="#ref-11"><em>11</em></a>) with variance <span class="inline-formula" id="inline-formula-39"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-41.gif"></span>.
+ For such a small set, the density estimator is unavoidably affected by 
+large statistical errors; thus, we assign images
+                     to a cluster following a slightly more restrictive 
+criterion than in the preceding examples. An image is assigned to the 
+same
+                     cluster of its nearest image with higher density 
+only if their distance is smaller than <span class="inline-formula" id="inline-formula-40"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-42.gif"></span>. As a consequence, the images further than <span class="inline-formula" id="inline-formula-41"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-43.gif"></span> from any other image of higher density remain unassigned. In <a id="xref-fig-4-2" class="xref-fig" href="#F4">Fig. 4</a>, we show the results of an analysis performed for the first 100 images in the data set. The decision graph (<a id="xref-fig-4-3" class="xref-fig" href="#F4">Fig. 4A</a>)
+ shows the presence of several distinct density maxima. Unlike in other 
+examples, their exact number is not clear, a consequence
+                     of the sparsity of the data points. A hint for 
+choosing the number of centers is provided by the plot of <span class="inline-formula" id="inline-formula-42"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-44.gif"></span> sorted in decreasing order (<a id="xref-fig-4-4" class="xref-fig" href="#F4">Fig. 4B</a>). This graph shows that this quantity, that is by definition large for cluster centers, starts growing anomalously below
+                     a rank order <span class="inline-formula" id="inline-formula-43"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-45.gif"></span>. Therefore, we performed the analysis by using nine centers. In <a id="xref-fig-4-5" class="xref-fig" href="#F4">Fig. 4D</a>,
+ we show with different colors the clusters corresponding to these 
+centers. Seven clusters correspond to different subjects,
+                     showing that the algorithm is able to “recognize” 7
+ subjects out of 10. An eighth subject appears split in two different 
+clusters.
+                     When the analysis is performed on all 400 images of
+ the database, the decision graph again does not allow recognizing 
+clearly
+                     the number of clusters (fig. S9). However, in <a id="xref-fig-4-6" class="xref-fig" href="#F4">Fig. 4C</a>
+ we show that by adding more and more putative centers, about 30 
+subjects can be recognized unambiguously (fig. S9). When
+                     more centers are included, the images of some of 
+the subjects are split in two clusters, but still all the clusters 
+remain
+                     pure, namely include only images of the same 
+subject. Following (<a id="xref-ref-20-1" class="xref-bibr" href="#ref-20"><em>20</em></a>) we also computed the fraction of pairs of images of the same subject correctly associated with the same cluster (<span class="inline-formula" id="inline-formula-44"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-46.gif"></span>) and the fraction of pairs of images of different subjects erroneously assigned to the same cluster (<span class="inline-formula" id="inline-formula-45"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-47.gif"></span>). If one does not apply the cutoff at <span class="inline-formula" id="inline-formula-46"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-48.gif"></span> in the assignation (namely if one applies our algorithm in its general formulation), one obtains <span class="inline-formula" id="inline-formula-47"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-49.gif"></span> and <span class="inline-formula" id="inline-formula-48"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-50.gif"></span> with <span class="inline-formula" id="inline-formula-49"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-51.gif"></span> to <span class="inline-formula" id="inline-formula-50"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-52.gif"></span> centers, a performance comparable to a state-of-the-art approach for unsupervised image categorization (<a id="xref-ref-20-2" class="xref-bibr" href="#ref-20"><em>20</em></a>).
+                  </p>
+                  <p id="p-25">Last, we benchmarked the clustering algorithm on the analysis of a molecular dynamics trajectory of trialanine in water at
+                     300 K (<a id="xref-ref-21-1" class="xref-bibr" href="#ref-21"><em>21</em></a>).
+ In this case, clusters will approximately correspond to kinetic basins,
+ namely independent conformations of the system
+                     that are stable for a substantial time and 
+separated by free energy barriers, that are crossed only rarely on a 
+microscopic
+                     time scale. We first analyzed the trajectory by a 
+standard approach (<a id="xref-ref-22-1" class="xref-bibr" href="#ref-22"><em>22</em></a>)
+ based on a spectral analysis of the kinetic matrix, whose eigenvalues 
+are associated with the relaxation times of the system.
+                     A gap is present after the seventh eigenvalue (fig.
+ S10), indicating that the system has eight basins; in agreement with 
+that,
+                     our cluster analysis (fig. S10) gives rise to eight
+ clusters, including conformations in a one-to-one correspondence with
+                     those defining the kinetic basins (<a id="xref-ref-22-2" class="xref-bibr" href="#ref-22"><em>22</em></a>).
+                  </p>
+                  <p id="p-26">Identifying clusters with density maxima, as is done here and in other density-based clustering algorithms (<a id="xref-ref-9-3" class="xref-bibr" href="#ref-9"><em>9</em></a>, <a id="xref-ref-10-4" class="xref-bibr" href="#ref-10"><em>10</em></a>),
+ is a simple and intuitive choice but has an important drawback. If one 
+generates data points at random, the density estimated
+                     for a finite sample size is far from uniform and is
+ instead characterized by several maxima. However, the decision graph 
+allows
+                     us to distinguish genuine clusters from the density
+ ripples generated by noise. Qualitatively, only in the former case are
+                     the points corresponding to cluster centers 
+separated by a sizeable gap in <span class="inline-formula" id="inline-formula-51"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-53.gif"></span> and <span class="inline-formula" id="inline-formula-52"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-54.gif"></span> from the other points. For a random distribution, one instead observes a continuous distribution in the values of <span class="inline-formula" id="inline-formula-53"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-55.gif"></span> and <span class="inline-formula" id="inline-formula-54"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-56.gif"></span>. Indeed, we performed the analysis for sets of points generated at random from a uniform distribution in a hypercube. The
+                     distances between data points entering in <a id="xref-disp-formula-1-2" class="xref-disp-formula" href="#disp-formula-1">Eqs. 1</a> and <a id="xref-disp-formula-2-2" class="xref-disp-formula" href="#disp-formula-2">2</a> are computed with periodic boundary conditions on the hypercube. This analysis shows that, for randomly distributed data
+                     points, the quantity <span class="inline-formula" id="inline-formula-55"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-57.gif"></span> is distributed according to a power law, with an exponent that depends on the dimensionality of the space in which the points
+                     are embedded. The distributions of <span class="inline-formula" id="inline-formula-56"><img class="math mml" alt="Formula" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/mml-math-58.gif"></span> for data sets with genuine clusters, like those in <a id="xref-fig-2-12" class="xref-fig" href="#F2">Figs. 2</a> to <a id="xref-fig-4-7" class="xref-fig" href="#F4">4</a>,
+ are strikingly different from power laws, especially in the region of 
+high γ (fig. S11). This observation may provide the
+                     basis for a criterion for the automatic choice of 
+the cluster centers as well as for statistically validating the 
+reliability
+                     of an analysis performed with our approach.
+                  </p>
+                  <div class="section app" id="app-1">
+                     
+                     <h2>Supplementary Materials</h2>
+                     <div id="DC1" class="supplementary-material">
+                        <p id="p-27"><a href="http://www.sciencemag.org/content/344/6191/1492/suppl/DC1">www.sciencemag.org/content/344/6191/1492/suppl/DC1</a></p>
+                        <p id="p-28">Figs. S1 to S11</p>
+                        <p id="p-29">Data S1</p>
+                     </div>
+                  </div>
+                  <ul class="history-list">
+                     <li xmlns:hwp="http://schema.highwire.org/Journal" class="received" hwp:start="2013-06-18"><span class="received-label">Received for publication </span>18 June 2013.
+                     </li>
+                     <li xmlns:hwp="http://schema.highwire.org/Journal" class="accepted" hwp:start="2014-05-23"><span class="accepted-label">Accepted for publication </span>23 May 2014.
+                     </li>
+                  </ul>
+                  <div class="section ref-list" id="ref-list-1">
+                     <h2>References and Notes</h2>
+                     <ol class="cit-list">
+                        <li>
+                           <div class="cit ref-cit ref-journal no-rev-xref" id="cit-344.6191.1492.1" data-doi="10.1109/TNN.2005.845141">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">R.</span> <span class="cit-name-surname">Xu</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">D.</span> <span class="cit-name-surname">Wunsch</span> <span class="cit-name-suffix">2nd</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Survey of clustering algorithms</span>. <abbr class="cit-jnl-abbrev">IEEE Trans. Neural Netw.</abbr> 
+                                    <span class="cit-vol">16</span>, 
+                                    <span class="cit-fpage">645</span>–<span class="cit-lpage">678</span> (<span class="cit-pub-date">2005</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1109/TNN.2005.845141</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>15940994</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1109/TNN.2005.845141&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=15940994&amp;link_type=MED" class="cit-ref-sprinkles cit-ref-sprinkles-medline">Medline</a><a href="http://www.sciencemag.org/external-ref?access_num=000228909900013&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Survey%20of%20clustering%20algorithms&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Xu&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-2-1" title="View reference 2 in text" id="ref-2">↵</a><div class="cit ref-cit ref-confproc" id="cit-344.6191.1492.2">
+                              <div class="cit-metadata unstructured">J. MacQueen, in <em>Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability</em>, L. M. Le Cam, J. Neyman, Eds. (Univ. California Press, Berkeley, CA, 1967), vol. 1, pp. 281–297.
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-3-1" title="View reference 3 in text" id="ref-3">↵</a><div class="cit ref-cit ref-book" id="cit-344.6191.1492.3">
+                              <div class="cit-metadata unstructured">L. Kaufman, P. J. Rousseeuw, <em>Finding Groups in Data: An Introduction to Cluster Analysis</em>, vol. 344 (Wiley-Interscience, New York, 2009).
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="cit ref-cit ref-journal no-rev-xref" id="cit-344.6191.1492.4" data-doi="10.1126/science.1136800">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">B. J.</span> <span class="cit-name-surname">Frey</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">D.</span> <span class="cit-name-surname">Dueck</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Clustering by passing messages between data points</span>. <abbr class="cit-jnl-abbrev">Science</abbr> 
+                                    <span class="cit-vol">315</span>, 
+                                    <span class="cit-fpage">972</span>–<span class="cit-lpage">976</span> (<span class="cit-pub-date">2007</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1126/science.1136800</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>17218491</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/cgi/ijlink?linkType=ABST&amp;journalCode=sci&amp;resid=315/5814/972" class="cit-ref-sprinkles cit-ref-sprinkles-ijlinks"><span class="cit-reflinks-abstract">Abstract</span><span class="cit-sep cit-reflinks-variant-name-sep">/</span><span class="cit-reflinks-full-text"><span class="free-full-text">FREE </span>Full Text</span></a></div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="cit ref-cit ref-journal no-rev-xref" id="cit-344.6191.1492.5" data-doi="10.1080/01621459.1963.10500845">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">J. H.</span> <span class="cit-name-surname">Ward</span> <span class="cit-name-suffix">Jr.</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Hierarchical grouping to optimize an objective function</span>. <abbr class="cit-jnl-abbrev">J. Am. Stat. Assoc.</abbr> 
+                                    <span class="cit-vol">58</span>, 
+                                    <span class="cit-fpage">236</span>–<span class="cit-lpage">244</span> (<span class="cit-pub-date">1963</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1080/01621459.1963.10500845</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1080/01621459.1963.10500845&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Hierarchical%20grouping%20to%20optimize%20an%20objective%20function&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Ward&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-6-1" title="View reference 6 in text" id="ref-6">↵</a><div class="cit ref-cit ref-book" id="cit-344.6191.1492.6">
+                              <div class="cit-metadata unstructured">F. Höppner, F. Klawonn, R. Kruse, T. Runkler, <em>Fuzzy Cluster Analysis: Methods for Classification, Data Analysis and Image Recognition</em> (Wiley, New York, 1999).
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-7-1" title="View reference 7 in text" id="ref-7">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.7" data-doi="10.1016/j.patrec.2009.09.011">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">A. K.</span> <span class="cit-name-surname">Jain</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Data clustering: 50 years beyond K-means</span>. <abbr class="cit-jnl-abbrev">Pattern Recognit. Lett.</abbr> 
+                                    <span class="cit-vol">31</span>, 
+                                    <span class="cit-fpage">651</span>–<span class="cit-lpage">666</span> (<span class="cit-pub-date">2010</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1016/j.patrec.2009.09.011</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1016/j.patrec.2009.09.011&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=000277552600002&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Data%20clustering%3A%2050%20years%20beyond%20K-means&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Jain&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-8-1" title="View reference 8 in text" id="ref-8">↵</a><div class="cit ref-cit ref-book" id="cit-344.6191.1492.8">
+                              <div class="cit-metadata unstructured">G. J. McLachlan, T. Krishnan, <em>The EM Algorithm and Extensions</em> (Wiley Series in Probability and Statistics vol. 382, Wiley-Interscience, New York, 2007).
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-9-1" title="View reference 9 in text" id="ref-9">↵</a><div class="cit ref-cit ref-confproc" id="cit-344.6191.1492.9">
+                              <div class="cit-metadata unstructured">M. Ester, H.-P. Kriegel, J. Sander, X. Xu, in <em>Proceedings of the 2nd International Conference on Knowledge Discovery and Data Mining</em>, E. Simoudis, J. Han, U. Fayyad, Eds. (AAAI Press, Menlo Park, CA, 1996), pp. 226–231.
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-10-1" title="View reference 10 in text" id="ref-10">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.10" data-doi="10.1109/TIT.1975.1055330">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">K.</span> <span class="cit-name-surname">Fukunaga</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">L.</span> <span class="cit-name-surname">Hostetler</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">The estimation of the gradient of a density function, with applications in pattern recognition</span>. <abbr class="cit-jnl-abbrev">IEEE Trans. Inf. Theory</abbr> 
+                                    <span class="cit-vol">21</span>, 
+                                    <span class="cit-fpage">32</span>–<span class="cit-lpage">40</span> (<span class="cit-pub-date">1975</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1109/TIT.1975.1055330</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1109/TIT.1975.1055330&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=A1975V342100004&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=The%20estimation%20of%20the%20gradient%20of%20a%20density%20function%2C%20with%20applications%20in%20pattern%20recognition&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Fukunaga&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-11-1" title="View reference 11 in text" id="ref-11">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.11" data-doi="10.1109/34.400568">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">Y.</span> <span class="cit-name-surname">Cheng</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Mean shift, mode seeking, and clustering</span>. <abbr class="cit-jnl-abbrev">IEEE Trans. Pattern Anal. Mach. Intell.</abbr> 
+                                    <span class="cit-vol">17</span>, 
+                                    <span class="cit-fpage">790</span> (<span class="cit-pub-date">1995</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1109/34.400568</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1109/34.400568&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=A1995RL03500005&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Mean%20shift%2C%20mode%20seeking%2C%20and%20clustering&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Cheng&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-12-1" title="View reference 12 in text" id="ref-12">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.12" data-doi="10.1145/1217299.1217303">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">A.</span> <span class="cit-name-surname">Gionis</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">H.</span> <span class="cit-name-surname">Mannila</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">P.</span> <span class="cit-name-surname">Tsaparas</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Clustering aggregation</span>. <abbr class="cit-jnl-abbrev">ACM Trans. Knowl. Discovery Data</abbr> 
+                                    <span class="cit-vol">1</span>, 
+                                    <span class="cit-fpage">4</span>
+                                    <span class="cit-lpage">, es</span> (<span class="cit-pub-date">2007</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1145/1217299.1217303</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1145/1217299.1217303&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Clustering%20aggregation&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Gionis&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-13-1" title="View reference 13 in text" id="ref-13">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.13" data-doi="10.1016/j.patcog.2005.09.012">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">P.</span> <span class="cit-name-surname">Fränti</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">O.</span> <span class="cit-name-surname">Virmajoki</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Iterative shrinking method for clustering problems</span>. <abbr class="cit-jnl-abbrev">Pattern Recognit.</abbr> 
+                                    <span class="cit-vol">39</span>, 
+                                    <span class="cit-fpage">761</span>–<span class="cit-lpage">775</span> (<span class="cit-pub-date">2006</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1016/j.patcog.2005.09.012</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1016/j.patcog.2005.09.012&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=000236164800003&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Iterative%20shrinking%20method%20for%20clustering%20problems&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Fr%C3%A4nti&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-14-1" title="View reference 14 in text" id="ref-14">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.14" data-doi="10.1186/1471-2105-8-3">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">L.</span> <span class="cit-name-surname">Fu</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">E.</span> <span class="cit-name-surname">Medico</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">FLAME, a novel fuzzy clustering method for the analysis of DNA microarray data</span>. <abbr class="cit-jnl-abbrev">BMC Bioinformatics</abbr> 
+                                    <span class="cit-vol">8</span>, 
+                                    <span class="cit-fpage">3</span> (<span class="cit-pub-date">2007</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1186/1471-2105-8-3</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>17204155</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1186/1471-2105-8-3&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=17204155&amp;link_type=MED" class="cit-ref-sprinkles cit-ref-sprinkles-medline">Medline</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=FLAME%2C%20a%20novel%20fuzzy%20clustering%20method%20for%20the%20analysis%20of%20DNA%20microarray%20data&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Fu&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-15-1" title="View reference 15 in text" id="ref-15">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.15" data-doi="10.1016/j.patcog.2007.04.010">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">H.</span> <span class="cit-name-surname">Chang</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">D.-Y.</span> <span class="cit-name-surname">Yeung</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Robust path-based spectral clustering</span>. <abbr class="cit-jnl-abbrev">Pattern Recognit.</abbr> 
+                                    <span class="cit-vol">41</span>, 
+                                    <span class="cit-fpage">191</span>–<span class="cit-lpage">203</span> (<span class="cit-pub-date">2008</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1016/j.patcog.2007.04.010</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1016/j.patcog.2007.04.010&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=000250028700014&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Robust%20path-based%20spectral%20clustering&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Chang&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-16-1" title="View reference 16 in text" id="ref-16">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.16" data-doi="10.1109/TPAMI.2006.227">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">P.</span> <span class="cit-name-surname">Fränti</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">O.</span> <span class="cit-name-surname">Virmajoki</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">V.</span> <span class="cit-name-surname">Hautamäki</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Fast agglomerative clustering using a k-nearest neighbor graph</span>. <abbr class="cit-jnl-abbrev">IEEE Trans. Pattern Anal. Mach. Intell.</abbr> 
+                                    <span class="cit-vol">28</span>, 
+                                    <span class="cit-fpage">1875</span>–<span class="cit-lpage">1881</span> (<span class="cit-pub-date">2006</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1109/TPAMI.2006.227</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>17063692</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1109/TPAMI.2006.227&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=17063692&amp;link_type=MED" class="cit-ref-sprinkles cit-ref-sprinkles-medline">Medline</a><a href="http://www.sciencemag.org/external-ref?access_num=000240443400015&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Fast%20agglomerative%20clustering%20using%20a%20k-nearest%20neighbor%20graph&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Fr%C3%A4nti&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-17-1" title="View reference 17 in text" id="ref-17">↵</a><div class="cit ref-cit ref-book" id="cit-344.6191.1492.17">
+                              <div class="cit-metadata unstructured">M. Charytanowicz <em>et al</em>., <em>Information Technologies in Biomedicine</em> (Springer, Berlin, 2010), pp. 15–24.
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-18-1" title="View reference 18 in text" id="ref-18">↵</a><div class="cit ref-cit ref-confproc" id="cit-344.6191.1492.18">
+                              <div class="cit-metadata unstructured">F. S. Samaria, A. C. Harter, in <em>Proceedings of 1994 IEEE Workshop on</em> <em>Applications of Computer Vision</em> (IEEE, New York, 1994), pp. 138–142.
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-19-1" title="View reference 19 in text" id="ref-19">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.19" data-doi="10.1109/TIP.2009.2025923">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">M. P.</span> <span class="cit-name-surname">Sampat</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">Z.</span> <span class="cit-name-surname">Wang</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">S.</span> <span class="cit-name-surname">Gupta</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">A. C.</span> <span class="cit-name-surname">Bovik</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">M. K.</span> <span class="cit-name-surname">Markey</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Complex wavelet structural similarity: A new image similarity index</span>. <abbr class="cit-jnl-abbrev">IEEE Trans. Image Process.</abbr> 
+                                    <span class="cit-vol">18</span>, 
+                                    <span class="cit-fpage">2385</span>–<span class="cit-lpage">2401</span> (<span class="cit-pub-date">2009</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1109/TIP.2009.2025923</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>19556195</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1109/TIP.2009.2025923&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=19556195&amp;link_type=MED" class="cit-ref-sprinkles cit-ref-sprinkles-medline">Medline</a><a href="http://www.sciencemag.org/external-ref?access_num=000270744400001&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Complex%20wavelet%20structural%20similarity%3A%20A%20new%20image%20similarity%20index&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Sampat&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-20-1" title="View reference 20 in text" id="ref-20">↵</a><div class="cit ref-cit ref-confproc" id="cit-344.6191.1492.20">
+                              <div class="cit-metadata unstructured">D. Dueck, B. Frey, <em>ICCV 2007. IEEE 11th International Conference on Computer Vision</em> (IEEE, New York, 2007), pp. 1–8.
+                              </div>
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-21-1" title="View reference 21 in text" id="ref-21">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.21" data-doi="10.1371/journal.pcbi.1000452">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">F.</span> <span class="cit-name-surname">Marinelli</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">F.</span> <span class="cit-name-surname">Pietrucci</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">A.</span> <span class="cit-name-surname">Laio</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">S.</span> <span class="cit-name-surname">Piana</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">A kinetic model of trp-cage folding from multiple biased molecular dynamics simulations</span>. <abbr class="cit-jnl-abbrev">PLOS Comput. Biol.</abbr> 
+                                    <span class="cit-vol">5</span>, 
+                                    <span class="cit-fpage">e1000452</span> (<span class="cit-pub-date">2009</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1371/journal.pcbi.1000452</span><span class="cit-pub-id-sep cit-pub-id-pmid-sep"> </span><span class="cit-pub-id cit-pub-id-pmid"><span class="cit-pub-id-scheme-pmid">pmid:</span>19662155</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1371/journal.pcbi.1000452&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=19662155&amp;link_type=MED" class="cit-ref-sprinkles cit-ref-sprinkles-medline">Medline</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=A%20kinetic%20model%20of%20trp-cage%20folding%20from%20multiple%20biased%20molecular%20dynamics%20simulations&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Marinelli&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li><a class="rev-xref-ref" href="#xref-ref-22-1" title="View reference 22 in text" id="ref-22">↵</a><div class="cit ref-cit ref-journal" id="cit-344.6191.1492.22" data-doi="10.1137/050623310">
+                              <div class="cit-metadata">
+                                 <ol class="cit-auth-list"> <li><span class="cit-auth"> <span class="cit-name-given-names">I.</span> <span class="cit-name-surname">Horenko</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">E.</span> <span class="cit-name-surname">Dittmer</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">A.</span> <span class="cit-name-surname">Fischer</span></span>, </li><li><span class="cit-auth"> <span class="cit-name-given-names">C.</span> <span class="cit-name-surname">Schütte</span></span></li></ol><cite>, 
+                                    <span class="cit-article-title">Automated model reduction for complex systems exhibiting metastability</span>. <abbr class="cit-jnl-abbrev">Multiscale Model. Simulation</abbr> 
+                                    <span class="cit-vol">5</span>, 
+                                    <span class="cit-fpage">802</span>–<span class="cit-lpage">827</span> (<span class="cit-pub-date">2006</span>).<span class="cit-pub-id-sep cit-pub-id-doi-sep"> </span><span class="cit-pub-id cit-pub-id-doi"><span class="cit-pub-id-scheme-doi">doi:</span>10.1137/050623310</span></cite></div>
+                              <div class="cit-extra"><a href="http://www.sciencemag.org/external-ref?access_num=10.1137/050623310&amp;link_type=DOI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">CrossRef</a><a href="http://www.sciencemag.org/external-ref?access_num=000242572200005&amp;link_type=ISI" class="cit-ref-sprinkles cit-ref-sprinkles-webofscience">Web of Science</a><a target="_blank" href="http://scholar.google.com/scholar?as_q=&amp;as_epq=Automated%20model%20reduction%20for%20complex%20systems%20exhibiting%20metastability&amp;as_oq=&amp;as_eq=&amp;as_occt=any&amp;as_sauthors=Horenko&amp;as_publication=&amp;as_ylo=&amp;as_yhi=&amp;btnG=&amp;hl=en&amp;sciui=1&amp;as_sdt=0%2C5&amp;lookup=1">
+                                    Search Google Scholar
+                                    </a></div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="cit ref-cit ack no-rev-xref"><strong>Acknowledgments: </strong>We
+ thank E. Tosatti, D. Amati, F. Laio, F. Marinelli, A. Maritan, R. 
+Allen, J. Nasica, and M. d’Errico for stimulating discussion.
+                              We acknowledge financial support from the 
+grant Associazione Italiana per la Ricerca sul Cancro 5 per mille, Rif. 
+12214, and
+                              Fondo per gli Investimenti della Ricerca 
+di Base–Accordo di programma, Rif. RBAP11ETKA.
+                              <div class="cit-extra"></div>
+                           </div>
+                        </li>
+                     </ol>
+                  </div><span class="highwire-journal-article-marker-end"></span></div><span id="related-urls"></span>
+               
+               <div class="sci-comment-link"><a class="sci-comments-full-link" href="http://comments.sciencemag.org/content/10.1126/science.1242072"><span class="bubble">&nbsp;</span>Leave a comment (28)</a></div>
+               
+            </div>
+            <div style="height: 5944px;" id="col-2">
+               
+               
+               <div class="content-box" id="article-cb-main">
+                  <div class="cb-contents">
+                     <h3 class="cb-contents-header"><span>Article Views</span></h3>
+                     <div class="cb-section">
+                        <ol>
+                           <li><a href="http://www.sciencemag.org/content/344/6191/1492.abstract" rel="view-abstract">Abstract</a><span class="free"></span></li>
+                           <li class="notice"><span class="variant-indicator"><span>Full Text</span></span></li>
+                           <li class="notice"><a href="http://www.sciencemag.org/content/344/6191/1492.full.pdf" rel="view-full-text.pdf">Full Text (PDF)</a></li>
+                           <li><a href="http://www.sciencemag.org/content/344/6191/1492.figures-only" rel="view-figures-only">Figures Only</a></li>
+                           <li><a href="http://www.sciencemag.org/content/344/6191/1492/suppl/DC1" rel="supplemental-data" class="dslink-supplementary-materials">Supplementary Materials</a></li>
+                        </ol>
+                     </div>
+                     <div class="cb-section" id="cb-art-svcs">
+                        <h4 class="cb-section-header"><span>Article Tools</span></h4>
+                        <ol>
+                           <li>
+                              <div class="sci-comment-link"><a class="sci-comments-full-link" href="http://comments.sciencemag.org/content/10.1126/science.1242072"><span class="bubble">&nbsp;</span>Leave a comment (28)</a></div>
+                           </li>
+                           <li><a href="http://www.sciencemag.org/cgi/folders?action=addtofolder&amp;wherefrom=JOURNALS&amp;wrapped_id=sci%3B344%2F6191%2F1492">Save to My Folders
+                                 </a></li>
+                           <li><a href="http://www.sciencemag.org/citmgr?gca=sci%3B344%2F6191%2F1492">Download Citation</a></li>
+                           <li><a href="http://www.sciencemag.org/cgi/alerts/ctalert?alertType=citedby&amp;addAlert=cited_by&amp;cited_by_criteria_resid=sci%3B344%2F6191%2F1492&amp;saveAlert=no&amp;return-type=article&amp;return_url=http://www.sciencemag.org/content/344/6191/1492.full">Alert Me When Article is Cited</a></li>
+                           <li>
+                              <div class="social-bookmarking">
+                                 
+                                 <ul xmlns="" class="social-bookmark-links">
+                                    <li>
+                                       <a href="http://www.sciencemag.org/external-ref?tag_url=http://www.sciencemag.org/cgi/content/long/344/6191/1492&amp;title=Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks+--+Rodriguez%20and%20Laio%20%2C%20%20Science%20344%20%286191%29%201492-1496.+--+SCIENCE&amp;doi=10.1126/science.1242072&amp;link_type=CITEULIKE">
+                                          <img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/citeulike.gif" alt="Add to Post to CiteULike" title="Post to CiteULike">
+                                          <span class="soc-bm-link-text">Post to CiteULike</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                                 
+                                 <p class="social-bookmarking-help"><a href="http://www.sciencemag.org/help/social_bookmarks.dtl">What's this?</a></p>
+                                 
+                              </div>
+                           </li>
+                           <li class="usage-stats-link icon-link"><a href="http://www.sciencemag.org/articleusage?gca=sci;344/6191/1492" rel="nofollow">Article Usage Statistics</a></li>
+                           <li><a href="http://www.sciencemag.org/email?gca=sci%3B344%2F6191%2F1492&amp;current-view-path=/content/344/6191/1492.full">
+                                 E-mail This Page</a></li>
+                           <li><a title="[opens in a new window]" target="rightslink" class="request-permissions" href="https://s100.copyright.com/AppDispatchServlet?publisherName=AAAS&amp;publication=sci&amp;title=Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks&amp;publicationDate=06/27/2014&amp;author=Alex%20Rodriguez,%20Alessandro%20Laio&amp;contentID=10.1126/science.1242072&amp;volumeNum=344&amp;issueNum=6191&amp;startPage=1492&amp;endPage=1496&amp;section=R&amp;copyright=American%20Association%20for%20the%20Advancement%20of%20Science&amp;orderBeanReset=true" id="cb-rightslink-link" rel="external-nw">Rights &amp; Permissions</a></li>
+                           <li><a title="[opens in a new window]" target="_blank" class="request-reprints" href="http://www.sciencemag.org/site/help/readers/permissions.xhtml#alert" id="cb-permissions-link" rel="external-nw">Commercial Reprints and E-Prints</a></li>
+                           <li><a title="[opens in a new window]" target="_blank" href="http://www.sciencemag.org/external-ref?access_num=24970081&amp;link_type=PUBMED" rel="external-nw">View PubMed Citation</a></li>
+                        </ol>
+                     </div>
+                     <div class="cb-section" id="cb-art-cit">
+                        <h4 class="cb-section-header"><span>Related Content</span></h4>
+                        <ol>
+                           <div class="cb-section nodata">
+                              <ol>
+                                 <li class="nodata"><div id="cb-loaded-related-urls-none">No related web pages</div></li>
+                              </ol>
+                           </div>
+                           <div class="cb-section cb-subhead" id="cb-art-cit">
+                              <h4 class="cb-section-header"><span>Similar Articles In:</span></h4>
+                              <ol>
+                                 <li><a href="http://www.sciencemag.org/search?qbe=sci%3B344%2F6191%2F1492&amp;citation=Rodriguez%20and%20Laio%20%2C%20%20Science%20344%20%286191%29%201492-1496.&amp;submit=yes">
+                                       
+                                       <em xmlns="">Science</em> Magazine</a></li>
+                                 <li class="nodata"><div id="cb-loaded-isi-related-none">No Web of Science related articles</div></li>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://www.sciencemag.org/external-ref?access_num=24970081&amp;link_type=MED_NBRS" rel="external-nw">PubMed</a></li>
+                              </ol>
+                           </div>
+                           <div class="cb-section cb-subhead" id="cb-art-gs">
+                              <h4 class="cb-section-header"><span>Search Google Scholar for:</span></h4>
+                              <ol>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://scholar.google.com/scholar?q=%22author%3ARodriguez%20author%3AA.%22" rel="external-nw">Articles by  Rodriguez, A.</a></li>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://scholar.google.com/scholar?q=%22author%3ALaio%20author%3AA.%22" rel="external-nw">Articles by  Laio, A.</a></li>
+                              </ol>
+                           </div>
+                           <div class="cb-section cb-subhead" id="cb-art-pm">
+                              <h4 class="cb-section-header"><span>Search PubMed for:</span></h4>
+                              <ol>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://www.sciencemag.org/external-ref?access_num=Rodriguez%20A&amp;link_type=AUTHORSEARCH" rel="external-nw">Articles by  Rodriguez, A.</a></li>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://www.sciencemag.org/external-ref?access_num=Laio%20A&amp;link_type=AUTHORSEARCH" rel="external-nw">Articles by  Laio, A.</a></li>
+                              </ol>
+                           </div>
+                           <div class="cb-section cb-subhead" id="cb-art-gs">
+                              <h4 class="cb-section-header"><span>Find Citing Articles in:</span></h4>
+                              <ol>
+                                 <li class="nodata"><div id="cb-loaded-isi-cited-none">No Web of Science citing articles</div></li>
+                                 <li class="nodata"><div id="cb-loaded-hw-cited-none">No citing articles</div></li>
+                                 <li><a title="[opens in a new window]" target="_blank" href="http://www.sciencemag.org/cgi/crossref-forward-links/344/6191/1492" rel="external-nw" id="cb-crossref-citing-articles">CrossRef</a></li>
+                                 <li class="nodata"><div id="cb-loaded-scopus-cited-none">No Scopus citing articles</div></li>
+                              </ol>
+                           </div>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               
+               
+               <div class="sidebar" id="lnav-dynamic-block-my-science">
+                  
+                  
+                  <h4><span>My Science</span></h4>
+                  
+                  <ol>
+                     <li id="lnav-my-folders"><a href="http://www.sciencemag.org/cgi/folders">My Folders</a></li>
+                     <li id="lnav-my-alerts"><a href="http://www.sciencemag.org/cgi/alerts/main">My Alerts</a></li>
+                     <li id="lnav-my-saved-searches"><a href="http://www.sciencemag.org/cgi/folders#savedsearch">My Saved Searches</a></li>
+                     <li id="lnav-smart-signin-signout"><a href="http://www.sciencemag.org/login?uri=http%3A%2F%2Fwww.sciencemag.org%2Fcontent%2F344%2F6191%2F1492.full">Sign In</a></li>
+                  </ol>
+                  
+               </div>
+               
+               
+               <div class="sidebar" id="cm_info">
+                  
+                  
+                  <h4><span>More Information</span></h4>
+                  
+                  <h4 class="cb-section-header">More in Collections</h4>
+                  
+                  <ul>
+                     <li><a href="http://www.sciencemag.org/cgi/collection/comp_math">Computers, Mathematics</a></li>
+                  </ul>
+                  
+                  <h4 class="cb-section-header">Related Jobs from ScienceCareers</h4>
+                  
+                  <ul>
+                     <li><a href="http://scjobs.sciencemag.org/search/?t=computer+science">Computer Science</a></li>
+                     <li><a href="http://scjobs.sciencemag.org/search/?t=informatics">Informatics</a></li>
+                     <li><a href="http://scjobs.sciencemag.org/search/?t=mathematics">Mathematics</a></li>
+                  </ul>
+                  
+               </div>
+               
+               
+               
+               
+            </div>
+            <div style="height: 5944px;" id="col-3">
+               
+               <div class="Promo" id="Promo160x120">
+                  		<script language="javascript">
+			OAS_AD('Right1');
+		</script><div class="ad"><div style="color: #52819B; font-size: 10px; text-align: center;">ADVERTISEMENT</div><br>
+<a href="http://oascentral.sciencemag.org/RealMedia/ads/click_lx.ads/www.sciencemag.org/content/344/6191/1492.full/L26/1922643788/Right1/AAAS/SOL-Marketing-Nationwide-Member-Benefit-Button/V2-Extole-banner-160x150_Button_131016.html/435651302b3150463761344144653270?1922643788" target="_blank"><img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/V2-Extole-banner-160x150_Button_131016.jpg" alt="Advertisement" border="0" height="150" width="160"></a></div>
+
+                  	</div>
+               <div class="Ad" id="Ad160x600">
+                  		<script language="javascript">
+			OAS_AD('Right2');
+		</script><div class="ad"><div style="color: #52819B; font-size: 10px; text-align: center;">ADVERTISEMENT</div><br>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2288234982592986";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="600" scrolling="no" width="160"></iframe></ins></ins>
+</div>
+
+                  	</div>
+               <div class="Ad" id="Ad160x600">
+                  		
+                  <p class="AdInfo">
+                     			<a href="http://www.sciencemag.org/site/help/advertisers/index.xhtml">To Advertise</a> <span class="Invisible">|</span> <a href="http://www.sciencemag.org/site/products/">Find Products</a>
+                     		
+                  </p>
+                  	
+               </div>
+               <div id="iframe_box">
+                  
+                  
+                  <div id="SideColumn">
+                     
+                     <p>
+                        <span style=" color: #52819B; font-size: 69.44%">ADVERTISEMENT</span>
+                        
+                     </p>
+                     
+                  </div>
+                  
+                  <div class="FeaturedJobs">
+                     
+                     <h6>
+                        				Headline Jobs
+                     </h6>
+                     
+                     <ilayer height="600" id="jobslayer" visibility="hidden" width="160">
+                        <nolayer><iframe id="mdgxWidgetiFrame" hspace="0" marginheight="5" marginwidth="5" ng="no" scrolli="" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/a.html" vspace="0" frameborder="0" height="600" scrolling="auto" width="160"></iframe></nolayer>
+                     </ilayer>
+                     
+                  </div>
+                  
+                  
+               </div>
+               
+               
+               
+            </div>
+         </div>
+         <div id="footer">
+            		<script type="text/javascript">_satellite.pageBottom();</script>
+            <div id="ISSNLine">
+               		
+               <p>
+                  			<em>Science</em>. ISSN 0036-8075 (print), 1095-9203 (online)
+                  		
+               </p>
+               	
+            </div>
+            
+            <div id="FooterWrapper">
+               <a href="http://www.aaas.org/" title="Go to AAAS website"><img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/logo_002.gif" alt="AAAS Logo" id="logo_aaas" border="0" height="16" width="52"></a><a href="http://highwire.stanford.edu/" title="Go to High Wire Press website"><img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/logo.gif" alt="HWP Logo" id="logo_hwp" border="0" height="19" width="115"></a><div class="footer-links">
+                  			<a href="http://news.sciencemag.org/">News</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/journals/">Science Journals</a> &nbsp;|&nbsp; 
+                  			<a href="http://sciencecareers.sciencemag.org/">Careers</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/site/multimedia/">Multimedia</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/cgi/collection">Collections</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/help">Help</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/help/about/site_map.dtl">Site Map</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/rss">RSS</a> 
+                  			
+                  		
+               </div>
+               <div class="footer-links">
+                  			<a href="http://www.sciencemag.org/site/subscriptions">Subscribe</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/cgi/feedback">Feedback</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/site/help/about/privacy.xhtml">Privacy / Legal</a> &nbsp;|&nbsp;
+                  			<a href="http://www.sciencemag.org/site/help/about/index.xhtml">About Us</a> &nbsp;|&nbsp;
+                  			<a href="http://www.sciencemag.org/site/help/advertisers/index.xhtml">Advertise With Us</a> &nbsp;|&nbsp; 
+                  			<a href="http://www.sciencemag.org/site/help/about/contact.xhtml">Contact Us</a> 
+                  		
+               </div>
+               
+               <div id="copyright">
+                  		
+                  <p><a href="http://www.sciencemag.org/site/help/about/copyright.xhtml">© 2014 American Association for the Advancement of Science.&nbsp;All Rights Reserved</a>.<br>AAAS is a partner of <a target="_blank" href="http://www.who.int/hinari/en/">HINARI</a>, <a target="_blank" href="http://www.aginternetwork.org/en/">AGORA</a>, <a target="_blank" href="http://www.oaresciences.org/en">OARE</a>, <a target="_blank" href="http://www.patientinform.org/">PatientInform</a>, <a target="_blank" href="http://www.crossref.org/">CrossRef</a>, and <a target="_blank" href="http://www.projectcounter.org/">COUNTER</a>.
+                  </p>
+                  	
+               </div>
+               
+            </div>
+            
+            <script type="text/javascript" language="JavaScript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/elqCfg.js"></script><script type="text/javascript" language="JavaScript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/elqImg.js"></script><layer hidden="true"><img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/svrGP.gif" border="0" height="1" width="1"></layer><script type="text/javascript" language="JavaScript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/elqCfg_002.js"></script><script type="text/javascript" language="JavaScript" src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/elqImg_002.js"></script><layer hidden="true"><img src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/svrGP_002.gif" border="0" height="1" width="1"></layer>
+            
+            
+            
+            </div><script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script src="Clustering%20by%20fast%20search%20and%20find%20of%20density%20peaks_files/ga.js" type="text/javascript"></script><script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-189672-10");
+        pageTracker._setDomainName(".sciencemag.org");
+        pageTracker._trackPageview();
+        } catch(err) {}
+        </script></div>
+   
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
