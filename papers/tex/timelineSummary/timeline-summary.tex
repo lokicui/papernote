@@ -1,16 +1,10 @@
-% This is LLNCS.DOC the documentation file of
-% the LaTeX2e class from Springer-Verlag
-% for Lecture Notes in Computer Science, version 2.4
+
 \documentclass{llncs}
 %\usepackage{llncsdoc}
 \usepackage[numbers]{natbib}
 %
 \begin{document}
-%\markboth{\LaTeXe{} Class for Lecture Notes in ComputerScience}
-%{\LaTeXe{} Class for Lecture Notes in Computer Science}
-%\thispagestyle{empty}
-%\vspace{2pt}
-%\vfill
+
 
 %
 \title {Leveraging  Aging Theory in Multi-document Timeline Summarization} 
@@ -22,7 +16,9 @@
 %
 \begin{abstract}
 
-Multi-document summarization plays an important role in helping readers to get the main information from any topic. Many approaches are proposed to generate the timeline summarization, but ignore the life circle of each topic. In this paper, aging theory is leveraged to compute the sentence feature in the first step, and then train the classification model with the SMOTEBoost technology. %We evaluate our approach on two corpora, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly.
+Multi-document summarization plays an important role in helping readers to get the main information from any topic. 
+Many approaches are proposed to generate the timeline summarization, but ignore the life circle of each topic. In this paper, aging theory is leveraged to compute the sentence feature in the first step, and then train the classification model with the SMOTEBoost technology. 
+%We evaluate our approach on two corpora, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly.
 Experiment results show that our method can improve the timeline summarization significantly.
 
 \end{abstract}
@@ -31,19 +27,33 @@ Experiment results show that our method can improve the timeline summarization s
 \section{Introduction}
 %
 
+Important facts about the summary are those which descripe the development progress of the topic.
+When people create summaries, they choose the sentences that contain key words such as place, people, date and so on to form a short story about the topic.
+Understandably in automatic summarization as well, it's useful to use those key words to represent general facts and the important factors.
 
-%Everyday thousands of news stories reporting different events are published on the Internet. These reports are disordered and people have to read most of them to know what is happening which is a time-consuming job undoubtedly. How can we get useful information about an event efficiently? Automatic summarization has been such a method solving this kind of information overloading since Luhn \cite{1958-Luhn-p159-165} proposed it in 1958. And numerous pages have been published in this field, ranging from single document to multiple documents, from extraction to abstraction, from traditional document to web document, email, blog and other types of genre. However, these research work focus on the central idea of document or document set ignoring the temporal characteristics of events. As a result, people cannot catch the changes of events over time efficiently. 
+Everyday thousands of news reporting different events are published on the internet. 
+With the help of topic detection and tracking(TDT), it's easy to group news articles into different events.
+However, most news reports are not prepared for the progress of event , so that lots of duplication message among reports about the same event. 
+Topic-focused multi-document summarization (TFMDS) aims to the main information from those topic-focused documents. 
+The timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
 
-%Recent years, topic detection and tracking (TDT) which detects new events from the large scale news stream and tracks them as events going on draws researchers' attention. But it did not display events properly, and people still have to read all the relevant reports to get what they want to know about the event. However, we are still enlightened by its usage of tracking which makes us decide to generate a timeline summary consisting of a series of individual small summaries with sentences both important and diverse to help people understand the progress of an event more quickly.
+Event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. 
+Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. 
+The energy of an event increases when the event becomes popular, and it diminishes with time. 
+In intuition, it can also be used for summarization to help us find out the daily hot terms of events. 
+%Then people can obtain what new changes happen as events going on.
 
-Everyday thousands of news reporting different events are published on the internet. With the help of topic detection and tracking(TDT), people can know what events happened and this save a lot of time for readers. However, most news reports are not prepared for the progress of event, so that there are lots of duplication message among reports about the same event. Topic-focused multi-document summarization(TFMDS) aims to gain the main information from the topic-focused documents. The timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
+In the keywords-based summarization field, there are two main challenges for choosing summary sentences. 
+One challenge lies in computing the importance of sentences, which is decided by each word in it.
+Since different authors may use different words, the synonym and polysemy bring lot of noise.
+In order to find the core words in the news without the influence caused by them, latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} is introduced.
+LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
-
-As we know, event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. The energy of an event increases when the event becomes popular, and it diminishes with time. In our opinion, it can also be used for summarization to help us find out the daily hot terms of events. Then people can obtain what new changes happen as events going on.
-
-In the keywords-based summarization field, there are two main challenges for choosing summary sentences. One challenge lies in computing the importance of sentences, which is decided by terms occurring at the documents . But different authors may use different words to express the same meaning which makes bag of words is very big. In order to find the core words in the news without the influence caused by the synonym and polysemy, we use latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} to handle the dataset. LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
-
-The other challenge is how to handle the sentences. In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. This situation causes a problem that the training model will prefer the normal sentences. SMOTEBoost \cite{chawla2003smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. This has been proved effective for imbalanced data set. 
+The other challenge is how to deal with the labeled dataset which is common problem in the field of machine learning.
+In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. 
+This situation causes a problem that the training model will prefer the normal sentences. 
+SMOTEBoost \cite{chawla2003smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. 
+This has been proved effective for imbalanced data set. 
 
 In this paper, we generate timeline summary by considering both temporal and semantic characteristics from the news around the same event. We first extract the features from five aspects to represent each sentence. Then, classification model is built with SMOTEBoost. Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
 
