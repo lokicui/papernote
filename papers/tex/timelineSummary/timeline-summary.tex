@@ -1,7 +1,22 @@
+%整体思路: 
+%1. 在特征方面,引入了aging的特征
+%2. 在训练模型的时候,引入了smoteboost的方法来采样
 
-\documentclass{llncs}
-%\usepackage{llncsdoc}
-\usepackage[numbers]{natbib}
+
+
+\documentclass{acm_proc_article-sp}
+
+\usepackage{algorithm} %format of the algorithm
+\usepackage{algorithmic} %format of the algorithm
+\usepackage{multirow} %multirow for format of table
+\usepackage{amsmath}
+\usepackage{xcolor}
+\DeclareMathOperator*{\argmin}{argmin}         %argmin或argmax公式的排版 
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}   %Use Input in the format of Algorithm 
+\renewcommand{\algorithmicensure}{\textbf{Output:}}  %UseOutput in the format of Algorithm 
+
+
 %
 \begin{document}
 
@@ -9,20 +24,35 @@
 %
 \title {Leveraging  Aging Theory in Multi-document Timeline Summarization} 
 
-\author{Chen Jie}
-\institute{Beijing Institute of Technology } 
+
+
+\author{
+% 1st. author
+\alignauthor
+Chen Jie\\
+     \affaddr{Beijing Institute of Technology}\\
+       \affaddr{ 5 South Zhongguancun Street }\\
+       \affaddr{Haidian District, Beijing}\\
+       \email{sonyfe25cp@gmail.com}
+% 2nd. author
+\alignauthor
+Zhendong Niu\\
+         \affaddr{Beijing Institute of Technology}\\
+       \affaddr{ 5 South Zhongguancun Street }\\
+       \affaddr{Haidian District, Beijing}\\
+       \email{zniu@bit.edu.cn}\\
+}
+
 
 \maketitle
-%
 \begin{abstract}
 
 In order to summarize multiple documents about the same topic, it's often helpful to follow the development progress of them.
-We present a model based on aging theory which provides an intuitive way to show the life circle of the topic which comply with the habit of people understanding things.
-There are three steps in our method. First, we extract hot terms from news which report the same event ac- cording to their energy during the time interval we choose (i.e. one day). Second, we use an incremental latent semantic analysis model to rec- ognize the semantic units of news. Third, we construct a semantic text relationship map and choose sentences both important and diverse to gen- erate timeline summaries. 
-%Multi-document summarization plays an important role in helping readers to get the main information from any topic. 
-%Many approaches are proposed to generate the timeline summarization, but ignore the life circle of each topic. 
-%In this paper, aging theory is leveraged to compute the sentence feature in the first step, and then train the classification model with the SMOTEBoost technology. 
-%We evaluate our approach on two corpora, one of which is a public data set, the other one is our manual annotation data set. Experiment results show that our method can improve the timeline summarization significantly.
+We present a model based on aging theory which provides an intuitive way to show the life circle of the topic, complying with the habit of people understanding things.
+We summarize the documents within three steps.
+First, we reduce the influence of synonym and polysemy with the LSA method.
+Second, aging theory is introduced to represent the sentence with other four categories of feature which are common used in this field. 
+Third, we train a classifier model to recongized the summary sentence. 
 Experiment results show that our method can improve the timeline summarization significantly.
 
 \end{abstract}
@@ -140,6 +170,38 @@ Weight_{novelty} = 1 - Jaccard(sentence_i, summary_{ex})
 \end{equation}
 where $summary_{ex}$ is the summary sentence in the last day.
 
+All the features are used in our experiments as follows:
+\begin{table}
+\centering
+\caption{List of features and their category}
+\begin{tabular}{c|c}
+\hline
+Category & Feature\\
+\hline
+surface & Length\\
+surface & the count of noun words\\
+surface & the count of stop words\\
+surface & position in current paragraph\\
+surface & position in the document\\
+surface & whether it contains person name\\
+\hline
+Importance & sum of LSA scores\\
+Importance & sum/avg TFIDF\\
+\hline
+Topic & the count of topic words\\
+Topic & sum of topic words' weight\\
+Topic & sum of the TF top 10 words' weight  \\
+\hline
+Aging & the aging score of sentence\\
+\hline 
+Novelty & distance between current sentence and summary\\
+\hline
+ 
+\end{tabular}
+\end{table}
+
+
+
 
 \subsection{Model Training}
 
@@ -148,8 +210,29 @@ With the help of labled data, we convert this summarization task to pairwise cla
 As the result of the number of summary sentence is much less than the ordinary sentences, the train data set is unbalanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
 
 %
-\section{Evaluation}
+\section{Experiments}
 %
+
+\subsection{Experimental settings}
+
+For evaluate the performance of our methd, we used the dataset of TAC 2011 summary task, whic is an open benchmark dataset published by Text Analysis Conference(http://www.nist.gov/tac/).
+This dataset contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service.
+Each topic has two sets of documents, A and B, each containing 10 documents.
+The difference is that documents in B were published later than A.
+
+\subsection{Methods to compare}
+
+We start our experiment with some preprocessings like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We implement some widely used multi-document summarization methods as the baselines.
+
+$Centroid$ extracts sentences based on centroid value, positional value and first-sentence overlap.
+
+$Cluster$ considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
+
+$Allan$ is a similar timeline system from different aspects, which dividing sentences into on-event and off-event while ranking them with useful and novelty.
+
+$Wong$ combined the supervised and semi-supervised learning and used co-training method to train the labeled data and unlabeled data. 
+
+$L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank to gain the summary.
 
 \subsection{Evaluation metric}
 
@@ -172,21 +255,7 @@ Where $N$ stands for the length of the $N-gram$, $Count_{match}(N-gram)$ is the 
 %Here we execute our evaluation in terms of ROUGE-1. And since our summary consists of a series of individual small summaries, we use the average ROUGE score as the final score.
 
 
-\subsection{Methods to compare}
 
-We start our experiment with some preprocessings like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We implement some widely used multi-document summarization methods as the baselines.
-
-$Centroid$ extracts sentences based on centroid value, positional value and first-sentence overlap.
-
-$Cluster$ considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
-
-$Allan$ is a similar timeline system from different aspects, which dividing sentences into on-event and off-event while ranking them with useful and novelty.
-
-$Wong$ combined the supervised and semi-supervised learning and used co-training method to train the labeled data and unlabeled data. 
-
-$L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank to gain the summary.
-
-\subsection{Experiment}% on public data set}
 
 %The public data set from Giang Binh Tran\cite{tran2013leveraging} is used in this research. This data set collects 17 timelines in 9 topics and obtains 4650 news articles. The data set provider takes the news editor's event summary as the topic summary, and some of labeled summaries are created by themselves. So there are many summary sentences are not extracted from the document, which brings extra problem about evaluate the results from TMTS.
 
@@ -215,9 +284,7 @@ $L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank
 
 %We also create a data set, which comes from the TAC2010. This data set contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service, however, it is not for summarization originally because of no summary labeled. In order to gain the relative accurate lable result, we distribute these documents to five people to label, then the highest count of sentence is the summary.
 %We labeled a dataset which comes from the TAC2011. 
-We use multi-document inputs from TAC2011, which contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service.
-Each topic has two sets of documents, A and B, each containing 10 documents.
-The difference is that documents in B were published later than A.
+
 
 
 In order to evaluate the performance, we design two experiments, respectively is top-1 and top-3. Top-1 means each day we only choose one sentence as the summary, relatively top-3 means three sentences are choosed as the summary.
@@ -259,7 +326,7 @@ In the future, we will identify semantic units using other methods since $LSA$ c
 
 
 \bibliographystyle{splncs}
-\bibliography{../../bib/text_summary}
+\bibliography{../../bib/text_summary.bib}
 
 
 
