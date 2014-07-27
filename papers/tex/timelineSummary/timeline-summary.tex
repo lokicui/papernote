@@ -51,7 +51,7 @@ In order to summarize multiple documents about the same topic, it's often helpfu
 We present a model based on aging theory which provides an intuitive way to show the life circle of the topic, complying with the habit of people understanding things.
 We summarize the documents within three steps.
 First, we reduce the influence of synonym and polysemy with the LSA method.
-Second, aging theory is introduced to represent the sentence with other four categories of feature which are common used in this field. 
+Second, aging theory is introduced to represent the sentence with other four categories of features which are common used in this field. 
 Third, we train a classifier model to recongized the summary sentence. 
 Experiment results show that our method can improve the timeline summarization significantly.
 
@@ -66,65 +66,86 @@ When people create summaries, they choose the sentences that contain key words s
 Understandably in automatic summarization as well, it's useful to use those key words to represent general facts and the important factors.
 
 Everyday thousands of news reporting different events are published on the internet. 
-With the help of topic detection and tracking(TDT), it's easy to group news articles into different events.
-However, most news reports are not prepared for the progress of event , so that lots of duplication message among reports about the same event. 
-Topic-focused multi-document summarization (TFMDS) aims to the main information from those topic-focused documents. 
+There are lots of news services(e.g. Google News) have been developed to group news into events, and then produce a short summary for each event.
+However, most news reports are not prepared for the progress of event, lots of duplication message among reports about the same event. 
+Topic-focused multi-document summarization aims to the main information from those topic-focused documents. 
 The timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
 
+A particular challenge for multi-document summarization is how to computing the importance of each sentence, which is either depend on the words or some other latent information around the sentence.
+This required effective methods to analyze the information stored in different sentences.
+From the surface of different sentences, there are many synonym and polysemy words which bring lots of difficulties when computing relationships among sentences.
+latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} is introduced to find the core words in a document without the influence caused by those words.
+LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
+
+
+Another challenge for multi-document summarization is how to deal with duplicate information among these documents around the same topic or event.
+Reporters usually like to review something happened and then tell the readers what happens now. 
+It's helpful for readers to know the development progress about the topic and it's also a solution to this challenge.
 Event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. 
 Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. 
 The energy of an event increases when the event becomes popular, and it diminishes with time. 
 In intuition, it can also be used for summarization to help us find out the daily hot terms of events. 
-%Then people can obtain what new changes happen as events going on.
 
-In the keywords-based summarization field, there are two main challenges for choosing summary sentences. 
-One challenge lies in computing the importance of sentences, which is decided by each word in it.
-Since different authors may use different words, the synonym and polysemy bring lot of noise.
-In order to find the core words in the news without the influence caused by them, latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} is introduced.
-LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
-
-The other challenge is how to deal with the unbalanced labeled dataset. 
-In each topic, only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. 
-When we create a classifier over this dataset, the classifier will perfer the major side \cite{chawla2003smoteboost}.
-SMOTEBoost \cite{chawla2003smoteboost} combines SMOTE \cite{chawla2011smote} and boost technology in order to impove the precision of minority class when resamping. 
-This has been proved effective for imbalanced data set. 
 
 In this paper, we generate timeline summary by considering both temporal and semantic characteristics from the news around the same event. 
 We extract the features from five aspects to represent each sentence. 
-Then, classification model is built with SMOTEBoost. 
+Then, classification model is built with logistic regression. 
 Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
 
 The remainder of this paper is organized as follows: Section 2 reviews related works on summarization. 
-We discuss our approach about how to leverage aging theory to gain sentence feature and train the classification model with SMOTEBoost technology in section 3. 
+We discuss our approach about how to leverage aging theory to gain sentence feature and train the logistic regression classification model in section 3. 
 Experiments and discusses are described in section 4. 
 Section 5 presents our conclusions and future plans.
 
 
 %
 \section{Related Work}
-%
-\paragraph{Topic-focused multi-document summarization(TFMDS)} aims at gaining main information from multiple texts about the same topic. There are two ways to achieve this, one is extract important sentences, the other one is build new sentence to express the key idea. In this paper, we focus on the former method.
 
-One of the most popular extractive multi-document summarization methods is MEAD \cite{2004-Radev-p919-938}, which takes term frequency, sentence position, first-sentence overlap to present the feature of each sentence. \cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty. \cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. \cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
+\subsection{Multi-Document Summarization}
 
-\paragraph{Timeline summarization(TS)} gains enough attraction with the development of Topic Detection and Track(TDT). Lots of timeline summarization methods have been developed recently. ETS \cite{2011-Yan-p745-754} formulated the task as an optimization  problem via iterative substitution from a set of sentences with four requirements. \cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task. \cite{zhao2013timeline} took social attention involved to compute the importance. ETTS \cite{Yan-2011-TGT-2145432-2145483} utilized trans-temporal characteristics to gain the summary. \cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. \cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
- 
-\paragraph{Aging theory} has been proved effictive to track which stage of life cycle for news. \cite{2007-Chen-p1016-1025} \cite{chen2003life} applied this to model the news event's life cycle and utilized the concept of energy to track it. In order to gain the summary of multi-documents of news domain, we consider aging theory is worth using to extract the feature of sentence.
+Many summarization methods about multi-document have been developed recently. 
+Generally speaking, these methods can be divided into extractive summarization or abstractive summarization.
+The main idea of extractive summarization is to assign scores to different words in each sentence, then those sentences with high scores will be choosed as the summary.
+While abstractive summarization usually do some information fusion\cite{barzilay1999information}, compression\cite{2002-Knight-p91-107} and reformulation\cite{mckeown1999towards} to get the summary sentences.
+In this paper, we focus on the former method.
+
+One of the most popular extractive multi-document summarization methods is MEAD\cite{2004-Radev-p919-938}, which represents each sentence with some sentence-leve features such as term frequency, sentence position, first-sentence overlap, etc. 
+Wan\cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty.
+Wan\cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. 
+Wong\cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
+
+Most recently, the multi-document timeline summarization gains enough attraction from researchers and engineers.
+The timeline can help readers to know the development  progress of the event.
+This requires the redundancy of summary should be very low and the key properties of event should be retained. 
+Lots of timeline summarization methods and applications have been developed recently. 
+ETS\cite{2011-Yan-p745-754} formulated the task as an optimization  problem via iterative substitution from a set of sentences with four requirements. 
+\cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task. 
+\cite{zhao2013timeline} took social attention involved to compute the importance. 
+Yan\cite{Yan-2011-TGT-2145432-2145483} proposed to model trans-temporal correlations among component summaries for timelines, using inter-date and intra-date sentence dependencies.
+\cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. 
+\cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
+Binh Tran\cite{binh2013predicting} proposed a framework for automatically constructing timeline summaries from web news articles. In their framework, they extracted some features for each date about articles and sentences' published time and reference time.
+
+\subsection{Aging theory}
+\paragraph{Aging theory} has been proved effictive to track which stage of life cycle for news. 
+\cite{2007-Chen-p1016-1025} \cite{chen2003life} applied this to model the news event's life cycle and utilized the concept of energy to track it. 
+In order to gain the summary of multi-documents of news domain, we consider aging theory is worth using to extract the feature of sentence.
 
 %
 \section{Our Approach}
 %
 
 \subsection{Key Concepts}
-\paragraph{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the event. Most of our summarrization technology's application scenario is working for TDT system. 
+\paragraph{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the event. 
+%Most of our summarrization technology's application scenario is working for TDT system. 
 
 \paragraph{Timeline Summaries:} Generally speaking, timeline is a kind of display forms for the summaries. Timeline summaries should show us the progress of this topic instand of just displaying the message according to the time sequence. Under this condition of the requirement, timeline summary of each day should describe the most important thing happened in that day.
 
-We give the formal definition of topic-focused multi-document timeline summarization(TMTS) as follows:
+We give the formal definition of multi-document timeline summarization as follows:
 
 \paragraph{Input}: Given a set of documents $D=\{d_1, d_2, \dots, d_n\}$ which should cover progress of the topic in the time span $T=\{t_1, t_2, \dots, t_m\}$. We segment each document to sentences and group them by the date to form sentences $S=\{s_1, s_2, \dots, s_m\}$. 
 
-\paragraph{Output}: The TMTS should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the sentences of that day $s_i$. 
+\paragraph{Output}: The multi-document timeline summarization should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the sentences of that day $s_i$. 
 
 
 \subsection{Sentence Feature Selection}
@@ -168,9 +189,10 @@ Weight_{topic} = PageRank(sentence_i)
 \begin{equation}
 Weight_{novelty} = 1 - Jaccard(sentence_i, summary_{ex})
 \end{equation}
-where $summary_{ex}$ is the summary sentence in the last day.
+where $summary_{ex}$ is the summary sentence in the last time span.
 
-All the features are used in our experiments as follows:
+All the features are used in our experiments are shown in table 1.
+
 \begin{table}
 \centering
 \caption{List of features and their category}
@@ -201,13 +223,16 @@ Novelty & distance between current sentence and summary\\
 \end{table}
 
 
-
-
 \subsection{Model Training}
 
-With the help of labled data, we convert this summarization task to pairwise classification problem. The positive data is sentences labeled to summary, otherwise is negative. 
+With the help of labled data, we considered this summarization task as a classification problem. The positive data is sentences labeled to summary, otherwise is negative. 
 
-As the result of the number of summary sentence is much less than the ordinary sentences, the train data set is unbalanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
+However, in each document only a few sentences will be labled as the summarization sentence, that is, the data set is imbalanced. 
+When we create a classifier over this dataset, the classifier will perfer the major side \cite{chawla2003smoteboost}.
+In order to impove the precision of minority class, we used SMOTEBoost\cite{chawla2003smoteboost} method to sampling datas for training the classification model. 
+This method combines SMOTE \cite{chawla2011smote} and boost technology and has been proved effective for imbalanced data set. 
+
+%As the result of the number of summary sentence is much less than the ordinary sentences, the train data set is unbalanced. In order to reduce this reflect, SMOTEBoost method is used to train the classification model.
 
 %
 \section{Experiments}
@@ -215,12 +240,12 @@ As the result of the number of summary sentence is much less than the ordinary s
 
 \subsection{Experimental settings}
 
-For evaluate the performance of our methd, we used the dataset of TAC 2011 summary task, whic is an open benchmark dataset published by Text Analysis Conference(http://www.nist.gov/tac/).
+For evaluate the performance of our methd, we used the dataset of TAC 2010 summary task, whic is an open benchmark dataset published by Text Analysis Conference\footnote{http://www.nist.gov/tac/}.
 This dataset contains 906 documents around 46 topics from the New York Times, the Associated Press, the Xinhua News Agency newswires, and the Washington Post News Service.
 Each topic has two sets of documents, A and B, each containing 10 documents.
 The difference is that documents in B were published later than A.
 
-\subsection{Methods to compare}
+\subsection{Baselines}
 
 We start our experiment with some preprocessings like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We implement some widely used multi-document summarization methods as the baselines.
 
@@ -236,7 +261,7 @@ $L2RTS$ considered the summary task as optimistic task and  leveaged the SVMRank
 
 \subsection{Evaluation metric}
 
-Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC) for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. 
+Here we use ROUGE toolkit \cite{2004-Lin-p74-81} , which is officially applied by Document Understanding Conference (DUC)\footnote{http://duc.nist.gov/} for document summarization performance evaluation, to evaluate the experimental results and compare these algorithms with each other. 
 The summarization quality is measured by counting the number of overlapping units, such as N-gram, word sequences, and word pairs between the auto-generated summary and the manual summary. 
 Several automatic evaluation methods are implemented in ROUGE, such as ROUGE-N, ROUGE-L and ROUGE-W, each of which can generate two scores (recall (R), precision (P) %and F-measure%
 ). The function is:
