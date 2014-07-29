@@ -50,7 +50,7 @@ Zhendong Niu\\
 In order to summarize multiple documents about the same topic, it's often helpful to follow the development progress of them.
 We present a model based on aging theory which provides an intuitive way to show the life circle of the topic, complying with the habit of people understanding things.
 We summarize the documents within three steps.
-First, we reduce the influence of synonym and polysemy with the LSA method.
+First, we reduce the influence of synonyms with the LSA method.
 Second, aging theory is introduced to represent the sentence with other four categories of features which are common used in this field. 
 Third, we train a classifier model to recongized the summary sentence. 
 Experiment results show that our method can improve the timeline summarization significantly.
@@ -127,8 +127,14 @@ Yan\cite{Yan-2011-TGT-2145432-2145483} proposed to model trans-temporal correlat
 Binh Tran\cite{binh2013predicting} proposed a framework for automatically constructing timeline summaries from web news articles. In their framework, they extracted some features for each date about articles and sentences' published time and reference time.
 
 \subsection{Aging theory}
-\paragraph{Aging theory} has been proved effictive to track which stage of life cycle for news. 
-\cite{2007-Chen-p1016-1025} \cite{chen2003life} applied this to model the news event's life cycle and utilized the concept of energy to track it. 
+
+Different aspects show in different stages of each event.
+An effective way to extract hot topic words is that capturing variations  in the distribution of different word terms occur in the documents around the event.
+Therefore, tracking the terms to know what the stage of the life cycle is very important.
+Aging theory has been proved effictive to track which stage of life cycle for news. 
+It modes the news event's life cycle into four stages, birth, growth, decay, and death.
+This four stages can be reflected by the key words' distribution.
+Chen\cite{2007-Chen-p1016-1025}\cite{chen2003life} applied this to model the news event's life cycle and utilized the concept of energy to track it. 
 In order to gain the summary of multi-documents of news domain, we consider aging theory is worth using to extract the feature of sentence.
 
 %
@@ -319,7 +325,7 @@ In order to evaluate the performance, we design two experiments, respectively is
 \centering
 \begin{tabular}{lllll}
 \hline\noalign{\smallskip}
-Method   &  Precision(1) & Recall(1)  & Precision(3) & Recall(3) \\
+Method   &  Precision@1 & Recall@1  & Precision@3 & Recall@3 \\
 \noalign{\smallskip}
 \hline
 \noalign{\smallskip}
