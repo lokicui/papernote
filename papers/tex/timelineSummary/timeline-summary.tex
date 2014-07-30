@@ -111,7 +111,9 @@ In this paper, we focus on the former method.
 
 One of the most popular extractive multi-document summarization methods is MEAD\cite{2004-Radev-p919-938}, which represents each sentence with some sentence-leve features such as term frequency, sentence position, first-sentence overlap, etc. 
 Wan\cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty.
-Wan\cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. 
+%Wan\cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. 
+News Blaster\cite{McKeown2003} clusters news into events and apply the MultiGen system to find similar senteces and reform the pieces of sentences to create the summary.
+Allan\cite{2001-Allan-p10-18} used 'usefulness', 'novelty' to represent the sentence and provide summaries of news topics. Their aimed to deal the news stream and create the useful summary sentences.
 Wong\cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
 
 Most recently, the multi-document timeline summarization gains enough attraction from researchers and engineers.
@@ -119,12 +121,12 @@ The timeline can help readers to know the development  progress of the event.
 This requires the redundancy of summary should be very low and the key properties of event should be retained. 
 Lots of timeline summarization methods and applications have been developed recently. 
 ETS\cite{2011-Yan-p745-754} formulated the task as an optimization  problem via iterative substitution from a set of sentences with four requirements. 
-\cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task. 
-\cite{zhao2013timeline} took social attention involved to compute the importance. 
+Tran\cite{tran2013leveraging} investigated five different sentence features and leveraged SVMRank to optimize the summarization task and proposed an un-biased criteria which can model timeline's characteristics.
+Zhao\cite{zhao2013timeline} took social attention involved to compute the importance and capture social attention by learning users' collective interests in the form of word distributions from Twitter.
 Yan\cite{Yan-2011-TGT-2145432-2145483} proposed to model trans-temporal correlations among component summaries for timelines, using inter-date and intra-date sentence dependencies.
-\cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. 
-\cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
-Binh Tran\cite{binh2013predicting} proposed a framework for automatically constructing timeline summaries from web news articles. In their framework, they extracted some features for each date about articles and sentences' published time and reference time.
+Nedunchelian\cite{2008-Nedunchelian-p480-485} reused the MEAD and add the timestamp feature to implement their TS.
+Binh Tran\cite{binh2013structured} extracted the temporal information and surface features to train the regression model for predicting the summary sentences. 
+And in the same year, they\cite{binh2013predicting} proposed a framework for automatically constructing timeline summaries from web news articles. In their framework, they extracted some features for each date about articles and sentences' published time and reference time.
 
 \subsection{Aging theory}
 
