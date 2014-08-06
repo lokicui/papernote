@@ -1,4 +1,4 @@
-% This file was created with JabRef 2.10b2.
+% This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
 
@@ -524,6 +524,7 @@
 
   Acmid                    = {1073435},
   Doi                      = {10.3115/1073427.1073435},
+  File                     = {McKeown2003.pdf:home/work/workspace/papernote/papers/bib/text_summary/McKeown2003.pdf:PDF},
   Location                 = {Edmonton, Canada},
   Numpages                 = {2},
   Url                      = {http://dx.doi.org/10.3115/1073427.1073435}
@@ -929,11 +930,11 @@
   Date-modified            = {2013-10-09 16:57:39 +0000}
 }
 
-@comment{jabref-meta: selector_keywords:}
-
-@comment{jabref-meta: selector_journal:}
-
 @comment{jabref-meta: selector_publisher:}
 
 @comment{jabref-meta: selector_author:}
+
+@comment{jabref-meta: selector_keywords:}
+
+@comment{jabref-meta: selector_journal:}
 
