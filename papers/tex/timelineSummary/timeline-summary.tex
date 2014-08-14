@@ -22,7 +22,7 @@
 
 
 %
-\title {Leveraging  Aging Theory in Multi-document Timeline Summarization} 
+\title {Leveraging  Aging Theory in Multi-news Timeline Summarization} 
 
 \author{
 % 1st. author
@@ -43,12 +43,23 @@ Zhendong Niu\\
 \maketitle
 \begin{abstract}
 
-In order to summarize multiple documents about the same topic, it's often helpful to follow the development progress of them.
-We present a model based on aging theory which provides an intuitive way to show the life circle of the topic, complying with the habit of people understanding things.
-We summarize the documents within three steps.
-First, we reduce the influence of synonyms with the LSA method.
-Second, aging theory is introduced to represent the sentence with other four categories of features which are common used in this field. 
-Third, we train a classifier model to recongized the summary sentence. 
+%In order to summarize multiple news about the same event, it's often helpful to follow the development progress of them.
+%We present a model based on aging theory which provides an intuitive way to show the life circle of the event, complying with the habit of people understanding things.
+%We summarize these news within three steps.
+%First, we reduce the influence of synonyms with the LSA method for each sentence.
+%Second, aging theory is introduced to represent the sentence with other four categories of features which are common used in this field. 
+%Third, a classifier model is trained by SVM to recongized the summary sentence with the help of those features
+%Experiment results show that our method can improve the timeline summarization significantly.
+
+This paper focuses on the problem of news event timeline summary in Multi-Document Summarization(MDS), which aims to summarize mult-news around the same event in timeline.
+Traditional methods to solve this problem only consider the text surface features and topic-related features, such as length of each sentence, position of the sentence in the document, number of topic words and so on.
+%Moreover, traditional 
+They ignored the life circle of the event, every event has its characteristics which are shown in the distribution of hot words.
+This paper proposes a new feature to describe the event based on the aging theory which focus on the life circle about the words.
+Sentences and their publish date are extracted from each news.
+Then, servel pretreatment work are done to these sentences to reduce the influence of noises like synonyms.
+After that, aging features and other four categories of features which are common used in this field are collected.
+Finally, SVM model is used to train these features with SMOTE technology to recongized the summary sentence.
 Experiment results show that our method can improve the timeline summarization significantly.
 
 \end{abstract}
@@ -57,38 +68,39 @@ Experiment results show that our method can improve the timeline summarization s
 \section{Introduction}
 %
 
-Important facts about the summary are those which descripe the development progress of the topic.
-When people create summaries, they choose the sentences that contain key words such as place, people, date and so on to form a short story about the topic.
+Important facts about the event summary are those which descripe the development progress of it.
+When people create summaries, they choose the sentences that contain key words such as place, people, date and so on to form a short story about the event.
 Understandably in automatic summarization as well, it's useful to use those key words to represent general facts and the important factors.
 
 Everyday thousands of news reporting different events are published on the internet. 
 There are lots of news services(e.g. Google News) have been developed to group news into events, and then produce a short summary for each event.
-However, most news reports are not prepared for the progress of event, lots of duplication message among reports about the same event. 
+However, most news reports are not prepared for the progress of event, lots of duplicate messages among reports about the same event. 
 Topic-focused multi-document summarization aims to the main information from those topic-focused documents. 
 The timeline summarization help to reorganize the order and sentences selection to get a better reading experience.
 
 A particular challenge for multi-document summarization is how to computing the importance of each sentence, which is either depend on the words or some other latent information around the sentence.
 This required effective methods to analyze the information stored in different sentences.
 From the surface of different sentences, there are many synonym and polysemy words which bring lots of difficulties when computing relationships among sentences.
-latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} is introduced to find the core words in a document without the influence caused by those words.
+Latent semantic analysis (LSA) \cite{1990-Deerwester-p391-407} is introduced to find the core words in a document to avoid the influence caused by those words.
 LSA is a robust unsupervised technique for deriving an implicit representation of text semantics based on observed co-occurrence of words to find semantic units of news.
 
 
 Another challenge for multi-document summarization is how to deal with duplicate information among these documents around the same topic or event.
 Reporters usually like to review something happened and then tell the readers what happens now. 
-It's helpful for readers to know the development progress about the topic and it's also a solution to this challenge.
+It's helpful for readers to know the development progress about the topic and also a solution to this challenge.
 Event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. 
 Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. 
 The energy of an event increases when the event becomes popular, and it diminishes with time. 
 In intuition, it can also be used for summarization to help us find out the daily hot terms of events. 
 
 
-In this paper, we generate timeline summary by considering both temporal and semantic characteristics from the news around the same event. 
+In this paper, we generate timeline summary by considering both temporal and semantic characteristics from the news around the same event.
+Sentences and publish time are extracted from the news articles. 
 We extract the features from five aspects to represent each sentence. 
 Then, classification model is built with logistic regression. 
-Last, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
+Finally, we choose sentences from candidates to form the summary and display them with timeline, so that people can track the progress of event easily and quickly.
 
-The remainder of this paper is organized as follows: Section 2 reviews related works on summarization. 
+The remainder of this paper is organized as follows: Section 2 reviews related works on summarization and aging theory. 
 We discuss our approach about how to leverage aging theory to gain sentence feature and train the logistic regression classification model in section 3. 
 Experiments and discusses are described in section 4. 
 Section 5 presents our conclusions and future plans.
@@ -109,7 +121,8 @@ One of the most popular extractive multi-document summarization methods is MEAD\
 Wan\cite{wan2007manifold} proposed an extractive approach based on manifold-ranking about the information richness and novelty.
 %Wan\cite{2008-Wan-p299-306} used markov random walk model and cluster hits model to analysis the link relationships between sentences in order to gain the important one as the summary. 
 News Blaster\cite{McKeown2003} clusters news into events and apply the MultiGen system to find similar senteces and reform the pieces of sentences to create the summary.
-Allan\cite{2001-Allan-p10-18} used 'usefulness', 'novelty' to represent the sentence and provide summaries of news topics. Their aimed to deal the news stream and create the useful summary sentences.
+Allan\cite{2001-Allan-p10-18} used 'usefulness', 'novelty' to represent the sentence and provide summaries of news topics. 
+They aimed to deal the news stream and create the useful summary sentences.
 Wong\cite{2008-Wong-p985-992} investigated co-training method by combining labeled and unlabeled data to train the model, which used four kinds of features can be categorized as surface, content, relevance and event features.
 
 Most recently, the multi-document timeline summarization gains enough attraction from researchers and engineers.
@@ -126,7 +139,7 @@ And in the same year, they\cite{binh2013predicting} proposed a framework for aut
 
 \subsection{Aging theory}
 
-Different aspects show in different stages of each event.
+Different aspects are shown in different stages of each event.
 An effective way to extract hot topic words is that capturing variations  in the distribution of different word terms occur in the documents around the event.
 Therefore, tracking the terms to know what the stage of the life cycle is very important.
 Aging theory has been proved effictive to track which stage of life cycle for news. 
@@ -139,16 +152,29 @@ In order to gain the summary of multi-documents of news domain, we consider agin
 \section{Our Approach}
 %
 
+\begin{figure}\label{process}
+\centering
+\epsfig{file=summary-process.eps, height=1in, width=3in}
+\caption{The overall process of auto-summary}
+\end{figure}
+
+Figure 1 shows the overall process of our approach.
+Sentences are extracted from the training set of news articles.
+Then, features are computed for each sentence. 
+Finally, SVM model is used to train these features with SMOTE technology to recongized the summary sentence.
+
+
 \subsection{Key Concepts}
 
-\texttt{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the event. 
+%\texttt{Topic-focused}: What we value most is an event grouped from several web news articles, such as the "the missing of the malaysia airlines plane" from BBC. These articles show us the cause, the progress and the results about the event. 
 %Most of our summarrization technology's application scenario is working for TDT system. 
+\texttt{Event}: News event often refers to a series of news reports around someone or something during a period of time, such as the news report about "the missing of the malaysia airlines plane". These articles form a news event which tell us the cause, the progress and the results about it. 
 
 \texttt{Timeline Summaries:} Generally speaking, timeline is a kind of display forms for the summaries. Timeline summaries should show us the progress of this topic instand of just displaying the message according to the time sequence. Under this condition of the requirement, timeline summary of each day should describe the most important thing happened in that day.
 
-We give the formal definition of multi-document timeline summarization as follows:
+We give the formal definition of event timeline summarization as follows:
 
-\textit{Input}: Given a set of documents $D=\{d_1, d_2, \dots, d_n\}$ which should cover progress of the topic in the time span $T=\{t_1, t_2, \dots, t_m\}$. We segment each document to sentences and group them by the date to form sentences $S=\{s_1, s_2, \dots, s_m\}$. 
+\textit{Input}: Given a set of news articles $D=\{d_1, d_2, \dots, d_n\}$ which should cover progress of the event in the time span $T=\{t_1, t_2, \dots, t_m\}$. We segment each news into sentences and group them by the date to form sentences $S=\{s_1, s_2, \dots, s_m\}$. 
 
 \textit{Output}: The multi-document timeline summarization should output the summaries along the date and each summary is the main idea of what occured in that day, i.e. $O=\{o_1, o_2, \dots, o_m\}$, where $o_i$ means the summary of sentences from all the sentences of that day $s_i$. 
 
@@ -157,7 +183,7 @@ We give the formal definition of multi-document timeline summarization as follow
 
 In order to respresent the most important thing happened in that day, the summary should consider the importance, the movelty, and contains the topic hot terms. 
 %Five kinds of features are chosen as follows:
-All the features are used in our experiments are shown in table 1 and their details as follows:
+All the features used in our experiments are shown in table 1 and details as follows:
 
 \begin{table}
 \centering
@@ -166,19 +192,19 @@ All the features are used in our experiments are shown in table 1 and their deta
 \hline
 Category & Feature\\
 \hline
-surface & Length\\
-surface & the count of noun words\\
+ & Length\\
+ & the count of noun words\\
 surface & the count of stop words\\
-surface & position in current paragraph\\
-surface & position in the document\\
-surface & whether it contains person name\\
+ & position in current paragraph\\
+& position in the document\\
+ & whether it contains person name\\
 \hline
 Importance & sum of LSA scores\\
-Importance & sum/avg TFIDF\\
+ & sum/avg TFIDF\\
 \hline
-Topic & the count of topic words\\
+& the count of topic words\\
 Topic & sum of topic words' weight\\
-Topic & sum of the TF top 10 words' weight  \\
+& sum of the TF top 10 words' weight  \\
 \hline
 Aging & the aging score of sentence\\
 \hline 
@@ -200,7 +226,7 @@ where $TF_w$ is the term frequency of word $w$ and $LSA_w$ is the weight of word
 \begin{equation}
   E_{w,t} =F(F^{-1}E_{w,t-1}+\alpha\cdot\chi^2_{w,t})
 \end{equation}
-where $E_{w,t}$ is the energy of word $w$  in time interval $t$ , and $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
+where $E_{w,t}$ is the energy of word $w$  in time interval $t$ , $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
 
 However, no words descripting a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor $\beta$ at the end of every time interval.
 Once the energy value became negative, it will be replaced by zero and stop decaying.
@@ -211,18 +237,21 @@ According to the description above, if the energies of some words increase great
 Var_{w,t} = \sqrt{ \frac{1}{N} \sum_{t \in period}(E_{w,t}- \overline{E_{w}})^2}
 \end{equation}
 where $N$ is the number of time intervals during the given period, $E_{w,t}$  is the energy of word $w$  in time interval $t$ , $\overline{E_{w}}$  is the average energy during the period, and $Var_{w,t}$  is the variance of $w$ .
-Then each word will be assigned a new weight besides the traditional TF.IDF which can be defined as:
+Then each word will be assigned a new weight besides the traditional TF*IDF which can be defined as:
  \begin{equation}
 Weight_{aging}=\sum_{w \in sentence_i}TF*LSA_{w} + \mu \cdot Var_{w}
 \end{equation}
 This kind of new weight can help us identify both central and hot information, so people can capture the main line and new changes of events simultaneously.
 
-\texttt{Topic feature}: Each topic contains lots of sentences, that is, every sentence contribute some information to the whole set to express the topic. In this study, we use the link analysis to compute the latent semantic between sentences. First, topic terms and topic elements can be found through the word frequency analysis. Then, the similarity among sentences are computed with the cosine function to construct the event map. Last, pageRank algorithm is used to assigin the weight to each node in this map. We treat the pageRank value as the topic feature of the sentence. The function is :
+\texttt{Topic feature}: Each topic contains lots of sentences, that is, each sentence contribute some information to the whole set to express the topic. In this study, we use the link analysis to compute the latent semantic between sentences. First, topic terms and topic elements can be found through the word frequency analysis. Then, the similarity among sentences are computed with the cosine function to construct the event map. Last, pageRank algorithm is used to assigin the weight to each node in this map. We treat the pageRank value as the topic feature of the sentence. The function is :
 \begin{equation}
 Weight_{topic} = PageRank(sentence_i)
 \end{equation}
 
-\texttt{Novelty feature}: In order to avoid some sentences with the same meanings be selected as the summary, the novelty of sentence is important. The novelty value is compute by the distance with the summary of last time span. The larger the distance is, the more the novelty this sentence is. In our research, we use the Jaccard similarity to gain this. The function is :
+\texttt{Novelty feature}: In order to avoid some sentences with the same meanings be selected as the summary, the novelty of sentence is important. 
+The novelty value is computed by the distance with the summary of last time span. 
+The larger the distance, the more the novelty this sentence. 
+In our research, we use the Jaccard similarity to gain this value. The function is :
 \begin{equation}
 Weight_{novelty} = 1 - Jaccard(sentence_i, summary_{ex})
 \end{equation}
@@ -274,7 +303,7 @@ $Random$ The strategy for random method is that one sentence will be choosed as 
 
 $MEAD\footnote{http://www.summarization.com/mead}$ is a famous multi-document summarization tools which extracts summary sentence based on centroid value, positional value and first-sentence overlap.
 
-$Cluster$ considers that there are different themes in an event, so it first clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
+$Cluster$ considers that there are different themes in an event, so it devide clusters similar sentences together into different clusters and then selects one representative sentence from each main cluster.
 
 $Allan$ is a similar timeline system from different aspects, which dividing sentences into on-event and off-event while ranking them with useful and novelty.
 
@@ -291,8 +320,10 @@ All the summaries were truncated to the words limit size without removing the st
 \subsection{Results}
 
 We use LibSVM\footnote{http://www.csie.ntu.edu.tw/~cjlin/libsvm/} as our classification mode.
+The model in our approach 1 is trained without SMOTEBoost, while the approach 2 is trained with re-sampling technology of SMOTEBoost.
 Rouge-1 and Rouge-2 are used to measure the performance about recall on both datasets. Results are shown in Table 2 and Table 3.
 Precision measures the percentage of labeled summary sentences among all the summary sentences created by the classifier.
+
 
 \begin{table}
 \caption{Performance on DUC-2002 dataset}
@@ -309,17 +340,20 @@ Cluster	&	0.075			&		0.061				&	0.018					 				\\
 Allan		&	0.077			&		0.061				&	0.021						 			\\
 Wong		&	0.144			&		0.245				&	0.089									\\
 L2RTS	&	0.211			&		0.276				&	0.105						 			\\
-Our approach	&	\textbf{0.221}	&		\textbf{0.279}				&	\textbf{0.110}								      \\
+Our approach 1	&	\textbf{0.204}	&		\textbf{0.273}				&	\textbf{0.103}	 \\
+Our approach 2	&	\textbf{0.221}	&		\textbf{0.279}				&	\textbf{0.110}	 \\
 \hline
 \end{tabular}
 \end{table}
 
-\texttt{Generic summarization} From Table 2, it can be seen that our approach using svm obtains the best results, followed by the L2RTS then Wong then MEAD and no surprise that Random provides the worst results. 
-The Allan's approach is similar timeline, but the results are not good due to the fact that only useful and novelty features are not enough to maintain the information of sentence. 
-The Cluster method's bad performance is due to the random selecting strategy from the cluster center.
-Wong's method combined the supervised and semi-supervised learning which make it hard to turning the parameters.
-The L2RTS method it better than Wong since the SVM-rank can put the preference information to the training progress.
-Our approach performs better than L2RTS in this experiment. This is due to the new features about aging and the training tricks about SMOTE which help the classifier to get better hyperplane.
+\texttt{Generic summarization} From Table 2, it can be seen that our approach 2 using svm and SMOTEBoost obtains the best results, followed by the $L2RTS$ then the approach 1 then $Wong$ and $MEAD$. 
+There is no surprise that Random provides the worst results. 
+The approach 2 performances better than approach 1 is well understanded, since the resampling can gain more training samples which enhance the classifier.
+The $Allan$'s approach is similar timeline, but the results are not good due to the fact that only useful and novelty features are not enough to maintain the information of sentence. 
+The $Cluster$ method's bad performance is due to the random selecting strategy from the cluster center.
+$Wong$'s method combined the supervised and semi-supervised learning which make it hard to turning the parameters.
+The $L2RTS$ method it better than Wong since the SVM-rank can put the preference information to the training progress.
+Our approach performs better than $L2RTS$ in this experiment. This is due to the new features about aging and the training tricks about SMOTE which help the classifier to get better hyperplane.
 
 
 \begin{table}
@@ -337,18 +371,25 @@ Cluster	&	0.057			&		0.045				&	0.025				 				     \\
 Allan		&	0.143			&		0.083				&	0.032						 			\\
 Wong		&	0.214			&		0.185				&	0.073									\\
 L2RTS	&	0.221			&		0.290				&	\textbf{0.124}					 	\\
-Our approach	&	\textbf{0.233}	&	\textbf{0.291}				&	0.121		          \\
+Our approach 1	&	\textbf{0.211}	&	\textbf{0.279}				&	0.102		          \\
+Our approach 2	&	\textbf{0.233}	&	\textbf{0.291}				&	0.121		          \\
 \hline
 \end{tabular}
 \end{table}
 
 \texttt{Guided summarization} Table 3 shows the results on the TAC-2010 dataset.
-In this experiment, the L2RTS performs bettern than our approach on the Rouge-2.
+In this experiment, the $L2RTS$ performs bettern than our approach on the Rouge-2.
 This is due to the preference information, that is, the average number of sentences in each document of this dataset is bigger than DUC-2002, which produce more information.
-The Allan method performs better than MEAD.
+The $Allan$ method performs better than $MEAD$.
 The reason is that events in this dataset have more than 20 documents, which provide enough information about useful and novelty compared to the previous dataset.
 
-We can get the information that summarization methods based on machine learning are performance better than others. The result of $MEAD$ are better than $Cluster$, mainly because this method use some surface feature. The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster randomly. The $Allan$ method does not perform stable, that it will depend on the amount of documents and the content of each sentence. Our method performed better than $Wong$ and $L2RTS$ on precision and Rouge-1 metric which mainly due to  SMOTE method and the new feature about aging. The SMOTE makes the minorty class can be classified better. But when testing in Rouge-2, the $L2RTS$ wins the match, because the SVMRanking can obtain a better classification model with enough perference information, but the complexity of algorithm is also high.
+From this two experiments, we can get the information that summarization methods based on machine learning are performance better than others. 
+The result of $MEAD$ are better than $Cluster$, mainly because this method use some surface feature.
+The $Cluster$ method is the worst in our experiments, since this method cluster the same meaning sentences and choose one from cluster randomly. 
+The $Allan$ method does not perform stable, that it will depend on the amount of documents and the content of each sentence. 
+Our method 2 performed better than $Wong$ and $L2RTS$ on precision and Rouge-1 metric which mainly due to  SMOTE method and the new feature about aging. 
+The SMOTE technology make the minorty class can be classified better and this is proved in our experiments.
+But when testing in Rouge-2, the $L2RTS$ wins the match, because the SVMRanking can obtain a better classification model with enough perference information, but the complexity of algorithm is also high.
 
 %
 \section{Conclusion and Future}
