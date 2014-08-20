@@ -1,56 +1,62 @@
-%整体思路: 
-%1. 在特征方面,引入了aging的特征
-%2. 在训练模型的时候,引入了smoteboost的方法来采样
+% Template article for document class `jicspack'
+% 2004/10/07
 
 
+\documentclass[print]{jicspack}
+\input{config}
 
-\documentclass{acm_proc_article-sp}
+\usepackage{enumerate}
+% if you use PostScript figures in your article
+% you can use the graphics package
+% \usepackage{graphics}
+% or use the graphicx package for more complicated function
+\usepackage{graphicx}
+% or use the epsfig package
+% \usepackage{epsfig}
 
-\usepackage{algorithm} %format of the algorithm
-\usepackage{algorithmic} %format of the algorithm
-\usepackage{multirow} %multirow for format of table
-\usepackage{amsmath}
-\usepackage{xcolor}
-\DeclareMathOperator*{\argmin}{argmin}         %argmin或argmax公式的排版 
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
 
-\renewcommand{\algorithmicrequire}{\textbf{Input:}}   %Use Input in the format of Algorithm 
-\renewcommand{\algorithmicensure}{\textbf{Output:}}  %UseOutput in the format of Algorithm 
-
-
-%
 \begin{document}
 
+\begin{premaker}
 
-%
-\title {Leveraging  Aging Theory in Multi-news Timeline Summarization} 
+% The premaker environment contains Title, authors and addresses;
+% use the thanksref command within \title, \author or \address for footnotes;
+% use the corauthref command within \author for corresponding author footnotes;
+% use the ead command for the email address,
+% and the form \ead[url] for the home page:
+% \title{Title\thanksref{label1}}
+% \thanks[label1]{}
+% \author{Name\corauthref{cor1}\thanksref{label2}}
+% \ead{email address}
+% \ead[url]{home page}
+% \thanks[label2]{}
+% \corauth[cor1]{Corresponding author}
+% \address{Address\thanksref{label3}}
+% \thanks[label3]{}
 
-\author{
-% 1st. author
-\alignauthor
-Chen Jie\\
-     \affaddr{Beijing Institute of Technology}\\
-       \affaddr{ 5 South Zhongguancun Street }\\
-       \affaddr{Haidian District, Beijing}\\
-       \email{sonyfe25cp@gmail.com}
-% 2nd. author
-\alignauthor
-Zhendong Niu\\
-         \affaddr{Beijing Institute of Technology}\\
-       \affaddr{ 5 South Zhongguancun Street }\\
-       \affaddr{Haidian District, Beijing}\\
-       \email{zniu@bit.edu.cn}\\
-}
-\maketitle
+\title{Leveraging  Aging Theory in Multi-news Timeline Summarization\thanksref{label1}}
+\thanks[label1]{Project supported by the National Nature Science Foundation of China (No. ***).}
+\author[author1]{Jie Chen},
+\ead{sonyfe25cp@gmail.com}
+%\thanks[label2]{Footnotes for authors}
+\corauth[cor1]{Corresponding author.}
+% other authors
+\author[author2]{Zhendong Niu\corauthref{cor1}}
+\author[author3]{Hongping Fu}
+\address[author1]{School of Computer Science, Beijing Institute of Technology, Beijing 100081, China}
+\address[author2]{School of Computer Science, Beijing Institute of Technology, Beijing 100081, China}
+\address[author3]{School of Computer Science, Beijing Institute of Technology, Beijing 100081, China}
+%\thanks[label3]{Footnotes for address}
+% you can use optional labels to link authors explicitly to addresses:
+% \author[label1]{},
+% \author[label2]{}
+% \address[label1]{}
+% \address[label2]{}
+
 \begin{abstract}
-
-%In order to summarize multiple news about the same event, it's often helpful to follow the development progress of them.
-%We present a model based on aging theory which provides an intuitive way to show the life circle of the event, complying with the habit of people understanding things.
-%We summarize these news within three steps.
-%First, we reduce the influence of synonyms with the LSA method for each sentence.
-%Second, aging theory is introduced to represent the sentence with other four categories of features which are common used in this field. 
-%Third, a classifier model is trained by SVM to recongized the summary sentence with the help of those features
-%Experiment results show that our method can improve the timeline summarization significantly.
-
+% Text of abstract
 This paper focuses on the problem of news event timeline summary in Multi-Document Summarization(MDS), which aims to summarize multi-news regarding the same event in timeline.
 Traditional methods to solve this problem only consider the text surface features and topic-related features, such as length of each sentence, position of the sentence in the document, number of topic words and so on.
 They ignored the life circle of the news event, each event has its characteristics which are shown in the change of words distribution.
@@ -62,11 +68,15 @@ Finally, SVM model is used to train these features with SMOTE technology to reco
 Experiment results show that our method can improve the timeline summarization significantly.
 
 \end{abstract}
+\begin{keyword}
+% keywords here, in the form: keyword \sep keyword
+News event summarization \sep Aging theory \sep Timeline
+\end{keyword}
+\end{premaker}
 
-%
+% main text
 \section{Introduction}
-%
-
+\label{Introduction}
 Important facts about the news event summary are those which descripe the development progress of it.
 When people create summaries, they choose the sentences which contain key words such as place, people, date and so on to form a short story about the event.
 Understandably in automatic summarization as well, it's useful to use those key words to represent general facts and the important factors.
@@ -106,7 +116,6 @@ Experiments and discusses are described in section 4.
 Section 5 presents our conclusions and future plans.
 
 
-%
 \section{Related Work}
 
 \subsection{Multi-Document Summarization}
@@ -152,11 +161,23 @@ In order to gain the summary of multi-documents of news domain, we consider agin
 \section{Our Approach}
 %
 
-\begin{figure*}\label{process}
+%\begin{figure*}\label{process}
+%\epsfig{file=summary-process.eps, height=2.2in, width=7in}
+%\caption{The overall process of auto-summary}
+%\end{figure*}
 
-\epsfig{file=summary-process.eps, height=2.2in, width=7in}
+
+\begin{figure}[h]
+\centering
+\includegraphics[angle=0, width=1\textwidth]{summary-process.eps}
+
 \caption{The overall process of auto-summary}
-\end{figure*}
+\label{fig:levfig}
+\end{figure}
+
+
+
+
 
 Figure 1 shows the overall process of our approach.
 Sentences are extracted from the training set of news articles.
@@ -339,7 +360,7 @@ Cluster	&	0.075			&		0.061				&	0.018					 				\\
 Allan		&	0.077			&		0.061				&	0.021						 			\\
 Wong		&	0.144			&		0.245				&	0.089									\\
 L2RTS	&	0.211			&		0.276				&	0.105						 			\\
-Our approach 1	&	\textbf{0.204}	&		\textbf{0.273}				&	\textbf{0.103}	 \\
+Our approach 1	&	0.204	&		0.273			&	0.103 \\
 Our approach 2	&	\textbf{0.221}	&		\textbf{0.279}				&	\textbf{0.110}	 \\
 \hline
 \end{tabular}
@@ -370,7 +391,7 @@ Cluster	&	0.057			&		0.045				&	0.025				 				     \\
 Allan		&	0.143			&		0.083				&	0.032						 			\\
 Wong		&	0.214			&		0.185				&	0.073									\\
 L2RTS	&	0.221			&		0.290				&	\textbf{0.124}					 	\\
-Our approach 1	&	\textbf{0.211}	&	\textbf{0.279}				&	0.102		          \\
+Our approach 1	&	0.211	&	0.279			&	0.102		          \\
 Our approach 2	&	\textbf{0.233}	&	\textbf{0.291}				&	0.121		          \\
 \hline
 \end{tabular}
@@ -398,16 +419,11 @@ In this paper, we present a novel approach of which involved aging theory and SM
 
 In the future, we will identify semantic units using other methods since $LSA$ can process synonym but is unable to handle polysemy. And we will also extend our approach to short text such as microblogs and comments.
 
-%Acknowledge%
-%\section{Acknowledgements}
-%something and somebody should be thanks...
 
 
-
-%\bibliographystyle{splncs}
-\bibliographystyle{abbrv}
-\bibliography{../../bib/text_summary.bib}
-
-
+\begin{thebibliography}{00}
+%	\bibliographystyle{abbrv}
+	\bibliography{../../../bib/text_summary.bib}
+\end{thebibliography}
 
 \end{document}
