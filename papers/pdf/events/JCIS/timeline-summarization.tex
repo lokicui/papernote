@@ -36,10 +36,11 @@
 % \address{Address\thanksref{label3}}
 % \thanks[label3]{}
 
-\title{Leveraging  Aging Theory in Multi-news Timeline Summarization\thanksref{label1}}
-\thanks[label1]{Project supported by the National Nature Science Foundation of China (No. ***).}
+\title{Leveraging  Aging Theory in Multi-news Timeline Summarization}
+%\title{Leveraging  Aging Theory in Multi-news Timeline Summarization\thanksref{label1}}
+%\thanks[label1]{Project supported by the National Nature Science Foundation of China (No. ***).}
 \author[author1]{Jie Chen},
-\ead{sonyfe25cp@gmail.com}
+\ead{bit\_chenjie@bit.edu.cn}
 %\thanks[label2]{Footnotes for authors}
 \corauth[cor1]{Corresponding author.}
 % other authors
@@ -62,9 +63,9 @@ Traditional methods to solve this problem only consider the text surface feature
 They ignored the life circle of the news event, each event has its characteristics which are shown in the change of words distribution.
 This paper proposes a new feature to describe the event based on the aging theory which focus on the life circle about the words.
 Sentences and their publish date are extracted from each news report.
-Then, servel pretreatment work are done to these sentences to reduce the influence of noises like synonyms.
+Then, several pretreatment work are done to these sentences to reduce the influence of noises like synonyms.
 After that, aging features and other four categories of features which are common used in this field are collected.
-Finally, SVM model is used to train these features with SMOTE technology to recongized the summary sentence.
+Finally, SVM model is used to train these features with SMOTE technology to recongize the summary sentence.
 Experiment results show that our method can improve the timeline summarization significantly.
 
 \end{abstract}
@@ -77,7 +78,7 @@ News event summarization \sep Aging theory \sep Timeline
 % main text
 \section{Introduction}
 \label{Introduction}
-Important facts about the news event summary are those which descripe the development progress of it.
+Important facts about the news event summary are those which describe the development progress of it.
 When people create summaries, they choose the sentences which contain key words such as place, people, date and so on to form a short story about the event.
 Understandably in automatic summarization as well, it's useful to use those key words to represent general facts and the important factors.
 
@@ -98,7 +99,7 @@ LSA is a robust unsupervised technique for deriving an implicit representation o
 Another challenge for multi-document summarization is how to deal with duplicate information among these documents about the same topic or event.
 Reporters usually like to review something happened and then tell the readers what happens now. 
 It's helpful for readers to know the development progress about the topic and also a solution to this challenge.
-Event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for descripting different events experience a similar life cycle. 
+Event goes through a life cycle of birth, growth, maturity and death, and this can be reflected from special terms utilized for describing different events experience a similar life cycle. 
 Aging theory \cite{chen2003life} is a model exploited in event detection task which tracks life cycles of events using energy function. 
 The energy of an event increases when the event becomes popular, and it diminishes with time. 
 In intuition, it can also be used for summarization to help us find out the daily hot terms of events. 
@@ -122,7 +123,7 @@ Section 5 presents our conclusions and future plans.
 
 Many summarization methods about multi-document have been developed recently. 
 Generally speaking, these methods can be divided into extractive summarization or abstractive summarization.
-The main idea of extractive summarization is to assign scores to different words in each sentence, then those sentences with high scores will be choosed as the summary.
+The main idea of extractive summarization is to assign scores to different words in each sentence, then those sentences with high scores will be chosen as the summary.
 While abstractive summarization usually do some information fusion\cite{barzilay1999information}, compression\cite{2002-Knight-p91-107} and reformulation\cite{mckeown1999towards} to get the summary sentences.
 In this paper, we focus on the former method.
 
@@ -249,7 +250,7 @@ where $TF_w$ is the term frequency of word $w$ and $LSA_w$ is the weight of word
 \end{equation}
 where $E_{w,t}$ is the energy of word $w$  in time interval $t$ , $E_{w,t-1}$  is the energy of word $w$ in time interval $t-1$ , $\alpha$ is the transfer factor, and $\chi^2_{w,t}$  is the contribution degree of word  at the time interval $t$, which can be computed as presented in \cite{2000-Swan-p49-56}. 
 
-However, no words descripting a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor $\beta$ at the end of every time interval.
+However, no words describing a special event point will retain popular forever, they will decay over time. In order to represent the word's life span realistically, we cut down the energy of word by a decay factor $\beta$ at the end of every time interval.
 Once the energy value became negative, it will be replaced by zero and stop decaying.
 
 
@@ -319,7 +320,7 @@ We relabeled the summary sentences based on the results from NIST in order to ad
 \subsection{Baselines}
 We start our experiment with some preprocessings like indexing, filtering out the stop words and segmenting news documents into sentences. Then we perform our method to the data set and generate a timeline for each event we choosing. We implement some widely used multi-document summarization methods as the baselines.
 
-$Random$ The strategy for random method is that one sentence will be choosed as the summary sentence randomly from the whole document.
+$Random$ The strategy for random method is that one sentence will be chosen as the summary sentence randomly from the whole document.
 
 $MEAD\footnote{http://www.summarization.com/mead}$ is a famous multi-document summarization tools which extracts summary sentence based on centroid value, positional value and first-sentence overlap.
 
