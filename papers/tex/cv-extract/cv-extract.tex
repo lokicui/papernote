@@ -42,44 +42,11 @@
 
 
 \begin{document}
-\title{PBECV: a fast resume extracting framework based on writing style recognition}
+\title{A fast resume extracting framework based on writing style recognition}
 \subtitle{Resume extraction}
 %\titlenote{A full version of this paper is available}
 
-%
-% You need the command \numberofauthors to handle the 'placement
-% and alignment' of the authors beneath the title.
-%
-% For aesthetic reasons, we recommend 'three authors at a time'
-% i.e. three 'name/affiliation blocks' be placed beneath the title.
-%
-% NOTE: You are NOT restricted in how many 'rows' of
-% "name/affiliations" may appear. We just ask that you restrict
-% the number of 'columns' to three.
-%
-% Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
-% (two rows with three columns) beneath the article title.
-% More than six makes the first-page appear very cluttered indeed.
-%
-% Use the \alignauthor commands to handle the names
-% and affiliations for an 'aesthetic maximum' of six authors.
-% Add names, affiliations, addresses for
-% the seventh etc. author(s) as the argument for the
-% \additionalauthors command.
-% These 'additional authors' will be output/set for you
-% without further effort on your part as the last section in
-% the body of your article BEFORE References or any Appendices.
 
-%\numberofauthors{8} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (for formatting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
-%\author{
-% You can go ahead and credit any number of authors here,
-% e.g. one 'row of three' or two rows (consisting of one row of three
-% and a second row of one, two or three).
-%
 % The command \alignauthor (no curly braces needed) should
 % precede each author name, affiliation/snail-mail address and
 % e-mail address. Additionally, tag each line of
@@ -114,15 +81,11 @@
 
 
 In the information age, companies receive thousands of resumes from job seekers everyday. 
-Most of resumes are wrote in different format, including font size, font color and cells. %, except those follow the same template.
-%For resumes adopt the common template file, they can be accurate interpred with the specific parser, but how to control the transfer efficiency?
-%Since these resumes are different, it's difficult to structure these data.
+Most of resumes are wrote in different format, including font size, font color and cells.
 As a result, it's difficult to structure these data with a general extracting method. 
-%In this paper, we propose a fast approach to extract the resume information from text file which drop the structure information like the font size and table constraint.
-In this paper, we propose PBECV to extract the resume information from text file without format information. 
-Our approach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse. 
-%The aim of this application scene is to build the baseline of resume extraction.
-%The experiments on the real word data, our approach can reach the proformance of those alg used the structure information and the alg is fastest.
+In this paper, we propose a novel framework to extract the resume information from text file without format information. 
+Our approach consider the writing style of each resume as the latent pattern, which help to segment resume text into different blocks and easy to parse.
+Classifiers are used to identify the attribute of different text spans.
 The experimental results on the real world data-set of resumes in Chinese show that our approach can reach the performance of algorithms that trained with the format information and the proposed approach's algorithm complexity is $O(NlogN)$.
 %We made our demo system public for future research at http://t.cn/RvardcW 
 
@@ -140,13 +103,9 @@ The experimental results on the real world data-set of resumes in Chinese show t
 
 \section{Introduction}
 
-%In the information age, head-hunting companies collect millions of resumes. 
-In the information age, head-hunting companies collect millions of resumes to occupy more market share.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the information age, head-hunting companies collect tens of millions of resumes to occupy more market share.
 More and more internet-based recruiting platforms become a primary recruitment channel \cite{al2012survey}.
 As the base of them, job seekers' resumes are the core of recruitment and how to extract the information hidden in the resume text is very important.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%However, these resumes are not wrote with the standard format.
 However, most of resumes are not wrote with the standard format or follow some special template file.
 In order to improve the success rate of recommending some person to fit the requirements of employer, those resumes should be parsed exactly and detailed.
 This helps headhunters to easily and quickly search for the right candidate.
@@ -154,7 +113,9 @@ The challenge is how to analysis the different kinds of resume to get the detail
 
 However, resumes are easier to structure than other texts, such as news. 
 Different people have different writing style about personal resume, but the content of these are all around the same topic, their personal information, which contains contacts, educations, work experiences and so on.
-%As a result of this, resumes can be segmented by servel groups.
+In the same module of one resume, the text formats are shared among different items.
+For example, the format of each record of work experience looks the same as others record in the same resume.
+Because items in the same module share the same text format that make the whole resume looks more comfortable.
 As a result of this, resumes can be segmented into servel groups, which is one of the basic ideas to solve the problem.
 In other words, resumes share the document-level hierarchical contextual structure \cite{maheshwari2010approach}.
 
